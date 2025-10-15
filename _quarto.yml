@@ -36,8 +36,8 @@ website:
     right:
       - href: about.qmd
         text: About
-      - href: 0-source_data/index.qmd
-        text: Source Data
+      - text: Source Data
+        href: 0-source_data/index.qmd
         menu:
           - text: GIS Resource
             href: 0-source_data/0-gis_resources.qmd
@@ -53,8 +53,8 @@ website:
             href: 0-source_data/5-cpi_inflation_indicator.qmd
           - text: External Subarea ID
             href: 0-source_data/6-external_subarea_id.qmd
-      - href: 1-tdm/index.qmd
-        text: Travel Demand Model
+      - text: Travel Demand Model
+        # href: 1-tdm/index.qmd
         menu:
           - text: Input Development
             href: 1-tdm/1-input_development.qmd

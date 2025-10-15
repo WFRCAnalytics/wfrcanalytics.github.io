@@ -321,10 +321,25 @@ cookieconsent.run({
     <a class="nav-link" href="./0-source_data/index.html"> 
 <span class="menu-text">Source Data</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./1-tdm/index.html"> 
-<span class="menu-text">Travel Demand Model</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-travel-demand-model" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Travel Demand Model</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-travel-demand-model">    
+        <li>
+    <a class="dropdown-item" href="./1-tdm/1-input_development.qmd">
+ <span class="dropdown-text">Input Development</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./1-tdm/2-estimate_parameters.qmd">
+ <span class="dropdown-text">Estimate Parameters</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./1-tdm/3-model_development.qmd">
+ <span class="dropdown-text">Model Development</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="./2-bdm/index.html"> 
 <span class="menu-text">Bike Demand Model</span></a>
