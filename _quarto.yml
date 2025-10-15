@@ -1,6 +1,6 @@
 project:
   type: website
-  output-dir: docs
+  output-dir: site
 
 website:
   title: "Wasatch Front Regional Council - Analytics"
