@@ -1,0 +1,47 @@
+---
+pagetitle: Contact
+name: Contact Form
+page-layout: article
+format:
+  html:
+    grid:
+      margin-width: 0px
+      sidebar-width: 0px
+css:
+  - /assets/css/contact.css
+---
+
+::: {.grid}
+
+::: {.g-col-5 #note}
+
+# Contact
+
+If you have questions about transportation planning methodologies, want to discuss R techniques for mobility data analysis, share interesting datasets, or just want to chat about anything related to transportation and data science, please use this contact form.
+
+:::
+<!-- source: https://github.com/mccarthy-m-g/tidytales/blob/main/about/index.qmd#L24-L46 -->
+
+::: {.g-col-1}
+:::
+
+::: {.g-col-6 #form}
+
+<form action="https://formspree.io/f/xxxxxxxx" method="POST" accept-charset="utf-8">
+
+
+<label for="full-name">Full Name</label>
+<input type="text" name="name" id="full-name" class="form-control" placeholder="First and Last" required>
+
+<label for="email-address">Email Address</label>
+<input type="email" name="_replyto" id="email-address" class="form-control" placeholder="your@email.here" required>
+
+<label for="message">Message</label>
+  <textarea rows="14" name="message" id="message" class="form-control" placeholder="Type your message here" required></textarea>
+
+<button type="submit" class="btn btn-primary mt-4">Send message</button>
+</form>
+:::
+
+:::
+<!-- end grid -->

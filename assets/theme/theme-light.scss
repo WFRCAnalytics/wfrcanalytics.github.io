@@ -1,0 +1,141 @@
+/*-- scss:defaults --*/
+
+// Reference: https://github.com/spcanelon/silvia/blob/main/assets/silvia-theme-light.scss
+
+// Import shared files
+@import "colors";
+@import "fonts";
+
+// Colors: Quarto variables
+$primary:                    $wfrc-primary-light;
+$secondary:                  $wfrc-secondary;
+// Colors: custom variables
+$primary-dark:               $wfrc-primary;
+$secondary-light:            $wfrc-secondary-light;
+$accent:                     $wfrc-accent;
+$accent-light:               $wfrc-accent-light;
+$accent-dark:                $wfrc-accent-dark;
+
+// Body - LIGHT MODE COLORS
+$body-color:                 $wfrc-text-light;      // #0E171E (dark text)
+$body-bg:                    $wfrc-bg-0;            // #FFFBF2 (cream background)
+$body-secondary:             #6C757D;
+
+// Links - ACTUAL SITE COLORS
+$link-color:                  $wfrc-secondary;        // #D96E34
+$link-decoration:             underline;
+$link-hover-color:            $wfrc-secondary-light;  // #A23E02
+$link-hover-decoration:       none;
+
+// Tables
+$table-border-color:          $wfrc-primary;
+$table-group-separator-color: lighten($wfrc-primary, 40%);
+$table-caption-color:         $body-secondary;
+
+// Code blocks (Light mode)
+$code-block-bg:              white;
+$code-block-border:          $wfrc-border-light;
+
+// Inline code (Light mode)
+$code-color:                  $wfrc-primary;
+$code-bg:                     $wfrc-accent-light;
+
+// Table of contents
+$toc-color:                   $link-color;
+$toc-active-border:           $toc-color;
+$toc-inactive-border:         lighten($toc-color, 50%);
+
+// Navbar
+$navbar-fg:                   $wfrc-secondary;
+
+// Footer
+$footer-fg:                   $wfrc-primary;
+
+// Miscellaneous
+$gray-200:                    lighten($wfrc-primary, 60%);
+
+/*-- scss:rules --*/
+
+// Light mode specific styles
+
+// Code blocks
+div.sourceCode {
+  background-color: $code-block-bg;
+  border: 1px solid $code-block-border;
+}
+
+// Code with filename
+.code-with-filename .code-with-filename-file {
+  color: $code-color;
+  background-color: $code-bg;
+  border: 1px solid $code-block-border;
+  border-bottom: none;
+  pre {
+    background-color: $code-bg;
+  }
+}
+
+// Blockquotes
+.blockquote {
+  color: lighten($wfrc-primary, 15%);
+}
+
+// Pagination
+.page-link {
+  color: $wfrc-primary;
+  &:hover {
+    color: $wfrc-bg-0;
+    background-color: $wfrc-primary;
+    border-color: $wfrc-primary;
+  }
+}
+
+// Categories
+.quarto-category {
+  background-color: $wfrc-primary;
+  color: $wfrc-bg-0;
+  border-color: $wfrc-primary;
+  &:hover {
+    background-color: $wfrc-bg-0;
+    color: $wfrc-primary;
+    border-color: $wfrc-primary;
+  }
+}
+
+// Navbar title
+.navbar-title {
+  font-size: 1.00em;
+  font-weight: 500;
+  color: $wfrc-primary;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+
+  &:hover {
+    border-bottom: 1px solid $wfrc-primary !important;
+  }
+}
+
+// Navbar background
+.navbar {
+  background-color: $wfrc-bg-0 !important;  // #FFFBF2 (cream background)
+}
+
+// Listing cards
+.card {
+  background: transparent;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+// Title banner (opposite colors for light theme)
+.quarto-title-banner {
+  background-color: $wfrc-bg-0-dark !important;  // Dark background
+
+  .title, .subtitle, .quarto-title-author-name, .quarto-title-affiliation {
+    color: $wfrc-text-dark !important;  // Light text
+  }
+}
+
+// Research page title visibility in light mode
+.research .listing-pub-info p {
+  color: $wfrc-text-light !important;  // Ensure dark text in light mode
+}

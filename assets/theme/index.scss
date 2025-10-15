@@ -1,0 +1,233 @@
+/*-- scss:defaults --*/
+
+// Refernce: https://github.com/spcanelon/silvia/blob/main/assets/index.css
+
+// Import base files
+@import "colors";
+@import "fonts";
+
+/*-- scss:rules --*/
+
+// Common styles that apply to both light and dark themes
+
+// Import common CSS rules that both themes share
+
+// Social icons (common styling)
+.nav-footer-center i,
+.about-links .about-link i,
+.link-dark.me-1 i {
+  color: $wfrc-secondary !important;
+
+  &:hover {
+    color: $wfrc-secondary-light !important;
+  }
+}
+
+// Buttons (common styling)
+.btn-secondary {
+  color: $wfrc-secondary;
+  background: transparent;
+  border-radius: 5px;
+}
+
+.btn-primary:hover {
+  background-color: $wfrc-secondary;
+  border-color: $wfrc-secondary;
+}
+
+// Categories (common hover behavior)
+.listing-category {
+  color: $wfrc-secondary !important;
+  border-color: $wfrc-secondary !important;
+  &:hover {
+    background-color: $wfrc-secondary;
+    color: white !important;
+  }
+}
+
+// Navbar (common styling)
+// .navbar {
+//   background: transparent;
+// }
+//
+// Navigation positioning
+// .fixed-top {
+//   position: absolute;
+// }
+
+.navbar {
+  // Use page background color instead of transparent
+  background-color: var(--bs-body-bg) !important;
+  // Ensure it stays on top
+  z-index: 1030;
+}
+
+.navbar-nav .nav-link {
+  color: $wfrc-secondary !important;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  border-bottom: 0px hidden $wfrc-secondary;
+  margin: 0px 10px 0px 10px;
+  padding: 2px 2px 4px 2px !important;
+
+  &:hover {
+    border-bottom: 1px solid $wfrc-secondary !important;
+    padding: 2px 2px 0px 2px !important;
+  }
+}
+
+// Footer links (common styling)
+.nav-footer a {
+  color: $wfrc-secondary;
+  &:hover {
+    color: $wfrc-secondary-light;
+  }
+}
+
+.nav-footer .nav-link {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Dropdown menu items
+.navbar-nav .dropdown-menu .dropdown-item {
+  &:hover {
+    background-color: $wfrc-secondary !important;
+    color: $wfrc-bg-0 !important;
+  }
+}
+
+// Card styling (common base)
+.card {
+  border: none;
+  border-radius: 4px;
+}
+
+.card-img {
+  border-radius: 4px 4px 0px 0px;
+}
+
+// Featured image styling
+.featured-image {
+  background-size: cover;
+  background-position: center;
+  color: white;
+  box-shadow: inset 0 0 0 1000px rgba(0,38,66,0.75);
+}
+
+
+
+.aa-DetachedOverlay {
+  position: absolute;
+}
+
+// Description links
+.description a {
+  text-decoration: underline !important;
+  &:hover {
+    text-decoration: none !important;
+  }
+}
+
+// Typography (common)
+.title {
+  font-size: 2.5em;
+  font-weight: 500;
+  line-height: 1.1em;
+}
+
+.subtitle {
+  font-size: 1.2em;
+  a {
+    color: white;
+    text-decoration: underline !important;
+    &:hover {
+      text-decoration: none !important;
+    }
+  }
+}
+
+// Custom page elements from your index.scss
+#bio {
+  font-size: 1.1em;
+}
+
+#landing-icons {
+  font-size: 1.4em;
+}
+
+.about-links.subtitle {
+  font-family: "Poppins"
+}
+
+// Inline code (common styling)
+p code:not(.sourceCode),
+li code:not(.sourceCode),
+td code:not(.sourceCode) {
+  border: 1px solid $wfrc-accent;
+}
+
+// Blockquotes (common italic styling)
+.blockquote {
+  font-style: oblique;
+}
+
+// Mobile Responsive Styles
+@media screen and (max-width: 991.98px) {
+  // Social media links
+  .about-entity .about-links {
+    flex-direction: row !important;
+    justify-content: center !important;
+  }
+
+  // Navigation footer
+  .nav-footer {
+    flex-direction: row;
+
+    &-center {
+      order: 1 !important;
+      flex-basis: 100%;
+      margin: 0 0 -1.2em 0;
+    }
+
+    &-right {
+      order: 2 !important;
+      flex-basis: 100%;
+      text-align: center;
+    }
+
+    &-left {
+      order: 3 !important;
+      flex-basis: 100%;
+      text-align: center;
+    }
+  }
+
+  // Navbar mobile styles
+  .navbar {
+    &-title {
+      justify-content: center !important;
+      font-size: 0.85rem;
+    }
+
+    .quarto-navbar-tools {
+      font-size: 1.2rem;
+      text-align: left;
+    }
+  }
+}
+
+
+// Code tools dropdown items
+.dropdown-menu .dropdown-item {
+  &:hover {
+    background-color: $wfrc-secondary !important;
+    color: $wfrc-bg-0 !important;
+  }
+}
+
+// Name highlighting
+.name-highlight {
+  color: $wfrc-secondary !important;
+}

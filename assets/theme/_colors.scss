@@ -1,0 +1,39 @@
+// Color Variables with wfrc- prefix
+// Based on the colors from silviacanelon.com
+
+// Primary colors (navy blue family)
+$wfrc-primary:           #0E171E;  // Dark navy (light mode text, dark mode background)
+$wfrc-primary-light:     #4a90a4;  // Medium blue (accents)
+
+// Secondary colors (orange family) - ACTUAL COLORS FROM SITE
+$wfrc-secondary:         #D96E34;  // Main orange/coral (links)
+$wfrc-secondary-light:   #A23E02;  // Darker orange (hover states)
+
+// Accent colors
+$wfrc-accent:            #007EA7;  // Teal blue (accent color)
+$wfrc-accent-light:      #E8F4F8;  // Very light blue/cream (code backgrounds)
+$wfrc-accent-dark:       #005577;  // Dark teal (darker accent)
+
+// Background colors - ACTUAL COLORS FROM SITE
+// Light mode
+$wfrc-bg-0:              #FFFBF2;  // Light mode background (cream)
+$wfrc-bg-1:              #F8F6ED;  // Secondary background (darker cream)
+$wfrc-bg-00:             #F0EDE4;  // Tertiary background (darkest cream)
+
+// Dark mode
+$wfrc-bg-0-dark:         #0E171E;  // Dark mode background (dark navy)
+$wfrc-bg-1-dark:         #1A2B35;  // Secondary background (lighter navy)
+$wfrc-bg-00-dark:        #0A1015;  // Tertiary background (darkest navy)
+
+// Text colors - ACTUAL COLORS FROM SITE
+$wfrc-text-light:        #0E171E;  // Light mode text color (dark navy)
+$wfrc-text-dark:         #FFFBF2;  // Dark mode text color (cream)
+
+// Additional utility colors
+$wfrc-text-muted:        #6C757D;  // Muted text
+$wfrc-border-light:      #E8E5DC;  // Border color (light mode)
+$wfrc-border-dark:       #2A3B45;  // Border color (dark mode)
+$wfrc-success:           #198754;  // Success color
+$wfrc-warning:           #FFC107;  // Warning color
+$wfrc-danger:            #DC3545;  // Danger color
+$wfrc-info:              #0DCAF0;  // Info color

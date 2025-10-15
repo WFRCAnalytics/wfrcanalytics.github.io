@@ -1,0 +1,64 @@
+// Font Face Declarations
+
+// FIRA CODE - monospace for code
+@font-face {
+  font-family: 'Fira Code';
+  src: url('assets/fonts/FiraCode-VariableFont_wght.woff2') format('woff2');
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+// LORA - for headings (serif)
+@font-face {
+  font-family: 'Lora';
+  src: url('assets/fonts/Poppins-Bold.woff2') format('woff2');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+// POPPINS - Regular weight for body text
+@font-face {
+  font-family: 'Poppins';
+  src: url('assets/fonts/Poppins-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+// Medium weight for navigation, buttons, emphasis
+@font-face {
+  font-family: 'Poppins';
+  src: url('assets/fonts/Poppins-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+// Bold weight for strong emphasis, job titles, dates
+@font-face {
+  font-family: 'Poppins';
+  src: url('assets/fonts/Poppins-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+// Regular italic for emphasis in body text, references
+@font-face {
+  font-family: 'Poppins';
+  src: url('assets/fonts/Poppins-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+// Font Family Variables
+$font-family-sans-serif: "Poppins", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-serif: "Lora", serif;
+$font-family-monospace: "Fira Code", "Dank Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+// Font Settings
+$headings-font-family: $font-family-serif;
+$headings-font-weight: 400;

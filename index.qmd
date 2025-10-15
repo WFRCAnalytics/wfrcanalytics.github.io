@@ -1,0 +1,48 @@
+---
+pagetitle: Home
+image: "assets/logo/WFRC_Logo.png"
+about:
+  template: jolla
+  image-width: 12em
+  image-shape: round
+  # links:
+  #   - icon: github
+  #     aria-label: Github
+  #     href: https://github.com/ar-puuk/
+  #   - icon: linkedin
+  #     aria-label: LinkedIn
+  #     href: https://www.linkedin.com/in/arpuuk
+  #   - icon: mastodon
+  #     aria-label: Mastodon
+  #     href: https://urbanists.social/@arpuuk
+  #   - icon: bluesky
+  #     aria-label: Bluesky
+  #     href: https://bsky.app/profile/arpuuk.bsky.social
+  #   - icon: envelope
+  #     aria-label: Email
+  #     href: mailto:pukar.bhandari@outlook.com
+
+twitter-card:
+    title: Wasatch Front Regional Council
+    description: |
+      Wasatch Front - Regional Travel Demand Model
+    image: assets/logo/WFRC_Logo.png
+
+header-includes: >
+  <link rel="stylesheet" href="assets/theme/index.css">
+resources:
+  - assets/theme/index.css
+---
+
+::: {#bio}
+
+# Welcome to <span class="name-highlight">WFRC Analytics Team</span>.
+
+The Wasatch Front Regional Council builds consensus and enhances quality of life by developing and implementing visions and plans for a well-functioning multi-modal transportation system, livable communities, a strong economy, and a healthy environment.
+
+<!-- [Learn more about me &rarr;](/about.html) -->
+
+::: {#landing-icons}
+[{{< fa brands facebook title="Facebook" >}}](https://www.facebook.com/WasatchFrontRegionalCouncil){target="_blank"} &nbsp; [{{< fa brands square-x-twitter title="X (Twitter)" >}}](https://twitter.com/wasatchcouncil){target="_blank"} &nbsp; [{{< fa brands square-instagram title="Instagram" >}}](https://www.instagram.com/wasatchfrontregionalcouncil){target="_blank"} &nbsp; [{{< fa brands square-linkedin title="LinkedIn" >}}](https://www.linkedin.com/company/wasatch-front-regional-council){target="_blank"} &nbsp; [{{< fa brands youtube title="YouTube" >}}](https://www.youtube.com/@WasatchFrontRegionalCouncil){target="_blank"} &nbsp;
+:::
+:::

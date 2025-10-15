@@ -1,0 +1,192 @@
+/*-- scss:defaults --*/
+
+// Reference: https://github.com/spcanelon/silvia/blob/main/assets/silvia-theme-dark.scss
+
+// Import shared files
+@import "colors";
+@import "fonts";
+
+// Colors: Quarto variables
+$primary:                    $wfrc-primary-light;
+$secondary:                  $wfrc-secondary-light;  // Using darker orange for better contrast
+// Colors: custom variables
+$primary-dark:               $wfrc-primary;
+$secondary-light:            $wfrc-secondary;        // Lighter orange for hover
+$accent:                     $wfrc-accent;
+$accent-light:               $wfrc-accent-light;
+$accent-dark:                $wfrc-accent-dark;
+
+// Body - DARK MODE COLORS
+$body-color:                 $wfrc-text-dark;        // #FFFBF2 (cream text)
+$body-bg:                    $wfrc-bg-0-dark;        // #0E171E (dark navy background)
+$body-secondary:             #9DA3AA;
+
+// Links - ACTUAL SITE COLORS
+$link-color:                  $wfrc-secondary;        // #D96E34
+$link-decoration:             underline;
+$link-hover-color:            $wfrc-secondary-light;  // #A23E02
+$link-hover-decoration:       none;
+
+// Tables
+$table-border-color:          darken($wfrc-text-dark, 20%);
+$table-group-separator-color: darken($wfrc-text-dark, 20%);
+$table-caption-color:         $body-secondary;
+
+// Code blocks (Dark mode)
+$code-block-bg:              $wfrc-bg-1-dark;
+$code-block-border:          $wfrc-border-dark;
+
+// Inline code (Dark mode)
+$code-color:                  $body-bg;
+$code-bg:                     $wfrc-accent;
+
+// Table of contents
+$toc-color:                   $link-color;
+$toc-active-border:           $toc-color;
+$toc-inactive-border:         lighten($toc-color, 50%);
+
+// Navbar
+$navbar-fg:                   $wfrc-secondary;
+
+// Footer
+$footer-fg:                   $wfrc-text-dark;
+
+// Miscellaneous
+$gray-200:                    darken($wfrc-text-dark, 30%);
+$gray-700:                    darken($wfrc-text-dark, 30%);
+
+/*-- scss:rules --*/
+
+// Dark mode specific styles
+
+// Code blocks
+div.sourceCode {
+  background-color: $code-block-bg;
+  border: 1px solid $code-block-border;
+}
+
+// Code output
+pre code {
+  color: $wfrc-text-dark;
+}
+
+// Code with filename
+.code-with-filename .code-with-filename-file {
+  color: $code-color;
+  background-color: $code-bg !important;
+  border: 1px solid $code-block-border;
+  border-bottom: none;
+  pre {
+    background-color: $code-bg !important;
+  }
+}
+
+// Blockquotes
+.blockquote {
+  color: darken($wfrc-text-dark, 15%);
+}
+
+// Pagination
+.page-link {
+  color: $wfrc-text-dark;
+  background-color: $wfrc-bg-1-dark;
+  border-color: lighten($wfrc-bg-1-dark, 20%);
+  &:hover {
+    color: $body-bg;
+    background-color: $wfrc-primary-light;
+    border-color: $wfrc-primary-light;
+  }
+}
+
+// Categories
+.quarto-category {
+  background-color: $body-bg;
+  color: $wfrc-text-dark;
+  border-color: $wfrc-text-dark;
+  &:hover {
+    background-color: $wfrc-primary-light;
+    color: $body-bg;
+  }
+}
+
+// Navbar title
+.navbar-title {
+  font-size: 1.00em;
+  font-weight: 500;
+  color: $wfrc-text-dark;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+
+  &:hover {
+    border-bottom: 1px solid $wfrc-text-dark !important;
+  }
+}
+
+// Navbar background
+.navbar {
+  background-color: $wfrc-bg-0-dark !important;  // #0E171E (dark navy background)
+}
+
+// Listing cards
+.card {
+  background: $wfrc-bg-1-dark !important;
+  box-shadow: 1px 1px 10px $wfrc-bg-00-dark !important;
+}
+
+// Details/summaries
+details > summary {
+  color: $body-secondary;
+}
+
+// Title banner (opposite colors for dark theme)
+.quarto-title-banner {
+  background-color: $wfrc-bg-0 !important;  // Light background
+
+  .title, .subtitle, .quarto-title-author-name, .quarto-title-affiliation {
+    color: $wfrc-text-light !important;  // Dark text
+  }
+}
+
+// Filter and sort icon backgrounds
+.input-group-text {
+  background-color: $wfrc-bg-1-dark !important;
+}
+
+// Panel tabset selected tab - simple white text
+.panel-tabset .nav-tabs .nav-link.active {
+  color: $wfrc-text-dark !important;  // White text
+}
+
+// WebR cell background - correct class
+.cm-content {
+  background-color: $wfrc-bg-1-dark !important;
+}
+
+// Preserve active line highlighting
+.cm-activeLine {
+  background-color: lighten($wfrc-bg-1-dark, 10%) !important;
+}
+
+// Fix selection highlighting z-index and color
+.cm-selectionLayer {
+  z-index: 1 !important;
+}
+
+.cm-selectionBackground {
+  background-color: $wfrc-secondary !important;
+  opacity: 0.3 !important;
+}
+
+// WebR cell comment color
+.tok-comment {
+  color: $body-secondary !important;  // Uses your existing grey color
+}
+
+// Research page title visibility in dark mode
+.research .listing-pub-info p {
+  color: $wfrc-text-dark !important;  // Ensure cream text in dark mode
+}
+
+.research .project-description {
+  color: $body-secondary !important;  // Better muted color for dark mode
+}

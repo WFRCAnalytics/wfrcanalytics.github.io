@@ -1,0 +1,132 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Wasatch Front Regional Council - Analytics"
+  description: Pukar Bhandari is a Transportation Planner and Data Scientist working at the intersection of Transportation Modeling, Economic Impact Analysis, and Data Science.
+  favicon: "assets/logo/WFRC_logo.png"
+  site-url: "https://wfrcanalytics.github.io"
+
+  # repo-url: "https://https://github.com/WFRCAnalytics/wfrcanalytics.github.io"
+  # repo-actions: [source, issue]
+
+  # page-navigation: false
+  # back-to-top-navigation: false
+  # margin-header: subscribe.html
+
+  announcement:
+    icon: info-circle
+    dismissable: true
+    content: "**Alert** - This website currently contains mostly placeholder items and is currently under development."
+    type: primary
+    position: below-navbar
+
+  twitter-card:
+    creator: "@wasatchcouncil"
+    site: "@wasatchcouncil"
+    card-style: summary_large_image
+
+  open-graph: true
+  cookie-consent: false
+
+  navbar:
+    logo: assets/logo/WFRC_logo.png
+
+    right:
+      - href: about.qmd
+        text: About
+      - href: 0-source_data/index.qmd
+        text: Source Data
+        menu:
+          - text: GIS Resource
+            href: 0-source_data/0-gis_resources.qmd
+          - text: Surveys & OD
+            href: 0-source_data/1-surveys_od.qmd
+          - text: Census Data
+            href: 0-source_data/2-census_data.qmd
+          - text: StreetLight
+            href: 0-source_data/3-streetlight.qmd
+          - text: Count Data
+            href: 0-source_data/4-count_data.qmd
+          - text: CPI Inflation Indicator
+            href: 0-source_data/5-cpi_inflation_indicator.qmd
+          - text: External Subarea ID
+            href: 0-source_data/6-external_subarea_id.qmd
+      - href: 1-tdm/index.qmd
+        text: Travel Demand Model
+        menu:
+          - text: Input Development
+            href: 1-tdm/1-input_development.qmd
+          - text: Estimate Parameters
+            href: 1-tdm/2-estimate_parameters.qmd
+          - text: Model Development
+            href: 1-tdm/3-model_development.qmd
+      - href: 2-bdm/index.qmd
+        text: Bike Demand Model
+      - text: Follow Us
+        menu:
+          - icon: facebook
+            text: Facebook
+            href: https://www.facebook.com/WasatchFrontRegionalCouncil
+            target: _blank
+          - icon: twitter-x
+            text: X (Twitter)
+            href: https://twitter.com/wasatchcouncil
+            target: _blank
+          - icon: instagram
+            text: Instagram
+            href: https://www.instagram.com/wasatchfrontregionalcouncil/
+            target: _blank
+          - text: linkedin
+            href: https://www.linkedin.com/company/wasatch-front-regional-council
+            target: _blank
+          - icon: youtube
+            text: YouTube
+            href: https://www.youtube.com/user/wfrcvideo
+            target: _blank
+
+  page-footer:
+    left: 2025 Wasatch Front Regional Council &#8729; Made with [{{< fa brands r-project title="R Project" >}}](https://www.r-project.org/about.html){target=_blank}, [<img src="https://quarto.org/favicon.png" width="14">](https://quarto.org/){target=_blank}, [{{< fa brands git-alt title="Git alt logo" >}}](https://git-scm.com/){target=_blank} and [{{< fa brands github title="GitHub octocat logo" >}}](https://github.com/){target=_blank}
+    center: |
+          <a href="https://www.facebook.com/WasatchFrontRegionalCouncil" title="Facebook" target="_blank" rel="noopener">{{< fa brands facebook >}}</a>
+          &nbsp;
+          <a href="https://twitter.com/wasatchcouncil" title="X (Twitter)" target="_blank" rel="noopener">{{< fa brands square-x-twitter >}}</a>
+          &nbsp;
+          <a href="https://www.instagram.com/wasatchfrontregionalcouncil" title="Instagram" target="_blank" rel="noopener">{{< fa brands square-instagram >}}</a>
+          &nbsp;
+          <a href="https://www.linkedin.com/company/wasatch-front-regional-council" title="LinkedIn" target="_blank" rel="noopener">{{< fa brands square-linkedin >}}</a>
+          &nbsp;
+          <a href="https://www.youtube.com/user/wfrcvideo" title="YouTube" target="_blank" rel="noopener">{{< fa brands youtube >}}</a>
+          &nbsp;
+          <a href="https://github.com/WFRCAnalytics" title="GitHub" target="_blank" rel="noopener">{{< fa brands github >}}</a>
+    right:
+      - text: Contact
+        aria-label: Contact Form
+        href: contact.qmd
+      - text: License
+        aria-label: License Details
+        href: license.qmd
+cookie-consent: true
+format:
+  html:
+    respect-user-color-scheme: true
+    theme:
+      light:
+        # - "flatly"
+        - cosmo
+        - assets/theme/index.scss
+        - assets/theme/theme-light.scss
+      dark:
+        # - "darkly"
+        - assets/theme/index.scss
+        - assets/theme/theme-dark.scss
+    mainfont: "Roboto"
+    monofont: "Roboto Mono"
+    # css: assets/css/index.css
+    include-in-header:
+      - _includes/preload-fonts.html
+
+# freeze computational output
+# (see https://quarto.org/docs/projects/code-execution.html#freeze)
+freeze: auto
