@@ -95,7 +95,7 @@ website:
           &nbsp;
           <a href="https://www.instagram.com/wasatchfrontregionalcouncil" title="Instagram" target="_blank" rel="noopener">{{< fa brands square-instagram >}}</a>
           &nbsp;
-          <a href="https://www.linkedin.com/company/wasatch-front-regional-council" title="LinkedIn" target="_blank" rel="noopener">{{< fa brands square-linkedin >}}</a>
+          <a href="https://www.linkedin.com/company/wasatch-front-regional-council" title="LinkedIn" target="_blank" rel="noopener">{{< fa brands linkedin >}}</a>
           &nbsp;
           <a href="https://www.youtube.com/user/wfrcvideo" title="YouTube" target="_blank" rel="noopener">{{< fa brands youtube >}}</a>
           &nbsp;
@@ -123,7 +123,7 @@ format:
         - assets/theme/theme-dark.scss
     mainfont: "Roboto"
     monofont: "Roboto Mono"
-    # css: assets/css/index.css
+    css: assets/css/index.css
     include-in-header:
       - _includes/preload-fonts.html
 
