@@ -28,7 +28,7 @@ website:
     card-style: summary_large_image
 
   open-graph: true
-  cookie-consent: false
+  cookie-consent: true
 
   navbar:
     logo: assets/logo/WFRC_logo.png
@@ -112,7 +112,7 @@ website:
       - text: License
         aria-label: License Details
         href: license.qmd
-cookie-consent: true
+
 format:
   html:
     respect-user-color-scheme: true
@@ -126,8 +126,8 @@ format:
         # - "darkly"
         - assets/theme/index.scss
         - assets/theme/theme-dark.scss
-    mainfont: "Roboto"
-    monofont: "Roboto Mono"
+    mainfont: "Poppins"
+    monofont: "Fira Code"
     css: assets/css/index.css
     include-in-header:
       - _includes/preload-fonts.html
