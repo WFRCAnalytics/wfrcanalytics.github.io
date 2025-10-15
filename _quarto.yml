@@ -78,12 +78,17 @@ website:
             text: Instagram
             href: https://www.instagram.com/wasatchfrontregionalcouncil/
             target: _blank
-          - text: linkedin
+          - text: LinkedIn
+            icon: linkedin
             href: https://www.linkedin.com/company/wasatch-front-regional-council
             target: _blank
           - icon: youtube
             text: YouTube
             href: https://www.youtube.com/user/wfrcvideo
+            target: _blank
+          - icon: github
+            text: GitHub
+            href: https://github.com/WFRCAnalytics
             target: _blank
 
   page-footer:
