@@ -37,7 +37,7 @@ website:
       - href: about.qmd
         text: About
       - text: Source Data
-        href: 0-source_data/index.qmd
+        # href: 0-source_data/index.qmd
         menu:
           - text: GIS Resource
             href: 0-source_data/0-gis_resources.qmd
