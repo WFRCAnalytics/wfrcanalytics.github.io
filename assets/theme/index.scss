@@ -231,3 +231,9 @@ td code:not(.sourceCode) {
 .name-highlight {
   color: $wfrc-secondary !important;
 }
+
+// Navbar Logo
+.navbar-logo {
+  max-height: 40px; /* Adjust as needed for your desired height */
+  width: auto; /* Maintain aspect ratio */
+}

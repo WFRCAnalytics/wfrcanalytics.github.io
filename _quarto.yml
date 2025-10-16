@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "Wasatch Front Regional Council - Analytics"
+  title: "Analytics"
   description: Pukar Bhandari is a Transportation Planner and Data Scientist working at the intersection of Transportation Modeling, Economic Impact Analysis, and Data Science.
   favicon: "assets/logo/WFRC_logo.png"
   site-url: "https://wfrcanalytics.github.io"
@@ -31,7 +31,7 @@ website:
   cookie-consent: true
 
   navbar:
-    logo: assets/logo/WFRC_logo.png
+    logo: "assets/logo/WFRC logo horizontal color_transparent.png"
 
     right:
       - href: about.qmd
@@ -41,29 +41,77 @@ website:
         menu:
           - text: GIS Resource
             href: 0-source_data/0-gis_resources.qmd
+            # menu:
+            #   - text: Boundary
+            #   - text: Land Use
+            #   - text: National
+            #   - text: Road
           - text: Surveys & OD
             href: 0-source_data/1-surveys_od.qmd
+            # menu:
+            #   - text: HTS
+            #   - text: OBS
+            #   - text: OD
+            #   - text: NHTS
           - text: Census Data
             href: 0-source_data/2-census_data.qmd
+            # menu:
+            #   - text: Shapefiles (in UTM)
+            #   - text: Data
+            #   - text: Block Split
           - text: StreetLight
             href: 0-source_data/3-streetlight.qmd
+            # menu:
+              # - text: Admin
+              # - text: Data
+              # - text: Analysis
+              # - text: Training & Notes
           - text: Count Data
             href: 0-source_data/4-count_data.qmd
+            # menu:
+            #   - text: AADT
+            #   - text: CCS
+            #   - text: Temp Counts
+            #   - text: Transit
           - text: CPI Inflation Indicator
             href: 0-source_data/5-cpi_inflation_indicator.qmd
           - text: External Subarea ID
             href: 0-source_data/6-external_subarea_id.qmd
+            # menu:
+            #   - text: USTM Externals
+            #   - text: Subarea Externals
+            #   - text: Attribute Data Tables
       - text: Travel Demand Model
         # href: 1-tdm/index.qmd
         menu:
           - text: Input Development
             href: 1-tdm/1-input_development.qmd
+            # menu:
+            #   - text: Global Data
+            #   - text: TAZ
+            #   - text: SE
+            #   - text: Highway Network
+            #   - text: Transit
+            #   - text: External
+            #   - text: Segment
           - text: Estimate Parameters
             href: 1-tdm/2-estimate_parameters.qmd
+            # menu:
+            #   - text: General Parameters
+            #   - text: Input Processing
+            #   - text: Household Auto-Ownership
+            #   - text: Trip Generation
+            #   - text: Trip Distribution
+            #   - text: Mode Choice
+            #   - text: Highway Assignment
           - text: Model Development
             href: 1-tdm/3-model_development.qmd
-      - href: 2-bdm/index.qmd
-        text: Bike Demand Model
+            # menu:
+            #   - text: Version 8.x.x (Archive)
+            #   - text: Version 9.x.x (Official)
+            #   - Development Version (Beta)
+      - text: Bike Demand Model
+        href: 2-bdm/index.qmd
       - text: Follow Us
         menu:
           - icon: facebook
