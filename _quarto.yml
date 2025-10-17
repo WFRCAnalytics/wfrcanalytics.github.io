@@ -174,11 +174,14 @@ format:
     #     # - "darkly"
     #     - assets/theme/index.scss
     #     - assets/theme/theme-dark.scss
-    mainfont: "Poppins"
+    mainfont: "Roboto"
     monofont: "Fira Code"
     css: assets/css/index.css
     include-in-header:
       - _includes/preload-fonts.html
+
+# Use _brand.yml
+brand: true
 
 # freeze computational output
 # (see https://quarto.org/docs/projects/code-execution.html#freeze)
