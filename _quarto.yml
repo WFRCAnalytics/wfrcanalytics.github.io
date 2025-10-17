@@ -164,16 +164,16 @@ website:
 format:
   html:
     respect-user-color-scheme: true
-    theme:
-      light:
-        # - "flatly"
-        - cosmo
-        - assets/theme/index.scss
-        - assets/theme/theme-light.scss
-      dark:
-        # - "darkly"
-        - assets/theme/index.scss
-        - assets/theme/theme-dark.scss
+    # theme:
+    #   light:
+    #     # - "flatly"
+    #     - cosmo
+    #     - assets/theme/index.scss
+    #     - assets/theme/theme-light.scss
+    #   dark:
+    #     # - "darkly"
+    #     - assets/theme/index.scss
+    #     - assets/theme/theme-dark.scss
     mainfont: "Poppins"
     monofont: "Fira Code"
     css: assets/css/index.css
