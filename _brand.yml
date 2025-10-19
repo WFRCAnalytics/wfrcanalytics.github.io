@@ -25,8 +25,8 @@ logo:
     horizontal-white: 'assets/logo/horizontal/WFRC_logo_horizontal_white_transparent.png'
     stacked-color: 'assets/logo/stacked/WFRC_logo_stacked_color_transparent.png'
     stacked-white: 'assets/logo/stacked/WFRC_logo_stacked_white_transparent.png'
-    abbreviated-color: 'assets/logo/abbreviated/WFRC_logo_abbreviated_color_tranparent.png'
-    abbreviated-white: 'assets/logo/abbreviated/WFRC_logo_abbreviated_white_tranparent.png'
+    abbreviated-color: 'assets/logo/abbreviated/WFRC_logo_abbreviated_color_transparent.png'
+    abbreviated-white: 'assets/logo/abbreviated/WFRC_logo_abbreviated_white_transparent.png'
   large:
     light: horizontal-color
     dark: horizontal-white
