@@ -147,12 +147,6 @@ ul.task-list li input[type="checkbox"] {
 
 #license-agreement {
 
-    display: flex;
-
-    align-items: flex-start;
-
-    gap: 10px;
-
     margin: 15px 0;
 
     padding: 15px;
@@ -167,15 +161,15 @@ ul.task-list li input[type="checkbox"] {
 
 #license-checkbox {
 
-    margin-top: 3px;
-
     cursor: pointer;
 
     min-width: 18px;
 
     min-height: 18px;
 
-    flex-shrink: 0;
+    margin-right: 10px;
+
+    vertical-align: middle;
 
 }
 
@@ -190,6 +184,10 @@ ul.task-list li input[type="checkbox"] {
     line-height: 1.6;
 
     margin: 0;
+
+    display: inline;
+
+    vertical-align: middle;
 
 }
 
@@ -1144,10 +1142,17 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="callout-body-container callout-body">
 <p>Please review the WFRC Travel Demand Model terms of use and data usage agreement. Your acceptance of these terms is required as a condition to proceeding with your download or use of the model.</p>
+<p><strong>Terms Summary:</strong></p>
+<ul>
+<li>This model is provided for planning and research purposes only</li>
+<li>Proper attribution to WFRC is required in all uses and publications</li>
+<li>Model outputs should be interpreted by qualified transportation planning professionals</li>
+<li>The model is provided “as-is” without warranty of any kind</li>
+<li>Users are responsible for validating results for their specific applications</li>
+</ul>
 <div id="license-agreement">
 <p><input type="checkbox" id="license-checkbox" aria-label="Accept license agreement"> <label for="license-checkbox">I agree to the WFRC TDM terms of use and will properly cite the model in any reports or publications.</label></p>
 </div>
-<p><strong>Terms Summary:</strong> - This model is provided for planning and research purposes only - Proper attribution to WFRC is required in all uses and publications - Model outputs should be interpreted by qualified transportation planning professionals - The model is provided “as-is” without warranty of any kind - Users are responsible for validating results for their specific applications</p>
 </div>
 </div>
 </section>
@@ -1239,8 +1244,20 @@ ul.task-list li input[type="checkbox"] {
 <section id="when-to-use-an-archived-version" class="level3">
 <h3 class="anchored" data-anchor-id="when-to-use-an-archived-version">When to Use an Archived Version</h3>
 <p>Archived model versions should only be used in specific circumstances:</p>
-<p><strong>Appropriate Use Cases:</strong> - <strong>Continuity in existing studies</strong>: Complete a planning study that was initiated with an earlier model version - <strong>Comparison and validation</strong>: Research comparing model results across versions - <strong>Historical analysis</strong>: Understanding how forecasts have evolved over time - <strong>Regulatory requirements</strong>: When specific version is mandated by study scope or agreement</p>
-<p><strong>Not Recommended:</strong> - Starting new planning studies - Regional Transportation Plan (RTP) development - Air quality conformity analysis - Major corridor studies</p>
+<p><strong>Appropriate Use Cases:</strong></p>
+<ul>
+<li><strong>Continuity in existing studies</strong>: Complete a planning study that was initiated with an earlier model version</li>
+<li><strong>Comparison and validation</strong>: Research comparing model results across versions</li>
+<li><strong>Historical analysis</strong>: Understanding how forecasts have evolved over time</li>
+<li><strong>Regulatory requirements</strong>: When specific version is mandated by study scope or agreement</li>
+</ul>
+<p><strong>Not Recommended:</strong></p>
+<ul>
+<li>Starting new planning studies</li>
+<li>Regional Transportation Plan (RTP) development</li>
+<li>Air quality conformity analysis</li>
+<li>Major corridor studies</li>
+</ul>
 </section>
 <section id="recommended-practice" class="level3">
 <h3 class="anchored" data-anchor-id="recommended-practice">Recommended Practice</h3>
@@ -1341,17 +1358,39 @@ ul.task-list li input[type="checkbox"] {
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <p><strong>Base Year</strong>: 2019</p>
-<p><strong>Key Features:</strong> - New mode choice model structure with improved transit representation - Enhanced accessibility to opportunity measures - Updated household travel survey integration (2018 Utah Travel Survey) - Improved truck model using StreetLight data - Integration with REMM 3.0 for socioeconomic forecasts - Updated transit assignment procedures</p>
+<p><strong>Key Features:</strong></p>
+<ul>
+<li>New mode choice model structure with improved transit representation</li>
+<li>Enhanced accessibility to opportunity measures</li>
+<li>Updated household travel survey integration (2018 Utah Travel Survey)</li>
+<li>Improved truck model using StreetLight data</li>
+<li>Integration with REMM 3.0 for socioeconomic forecasts</li>
+<li>Updated transit assignment procedures</li>
+</ul>
 <p><strong>Software</strong>: Cube Voyager 7.0+</p>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <p><strong>Base Year</strong>: 2017</p>
-<p><strong>Key Features:</strong> - Traditional mode choice approach - Legacy accessibility measures - 2012 household travel survey - Original truck model structure - Integration with REMM 2.0 - Traditional transit assignment</p>
+<p><strong>Key Features:</strong></p>
+<ul>
+<li>Traditional mode choice approach</li>
+<li>Legacy accessibility measures</li>
+<li>2012 household travel survey</li>
+<li>Original truck model structure</li>
+<li>Integration with REMM 2.0</li>
+<li>Traditional transit assignment</li>
+</ul>
 <p><strong>Software</strong>: Cube Voyager 6.x</p>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
 <p><strong>Base Year</strong>: 2012</p>
-<p><strong>Key Features:</strong> - Legacy model structure - Older household travel survey data - Limited GIS integration - Manual network editing</p>
+<p><strong>Key Features:</strong></p>
+<ul>
+<li>Legacy model structure</li>
+<li>Older household travel survey data</li>
+<li>Limited GIS integration</li>
+<li>Manual network editing</li>
+</ul>
 <p><strong>Software</strong>: Cube Voyager 5.x</p>
 </div>
 </div>
@@ -1363,16 +1402,53 @@ ul.task-list li input[type="checkbox"] {
 <section id="upgrading-from-archived-versions" class="level3">
 <h3 class="anchored" data-anchor-id="upgrading-from-archived-versions">Upgrading from Archived Versions</h3>
 <p>If you’re currently using an archived model version and considering upgrading:</p>
-<p><strong>Step 1: Review Changes</strong> - Read <a href="../current/whats-new/overview.qmd">What’s New in 9.2.0</a> - Review major methodology changes - Understand impact on your study</p>
-<p><strong>Step 2: Assess Compatibility</strong> - Check socioeconomic data format requirements - Verify network file compatibility - Review input file formats</p>
-<p><strong>Step 3: Update Inputs</strong> - Convert socioeconomic forecasts to new format - Update network files if needed - Verify zone system compatibility</p>
-<p><strong>Step 4: Calibration Check</strong> - Run validation scenarios - Compare key outputs (VMT, mode share, volumes) - Adjust project-specific parameters if needed</p>
-<p><strong>Step 5: Validate Results</strong> - Compare major metrics between versions - Document significant differences - Validate reasonableness of changes</p>
-<p><strong>Step 6: Documentation</strong> - Update technical documentation - Note model version change in all materials - Document validation approach</p>
+<p><strong>Step 1: Review Changes</strong></p>
+<ul>
+<li>Read <a href="../current/whats-new/overview.qmd">What’s New in 9.2.0</a></li>
+<li>Review major methodology changes</li>
+<li>Understand impact on your study</li>
+</ul>
+<p><strong>Step 2: Assess Compatibility</strong></p>
+<ul>
+<li>Check socioeconomic data format requirements</li>
+<li>Verify network file compatibility</li>
+<li>Review input file formats</li>
+</ul>
+<p><strong>Step 3: Update Inputs</strong></p>
+<ul>
+<li>Convert socioeconomic forecasts to new format</li>
+<li>Update network files if needed</li>
+<li>Verify zone system compatibility</li>
+</ul>
+<p><strong>Step 4: Calibration Check</strong></p>
+<ul>
+<li>Run validation scenarios</li>
+<li>Compare key outputs (VMT, mode share, volumes)</li>
+<li>Adjust project-specific parameters if needed</li>
+</ul>
+<p><strong>Step 5: Validate Results</strong></p>
+<ul>
+<li>Compare major metrics between versions</li>
+<li>Document significant differences</li>
+<li>Validate reasonableness of changes</li>
+</ul>
+<p><strong>Step 6: Documentation</strong></p>
+<ul>
+<li>Update technical documentation</li>
+<li>Note model version change in all materials</li>
+<li>Document validation approach</li>
+</ul>
 </section>
 <section id="wfrc-assistance-available" class="level3">
 <h3 class="anchored" data-anchor-id="wfrc-assistance-available">WFRC Assistance Available</h3>
-<p>The Analytics team can provide: - <strong>Version Selection Guidance</strong>: Recommend appropriate version for your study - <strong>Migration Support</strong>: Assist with converting inputs and validating results - <strong>Interpretation</strong>: Explain differences in results between versions - <strong>Technical Assistance</strong>: Help troubleshoot issues during migration - <strong>Training</strong>: Provide briefing on new model features</p>
+<p>The Analytics team can provide:</p>
+<ul>
+<li><strong>Version Selection Guidance</strong>: Recommend appropriate version for your study</li>
+<li><strong>Migration Support</strong>: Assist with converting inputs and validating results</li>
+<li><strong>Interpretation</strong>: Explain differences in results between versions</li>
+<li><strong>Technical Assistance</strong>: Help troubleshoot issues during migration</li>
+<li><strong>Training</strong>: Provide briefing on new model features</li>
+</ul>
 <p><a href="mailto:analytics@wfrc.org">Contact us</a> to schedule a consultation.</p>
 </section>
 </section>
@@ -1380,13 +1456,41 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="historical-release-notes">Historical Release Notes</h2>
 <section id="version-9.x-series" class="level3">
 <h3 class="anchored" data-anchor-id="version-9.x-series">Version 9.x Series</h3>
-<p><strong>9.1.0 → 9.2.0 (June 2024 → January 2025)</strong> - Highway network updates for projects completed through 2024 - New accessibility to opportunity measures by mode and time threshold - Updated socioeconomic data coordinated with REMM - Enhanced validation using 2023-2024 data sources - Performance improvements in assignment procedures</p>
-<p><strong>9.0.x → 9.1.0 (January 2024 → June 2024)</strong> - Network refinements for transit services - Calibration adjustments based on recent data - Transit service updates for Fall 2023 schedule changes - Bug fixes and performance improvements - Documentation updates</p>
-<p><strong>8.3.2 → 9.0.0 (August 2023 → January 2024)</strong> - Complete mode choice model redesign - New base year (2019 vs 2017) - Updated household travel survey integration (2018 data) - REMM 3.0 integration - Enhanced truck model using StreetLight data - New software platform (Cube 7.0) - Major documentation update</p>
+<p><strong>9.1.0 → 9.2.0 (June 2024 → January 2025)</strong></p>
+<ul>
+<li>Highway network updates for projects completed through 2024</li>
+<li>New accessibility to opportunity measures by mode and time threshold</li>
+<li>Updated socioeconomic data coordinated with REMM</li>
+<li>Enhanced validation using 2023-2024 data sources</li>
+<li>Performance improvements in assignment procedures</li>
+</ul>
+<p><strong>9.0.x → 9.1.0 (January 2024 → June 2024)</strong></p>
+<ul>
+<li>Network refinements for transit services</li>
+<li>Calibration adjustments based on recent data</li>
+<li>Transit service updates for Fall 2023 schedule changes</li>
+<li>Bug fixes and performance improvements</li>
+<li>Documentation updates</li>
+</ul>
+<p><strong>8.3.2 → 9.0.0 (August 2023 → January 2024)</strong></p>
+<ul>
+<li>Complete mode choice model redesign</li>
+<li>New base year (2019 vs 2017)</li>
+<li>Updated household travel survey integration (2018 data)</li>
+<li>REMM 3.0 integration</li>
+<li>Enhanced truck model using StreetLight data</li>
+<li>New software platform (Cube 7.0)</li>
+<li>Major documentation update</li>
+</ul>
 </section>
 <section id="version-8.x-series" class="level3">
 <h3 class="anchored" data-anchor-id="version-8.x-series">Version 8.x Series</h3>
-<p><strong>8.3.1 → 8.3.2 (June 2023 → August 2023)</strong> - Final maintenance release for 8.x series - Bug fixes only, no feature changes - Network updates for consistency</p>
+<p><strong>8.3.1 → 8.3.2 (June 2023 → August 2023)</strong></p>
+<ul>
+<li>Final maintenance release for 8.x series</li>
+<li>Bug fixes only, no feature changes</li>
+<li>Network updates for consistency</li>
+</ul>
 <p>For complete release notes, visit the <a href="https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases" target="_blank">GitHub release repository</a>.</p>
 </section>
 </section>
@@ -1420,8 +1524,12 @@ ul.task-list li input[type="checkbox"] {
 <section id="contact-information" class="level2">
 <h2 class="anchored" data-anchor-id="contact-information">Contact Information</h2>
 <p>For questions about archived model versions or assistance in selecting the appropriate version:</p>
-<p><strong>WFRC Analytics Team</strong> Email: <a href="mailto:analytics@wfrc.org">analytics@wfrc.org</a> Phone: (801) 363-4250</p>
-<p><strong>GitHub Support</strong> - <a href="https://github.com/WFRCAnalytics/wfrcanalytics.github.io/discussions" target="_blank">Submit a question</a> - <a href="https://github.com/WFRCAnalytics/wfrcanalytics.github.io/issues" target="_blank">Report an issue</a></p>
+<p><strong>WFRC Analytics Team</strong> Email: <a href="mailto:analytics@wfrc.utah.gov">analytics@wfrc.utah.gov</a> Phone: (801) 363-4250</p>
+<p><strong>GitHub Support</strong></p>
+<ul>
+<li><a href="https://github.com/WFRCAnalytics/wfrcanalytics.github.io/discussions" target="_blank">Submit a question</a></li>
+<li><a href="https://github.com/WFRCAnalytics/wfrcanalytics.github.io/issues" target="_blank">Report an issue</a></li>
+</ul>
 <hr>
 <p><em>Last Updated: January 2025</em></p>
 
