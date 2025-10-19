@@ -21,12 +21,12 @@ meta:
 
 logo:
   images:
-    horizontal-color: 'assets/logo/horizontal/WFRC logo horizontal color_transparent.png'
-    horizontal-white: 'assets/logo/horizontal/WFRC logo horizontal white_transparent.png'
-    stacked-color: 'assets/logo/stacked/WFRC logo stacked color_transparent.png'
-    stacked-white: 'assets/logo/stacked/WFRC logo stacked white_transparent.png'
-    abbreviated-color: 'assets/logo/abbreviated/WFRC logo abbreviated color_tranparent.png'
-    abbreviated-white: 'assets/logo/abbreviated/WFRC logo abbreviated white_tranparent.png'
+    horizontal-color: 'assets/logo/horizontal/WFRC_logo_horizontal_color_transparent.png'
+    horizontal-white: 'assets/logo/horizontal/WFRC_logo_horizontal_white_transparent.png'
+    stacked-color: 'assets/logo/stacked/WFRC_logo_stacked_color_transparent.png'
+    stacked-white: 'assets/logo/stacked/WFRC_logo_stacked_white_transparent.png'
+    abbreviated-color: 'assets/logo/abbreviated/WFRC_logo_abbreviated_color_tranparent.png'
+    abbreviated-white: 'assets/logo/abbreviated/WFRC_logo_abbreviated_white_tranparent.png'
   large:
     light: horizontal-color
     dark: horizontal-white

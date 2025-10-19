@@ -1,9 +1,9 @@
 ---
 pagetitle: Home
-image: 'assets/logo/horizontal/WFRC logo horizontal color_tranparent.png'
+image: 'assets/logo/horizontal/WFRC_logo_horizontal_color_tranparent.png'
 about:
   template: jolla
-  image-width: 48em
+  # image-width: 48em
   image-shape: rectangle
 
 twitter-card:
@@ -27,6 +27,7 @@ The Wasatch Front Regional Council builds consensus and enhances quality of life
 <!-- [Learn more about me &rarr;](/about.html) -->
 
 ::: {#landing-icons}
-[{{< fa brands github title="GitHub" >}}](https://github.com/WFRCAnalytics){target="_blank"} &nbsp; [{{< fa brands facebook title="Facebook" >}}](https://www.facebook.com/WasatchFrontRegionalCouncil){target="_blank"} &nbsp; [{{< fa brands square-x-twitter title="X (Twitter)" >}}](https://twitter.com/wasatchcouncil){target="_blank"} &nbsp; [{{< fa brands square-instagram title="Instagram" >}}](https://www.instagram.com/wasatchfrontregionalcouncil){target="_blank"} &nbsp; [{{< fa brands linkedin title="LinkedIn" >}}](https://www.linkedin.com/company/wasatch-front-regional-council){target="_blank"} &nbsp; [{{< fa brands youtube title="YouTube" >}}](https://www.youtube.com/@WasatchFrontRegionalCouncil){target="_blank"} &nbsp;
+<!-- [{{< fa brands github title="GitHub" >}}](https://github.com/WFRCAnalytics){target="_blank"} &nbsp; -->
+[{{< fa brands facebook title="Facebook" >}}](https://www.facebook.com/WasatchFrontRegionalCouncil){target="_blank"} &nbsp; [{{< fa brands square-x-twitter title="X (Twitter)" >}}](https://twitter.com/wasatchcouncil){target="_blank"} &nbsp; [{{< fa brands square-instagram title="Instagram" >}}](https://www.instagram.com/wasatchfrontregionalcouncil){target="_blank"} &nbsp; [{{< fa brands linkedin title="LinkedIn" >}}](https://www.linkedin.com/company/wasatch-front-regional-council){target="_blank"} &nbsp; [{{< fa brands youtube title="YouTube" >}}](https://www.youtube.com/@WasatchFrontRegionalCouncil){target="_blank"} &nbsp;
 :::
 :::

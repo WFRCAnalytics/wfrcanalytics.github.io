@@ -5,10 +5,10 @@ project:
 website:
   title: "Analytics"
   description: The Wasatch Front Regional Council builds consensus and enhances quality of life by developing and implementing visions and plans for a well-functioning multi-modal transportation system, livable communities, a strong economy, and a healthy environment.The Wasatch Front Regional Council builds consensus and enhances quality of life by developing and implementing visions and plans for a well-functioning multi-modal transportation system, livable communities, a strong economy, and a healthy environment.
-  favicon: "assets/logo/WFRC_logo.png"
-  site-url: "https://wfrcanalytics.github.io"
+  favicon: 'assets/logo/abbreviated/WFRC_logo_abbreviated_color_tranparent.png'
+  site-url: 'https://wfrcanalytics.github.io'
 
-  # repo-url: "https://https://github.com/WFRCAnalytics/wfrcanalytics.github.io"
+  # repo-url: 'https://https://github.com/WFRCAnalytics/wfrcanalytics.github.io'
   # repo-actions: [source, issue]
 
   # page-navigation: false
@@ -31,7 +31,7 @@ website:
   cookie-consent: false
 
   navbar:
-    logo: 'assets/logo/horizontal/WFRC logo horizontal color_transparent.png'
+    logo: 'assets/logo/horizontal/WFRC_logo_horizontal_color_transparent.png'
 
     right:
       - href: about.qmd
@@ -77,12 +77,19 @@ website:
             text: YouTube
             href: https://www.youtube.com/user/wfrcvideo
             target: _blank
+    tools:
+      - icon: github
+        menu:
+          - text: Source Code
+            href: https://https://github.com/WFRCAnalytics/wfrcanalytics.github.io
+            target: _blank
+          - text: Report a Bug
+            href: https://github.com/WFRCAnalytics/wfrcanalytics.github.io/issues/new
+            target: _blank
 
   page-footer:
     left: 2025 Wasatch Front Regional Council &#8729; Made with [{{< fa brands r-project title="R Project" >}}](https://www.r-project.org/about.html){target=_blank}, [<img src="https://quarto.org/favicon.png" width="14">](https://quarto.org/){target=_blank}, [{{< fa brands git-alt title="Git alt logo" >}}](https://git-scm.com/){target=_blank} and [{{< fa brands github title="GitHub octocat logo" >}}](https://github.com/){target=_blank}
-    center: |
-          <a href="https://github.com/WFRCAnalytics" title="GitHub" target="_blank" rel="noopener">{{< fa brands github >}}</a>
-          &nbsp;
+    center: | # <a href="https://github.com/WFRCAnalytics" title="GitHub" target="_blank" rel="noopener">{{< fa brands github >}}</a> &nbsp;
           <a href="https://www.facebook.com/WasatchFrontRegionalCouncil" title="Facebook" target="_blank" rel="noopener">{{< fa brands facebook >}}</a>
           &nbsp;
           <a href="https://twitter.com/wasatchcouncil" title="X (Twitter)" target="_blank" rel="noopener">{{< fa brands square-x-twitter >}}</a>
