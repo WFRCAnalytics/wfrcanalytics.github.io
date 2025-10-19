@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "Analytics"
+  title: "Analytics and Modeling"
   description: The Wasatch Front Regional Council builds consensus and enhances quality of life by developing and implementing visions and plans for a well-functioning multi-modal transportation system, livable communities, a strong economy, and a healthy environment.The Wasatch Front Regional Council builds consensus and enhances quality of life by developing and implementing visions and plans for a well-functioning multi-modal transportation system, livable communities, a strong economy, and a healthy environment.
   favicon: "assets/logo/WFRC_logo.png"
   site-url: "https://wfrcanalytics.github.io"
@@ -28,7 +28,7 @@ website:
     card-style: summary_large_image
 
   open-graph: true
-  cookie-consent: true
+  cookie-consent: false
 
   navbar:
     logo: "assets/logo/WFRC logo horizontal color_transparent.png"
@@ -36,84 +36,27 @@ website:
     right:
       - href: about.qmd
         text: About
-      - text: Source Data
-        # href: 0-source_data/index.qmd
-        menu:
-          - text: GIS Resource
-            href: 0-source_data/0-gis_resources.qmd
-            # menu:
-            #   - text: Boundary
-            #   - text: Land Use
-            #   - text: National
-            #   - text: Road
-          - text: Surveys & OD
-            href: 0-source_data/1-surveys_od.qmd
-            # menu:
-            #   - text: HTS
-            #   - text: OBS
-            #   - text: OD
-            #   - text: NHTS
-          - text: Census Data
-            href: 0-source_data/2-census_data.qmd
-            # menu:
-            #   - text: Shapefiles (in UTM)
-            #   - text: Data
-            #   - text: Block Split
-          - text: StreetLight
-            href: 0-source_data/3-streetlight.qmd
-            # menu:
-              # - text: Admin
-              # - text: Data
-              # - text: Analysis
-              # - text: Training & Notes
-          - text: Count Data
-            href: 0-source_data/4-count_data.qmd
-            # menu:
-            #   - text: AADT
-            #   - text: CCS
-            #   - text: Temp Counts
-            #   - text: Transit
-          - text: CPI Inflation Indicator
-            href: 0-source_data/5-cpi_inflation_indicator.qmd
-          - text: External Subarea ID
-            href: 0-source_data/6-external_subarea_id.qmd
-            # menu:
-            #   - text: USTM Externals
-            #   - text: Subarea Externals
-            #   - text: Attribute Data Tables
       - text: Travel Demand Model
         # href: 1-tdm/index.qmd
         menu:
-          - text: Input Development
-            href: 1-tdm/1-input_development.qmd
-            # menu:
-            #   - text: Global Data
-            #   - text: TAZ
-            #   - text: SE
-            #   - text: Highway Network
-            #   - text: Transit
-            #   - text: External
-            #   - text: Segment
-          - text: Estimate Parameters
-            href: 1-tdm/2-estimate_parameters.qmd
-            # menu:
-            #   - text: General Parameters
-            #   - text: Input Processing
-            #   - text: Household Auto-Ownership
-            #   - text: Trip Generation
-            #   - text: Trip Distribution
-            #   - text: Mode Choice
-            #   - text: Highway Assignment
-          - text: Model Development
-            href: 1-tdm/3-model_development.qmd
-            # menu:
-            #   - text: Version 8.x.x (Archive)
-            #   - text: Version 9.x.x (Official)
-            #   - Development Version (Beta)
+          - text: Current Official Release (9.2.0)
+            href: 1-tdm/official-release/index.qmd
+          - text: In-Progress Model (10.0.0 - Beta)
+            href: 1-tdm/under-development/index.qmd
+          - text: Previous Releases (Archive)
+            href: 1-tdm/previous-releases/index.qmd
+      - text: Real-Estate Market Model
+        href: 2-remm/index.qmd
       - text: Bike Demand Model
-        href: 2-bdm/index.qmd
+        href: 3-bdm/index.qmd
+      - text: Tools
+        href: 4-tools/index.qmd
       - text: Follow Us
         menu:
+          - icon: github
+            text: GitHub
+            href: https://github.com/WFRCAnalytics
+            target: _blank
           - icon: facebook
             text: Facebook
             href: https://www.facebook.com/WasatchFrontRegionalCouncil
@@ -134,14 +77,12 @@ website:
             text: YouTube
             href: https://www.youtube.com/user/wfrcvideo
             target: _blank
-          - icon: github
-            text: GitHub
-            href: https://github.com/WFRCAnalytics
-            target: _blank
 
   page-footer:
     left: 2025 Wasatch Front Regional Council &#8729; Made with [{{< fa brands r-project title="R Project" >}}](https://www.r-project.org/about.html){target=_blank}, [<img src="https://quarto.org/favicon.png" width="14">](https://quarto.org/){target=_blank}, [{{< fa brands git-alt title="Git alt logo" >}}](https://git-scm.com/){target=_blank} and [{{< fa brands github title="GitHub octocat logo" >}}](https://github.com/){target=_blank}
     center: |
+          <a href="https://github.com/WFRCAnalytics" title="GitHub" target="_blank" rel="noopener">{{< fa brands github >}}</a>
+          &nbsp;
           <a href="https://www.facebook.com/WasatchFrontRegionalCouncil" title="Facebook" target="_blank" rel="noopener">{{< fa brands facebook >}}</a>
           &nbsp;
           <a href="https://twitter.com/wasatchcouncil" title="X (Twitter)" target="_blank" rel="noopener">{{< fa brands square-x-twitter >}}</a>
@@ -151,8 +92,6 @@ website:
           <a href="https://www.linkedin.com/company/wasatch-front-regional-council" title="LinkedIn" target="_blank" rel="noopener">{{< fa brands linkedin >}}</a>
           &nbsp;
           <a href="https://www.youtube.com/user/wfrcvideo" title="YouTube" target="_blank" rel="noopener">{{< fa brands youtube >}}</a>
-          &nbsp;
-          <a href="https://github.com/WFRCAnalytics" title="GitHub" target="_blank" rel="noopener">{{< fa brands github >}}</a>
     right:
       - text: Contact
         aria-label: Contact Form
@@ -174,8 +113,8 @@ format:
     #     # - "darkly"
     #     - assets/theme/index.scss
     #     - assets/theme/theme-dark.scss
-    mainfont: "Roboto"
-    monofont: "Fira Code"
+    # mainfont: "Roboto"
+    # monofont: "Fira Code"
     css: assets/css/index.css
     include-in-header:
       - _includes/preload-fonts.html
