@@ -1,0 +1,32 @@
+{
+  "0-source_data/index.qmd": {
+    "index.html": "bfa0c05c"
+  },
+  "1-tdm/index.qmd": {
+    "index.html": "dcbbbac7"
+  },
+  "2-bdm/index.qmd": {
+    "index.html": "9d15f95f"
+  },
+  "about.qmd": {
+    "about.html": "4984c7c8"
+  },
+  "contact.qmd": {
+    "contact.html": "34794e65"
+  },
+  "index.qmd": {
+    "index.html": "360e5613"
+  },
+  "license.qmd": {
+    "license.html": "c0de9466"
+  },
+  "2-remm/index.qmd": {
+    "index.html": "eeff606d"
+  },
+  "3-bdm/index.qmd": {
+    "index.html": "1ebb3cb1"
+  },
+  "4-tools/index.qmd": {
+    "index.html": "21f05a36"
+  }
+}
