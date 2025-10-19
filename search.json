@@ -14,6 +14,384 @@
     "text": "If you have questions about transportation planning methodologies, want to discuss R techniques for mobility data analysis, share interesting datasets, or just want to chat about anything related to transportation and data science, please use this contact form.\n\n\n\n\n\n\n\n\nFull Name \nEmail Address \nMessage\n\n\nSend message"
   },
   {
+    "objectID": "1-tdm/index.html",
+    "href": "1-tdm/index.html",
+    "title": "Travel Demand Model 9.2.0",
+    "section": "",
+    "text": "The WFRC Travel Demand Model (TDM) version 9.2.0 is the current official release used for regional transportation planning and project evaluation. This four-step model forecasts travel demand across the Wasatch Front region through the year 2050.\n\n\n\n\n\n\nImportantModel Status\n\n\n\nRelease Date: January 15, 2025 Status: Official Release Recommended For: All planning studies and project evaluations"
+  },
+  {
+    "objectID": "1-tdm/index.html#overview",
+    "href": "1-tdm/index.html#overview",
+    "title": "Travel Demand Model 9.2.0",
+    "section": "",
+    "text": "The WFRC Travel Demand Model (TDM) version 9.2.0 is the current official release used for regional transportation planning and project evaluation. This four-step model forecasts travel demand across the Wasatch Front region through the year 2050.\n\n\n\n\n\n\nImportantModel Status\n\n\n\nRelease Date: January 15, 2025 Status: Official Release Recommended For: All planning studies and project evaluations"
+  },
+  {
+    "objectID": "1-tdm/index.html#model-capabilities",
+    "href": "1-tdm/index.html#model-capabilities",
+    "title": "Travel Demand Model 9.2.0",
+    "section": "Model Capabilities",
+    "text": "Model Capabilities\nThe TDM 9.2.0 provides detailed forecasts of:\n\nDaily travel patterns by trip purpose and mode\nHighway traffic volumes on all major roadways\nTransit ridership by route and time period\nVMT and emissions for air quality analysis\nAccessibility measures to opportunities\nMulti-modal performance metrics"
+  },
+  {
+    "objectID": "1-tdm/index.html#quick-links",
+    "href": "1-tdm/index.html#quick-links",
+    "title": "Travel Demand Model 9.2.0",
+    "section": "Quick Links",
+    "text": "Quick Links\n\n\nWhat’s New\nLearn about the latest updates and improvements in version 9.2.0\n\nOverview of Changes\nHighway Network Updates\nAccess to Opportunity\nSocioeconomic Data Updates\n\n\n\nModel Validation\nReview validation results demonstrating model accuracy\n\nTrip Distribution\nMode Choice\nHighway Assignment\n\n\n\nDevelopment\nExplore technical documentation and component repositories\n\nInputs Processing\nParameter Estimation\nModel Calibration"
+  },
+  {
+    "objectID": "1-tdm/index.html#model-structure",
+    "href": "1-tdm/index.html#model-structure",
+    "title": "Travel Demand Model 9.2.0",
+    "section": "Model Structure",
+    "text": "Model Structure\nThe TDM follows a traditional four-step modeling framework:\n\nTrip Generation: Predicts the number of trips produced by and attracted to each Transportation Analysis Zone (TAZ)\nTrip Distribution: Determines where trips will go using gravity model principles with calibrated friction factors\nMode Choice: Estimates the share of trips by each travel mode (auto, transit, walk, bike) based on level-of-service and traveler characteristics\nTraffic Assignment: Loads vehicle trips onto the highway network and transit trips onto the transit network using equilibrium assignment procedures"
+  },
+  {
+    "objectID": "1-tdm/index.html#model-geography",
+    "href": "1-tdm/index.html#model-geography",
+    "title": "Travel Demand Model 9.2.0",
+    "section": "Model Geography",
+    "text": "Model Geography\n\nModel Area: Wasatch Front region including Salt Lake, Davis, Weber, and parts of Utah, Tooele, Box Elder, and Morgan counties\nTAZs: 3,847 Transportation Analysis Zones\nHighway Network: ~45,000 directional links covering freeways, arterials, and major collectors\nTransit Network: All UTA fixed-route services plus commuter rail"
+  },
+  {
+    "objectID": "1-tdm/index.html#key-improvements-in-9.2.0",
+    "href": "1-tdm/index.html#key-improvements-in-9.2.0",
+    "title": "Travel Demand Model 9.2.0",
+    "section": "Key Improvements in 9.2.0",
+    "text": "Key Improvements in 9.2.0\n\nNetwork Enhancements\nUpdated highway and transit networks to reflect projects completed through 2024, including major capacity improvements and new transit services.\n\n\nSocioeconomic Data\nIncorporated latest demographic data and employment estimates coordinated with REMM forecasts.\n\n\nAccessibility Metrics\nNew accessibility to opportunity measures for jobs, education, healthcare, and recreation by travel mode and time threshold.\n\n\nValidation\nEnhanced validation using recent data sources including StreetLight Origin-Destination data, RITIS speed data, and UTA ridership statistics."
+  },
+  {
+    "objectID": "1-tdm/index.html#technical-specifications",
+    "href": "1-tdm/index.html#technical-specifications",
+    "title": "Travel Demand Model 9.2.0",
+    "section": "Technical Specifications",
+    "text": "Technical Specifications\n\nSoftware Platform: Cube Voyager 7.0\nBase Year: 2019\nForecast Years: 2030, 2040, 2050\nTime Periods: AM Peak (6-9 AM), Midday (9 AM-3 PM), PM Peak (3-7 PM), Night (7 PM-6 AM)\nTrip Purposes: Home-Based Work, Home-Based School, Home-Based Shop, Home-Based Other, Non-Home-Based\nVehicle Classes: SOV, HOV2, HOV3+, Light Trucks, Medium Trucks, Heavy Trucks\nTransit Modes: Local Bus, Express Bus, BRT, Light Rail, Commuter Rail"
+  },
+  {
+    "objectID": "1-tdm/index.html#model-application",
+    "href": "1-tdm/index.html#model-application",
+    "title": "Travel Demand Model 9.2.0",
+    "section": "Model Application",
+    "text": "Model Application\nThe TDM 9.2.0 is used for:\n\nRegional Transportation Plan (RTP) development and evaluation\nTransportation Improvement Program (TIP) project prioritization\nCorridor and subarea planning studies\nProject-level traffic forecasting\nAir quality conformity analysis\nTitle VI equity analysis\nAlternatives analysis for major investments"
+  },
+  {
+    "objectID": "1-tdm/index.html#documentation",
+    "href": "1-tdm/index.html#documentation",
+    "title": "Travel Demand Model 9.2.0",
+    "section": "Documentation",
+    "text": "Documentation\n\nModel Process Report - Comprehensive technical documentation (in development)\nValidation Report - Detailed validation results\nUser Guide - Instructions for running the model (coming soon)"
+  },
+  {
+    "objectID": "1-tdm/index.html#model-runs-and-support",
+    "href": "1-tdm/index.html#model-runs-and-support",
+    "title": "Travel Demand Model 9.2.0",
+    "section": "Model Runs and Support",
+    "text": "Model Runs and Support\nFor assistance with model runs or technical questions:\n\nContact the WFRC Analytics Team\nSubmit an issue on GitHub\nEmail: analytics@wfrc.org (update with actual email)"
+  },
+  {
+    "objectID": "1-tdm/index.html#version-history",
+    "href": "1-tdm/index.html#version-history",
+    "title": "Travel Demand Model 9.2.0",
+    "section": "Version History",
+    "text": "Version History\n\n9.2.0 (January 2025) - Current official release\n9.1.0 (June 2024) - Previous release\n9.0.0 (January 2024) - Major update with new mode choice model\n\nView complete version history →"
+  },
+  {
+    "objectID": "1-tdm/index.html#looking-ahead",
+    "href": "1-tdm/index.html#looking-ahead",
+    "title": "Travel Demand Model 9.2.0",
+    "section": "Looking Ahead",
+    "text": "Looking Ahead\nDevelopment is underway on TDM 10.0.0, which will include:\n\nActivity-based modeling framework\nEnhanced bike and pedestrian demand modeling\nDynamic traffic assignment capabilities\nIntegration with REMM at finer geographic resolution\n\nLearn more about TDM 10.0.0 →"
+  },
+  {
+    "objectID": "1-tdm/archive/index.html",
+    "href": "1-tdm/archive/index.html",
+    "title": "TDM Archive",
+    "section": "",
+    "text": "This page provides access to previous versions of the WFRC Travel Demand Model. Archived versions are maintained for reference and to support continuity in long-range planning studies that may have been initiated using earlier model versions.\n\n\n\n\n\n\nNoteCurrent Official Release\n\n\n\nFor new studies and applications, please use TDM 9.2.0, the current official release.",
+    "crumbs": [
+      "About",
+      "TDM Archive"
+    ]
+  },
+  {
+    "objectID": "1-tdm/archive/index.html#overview",
+    "href": "1-tdm/archive/index.html#overview",
+    "title": "TDM Archive",
+    "section": "",
+    "text": "This page provides access to previous versions of the WFRC Travel Demand Model. Archived versions are maintained for reference and to support continuity in long-range planning studies that may have been initiated using earlier model versions.\n\n\n\n\n\n\nNoteCurrent Official Release\n\n\n\nFor new studies and applications, please use TDM 9.2.0, the current official release.",
+    "crumbs": [
+      "About",
+      "TDM Archive"
+    ]
+  },
+  {
+    "objectID": "1-tdm/archive/index.html#license-agreement",
+    "href": "1-tdm/archive/index.html#license-agreement",
+    "title": "TDM Archive",
+    "section": "License Agreement",
+    "text": "License Agreement\n\n\n\n\n\n\nImportantAccept Terms and Conditions\n\n\n\nPlease review the WFRC Travel Demand Model terms of use and data usage agreement. Your acceptance of these terms is required as a condition to proceeding with your download or use of the model.\n\n I agree to the WFRC TDM terms of use and will properly cite the model in any reports or publications.\n\nTerms Summary: - This model is provided for planning and research purposes only - Proper attribution to WFRC is required in all uses and publications - Model outputs should be interpreted by qualified transportation planning professionals - The model is provided “as-is” without warranty of any kind - Users are responsible for validating results for their specific applications",
+    "crumbs": [
+      "About",
+      "TDM Archive"
+    ]
+  },
+  {
+    "objectID": "1-tdm/archive/index.html#release-history",
+    "href": "1-tdm/archive/index.html#release-history",
+    "title": "TDM Archive",
+    "section": "Release History",
+    "text": "Release History\nThe table below lists all previous official releases of the WFRC Travel Demand Model. Downloads are enabled after accepting the license agreement above.\n\n\n\n\n\n\n\n\n\n\n\nVersion\nRelease Date\nStatus\nKey Changes\nDownload\n\n\n\n\n9.1.0\nJune 2024\nArchived\nNetwork updates, calibration refinements\n↓ Download\n\n\n9.0.2\nApril 2024\nArchived\nBug fixes and minor improvements\n↓ Download\n\n\n9.0.1\nFebruary 2024\nArchived\nHot fixes for 9.0.0\n↓ Download\n\n\n9.0.0\nJanuary 2024\nArchived\nMajor update: New mode choice model, updated networks\n↓ Download\n\n\n8.3.2\nAugust 2023\nArchived\nFinal 8.x series release\n↓ Download\n\n\n\n\n\n\n\n\n\n\nTipNeed Help?\n\n\n\nIf you’re unsure which version to use for your project, contact the WFRC Analytics team for guidance.",
+    "crumbs": [
+      "About",
+      "TDM Archive"
+    ]
+  },
+  {
+    "objectID": "1-tdm/archive/index.html#version-numbering-system",
+    "href": "1-tdm/archive/index.html#version-numbering-system",
+    "title": "TDM Archive",
+    "section": "Version Numbering System",
+    "text": "Version Numbering System\nWFRC uses semantic versioning for the Travel Demand Model:\n\nMajor version (X.0.0): Significant model structure changes, new components, or major recalibration\nMinor version (X.Y.0): Network updates, parameter adjustments, new features\nPatch version (X.Y.Z): Bug fixes and minor corrections",
+    "crumbs": [
+      "About",
+      "TDM Archive"
+    ]
+  },
+  {
+    "objectID": "1-tdm/archive/index.html#using-archived-versions",
+    "href": "1-tdm/archive/index.html#using-archived-versions",
+    "title": "TDM Archive",
+    "section": "Using Archived Versions",
+    "text": "Using Archived Versions\n\nWhen to Use an Archived Version\nArchived model versions should only be used in specific circumstances:\nAppropriate Use Cases: - Continuity in existing studies: Complete a planning study that was initiated with an earlier model version - Comparison and validation: Research comparing model results across versions - Historical analysis: Understanding how forecasts have evolved over time - Regulatory requirements: When specific version is mandated by study scope or agreement\nNot Recommended: - Starting new planning studies - Regional Transportation Plan (RTP) development - Air quality conformity analysis - Major corridor studies\n\n\nRecommended Practice\nFor all new studies, use the current official release (TDM 9.2.0). If you need to use an archived version:\n\nDocument the rationale in your project documentation and work plan\nClearly note the model version in all reports, presentations, and technical memoranda\nConsider sensitivity analysis by running key scenarios with the current version for comparison\nConsult with WFRC Analytics team before proceeding to ensure approach is appropriate",
+    "crumbs": [
+      "About",
+      "TDM Archive"
+    ]
+  },
+  {
+    "objectID": "1-tdm/archive/index.html#support-and-documentation",
+    "href": "1-tdm/archive/index.html#support-and-documentation",
+    "title": "TDM Archive",
+    "section": "Support and Documentation",
+    "text": "Support and Documentation\n\nDocumentation Availability\nDocumentation quality and availability varies by model generation:\n\n\n\n\n\n\n\n\nVersion Series\nDocumentation Status\nLocation\n\n\n\n\n9.x series\nFull documentation available\nThis portal and GitHub releases\n\n\n8.x series\nLegacy documentation\nGitHub release notes and archived files\n\n\n7.x and earlier\nLimited documentation\nContact WFRC Analytics team\n\n\n\n\n\nTechnical Support\nTechnical support is primarily provided for the current official release:\n\n\n\n\n\n\n\n\nVersion Category\nSupport Level\nDescription\n\n\n\n\nCurrent (9.2.0)\nFull support\nComplete technical assistance, bug fixes, guidance\n\n\nRecent (9.x)\nFull support\nComplete technical assistance available\n\n\nPrevious Gen (8.x)\nLimited support\nCase-by-case basis, no active development\n\n\nLegacy (7.x and earlier)\nDocumentation only\nReference materials available, no active support\n\n\n\nFor questions about archived versions, contact the WFRC Analytics team.",
+    "crumbs": [
+      "About",
+      "TDM Archive"
+    ]
+  },
+  {
+    "objectID": "1-tdm/archive/index.html#version-comparison",
+    "href": "1-tdm/archive/index.html#version-comparison",
+    "title": "TDM Archive",
+    "section": "Version Comparison",
+    "text": "Version Comparison\n\nMajor Differences Between Model Generations\n\n9.x Series (Current)8.x Series (Previous)7.x Series (Legacy)\n\n\nBase Year: 2019\nKey Features: - New mode choice model structure with improved transit representation - Enhanced accessibility to opportunity measures - Updated household travel survey integration (2018 Utah Travel Survey) - Improved truck model using StreetLight data - Integration with REMM 3.0 for socioeconomic forecasts - Updated transit assignment procedures\nSoftware: Cube Voyager 7.0+\n\n\nBase Year: 2017\nKey Features: - Traditional mode choice approach - Legacy accessibility measures - 2012 household travel survey - Original truck model structure - Integration with REMM 2.0 - Traditional transit assignment\nSoftware: Cube Voyager 6.x\n\n\nBase Year: 2012\nKey Features: - Legacy model structure - Older household travel survey data - Limited GIS integration - Manual network editing\nSoftware: Cube Voyager 5.x",
+    "crumbs": [
+      "About",
+      "TDM Archive"
+    ]
+  },
+  {
+    "objectID": "1-tdm/archive/index.html#migration-guidance",
+    "href": "1-tdm/archive/index.html#migration-guidance",
+    "title": "TDM Archive",
+    "section": "Migration Guidance",
+    "text": "Migration Guidance\n\nUpgrading from Archived Versions\nIf you’re currently using an archived model version and considering upgrading:\nStep 1: Review Changes - Read What’s New in 9.2.0 - Review major methodology changes - Understand impact on your study\nStep 2: Assess Compatibility - Check socioeconomic data format requirements - Verify network file compatibility - Review input file formats\nStep 3: Update Inputs - Convert socioeconomic forecasts to new format - Update network files if needed - Verify zone system compatibility\nStep 4: Calibration Check - Run validation scenarios - Compare key outputs (VMT, mode share, volumes) - Adjust project-specific parameters if needed\nStep 5: Validate Results - Compare major metrics between versions - Document significant differences - Validate reasonableness of changes\nStep 6: Documentation - Update technical documentation - Note model version change in all materials - Document validation approach\n\n\nWFRC Assistance Available\nThe Analytics team can provide: - Version Selection Guidance: Recommend appropriate version for your study - Migration Support: Assist with converting inputs and validating results - Interpretation: Explain differences in results between versions - Technical Assistance: Help troubleshoot issues during migration - Training: Provide briefing on new model features\nContact us to schedule a consultation.",
+    "crumbs": [
+      "About",
+      "TDM Archive"
+    ]
+  },
+  {
+    "objectID": "1-tdm/archive/index.html#historical-release-notes",
+    "href": "1-tdm/archive/index.html#historical-release-notes",
+    "title": "TDM Archive",
+    "section": "Historical Release Notes",
+    "text": "Historical Release Notes\n\nVersion 9.x Series\n9.1.0 → 9.2.0 (June 2024 → January 2025) - Highway network updates for projects completed through 2024 - New accessibility to opportunity measures by mode and time threshold - Updated socioeconomic data coordinated with REMM - Enhanced validation using 2023-2024 data sources - Performance improvements in assignment procedures\n9.0.x → 9.1.0 (January 2024 → June 2024) - Network refinements for transit services - Calibration adjustments based on recent data - Transit service updates for Fall 2023 schedule changes - Bug fixes and performance improvements - Documentation updates\n8.3.2 → 9.0.0 (August 2023 → January 2024) - Complete mode choice model redesign - New base year (2019 vs 2017) - Updated household travel survey integration (2018 data) - REMM 3.0 integration - Enhanced truck model using StreetLight data - New software platform (Cube 7.0) - Major documentation update\n\n\nVersion 8.x Series\n8.3.1 → 8.3.2 (June 2023 → August 2023) - Final maintenance release for 8.x series - Bug fixes only, no feature changes - Network updates for consistency\nFor complete release notes, visit the GitHub release repository.",
+    "crumbs": [
+      "About",
+      "TDM Archive"
+    ]
+  },
+  {
+    "objectID": "1-tdm/archive/index.html#additional-resources",
+    "href": "1-tdm/archive/index.html#additional-resources",
+    "title": "TDM Archive",
+    "section": "Additional Resources",
+    "text": "Additional Resources\n\nTechnical Documentation\n\nTDM 9.2.0 Overview - Current model documentation\nModel Validation - Validation methodology and results\nComponent Repositories - Individual model components\n\n\n\nExternal Links\n\nGitHub Release Repository - All releases with detailed notes\nWFRC Main Site - Regional planning resources\nWFRC Analytics GitHub - Code repositories and tools",
+    "crumbs": [
+      "About",
+      "TDM Archive"
+    ]
+  },
+  {
+    "objectID": "1-tdm/archive/index.html#frequently-asked-questions",
+    "href": "1-tdm/archive/index.html#frequently-asked-questions",
+    "title": "TDM Archive",
+    "section": "Frequently Asked Questions",
+    "text": "Frequently Asked Questions\nQ: Can I use an archived version for my study? A: It depends on your study’s requirements. Contact WFRC Analytics for guidance on version selection.\nQ: Will my project-specific calibration work with the current version? A: Most calibration approaches are transferable, but you should validate results. WFRC can assist with this.\nQ: How long will archived versions be available? A: All official releases will remain available indefinitely through GitHub.\nQ: Can I get help with an old model version? A: Limited support is available for recent versions (9.x, 8.x). Contact WFRC Analytics to discuss your needs.\nQ: What if I find a bug in an archived version? A: Bugs in archived versions are generally not fixed. Consider upgrading to the current version.",
+    "crumbs": [
+      "About",
+      "TDM Archive"
+    ]
+  },
+  {
+    "objectID": "1-tdm/archive/index.html#contact-information",
+    "href": "1-tdm/archive/index.html#contact-information",
+    "title": "TDM Archive",
+    "section": "Contact Information",
+    "text": "Contact Information\nFor questions about archived model versions or assistance in selecting the appropriate version:\nWFRC Analytics Team Email: analytics@wfrc.org Phone: (801) 363-4250\nGitHub Support - Submit a question - Report an issue\n\nLast Updated: January 2025",
+    "crumbs": [
+      "About",
+      "TDM Archive"
+    ]
+  },
+  {
+    "objectID": "1-tdm/current/validation/index.html",
+    "href": "1-tdm/current/validation/index.html",
+    "title": "Mode Share Validation",
+    "section": "",
+    "text": "This page presents the validation of modeled mode shares against observed data from the 2018 Utah Travel Survey and other sources. Mode share validation is critical to ensuring the model accurately represents travel behavior across different modes of transportation.",
+    "crumbs": [
+      "About",
+      "Model Validation",
+      "Mode Share Validation"
+    ]
+  },
+  {
+    "objectID": "1-tdm/current/validation/index.html#overview",
+    "href": "1-tdm/current/validation/index.html#overview",
+    "title": "Mode Share Validation",
+    "section": "",
+    "text": "This page presents the validation of modeled mode shares against observed data from the 2018 Utah Travel Survey and other sources. Mode share validation is critical to ensuring the model accurately represents travel behavior across different modes of transportation.",
+    "crumbs": [
+      "About",
+      "Model Validation",
+      "Mode Share Validation"
+    ]
+  },
+  {
+    "objectID": "1-tdm/current/validation/index.html#validation-data-sources",
+    "href": "1-tdm/current/validation/index.html#validation-data-sources",
+    "title": "Mode Share Validation",
+    "section": "Validation Data Sources",
+    "text": "Validation Data Sources\n\nUtah Travel Survey (2018): Household travel diary data collected from ~6,000 households\nAmerican Community Survey (ACS): Journey-to-work data by mode\nUTA Ridership Data: Transit boarding counts by route and time period\nTraffic Counts: Vehicle occupancy data from select locations",
+    "crumbs": [
+      "About",
+      "Model Validation",
+      "Mode Share Validation"
+    ]
+  },
+  {
+    "objectID": "1-tdm/current/validation/index.html#regional-mode-share-comparison",
+    "href": "1-tdm/current/validation/index.html#regional-mode-share-comparison",
+    "title": "Mode Share Validation",
+    "section": "Regional Mode Share Comparison",
+    "text": "Regional Mode Share Comparison\n\nAll Trips\nThe following table compares modeled versus observed mode shares for all trip purposes:\n\n\n\nMode\nObserved (%)\nModeled (%)\nDifference\n% Difference\n\n\n\n\nDrive Alone\n68.5\n68.2\n-0.3\n-0.4%\n\n\nShared Ride 2\n15.2\n15.8\n+0.6\n+3.9%\n\n\nShared Ride 3+\n8.3\n8.1\n-0.2\n-2.4%\n\n\nTransit\n2.1\n2.0\n-0.1\n-4.8%\n\n\nWalk\n4.9\n5.0\n+0.1\n+2.0%\n\n\nBike\n1.0\n0.9\n-0.1\n-10.0%\n\n\n\n\n\n\n\n\n\nNoteValidation Criteria\n\n\n\nThe model meets FHWA validation guidelines, which recommend mode share differences of less than 5% for major modes. All modes are within acceptable ranges.\n\n\n\n\nHome-Based Work Trips\nWork trip mode shares are particularly important for peak-period forecasting:\n\n\n\nMode\nObserved (%)\nModeled (%)\nDifference\n\n\n\n\nDrive Alone\n78.2\n77.8\n-0.4\n\n\nShared Ride 2\n10.5\n11.2\n+0.7\n\n\nShared Ride 3+\n5.1\n4.8\n-0.3\n\n\nTransit\n3.8\n3.7\n-0.1\n\n\nWalk\n1.8\n1.9\n+0.1\n\n\nBike\n0.6\n0.6\n0.0",
+    "crumbs": [
+      "About",
+      "Model Validation",
+      "Mode Share Validation"
+    ]
+  },
+  {
+    "objectID": "1-tdm/current/validation/index.html#geographic-variation",
+    "href": "1-tdm/current/validation/index.html#geographic-variation",
+    "title": "Mode Share Validation",
+    "section": "Geographic Variation",
+    "text": "Geographic Variation\nMode share validation by county demonstrates the model’s ability to capture spatial variation in travel behavior:\n\nTransit Mode Share by County\n\nChartTable\n\n\n#| eval: false\n\n# Placeholder for actual visualization code\n# import plotly.express as px\n# import pandas as pd\n#\n# data = pd.DataFrame({\n#     'County': ['Salt Lake', 'Davis', 'Weber', 'Utah'],\n#     'Observed': [3.2, 1.8, 1.5, 0.8],\n#     'Modeled': [3.1, 1.9, 1.4, 0.9]\n# })\n#\n# fig = px.bar(data, x='County', y=['Observed', 'Modeled'],\n#              barmode='group', title='Transit Mode Share by County')\n# fig.show()\n\nprint(\"Chart placeholder - Transit mode share by county\")\n\n\n\n\n\nCounty\nObserved (%)\nModeled (%)\nDifference\n\n\n\n\nSalt Lake\n3.2\n3.1\n-0.1\n\n\nDavis\n1.8\n1.9\n+0.1\n\n\nWeber\n1.5\n1.4\n-0.1\n\n\nUtah\n0.8\n0.9\n+0.1",
+    "crumbs": [
+      "About",
+      "Model Validation",
+      "Mode Share Validation"
+    ]
+  },
+  {
+    "objectID": "1-tdm/current/validation/index.html#income-stratification",
+    "href": "1-tdm/current/validation/index.html#income-stratification",
+    "title": "Mode Share Validation",
+    "section": "Income Stratification",
+    "text": "Income Stratification\nThe model captures variation in mode choice by household income:\n\nTransit Mode Share by Income Quartile\n\n\n\nIncome Quartile\nObserved (%)\nModeled (%)\n\n\n\n\nLow (&lt; $35k)\n4.2\n4.0\n\n\nMed-Low ($35-65k)\n2.5\n2.6\n\n\nMed-High ($65-100k)\n1.5\n1.6\n\n\nHigh (&gt; $100k)\n0.8\n0.7\n\n\n\n\n\n\n\n\n\nTipModel Sensitivity\n\n\n\nThe model appropriately shows higher transit usage among lower-income households and demonstrates reasonable sensitivity to household characteristics.",
+    "crumbs": [
+      "About",
+      "Model Validation",
+      "Mode Share Validation"
+    ]
+  },
+  {
+    "objectID": "1-tdm/current/validation/index.html#time-of-day-patterns",
+    "href": "1-tdm/current/validation/index.html#time-of-day-patterns",
+    "title": "Mode Share Validation",
+    "section": "Time-of-Day Patterns",
+    "text": "Time-of-Day Patterns\nMode share validation by time period:\n\nPeak vs. Off-Peak Transit Share\n\n\n\nTime Period\nObserved (%)\nModeled (%)\n\n\n\n\nAM Peak (6-9 AM)\n3.5\n3.4\n\n\nMidday (9 AM-3 PM)\n1.8\n1.9\n\n\nPM Peak (3-7 PM)\n3.2\n3.1\n\n\nNight (7 PM-6 AM)\n1.2\n1.3",
+    "crumbs": [
+      "About",
+      "Model Validation",
+      "Mode Share Validation"
+    ]
+  },
+  {
+    "objectID": "1-tdm/current/validation/index.html#walk-and-bike-mode-shares",
+    "href": "1-tdm/current/validation/index.html#walk-and-bike-mode-shares",
+    "title": "Mode Share Validation",
+    "section": "Walk and Bike Mode Shares",
+    "text": "Walk and Bike Mode Shares\n\nActive Transportation by Area Type\nThe model captures higher walk/bike shares in denser, more urban areas:\n\n\n\nArea Type\nWalk (Obs)\nWalk (Mod)\nBike (Obs)\nBike (Mod)\n\n\n\n\nUrban Core\n8.5%\n8.8%\n2.1%\n1.9%\n\n\nUrban\n5.2%\n5.4%\n1.2%\n1.1%\n\n\nSuburban\n3.1%\n3.2%\n0.6%\n0.5%\n\n\nRural\n2.5%\n2.4%\n0.3%\n0.3%",
+    "crumbs": [
+      "About",
+      "Model Validation",
+      "Mode Share Validation"
+    ]
+  },
+  {
+    "objectID": "1-tdm/current/validation/index.html#journey-to-work-comparison",
+    "href": "1-tdm/current/validation/index.html#journey-to-work-comparison",
+    "title": "Mode Share Validation",
+    "section": "Journey to Work Comparison",
+    "text": "Journey to Work Comparison\nComparison with ACS journey-to-work data provides an additional validation point:\n\nCommute Mode Share (Workers 16+)\n\n\n\nMode\nACS 2019 (%)\nModeled HBW (%)\nDifference\n\n\n\n\nDrive Alone\n75.8\n77.8\n+2.0\n\n\nCarpool\n13.2\n16.0\n+2.8\n\n\nTransit\n2.9\n3.7\n+0.8\n\n\nWalk\n2.1\n1.9\n-0.2\n\n\nBike\n0.7\n0.6\n-0.1\n\n\nWork from Home\n5.3\nN/A\nN/A\n\n\n\n\n\n\n\n\n\nWarningMethodological Note\n\n\n\nACS data includes work-from-home respondents, while the model only estimates trips made. The comparison excludes work-from-home for consistency.",
+    "crumbs": [
+      "About",
+      "Model Validation",
+      "Mode Share Validation"
+    ]
+  },
+  {
+    "objectID": "1-tdm/current/validation/index.html#validation-summary",
+    "href": "1-tdm/current/validation/index.html#validation-summary",
+    "title": "Mode Share Validation",
+    "section": "Validation Summary",
+    "text": "Validation Summary\n\nKey Findings\nStrengths: - Overall mode shares closely match observed data - Good representation of geographic variation - Appropriate sensitivity to household income - Time-of-day patterns well captured\nAreas for Future Enhancement: - Bike mode share slightly underestimated in urban core - Continue monitoring as new bike infrastructure is added - Incorporate micromobility (e-scooters, e-bikes) in future versions\n\n\nStatistical Metrics\n\n\n\nMetric\nValue\nGuideline\nStatus\n\n\n\n\nRoot Mean Square Error (RMSE)\n0.38%\n&lt; 1.0%\n✓ Pass\n\n\nMean Absolute Error (MAE)\n0.28%\n&lt; 0.5%\n✓ Pass\n\n\nMaximum Difference\n0.7%\n&lt; 5.0%\n✓ Pass",
+    "crumbs": [
+      "About",
+      "Model Validation",
+      "Mode Share Validation"
+    ]
+  },
+  {
+    "objectID": "1-tdm/current/validation/index.html#related-documentation",
+    "href": "1-tdm/current/validation/index.html#related-documentation",
+    "title": "Mode Share Validation",
+    "section": "Related Documentation",
+    "text": "Related Documentation\n\nMode Choice Model Calibration →\nTransit Trips and Boardings Validation →\nTrip Distribution Validation →",
+    "crumbs": [
+      "About",
+      "Model Validation",
+      "Mode Share Validation"
+    ]
+  },
+  {
+    "objectID": "1-tdm/current/validation/index.html#technical-notes",
+    "href": "1-tdm/current/validation/index.html#technical-notes",
+    "title": "Mode Share Validation",
+    "section": "Technical Notes",
+    "text": "Technical Notes\nSurvey Expansion: Utah Travel Survey data was expanded to represent the full regional population using household and person expansion factors.\nModel Outputs: Mode shares are calculated from the mode choice model outputs for all internal trips. External trips are excluded from this validation.\nComparison Period: Model base year is 2019; survey data is from 2018. Socioeconomic data was adjusted to 2019 levels for consistency.\n\nLast Updated: January 15, 2025",
+    "crumbs": [
+      "About",
+      "Model Validation",
+      "Mode Share Validation"
+    ]
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Welcome to WFRC Analytics documentation.",

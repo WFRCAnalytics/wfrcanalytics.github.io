@@ -1,0 +1,1874 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>TDM Archive – Analytics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../assets/logo/abbreviated/WFRC_logo_abbreviated_color_tranparent.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c38f0049333ff9206208837e54a8ee10.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-281824393110b84a35ff188c8c7b2064.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c38f0049333ff9206208837e54a8ee10.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-06a5df9597e7de6a4e189ebe7782a111.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-e7e1715dfb18cdb079e34f654d6af2c4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-06a5df9597e7de6a4e189ebe7782a111.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<!-- Optimized Font Preloading -->
+
+
+
+<!-- Body text font (Poppins Regular) -->
+
+<link rel="preload" href="../../assets/fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin="">
+
+<style>
+
+/* Disabled state styling */
+
+.disabled {
+
+    pointer-events: none;
+
+    cursor: default;
+
+}
+
+
+
+.disabled-overlay {
+
+    background-color: var(--bs-secondary-bg);
+
+    border-radius: 5px;
+
+    opacity: 0.5;
+
+    transition-duration: 0.5s;
+
+}
+
+
+
+.visible {
+
+    opacity: 1;
+
+    transition-duration: 0.5s;
+
+}
+
+
+
+/* Download link styling */
+
+.download-link {
+
+    color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
+
+    text-decoration: underline;
+
+}
+
+
+
+.download-link.disabled {
+
+    color: var(--bs-secondary-color);
+
+    text-decoration: none;
+
+}
+
+
+
+/* License agreement styling */
+
+#license-agreement {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin: 15px 0;
+
+    padding: 15px;
+
+    background-color: rgba(255, 255, 255, 0.05);
+
+    border-radius: 5px;
+
+}
+
+
+
+#license-checkbox {
+
+    margin-top: 3px;
+
+    cursor: pointer;
+
+    min-width: 18px;
+
+    min-height: 18px;
+
+    flex-shrink: 0;
+
+}
+
+
+
+#license-agreement label {
+
+    cursor: pointer;
+
+    user-select: none;
+
+    line-height: 1.6;
+
+    margin: 0;
+
+}
+
+
+
+/* Download section styling */
+
+#download-section {
+
+    margin-top: 20px;
+
+}
+
+
+
+/* Highlight animation for license agreement */
+
+@keyframes highlight-pulse {
+
+    0% {
+
+        background-color: rgba(255, 193, 7, 0);
+
+    }
+
+    50% {
+
+        background-color: rgba(255, 193, 7, 0.3);
+
+    }
+
+    100% {
+
+        background-color: rgba(255, 193, 7, 0);
+
+    }
+
+}
+
+
+
+.highlight-license {
+
+    animation: highlight-pulse 1s ease-in-out;
+
+}
+
+</style>
+
+
+
+<script type="application/javascript">
+
+    // Initialize on page load
+
+    window.document.addEventListener("DOMContentLoaded", () => {
+
+        initializeLicenseAgreement();
+
+    });
+
+
+
+    /**
+
+     * Initialize license agreement functionality
+
+     */
+
+    function initializeLicenseAgreement() {
+
+        const checkbox = document.getElementById('license-checkbox');
+
+        const downloadSection = document.getElementById('download-section');
+
+
+
+        if (!checkbox || !downloadSection) {
+
+            return; // Elements not found, not on a download page
+
+        }
+
+
+
+        // Set initial state to disabled
+
+        setLinkEnablement(false);
+
+
+
+        // Check if user previously accepted (optional feature)
+
+        // Comment out these lines if you want users to accept every time
+
+        const storageKey = 'wfrc-tdm-license-accepted';
+
+        try {
+
+            const previouslyAccepted = sessionStorage.getItem(storageKey);
+
+            if (previouslyAccepted === 'true') {
+
+                checkbox.checked = true;
+
+                setLinkEnablement(true);
+
+            }
+
+        } catch (e) {
+
+            // sessionStorage might not be available (private browsing, etc.)
+
+            console.log('Unable to check previous license acceptance');
+
+        }
+
+
+
+        // Add change event listener to checkbox
+
+        checkbox.addEventListener('change', function() {
+
+            updateLicenseAgreement(this);
+
+        });
+
+    }
+
+
+
+    /**
+
+     * Enable or disable download links based on checkbox state
+
+     * @param {boolean} enable - Whether to enable or disable links
+
+     */
+
+    function setLinkEnablement(enable) {
+
+        const downloadSection = document.getElementById('download-section');
+
+        const downloadLinks = document.querySelectorAll('#download-section a.download-link');
+
+
+
+        if (!downloadSection || downloadLinks.length === 0) {
+
+            return;
+
+        }
+
+
+
+        // Apply overlay styling to entire download section
+
+        if (enable) {
+
+            downloadSection.classList.remove("disabled-overlay");
+
+            downloadSection.classList.add("visible");
+
+        } else {
+
+            downloadSection.classList.add("disabled-overlay");
+
+            downloadSection.classList.remove("visible");
+
+        }
+
+
+
+        // Enable/disable individual links
+
+        downloadLinks.forEach((link) => {
+
+            if (enable) {
+
+                link.classList.remove("disabled");
+
+                link.removeAttribute("aria-disabled");
+
+                link.removeAttribute("tabindex");
+
+            } else {
+
+                link.classList.add("disabled");
+
+                link.setAttribute("aria-disabled", "true");
+
+                link.setAttribute("tabindex", "-1");
+
+            }
+
+        });
+
+    }
+
+
+
+    /**
+
+     * Update download link states when license checkbox changes
+
+     * @param {HTMLInputElement} checkbox - The license agreement checkbox
+
+     */
+
+    function updateLicenseAgreement(checkbox) {
+
+        const isChecked = checkbox.checked;
+
+
+
+        // Enable or disable download links
+
+        setLinkEnablement(isChecked);
+
+
+
+        // Store preference in sessionStorage (persists during browser session only)
+
+        // Use localStorage instead of sessionStorage if you want it to persist between sessions
+
+        const storageKey = 'wfrc-tdm-license-accepted';
+
+        try {
+
+            if (isChecked) {
+
+                sessionStorage.setItem(storageKey, 'true');
+
+            } else {
+
+                sessionStorage.removeItem(storageKey);
+
+            }
+
+        } catch (e) {
+
+            // Storage might not be available
+
+            console.log('Unable to store license preference');
+
+        }
+
+    }
+
+
+
+    /**
+
+     * Check if license is accepted before allowing download
+
+     * Call this function in onclick handlers for download links
+
+     * @param {Event} event - The click event
+
+     * @returns {boolean} - True if license is accepted, false otherwise
+
+     */
+
+    function checkLicense(event) {
+
+        const checkbox = document.getElementById('license-checkbox');
+
+
+
+        if (!checkbox || !checkbox.checked) {
+
+            event.preventDefault();
+
+
+
+            // Show alert with custom message
+
+            alert('Please accept the WFRC TDM terms of use before downloading.\n\n' +
+
+                  'Scroll to the license agreement section above and check the box to proceed.');
+
+
+
+            // Scroll to and highlight the license agreement
+
+            const licenseSection = document.getElementById('license-agreement');
+
+            if (licenseSection) {
+
+                // Smooth scroll to license agreement
+
+                licenseSection.scrollIntoView({
+
+                    behavior: 'smooth',
+
+                    block: 'center'
+
+                });
+
+
+
+                // Add highlight animation
+
+                licenseSection.classList.add('highlight-license');
+
+
+
+                // Remove highlight class after animation completes
+
+                setTimeout(() => {
+
+                    licenseSection.classList.remove('highlight-license');
+
+                }, 1000);
+
+
+
+                // Focus on checkbox for accessibility
+
+                setTimeout(() => {
+
+                    checkbox.focus();
+
+                }, 600);
+
+            }
+
+
+
+            return false;
+
+        }
+
+
+
+        // License accepted, allow download to proceed
+
+        return true;
+
+    }
+
+
+
+    /**
+
+     * Track download events (optional - for analytics)
+
+     * @param {string} version - Model version being downloaded
+
+     * @param {string} component - Component being downloaded (e.g., 'full-model', 'docs')
+
+     */
+
+    function trackDownload(version, component) {
+
+        // Log download event
+
+        console.log(`Download initiated: TDM ${version} - ${component}`);
+
+
+
+        // If you have Google Analytics or another analytics platform, track here
+
+        // Example:
+
+        // gtag('event', 'download', {
+
+        //     'event_category': 'TDM',
+
+        //     'event_label': `${version}-${component}`,
+
+        //     'value': 1
+
+        // });
+
+    }
+
+
+
+    /**
+
+     * Copy text to clipboard with visual feedback
+
+     * Useful for copying checksums or version numbers
+
+     * @param {string} text - Text to copy
+
+     * @param {HTMLElement} element - Element that triggered the copy
+
+     */
+
+    function copyToClipboard(text, element) {
+
+        navigator.clipboard.writeText(text).then(() => {
+
+            // Show success feedback
+
+            const originalText = element.textContent;
+
+            element.textContent = '✓ Copied!';
+
+            element.style.color = 'var(--bs-success)';
+
+
+
+            // Reset after delay
+
+            setTimeout(() => {
+
+                element.textContent = originalText;
+
+                element.style.color = '';
+
+            }, 2000);
+
+        }).catch((err) => {
+
+            console.error('Failed to copy text: ', err);
+
+
+
+            // Show error feedback
+
+            const originalText = element.textContent;
+
+            element.textContent = '✗ Failed';
+
+            element.style.color = 'var(--bs-danger)';
+
+
+
+            // Reset after delay
+
+            setTimeout(() => {
+
+                element.textContent = originalText;
+
+                element.style.color = '';
+
+            }, 2000);
+
+        });
+
+    }
+
+</script>
+
+
+
+<link rel="stylesheet" href="../../assets/css/index.css">
+<meta property="og:title" content="TDM Archive – Analytics">
+<meta property="og:description" content="Previous Model Releases">
+<meta property="og:site_name" content="Analytics">
+<meta name="twitter:title" content="TDM Archive – Analytics">
+<meta name="twitter:description" content="Previous Model Releases">
+<meta name="twitter:creator" content="@wasatchcouncil">
+<meta name="twitter:site" content="@wasatchcouncil">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../assets\logo\abbreviated\WFRC_logo_abbreviated_color_transparent.png" alt="" class="navbar-logo light-content">
+    <img src="../../assets\logo\abbreviated\WFRC_logo_abbreviated_white_transparent.png" alt="" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Analytics</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-travel-demand-model" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Travel Demand Model</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-travel-demand-model">    
+        <li>
+    <a class="dropdown-item" href="../../1-tdm/current/index.html">
+ <span class="dropdown-text">Current Official Release (9.2.0)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../1-tdm/beta/index.html">
+ <span class="dropdown-text">Under Development (10.0.0 - Beta)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../1-tdm/archive/index.html">
+ <span class="dropdown-text">Archived Releases</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-real-estate-market-model" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Real-Estate Market Model</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-real-estate-market-model">    
+        <li>
+    <a class="dropdown-item" href="../../2-remm/3.0.0/index.qmd">
+ <span class="dropdown-text">Current Release (3.0.0)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../2-remm/3.0.2/index.qmd">
+ <span class="dropdown-text">Under Development (Beta)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../2-remm/archive/index.html">
+ <span class="dropdown-text">Archived Releases</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bike-demand-model" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Bike Demand Model</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-bike-demand-model">    
+        <li>
+    <a class="dropdown-item" href="../../3-bdm/current/index.html">
+ <span class="dropdown-text">Current Release</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../3-bdm/beta/index.html">
+ <span class="dropdown-text">Under Development (Beta)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../3-bdm/archive/index.html">
+ <span class="dropdown-text">Archived Releases</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../4-tools/index.html"> 
+<span class="menu-text">Tools</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-follow-us" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Follow Us</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-follow-us">    
+        <li>
+    <a class="dropdown-item" href="https://www.facebook.com/WasatchFrontRegionalCouncil" target="_blank"><i class="bi bi-facebook" role="img">
+</i> 
+ <span class="dropdown-text">Facebook</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://twitter.com/wasatchcouncil" target="_blank"><i class="bi bi-twitter-x" role="img">
+</i> 
+ <span class="dropdown-text">X (Twitter)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://www.instagram.com/wasatchfrontregionalcouncil/" target="_blank"><i class="bi bi-instagram" role="img">
+</i> 
+ <span class="dropdown-text">Instagram</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://www.linkedin.com/company/wasatch-front-regional-council" target="_blank"><i class="bi bi-linkedin" role="img">
+</i> 
+ <span class="dropdown-text">LinkedIn</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://www.youtube.com/user/wfrcvideo" target="_blank"><i class="bi bi-youtube" role="img">
+</i> 
+ <span class="dropdown-text">YouTube</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-github"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/WFRCAnalytics/wfrcanalytics.github.io" target="_blank">
+            Source Code
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/WFRCAnalytics/wfrcanalytics.github.io/issues/new" target="_blank">
+            Report a Bug
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/WFRCAnalytics/wfrcanalytics.github.io/discussions/new/choose" target="_blank">
+            Ask a Question
+            </a>
+          </li>
+      </ul>
+    </div>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../1-tdm/archive/index.html">TDM Archive</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+  <div id="quarto-announcement" data-announcement-id="ff41a64e3ed9ef31a42d399ba7f26026" class="alert alert-primary hidden"><i class="bi bi-info-circle quarto-announcement-icon"></i><div class="quarto-announcement-content">
+<p><strong>Alert</strong> - This website currently contains mostly placeholder items and is currently under development.</p>
+</div><i class="bi bi-x-lg quarto-announcement-action"></i></div>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../assets\logo\stacked\WFRC_logo_stacked_color_transparent.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="../../assets\logo\stacked\WFRC_logo_stacked_white_transparent.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      </a>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../1-tdm/archive/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">TDM Archive</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Release History</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">1-tdm/archive/release-history.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Previous Releases</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases/tag/v9.1.0-official" class="sidebar-item-text sidebar-link" target="_blank">
+ <span class="menu-text">Version 9.1.0 (June 2024)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases/tag/v9.0.2-official" class="sidebar-item-text sidebar-link" target="_blank">
+ <span class="menu-text">Version 9.0.2 (April 2024)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases/tag/v9.0.1-official" class="sidebar-item-text sidebar-link" target="_blank">
+ <span class="menu-text">Version 9.0.1 (February 2024)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases/tag/v9.0.0-official" class="sidebar-item-text sidebar-link" target="_blank">
+ <span class="menu-text">Version 9.0.0 (January 2024)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases/tag/v8.3.2-official" class="sidebar-item-text sidebar-link" target="_blank">
+ <span class="menu-text">Version 8.3.2 (August 2023)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Resources</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases" class="sidebar-item-text sidebar-link" target="_blank">
+ <span class="menu-text">All Releases on GitHub</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../1-tdm/archive/version-comparison.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Version Comparison Guide</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content column-page-right" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">TDM Archive</h1>
+<p class="subtitle lead">Previous Model Releases</p>
+</div>
+
+
+
+<div class="quarto-title-meta column-page-right">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>This page provides access to previous versions of the WFRC Travel Demand Model. Archived versions are maintained for reference and to support continuity in long-range planning studies that may have been initiated using earlier model versions.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Current Official Release
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>For new studies and applications, please use <a href="../../1-tdm/current/index.html">TDM 9.2.0</a>, the current official release.</p>
+</div>
+</div>
+</section>
+<section id="license-agreement" class="level2">
+<h2 class="anchored" data-anchor-id="license-agreement">License Agreement</h2>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Accept Terms and Conditions
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Please review the WFRC Travel Demand Model terms of use and data usage agreement. Your acceptance of these terms is required as a condition to proceeding with your download or use of the model.</p>
+<div id="license-agreement">
+<p><input type="checkbox" id="license-checkbox" aria-label="Accept license agreement"> <label for="license-checkbox">I agree to the WFRC TDM terms of use and will properly cite the model in any reports or publications.</label></p>
+</div>
+<p><strong>Terms Summary:</strong> - This model is provided for planning and research purposes only - Proper attribution to WFRC is required in all uses and publications - Model outputs should be interpreted by qualified transportation planning professionals - The model is provided “as-is” without warranty of any kind - Users are responsible for validating results for their specific applications</p>
+</div>
+</div>
+</section>
+<section id="release-history" class="level2">
+<h2 class="anchored" data-anchor-id="release-history">Release History</h2>
+<p>The table below lists all previous official releases of the WFRC Travel Demand Model. Downloads are enabled after accepting the license agreement above.</p>
+<div id="download-section">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 25%">
+<col style="width: 14%">
+<col style="width: 24%">
+<col style="width: 18%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Version</th>
+<th>Release Date</th>
+<th>Status</th>
+<th>Key Changes</th>
+<th>Download</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>9.1.0</td>
+<td>June 2024</td>
+<td>Archived</td>
+<td>Network updates, calibration refinements</td>
+<td><a href="https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases/tag/v9.1.0-official" class="download-link" onclick="return checkLicense(event)" target="_blank">↓ Download</a></td>
+</tr>
+<tr class="even">
+<td>9.0.2</td>
+<td>April 2024</td>
+<td>Archived</td>
+<td>Bug fixes and minor improvements</td>
+<td><a href="https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases/tag/v9.0.2-official" class="download-link" onclick="return checkLicense(event)" target="_blank">↓ Download</a></td>
+</tr>
+<tr class="odd">
+<td>9.0.1</td>
+<td>February 2024</td>
+<td>Archived</td>
+<td>Hot fixes for 9.0.0</td>
+<td><a href="https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases/tag/v9.0.1-official" class="download-link" onclick="return checkLicense(event)" target="_blank">↓ Download</a></td>
+</tr>
+<tr class="even">
+<td>9.0.0</td>
+<td>January 2024</td>
+<td>Archived</td>
+<td>Major update: New mode choice model, updated networks</td>
+<td><a href="https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases/tag/v9.0.0-official" class="download-link" onclick="return checkLicense(event)" target="_blank">↓ Download</a></td>
+</tr>
+<tr class="odd">
+<td>8.3.2</td>
+<td>August 2023</td>
+<td>Archived</td>
+<td>Final 8.x series release</td>
+<td><a href="https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases/tag/v8.3.2-official" class="download-link" onclick="return checkLicense(event)" target="_blank">↓ Download</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Need Help?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you’re unsure which version to use for your project, <a href="mailto:analytics@wfrc.org">contact the WFRC Analytics team</a> for guidance.</p>
+</div>
+</div>
+</section>
+<section id="version-numbering-system" class="level2">
+<h2 class="anchored" data-anchor-id="version-numbering-system">Version Numbering System</h2>
+<p>WFRC uses semantic versioning for the Travel Demand Model:</p>
+<ul>
+<li><strong>Major version (X.0.0)</strong>: Significant model structure changes, new components, or major recalibration</li>
+<li><strong>Minor version (X.Y.0)</strong>: Network updates, parameter adjustments, new features</li>
+<li><strong>Patch version (X.Y.Z)</strong>: Bug fixes and minor corrections</li>
+</ul>
+</section>
+<section id="using-archived-versions" class="level2">
+<h2 class="anchored" data-anchor-id="using-archived-versions">Using Archived Versions</h2>
+<section id="when-to-use-an-archived-version" class="level3">
+<h3 class="anchored" data-anchor-id="when-to-use-an-archived-version">When to Use an Archived Version</h3>
+<p>Archived model versions should only be used in specific circumstances:</p>
+<p><strong>Appropriate Use Cases:</strong> - <strong>Continuity in existing studies</strong>: Complete a planning study that was initiated with an earlier model version - <strong>Comparison and validation</strong>: Research comparing model results across versions - <strong>Historical analysis</strong>: Understanding how forecasts have evolved over time - <strong>Regulatory requirements</strong>: When specific version is mandated by study scope or agreement</p>
+<p><strong>Not Recommended:</strong> - Starting new planning studies - Regional Transportation Plan (RTP) development - Air quality conformity analysis - Major corridor studies</p>
+</section>
+<section id="recommended-practice" class="level3">
+<h3 class="anchored" data-anchor-id="recommended-practice">Recommended Practice</h3>
+<p>For all new studies, use the <a href="../../1-tdm/current/index.html">current official release (TDM 9.2.0)</a>. If you need to use an archived version:</p>
+<ol type="1">
+<li><strong>Document the rationale</strong> in your project documentation and work plan</li>
+<li><strong>Clearly note the model version</strong> in all reports, presentations, and technical memoranda</li>
+<li><strong>Consider sensitivity analysis</strong> by running key scenarios with the current version for comparison</li>
+<li><strong>Consult with WFRC Analytics team</strong> before proceeding to ensure approach is appropriate</li>
+</ol>
+</section>
+</section>
+<section id="support-and-documentation" class="level2">
+<h2 class="anchored" data-anchor-id="support-and-documentation">Support and Documentation</h2>
+<section id="documentation-availability" class="level3">
+<h3 class="anchored" data-anchor-id="documentation-availability">Documentation Availability</h3>
+<p>Documentation quality and availability varies by model generation:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 34%">
+<col style="width: 44%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Version Series</th>
+<th>Documentation Status</th>
+<th>Location</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>9.x series</td>
+<td>Full documentation available</td>
+<td>This portal and GitHub releases</td>
+</tr>
+<tr class="even">
+<td>8.x series</td>
+<td>Legacy documentation</td>
+<td>GitHub release notes and archived files</td>
+</tr>
+<tr class="odd">
+<td>7.x and earlier</td>
+<td>Limited documentation</td>
+<td>Contact WFRC Analytics team</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="technical-support" class="level3">
+<h3 class="anchored" data-anchor-id="technical-support">Technical Support</h3>
+<p>Technical support is primarily provided for the current official release:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 37%">
+<col style="width: 33%">
+<col style="width: 28%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Version Category</th>
+<th>Support Level</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Current (9.2.0)</td>
+<td>Full support</td>
+<td>Complete technical assistance, bug fixes, guidance</td>
+</tr>
+<tr class="even">
+<td>Recent (9.x)</td>
+<td>Full support</td>
+<td>Complete technical assistance available</td>
+</tr>
+<tr class="odd">
+<td>Previous Gen (8.x)</td>
+<td>Limited support</td>
+<td>Case-by-case basis, no active development</td>
+</tr>
+<tr class="even">
+<td>Legacy (7.x and earlier)</td>
+<td>Documentation only</td>
+<td>Reference materials available, no active support</td>
+</tr>
+</tbody>
+</table>
+<p>For questions about archived versions, <a href="mailto:analytics@wfrc.org">contact the WFRC Analytics team</a>.</p>
+</section>
+</section>
+<section id="version-comparison" class="level2">
+<h2 class="anchored" data-anchor-id="version-comparison">Version Comparison</h2>
+<section id="major-differences-between-model-generations" class="level3">
+<h3 class="anchored" data-anchor-id="major-differences-between-model-generations">Major Differences Between Model Generations</h3>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">9.x Series (Current)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">8.x Series (Previous)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">7.x Series (Legacy)</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p><strong>Base Year</strong>: 2019</p>
+<p><strong>Key Features:</strong> - New mode choice model structure with improved transit representation - Enhanced accessibility to opportunity measures - Updated household travel survey integration (2018 Utah Travel Survey) - Improved truck model using StreetLight data - Integration with REMM 3.0 for socioeconomic forecasts - Updated transit assignment procedures</p>
+<p><strong>Software</strong>: Cube Voyager 7.0+</p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p><strong>Base Year</strong>: 2017</p>
+<p><strong>Key Features:</strong> - Traditional mode choice approach - Legacy accessibility measures - 2012 household travel survey - Original truck model structure - Integration with REMM 2.0 - Traditional transit assignment</p>
+<p><strong>Software</strong>: Cube Voyager 6.x</p>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p><strong>Base Year</strong>: 2012</p>
+<p><strong>Key Features:</strong> - Legacy model structure - Older household travel survey data - Limited GIS integration - Manual network editing</p>
+<p><strong>Software</strong>: Cube Voyager 5.x</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="migration-guidance" class="level2">
+<h2 class="anchored" data-anchor-id="migration-guidance">Migration Guidance</h2>
+<section id="upgrading-from-archived-versions" class="level3">
+<h3 class="anchored" data-anchor-id="upgrading-from-archived-versions">Upgrading from Archived Versions</h3>
+<p>If you’re currently using an archived model version and considering upgrading:</p>
+<p><strong>Step 1: Review Changes</strong> - Read <a href="../current/whats-new/overview.qmd">What’s New in 9.2.0</a> - Review major methodology changes - Understand impact on your study</p>
+<p><strong>Step 2: Assess Compatibility</strong> - Check socioeconomic data format requirements - Verify network file compatibility - Review input file formats</p>
+<p><strong>Step 3: Update Inputs</strong> - Convert socioeconomic forecasts to new format - Update network files if needed - Verify zone system compatibility</p>
+<p><strong>Step 4: Calibration Check</strong> - Run validation scenarios - Compare key outputs (VMT, mode share, volumes) - Adjust project-specific parameters if needed</p>
+<p><strong>Step 5: Validate Results</strong> - Compare major metrics between versions - Document significant differences - Validate reasonableness of changes</p>
+<p><strong>Step 6: Documentation</strong> - Update technical documentation - Note model version change in all materials - Document validation approach</p>
+</section>
+<section id="wfrc-assistance-available" class="level3">
+<h3 class="anchored" data-anchor-id="wfrc-assistance-available">WFRC Assistance Available</h3>
+<p>The Analytics team can provide: - <strong>Version Selection Guidance</strong>: Recommend appropriate version for your study - <strong>Migration Support</strong>: Assist with converting inputs and validating results - <strong>Interpretation</strong>: Explain differences in results between versions - <strong>Technical Assistance</strong>: Help troubleshoot issues during migration - <strong>Training</strong>: Provide briefing on new model features</p>
+<p><a href="mailto:analytics@wfrc.org">Contact us</a> to schedule a consultation.</p>
+</section>
+</section>
+<section id="historical-release-notes" class="level2">
+<h2 class="anchored" data-anchor-id="historical-release-notes">Historical Release Notes</h2>
+<section id="version-9.x-series" class="level3">
+<h3 class="anchored" data-anchor-id="version-9.x-series">Version 9.x Series</h3>
+<p><strong>9.1.0 → 9.2.0 (June 2024 → January 2025)</strong> - Highway network updates for projects completed through 2024 - New accessibility to opportunity measures by mode and time threshold - Updated socioeconomic data coordinated with REMM - Enhanced validation using 2023-2024 data sources - Performance improvements in assignment procedures</p>
+<p><strong>9.0.x → 9.1.0 (January 2024 → June 2024)</strong> - Network refinements for transit services - Calibration adjustments based on recent data - Transit service updates for Fall 2023 schedule changes - Bug fixes and performance improvements - Documentation updates</p>
+<p><strong>8.3.2 → 9.0.0 (August 2023 → January 2024)</strong> - Complete mode choice model redesign - New base year (2019 vs 2017) - Updated household travel survey integration (2018 data) - REMM 3.0 integration - Enhanced truck model using StreetLight data - New software platform (Cube 7.0) - Major documentation update</p>
+</section>
+<section id="version-8.x-series" class="level3">
+<h3 class="anchored" data-anchor-id="version-8.x-series">Version 8.x Series</h3>
+<p><strong>8.3.1 → 8.3.2 (June 2023 → August 2023)</strong> - Final maintenance release for 8.x series - Bug fixes only, no feature changes - Network updates for consistency</p>
+<p>For complete release notes, visit the <a href="https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases" target="_blank">GitHub release repository</a>.</p>
+</section>
+</section>
+<section id="additional-resources" class="level2">
+<h2 class="anchored" data-anchor-id="additional-resources">Additional Resources</h2>
+<section id="technical-documentation" class="level3">
+<h3 class="anchored" data-anchor-id="technical-documentation">Technical Documentation</h3>
+<ul>
+<li><a href="../../1-tdm/current/index.html">TDM 9.2.0 Overview</a> - Current model documentation</li>
+<li><a href="../../1-tdm/current/validation/index.html">Model Validation</a> - Validation methodology and results</li>
+<li><a href="../current/development/index.qmd">Component Repositories</a> - Individual model components</li>
+</ul>
+</section>
+<section id="external-links" class="level3">
+<h3 class="anchored" data-anchor-id="external-links">External Links</h3>
+<ul>
+<li><a href="https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases" target="_blank">GitHub Release Repository</a> - All releases with detailed notes</li>
+<li><a href="https://wfrc.org" target="_blank">WFRC Main Site</a> - Regional planning resources</li>
+<li><a href="https://github.com/WFRCAnalytics" target="_blank">WFRC Analytics GitHub</a> - Code repositories and tools</li>
+</ul>
+</section>
+</section>
+<section id="frequently-asked-questions" class="level2">
+<h2 class="anchored" data-anchor-id="frequently-asked-questions">Frequently Asked Questions</h2>
+<p><strong>Q: Can I use an archived version for my study?</strong> A: It depends on your study’s requirements. Contact WFRC Analytics for guidance on version selection.</p>
+<p><strong>Q: Will my project-specific calibration work with the current version?</strong> A: Most calibration approaches are transferable, but you should validate results. WFRC can assist with this.</p>
+<p><strong>Q: How long will archived versions be available?</strong> A: All official releases will remain available indefinitely through GitHub.</p>
+<p><strong>Q: Can I get help with an old model version?</strong> A: Limited support is available for recent versions (9.x, 8.x). Contact WFRC Analytics to discuss your needs.</p>
+<p><strong>Q: What if I find a bug in an archived version?</strong> A: Bugs in archived versions are generally not fixed. Consider upgrading to the current version.</p>
+</section>
+<section id="contact-information" class="level2">
+<h2 class="anchored" data-anchor-id="contact-information">Contact Information</h2>
+<p>For questions about archived model versions or assistance in selecting the appropriate version:</p>
+<p><strong>WFRC Analytics Team</strong> Email: <a href="mailto:analytics@wfrc.org">analytics@wfrc.org</a> Phone: (801) 363-4250</p>
+<p><strong>GitHub Support</strong> - <a href="https://github.com/WFRCAnalytics/wfrcanalytics.github.io/discussions" target="_blank">Submit a question</a> - <a href="https://github.com/WFRCAnalytics/wfrcanalytics.github.io/issues" target="_blank">Report an issue</a></p>
+<hr>
+<p><em>Last Updated: January 2025</em></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/wfrcanalytics\.github\.io");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>2025 Wasatch Front Regional Council ∙ Made with <a href="https://www.r-project.org/about.html" target="_blank"><i class="fa-brands fa-python" title="Python" aria-label="python"></i></a>, <a href="https://quarto.org/" target="_blank"><img src="https://quarto.org/favicon.png" width="14"></a>, <a href="https://git-scm.com/" target="_blank"><i class="fa-brands fa-git-alt" title="Git alt logo" aria-label="git-alt"></i></a> and <a href="https://github.com/" target="_blank"><i class="fa-brands fa-github" title="GitHub octocat logo" aria-label="github"></i></a></p>
+</div>   
+    <div class="nav-footer-center">
+<p><a href="https://www.facebook.com/WasatchFrontRegionalCouncil" title="Facebook" target="_blank" rel="noopener"><i class="fa-brands fa-facebook" aria-label="facebook"></i></a> &nbsp; <a href="https://twitter.com/wasatchcouncil" title="X (Twitter)" target="_blank" rel="noopener"><i class="fa-brands fa-square-x-twitter" aria-label="square-x-twitter"></i></a> &nbsp; <a href="https://www.instagram.com/wasatchfrontregionalcouncil" title="Instagram" target="_blank" rel="noopener"><i class="fa-brands fa-square-instagram" aria-label="square-instagram"></i></a> &nbsp; <a href="https://www.linkedin.com/company/wasatch-front-regional-council" title="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a> &nbsp; <a href="https://www.youtube.com/user/wfrcvideo" title="YouTube" target="_blank" rel="noopener"><i class="fa-brands fa-youtube" aria-label="youtube"></i></a></p>
+</div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../contact.html">
+<p>Contact</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../license.html">
+<p>License</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
