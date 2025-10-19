@@ -1,6 +1,6 @@
 ---
 pagetitle: Home
-image: 'assets/logo/horizontal/WFRC_logo_horizontal_color_tranparent.png'
+image: 'assets/logo/horizontal/WFRC_logo_horizontal_color_transparent.png'
 about:
   template: jolla
   # image-width: 48em
@@ -10,7 +10,7 @@ twitter-card:
     title: Wasatch Front Regional Council
     description: |
       Wasatch Front - Regional Travel Demand Model
-    image: 'assets/logo/abbreviated/WFRC logo abbreviated color_tranparent.png'
+    image: 'assets/logo/abbreviated/WFRC_logo_abbreviated_color_transparent.png'
 
 header-includes: >
   <link rel="stylesheet" href="assets/theme/index.css">
