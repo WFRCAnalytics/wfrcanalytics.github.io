@@ -1,6 +1,6 @@
 ---
 pagetitle: Home
-image: 'assets/logo/horizontal/WFRC_logo_horizontal_color_transparent.png'
+image: 'assets/logo/WFRCDieCutLogo.png'
 about:
   template: jolla
   image-width: 24em
