@@ -12,7 +12,7 @@ toc: false
 }
 
 .error-code {
-  font-size: 10rem;
+  font-size: 8rem;
   font-weight: 800;
   line-height: 1;
   margin: 0;
@@ -32,7 +32,7 @@ toc: false
 
 <h1 class="error-code">404</h1>
 
-## This Path Does Not Exist
+## This Path Does Not Exist. {.text-center}
 
 Use the navigation menu above to explore our analytics and modeling documentation.
 
@@ -40,7 +40,9 @@ Use the navigation menu above to explore our analytics and modeling documentatio
 
 ---
 
+::: {.text-center}
 ## Still Can't Find What You Need?
+:::
 
 ::: {.grid}
 
