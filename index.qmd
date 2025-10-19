@@ -1,32 +1,16 @@
 ---
 pagetitle: Home
-image: "assets/logo/WFRC_Logo.png"
+image: 'assets/logo/horizontal/WFRC logo horizontal color_tranparent.png'
 about:
   template: jolla
-  image-width: 12em
-  image-shape: round
-  # links:
-  #   - icon: github
-  #     aria-label: Github
-  #     href: https://github.com/ar-puuk/
-  #   - icon: linkedin
-  #     aria-label: LinkedIn
-  #     href: https://www.linkedin.com/in/arpuuk
-  #   - icon: mastodon
-  #     aria-label: Mastodon
-  #     href: https://urbanists.social/@arpuuk
-  #   - icon: bluesky
-  #     aria-label: Bluesky
-  #     href: https://bsky.app/profile/arpuuk.bsky.social
-  #   - icon: envelope
-  #     aria-label: Email
-  #     href: mailto:pukar.bhandari@outlook.com
+  image-width: 48em
+  image-shape: rectangle
 
 twitter-card:
     title: Wasatch Front Regional Council
     description: |
       Wasatch Front - Regional Travel Demand Model
-    image: assets/logo/WFRC_Logo.png
+    image: 'assets/logo/abbreviated/WFRC logo abbreviated color_tranparent.png'
 
 header-includes: >
   <link rel="stylesheet" href="assets/theme/index.css">

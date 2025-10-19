@@ -1,7 +1,5 @@
 /*-- scss:defaults --*/
 
-// Refernce: https://github.com/spcanelon/silvia/blob/main/assets/index.css
-
 // Import base files
 @import "colors";
 @import "fonts";
@@ -10,77 +8,48 @@
 
 // Common styles that apply to both light and dark themes
 
-// Import common CSS rules that both themes share
-
-// Social icons (common styling)
-.nav-footer-center i,
-.about-links .about-link i,
-.link-dark.me-1 i {
-  color: $wfrc-secondary !important;
-
-  &:hover {
-    color: $wfrc-secondary-light !important;
-  }
-}
-
-// Buttons (common styling)
-.btn-secondary {
-  color: $wfrc-secondary;
-  background: transparent;
-  border-radius: 5px;
-}
-
-.btn-primary:hover {
-  background-color: $wfrc-secondary;
-  border-color: $wfrc-secondary;
-}
-
-// Categories (common hover behavior)
-.listing-category {
-  color: $wfrc-secondary !important;
-  border-color: $wfrc-secondary !important;
-  &:hover {
-    background-color: $wfrc-secondary;
-    color: white !important;
-  }
-}
-
-// Navbar (common styling)
-// .navbar {
-//   background: transparent;
-// }
-//
-// Navigation positioning
-// .fixed-top {
-//   position: absolute;
-// }
-
+// Navbar positioning - use page background color
 .navbar {
-  // Use page background color instead of transparent
   background-color: var(--bs-body-bg) !important;
-  // Ensure it stays on top
+  text-transform: uppercase;
+  font-family: $headings-font-family;
+  font-size: 1.00em;
+  font-weight: 700;
+  letter-spacing: .1em;
   z-index: 1030;
+
 }
 
+// Navbar links styling
 .navbar-nav .nav-link {
-  color: $wfrc-secondary !important;
-  text-transform: uppercase;
+  color: $wfrc-secondary-blue !important;
+  // text-transform: uppercase;
   letter-spacing: .1em;
-  border-bottom: 0px hidden $wfrc-secondary;
-  margin: 0px 10px 0px 10px;
+  border-bottom: 0px hidden $wfrc-secondary-blue;
+  margin: 0px 8px 0px 8px;
   padding: 2px 2px 4px 2px !important;
+  font-family: $headings-font-family;
+  font-weight: 200;
 
   &:hover {
-    border-bottom: 1px solid $wfrc-secondary !important;
+    border-bottom: 1px solid $wfrc-secondary-blue !important;
     padding: 2px 2px 0px 2px !important;
   }
 }
 
-// Footer links (common styling)
-.nav-footer a {
-  color: $wfrc-secondary;
+// Dropdown menu items
+.navbar-nav .dropdown-menu .dropdown-item {
   &:hover {
-    color: $wfrc-secondary-light;
+    background-color: $wfrc-secondary-blue !important;
+    color: $white !important;
+  }
+}
+
+// Footer links
+.nav-footer a {
+  color: $wfrc-secondary-blue;
+  &:hover {
+    color: darken($wfrc-secondary-blue, 10%);
   }
 }
 
@@ -90,15 +59,40 @@
   }
 }
 
-// Dropdown menu items
-.navbar-nav .dropdown-menu .dropdown-item {
+// Social icons
+.nav-footer-center i,
+.about-links .about-link i,
+.link-dark.me-1 i {
+  color: $wfrc-secondary-blue !important;
+
   &:hover {
-    background-color: $wfrc-secondary !important;
-    color: $wfrc-bg-0 !important;
+    color: darken($wfrc-secondary-blue, 10%) !important;
   }
 }
 
-// Card styling (common base)
+// Buttons
+.btn-secondary {
+  color: $wfrc-secondary-blue;
+  background: transparent;
+  border-radius: 5px;
+}
+
+.btn-primary:hover {
+  background-color: $wfrc-secondary-blue;
+  border-color: $wfrc-secondary-blue;
+}
+
+// Categories
+.listing-category {
+  color: $wfrc-secondary-blue !important;
+  border-color: $wfrc-secondary-blue !important;
+  &:hover {
+    background-color: $wfrc-secondary-blue;
+    color: white !important;
+  }
+}
+
+// Card styling
 .card {
   border: none;
   border-radius: 4px;
@@ -113,11 +107,10 @@
   background-size: cover;
   background-position: center;
   color: white;
-  box-shadow: inset 0 0 0 1000px rgba(0,38,66,0.75);
+  box-shadow: inset 0 0 0 1000px rgba(2, 60, 91, 0.75); // Using wfrc-blue
 }
 
-
-
+// Algolia search overlay
 .aa-DetachedOverlay {
   position: absolute;
 }
@@ -130,15 +123,17 @@
   }
 }
 
-// Typography (common)
+// Typography
 .title {
   font-size: 2.5em;
   font-weight: 500;
   line-height: 1.1em;
+  font-family: $headings-font-family;
 }
 
 .subtitle {
   font-size: 1.2em;
+  font-family: $base-font-family;
   a {
     color: white;
     text-decoration: underline !important;
@@ -148,9 +143,10 @@
   }
 }
 
-// Custom page elements from your index.scss
+// Custom page elements
 #bio {
   font-size: 1.1em;
+  font-family: $base-font-family;
 }
 
 #landing-icons {
@@ -158,19 +154,45 @@
 }
 
 .about-links.subtitle {
-  font-family: "Poppins"
+  font-family: $base-font-family;
 }
 
-// Inline code (common styling)
+// Inline code border
 p code:not(.sourceCode),
 li code:not(.sourceCode),
 td code:not(.sourceCode) {
-  border: 1px solid $wfrc-accent;
+  border: 1px solid $wfrc-secondary-blue;
 }
 
-// Blockquotes (common italic styling)
+// Blockquotes
 .blockquote {
-  font-style: oblique;
+  font-style: italic;
+}
+
+// Code tools dropdown items
+.dropdown-menu .dropdown-item {
+  &:hover {
+    background-color: $wfrc-secondary-blue !important;
+    color: $white !important;
+  }
+}
+
+// Name highlighting
+.name-highlight {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500; // Medium weight for emphasis
+}
+
+// Navbar Logo sizing
+.navbar-logo {
+  max-height: 40px;
+  width: auto;
+}
+
+// Links general styling
+a {
+  text-decoration: $link-text-decoration;
+  text-underline-offset: $link-text-underline-offset;
 }
 
 // Mobile Responsive Styles
@@ -216,24 +238,4 @@ td code:not(.sourceCode) {
       text-align: left;
     }
   }
-}
-
-
-// Code tools dropdown items
-.dropdown-menu .dropdown-item {
-  &:hover {
-    background-color: $wfrc-secondary !important;
-    color: $wfrc-bg-0 !important;
-  }
-}
-
-// Name highlighting
-.name-highlight {
-  color: $wfrc-secondary !important;
-}
-
-// Navbar Logo
-.navbar-logo {
-  max-height: 40px; /* Adjust as needed for your desired height */
-  width: auto; /* Maintain aspect ratio */
 }

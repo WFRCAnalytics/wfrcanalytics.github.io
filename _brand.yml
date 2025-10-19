@@ -10,18 +10,32 @@ meta:
     facebook: https://www.facebook.com/WasatchFrontRegionalCouncil
     instagram: https://www.instagram.com/wasatchfrontregionalcouncil/
     youtube: https://www.youtube.com/user/wfrcvideo
+  description: |
+    The Wasatch Front Regional Council builds consensus and enhances quality of
+    life by developing and implementing visions and plans for a well-functioning
+    multi-modal transportation system, livable communities, a strong economy,
+    and a healthy environment.
+  founded:
+    aog: 1969
+    mpo: 1973
 
 logo:
   images:
-    # Download official logo files from WFRC and place them in a 'logos' folder next to this file
-    header: 'assets/logo/WFRC logo horizontal color_transparent.png' # dark text + mountains (for light backgrounds)
-    header-white: 'assets/logo/WFRC logo horizontal color_transparent.png' # white text + mountains (for dark backgrounds)
-    full:
-      path: 'assets/logo/WFRC logo horizontal color_transparent.png'
-      alt: Wasatch Front Regional Council mountain logo
-  small: 'assets/logo/WFRC_logo.png' # square or favicon-friendly
-  medium: header
-  large: full
+    horizontal-color: 'assets/logo/horizontal/WFRC logo horizontal color_transparent.png'
+    horizontal-white: 'assets/logo/horizontal/WFRC logo horizontal white_transparent.png'
+    stacked-color: 'assets/logo/stacked/WFRC logo stacked color_transparent.png'
+    stacked-white: 'assets/logo/stacked/WFRC logo stacked white_transparent.png'
+    abbreviated-color: 'assets/logo/abbreviated/WFRC logo abbreviated color_tranparent.png'
+    abbreviated-white: 'assets/logo/abbreviated/WFRC logo abbreviated white_tranparent.png'
+  large:
+    light: horizontal-color
+    dark: horizontal-white
+  medium:
+    light: stacked-color
+    dark: stacked-white
+  small:
+    light: abbreviated-color
+    dark: abbreviated-white
 
 color:
   palette:

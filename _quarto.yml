@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "Analytics and Modeling"
+  title: "Analytics"
   description: The Wasatch Front Regional Council builds consensus and enhances quality of life by developing and implementing visions and plans for a well-functioning multi-modal transportation system, livable communities, a strong economy, and a healthy environment.The Wasatch Front Regional Council builds consensus and enhances quality of life by developing and implementing visions and plans for a well-functioning multi-modal transportation system, livable communities, a strong economy, and a healthy environment.
   favicon: "assets/logo/WFRC_logo.png"
   site-url: "https://wfrcanalytics.github.io"
@@ -31,7 +31,7 @@ website:
   cookie-consent: false
 
   navbar:
-    logo: "assets/logo/WFRC logo horizontal color_transparent.png"
+    logo: 'assets/logo/horizontal/WFRC logo horizontal color_transparent.png'
 
     right:
       - href: about.qmd
@@ -103,18 +103,18 @@ website:
 format:
   html:
     respect-user-color-scheme: true
-    # theme:
-    #   light:
-    #     # - "flatly"
-    #     - cosmo
-    #     - assets/theme/index.scss
-    #     - assets/theme/theme-light.scss
-    #   dark:
-    #     # - "darkly"
-    #     - assets/theme/index.scss
-    #     - assets/theme/theme-dark.scss
+    theme:
+      light:
+        # - "flatly"
+        - cosmo
+        - assets/theme/index.scss
+        - assets/theme/theme-light.scss
+      dark:
+        # - "darkly"
+        - assets/theme/index.scss
+        - assets/theme/theme-dark.scss
     # mainfont: "Roboto"
-    # monofont: "Fira Code"
+    # monofont: "Roboto Mono"
     css: assets/css/index.css
     include-in-header:
       - _includes/preload-fonts.html
