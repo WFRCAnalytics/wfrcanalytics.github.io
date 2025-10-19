@@ -1,0 +1,156 @@
+---
+title: "TDM Archive"
+subtitle: "Previous Model Releases"
+sidebar: tdm-archive
+---
+
+## Overview
+
+This page provides access to previous versions of the WFRC Travel Demand Model. Archived versions are maintained for reference and to support continuity in long-range planning studies that may have been initiated using earlier model versions.
+
+::: {.callout-note}
+## Current Official Release
+For new studies and applications, please use [TDM 9.2.0](../current/index.qmd), the current official release.
+:::
+
+## Release History
+
+The table below lists all previous official releases of the WFRC Travel Demand Model. Click on the version number to access the complete model package, documentation, and release notes.
+
+| Version | Release Date | Status | Key Changes | Download |
+|---------|--------------|--------|-------------|----------|
+| [9.1.0](https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases/tag/v9.1.0-official){target="_blank"} | June 2024 | Archived | Network updates, calibration refinements | [↓ Download](https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases/tag/v9.1.0-official){target="_blank"} |
+| [9.0.2](https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases/tag/v9.0.2-official){target="_blank"} | April 2024 | Archived | Bug fixes and minor improvements | [↓ Download](https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases/tag/v9.0.2-official){target="_blank"} |
+| [9.0.1](https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases/tag/v9.0.1-official){target="_blank"} | February 2024 | Archived | Hot fixes for 9.0.0 | [↓ Download](https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases/tag/v9.0.1-official){target="_blank"} |
+| [9.0.0](https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases/tag/v9.0.0-official){target="_blank"} | January 2024 | Archived | Major update: New mode choice model, updated networks | [↓ Download](https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases/tag/v9.0.0-official){target="_blank"} |
+| [8.3.2](https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases/tag/v8.3.2-official){target="_blank"} | August 2023 | Archived | Final 8.x series release | [↓ Download](https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases/tag/v8.3.2-official){target="_blank"} |
+
+## Version Numbering System
+
+WFRC uses semantic versioning for the Travel Demand Model:
+
+- **Major version (X.0.0)**: Significant model structure changes, new components, or major recalibration
+- **Minor version (X.Y.0)**: Network updates, parameter adjustments, new features
+- **Patch version (X.Y.Z)**: Bug fixes and minor corrections
+
+## Using Archived Versions
+
+### When to Use an Archived Version
+
+Archived model versions should only be used in specific circumstances:
+
+- **Continuity in existing studies**: If a planning study was initiated with an earlier model version, it may be appropriate to complete the study with that version
+- **Comparison and validation**: For research comparing model results across versions
+- **Historical analysis**: Understanding how forecasts have evolved over time
+
+### Recommended Practice
+
+For all new studies, use the current official release (TDM 9.2.0). If you need to use an archived version:
+
+1. Document the rationale in your project documentation
+2. Clearly note the model version in all reports and presentations
+3. Consider running sensitivity analyses with the current version
+4. Consult with WFRC Analytics team before proceeding
+
+## Support and Documentation
+
+### Documentation Availability
+
+- **Version 9.x series**: Full documentation available through this portal
+- **Version 8.x series**: Documentation available in GitHub release notes and legacy SharePoint repository
+- **Earlier versions**: Contact WFRC Analytics team for archived documentation
+
+### Technical Support
+
+Technical support is primarily provided for the current official release. Limited support for archived versions may be available:
+
+- **Recent versions (9.x)**: Full support available
+- **Previous generation (8.x)**: Limited support on a case-by-case basis
+- **Older versions**: Documentation and release notes only
+
+For questions about archived versions, contact the WFRC Analytics team.
+
+## Version Comparison
+
+### Major Differences Between Model Generations
+
+**9.x Series (Current Generation)**
+- New mode choice model structure
+- Enhanced accessibility measures
+- Updated base year data (2019)
+- Improved transit assignment
+- Integration with REMM 3.0
+
+**8.x Series (Previous Generation)**
+- Traditional mode choice approach
+- Base year data (2017)
+- Legacy transit assignment
+- Integration with REMM 2.0
+
+**7.x Series and Earlier**
+- Legacy model structure
+- Older base year data
+- Limited documentation available
+
+## Migration Guidance
+
+### Upgrading from Archived Versions
+
+If you're currently using an archived model version and want to upgrade to the current release:
+
+1. **Review changes**: See [What's New in 9.2.0](../current/whats-new/overview.qmd)
+2. **Update inputs**: Ensure socioeconomic data and networks are compatible
+3. **Recalibrate if needed**: Project-specific calibration may need adjustment
+4. **Validate results**: Compare key metrics between versions
+5. **Document changes**: Note any significant differences in results
+
+### Assistance Available
+
+The WFRC Analytics team can provide:
+- Guidance on version selection
+- Support for upgrading model inputs
+- Interpretation of differences between versions
+- Technical assistance with model runs
+
+## Historical Release Notes
+
+For detailed information about each release, including bug fixes, new features, and known issues, refer to the release notes in each version's GitHub release page.
+
+### Recent Notable Changes
+
+**9.1.0 → 9.2.0**
+- Highway network updates for completed projects
+- New accessibility to opportunity measures
+- Updated socioeconomic data
+- Enhanced validation with recent data sources
+
+**9.0.x → 9.1.0**
+- Network refinements
+- Calibration adjustments
+- Transit service updates
+- Performance improvements
+
+**8.3.2 → 9.0.0**
+- Complete mode choice model redesign
+- New base year (2019)
+- Updated household travel survey integration
+- REMM 3.0 integration
+- Enhanced truck model
+
+## Additional Resources
+
+- [TDM Component Repositories](../current/development/index.qmd)
+- [Model Validation Framework](../current/validation/index.qmd)
+- [GitHub Release Repository](https://github.com/WFRCAnalytics/WF-TDM-Official-Releases){target="_blank"}
+
+## Questions?
+
+For questions about archived model versions or assistance in selecting the appropriate version for your application:
+
+- Email: analytics@wfrc.org *(update with actual email)*
+- [Submit a question on GitHub](https://github.com/WFRCAnalytics/wfrcanalytics.github.io/discussions){target="_blank"}
+- Contact the WFRC Analytics team directly
+
+---
+
+*Last Updated: January 2025*

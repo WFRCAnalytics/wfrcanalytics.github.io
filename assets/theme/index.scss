@@ -39,6 +39,8 @@
 
 // Dropdown menu items
 .navbar-nav .dropdown-menu .dropdown-item {
+  font-weight: 100;
+
   &:hover {
     background-color: $wfrc-secondary-blue !important;
     color: $white !important;

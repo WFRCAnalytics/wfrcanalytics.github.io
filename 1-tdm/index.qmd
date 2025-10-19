@@ -1,0 +1,150 @@
+---
+title: "Travel Demand Model 9.2.0"
+subtitle: "Current Official Release"
+date: "2025-01-15"
+sidebar: tdm-920
+---
+
+## Overview
+
+The WFRC Travel Demand Model (TDM) version 9.2.0 is the current official release used for regional transportation planning and project evaluation. This four-step model forecasts travel demand across the Wasatch Front region through the year 2050.
+
+::: {.callout-important}
+## Model Status
+**Release Date:** January 15, 2025
+**Status:** Official Release
+**Recommended For:** All planning studies and project evaluations
+:::
+
+## Model Capabilities
+
+The TDM 9.2.0 provides detailed forecasts of:
+
+- **Daily travel patterns** by trip purpose and mode
+- **Highway traffic volumes** on all major roadways
+- **Transit ridership** by route and time period
+- **VMT and emissions** for air quality analysis
+- **Accessibility measures** to opportunities
+- **Multi-modal performance metrics**
+
+## Quick Links
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-4}
+### What's New
+Learn about the latest updates and improvements in version 9.2.0
+
+- [Overview of Changes](whats-new/overview.qmd)
+- [Highway Network Updates](whats-new/highway-network.qmd)
+- [Access to Opportunity](whats-new/access-to-opportunity.qmd)
+- [Socioeconomic Data Updates](whats-new/socioeconomic-data.qmd)
+:::
+
+::: {.g-col-12 .g-col-md-4}
+### Model Validation
+Review validation results demonstrating model accuracy
+
+- [Trip Distribution](validation/trip-distribution/average-trip-length.qmd)
+- [Mode Choice](validation/mode-choice/mode-share.qmd)
+- [Highway Assignment](validation/highway-assignment/volumes.qmd)
+:::
+
+::: {.g-col-12 .g-col-md-4}
+### Development
+Explore technical documentation and component repositories
+
+- [Inputs Processing](development/index.qmd#inputs-processing)
+- [Parameter Estimation](development/index.qmd#estimate-parameters)
+- [Model Calibration](development/index.qmd#model-calibration)
+:::
+
+:::
+
+## Model Structure
+
+The TDM follows a traditional four-step modeling framework:
+
+1. **Trip Generation**: Predicts the number of trips produced by and attracted to each Transportation Analysis Zone (TAZ)
+
+2. **Trip Distribution**: Determines where trips will go using gravity model principles with calibrated friction factors
+
+3. **Mode Choice**: Estimates the share of trips by each travel mode (auto, transit, walk, bike) based on level-of-service and traveler characteristics
+
+4. **Traffic Assignment**: Loads vehicle trips onto the highway network and transit trips onto the transit network using equilibrium assignment procedures
+
+## Model Geography
+
+- **Model Area**: Wasatch Front region including Salt Lake, Davis, Weber, and parts of Utah, Tooele, Box Elder, and Morgan counties
+- **TAZs**: 3,847 Transportation Analysis Zones
+- **Highway Network**: ~45,000 directional links covering freeways, arterials, and major collectors
+- **Transit Network**: All UTA fixed-route services plus commuter rail
+
+## Key Improvements in 9.2.0
+
+### Network Enhancements
+Updated highway and transit networks to reflect projects completed through 2024, including major capacity improvements and new transit services.
+
+### Socioeconomic Data
+Incorporated latest demographic data and employment estimates coordinated with REMM forecasts.
+
+### Accessibility Metrics
+New accessibility to opportunity measures for jobs, education, healthcare, and recreation by travel mode and time threshold.
+
+### Validation
+Enhanced validation using recent data sources including StreetLight Origin-Destination data, RITIS speed data, and UTA ridership statistics.
+
+## Technical Specifications
+
+- **Software Platform**: Cube Voyager 7.0
+- **Base Year**: 2019
+- **Forecast Years**: 2030, 2040, 2050
+- **Time Periods**: AM Peak (6-9 AM), Midday (9 AM-3 PM), PM Peak (3-7 PM), Night (7 PM-6 AM)
+- **Trip Purposes**: Home-Based Work, Home-Based School, Home-Based Shop, Home-Based Other, Non-Home-Based
+- **Vehicle Classes**: SOV, HOV2, HOV3+, Light Trucks, Medium Trucks, Heavy Trucks
+- **Transit Modes**: Local Bus, Express Bus, BRT, Light Rail, Commuter Rail
+
+## Model Application
+
+The TDM 9.2.0 is used for:
+
+- Regional Transportation Plan (RTP) development and evaluation
+- Transportation Improvement Program (TIP) project prioritization
+- Corridor and subarea planning studies
+- Project-level traffic forecasting
+- Air quality conformity analysis
+- Title VI equity analysis
+- Alternatives analysis for major investments
+
+## Documentation
+
+- [Model Process Report](process-report/index.qmd) - Comprehensive technical documentation *(in development)*
+- [Validation Report](validation/index.qmd) - Detailed validation results
+- [User Guide](process-report/index.qmd) - Instructions for running the model *(coming soon)*
+
+## Model Runs and Support
+
+For assistance with model runs or technical questions:
+
+- Contact the WFRC Analytics Team
+- Submit an issue on [GitHub](https://github.com/WFRCAnalytics/wfrcanalytics.github.io/issues)
+- Email: [analytics@wfrc.org](mailto:analytics@wfrc.org) *(update with actual email)*
+
+## Version History
+
+- **9.2.0** (January 2025) - Current official release
+- **9.1.0** (June 2024) - Previous release
+- **9.0.0** (January 2024) - Major update with new mode choice model
+
+[View complete version history →](../archive/release-history.qmd)
+
+## Looking Ahead
+
+Development is underway on TDM 10.0.0, which will include:
+
+- Activity-based modeling framework
+- Enhanced bike and pedestrian demand modeling
+- Dynamic traffic assignment capabilities
+- Integration with REMM at finer geographic resolution
+
+[Learn more about TDM 10.0.0 →](../10.0.0/index.qmd)

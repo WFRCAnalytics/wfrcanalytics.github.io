@@ -41,15 +41,29 @@ website:
         # href: 1-tdm/index.qmd
         menu:
           - text: Current Official Release (9.2.0)
-            href: 1-tdm/official-release/index.qmd
-          - text: In-Progress Model (10.0.0 - Beta)
-            href: 1-tdm/under-development/index.qmd
-          - text: Previous Releases (Archive)
-            href: 1-tdm/previous-releases/index.qmd
+            href: 1-tdm/current/index.qmd
+          - text: Under Development (10.0.0 - Beta)
+            href: 1-tdm/beta/index.qmd
+          - text: Archived Releases
+            href: 1-tdm/archive/index.qmd
       - text: Real-Estate Market Model
-        href: 2-remm/index.qmd
+        # href: 2-remm/index.qmd
+        menu:
+          - text: Current Release (3.0.0)
+            href: 2-remm/3.0.0/index.qmd
+          - text: Under Development (Beta)
+            href: 2-remm/3.0.2/index.qmd
+          - text: Archived Releases
+            href: 2-remm/archive/index.qmd
       - text: Bike Demand Model
-        href: 3-bdm/index.qmd
+        # href: 3-bdm/index.qmd
+        menu:
+          - text: Current Release
+            href: 3-bdm/current/index.qmd
+          - text: Under Development (Beta)
+            href: 3-bdm/beta/index.qmd
+          - text: Archived Releases
+            href: 3-bdm/archive/index.qmd
       - text: Tools
         href: 4-tools/index.qmd
       - text: Follow Us
@@ -82,14 +96,299 @@ website:
       - icon: github
         menu:
           - text: Source Code
+            # icon: "code-slash"
             href: https://github.com/WFRCAnalytics/wfrcanalytics.github.io
             target: _blank
           - text: Report a Bug
+            # icon: "bug"
             href: https://github.com/WFRCAnalytics/wfrcanalytics.github.io/issues/new
             target: _blank
+          - text: Ask a Question
+            # icon: "chat-right-text"
+            href: https://github.com/WFRCAnalytics/wfrcanalytics.github.io/discussions/new/choose
+            target: _blank
+
+  sidebar:
+    - id: tdm-current
+      title: "TDM 9.2.0"
+      search: true
+      style: "floating"
+      collapse-level: 2
+      contents:
+        - 1-tdm/current/index.qmd
+        - section: "What's New"
+          contents:
+            - 1-tdm/current/whats-new/overview.qmd
+            - 1-tdm/current/whats-new/highway-network.qmd
+            - 1-tdm/current/whats-new/access-to-opportunity.qmd
+            - 1-tdm/current/whats-new/socioeconomic-data.qmd
+        - section: "Model Validation"
+          contents:
+            - 1-tdm/current/validation/index.qmd
+            - text: "---"
+            - section: "Trip Distribution"
+              contents:
+                - 1-tdm/current/validation/trip-distribution/average-trip-length.qmd
+                - 1-tdm/current/validation/trip-distribution/trip-length-frequency.qmd
+            - section: "Mode Choice"
+              contents:
+                - 1-tdm/current/validation/mode-choice/mode-share.qmd
+                - 1-tdm/current/validation/mode-choice/transit-trips-boardings.qmd
+            - section: "Highway Assignment"
+              contents:
+                - 1-tdm/current/validation/highway-assignment/volumes.qmd
+                - 1-tdm/current/validation/highway-assignment/travel-times.qmd
+        - section: "Model Process Report"
+          contents:
+            - 1-tdm/current/process-report/index.qmd
+        - section: "Model Development"
+          contents:
+            - 1-tdm/current/development/index.qmd
+            - text: "---"
+            - section: "Inputs Processing"
+              contents:
+                - text: "TDM-INP-TAZ-Age-Percent"
+                  href: https://wfrcanalytics.github.io/TDM-INP-TAZ-Age-Percent/
+                  target: _blank
+                - text: "TDM-INP-External-Forecasts"
+                  href: https://wfrcanalytics.github.io/TDM-INP-External-Forecasts/
+                  target: _blank
+                - text: "TDM-INP-K-12-Enrollment"
+                  href: https://wfrcanalytics.github.io/TDM-INP-K-12-Enrollment/
+                  target: _blank
+                - text: "TDM-INP-College-Enrollment"
+                  href: https://wfrcanalytics.github.io/TDM-INP-College-Enrollment/
+                  target: _blank
+                - text: "TDM-INP-TAZ-Renumbering"
+                  href: https://wfrcanalytics.github.io/TDM-INP-TAZ-Renumbering/
+                  target: _blank
+                - text: "TDM-INP-TAZ-to-CensusTract"
+                  href: https://wfrcanalytics.github.io/TDM-INP-TAZ-to-CensusTract/
+                  target: _blank
+                - text: "TDM-INP-USTM-Externals-Using-National-Network"
+                  href: https://wfrcanalytics.github.io/TDM-INP-USTM-Externals-Using-National-Network/
+                  target: _blank
+                - text: "TDM-INP-Transit-Node-Renumbering"
+                  href: https://wfrcanalytics.github.io/TDM-INP-Transit-Node-Renumbering/
+                  target: _blank
+                - text: "TDM-INP-Census-Block-to-TAZ"
+                  href: https://wfrcanalytics.github.io/TDM-INP-Census-Block-to-TAZ/
+                  target: _blank
+                - text: "TDM-INP-Parcel-to-TAZ"
+                  href: https://wfrcanalytics.github.io/TDM-INP-Parcel-to-TAZ/
+                  target: _blank
+                - text: "TDM-INP-TAZ-to-ZIPCode"
+                  href: https://wfrcanalytics.github.io/TDM-INP-TAZ-to-ZIPCode/
+                  target: _blank
+            - section: "Estimate Parameters"
+              contents:
+                - text: "TDM-EST-Auto-Operating-Costs"
+                  href: https://wfrcanalytics.github.io/TDM-EST-Auto-Operating-Costs/
+                  target: _blank
+                - text: "TDM-EST-TAZ-Median-Income"
+                  href: https://wfrcanalytics.github.io/TDM-EST-TAZ-Median-Income/
+                  target: _blank
+                - text: "TDM-EST-Value-Of-Time"
+                  href: https://wfrcanalytics.github.io/TDM-EST-Value-Of-Time/
+                  target: _blank
+                - text: "TDM-EST-HTS-Params"
+                  href: https://wfrcanalytics.github.io/TDM-EST-HTS-Params/
+                  target: _blank
+                - text: "TDM-EST-LifeCycle"
+                  href: https://wfrcanalytics.github.io/TDM-EST-LifeCycle/
+                  target: _blank
+                - text: "TDM-EST-Trucks-Streetlight"
+                  href: https://wfrcanalytics.github.io/TDM-EST-Trucks-Streetlight/
+                  target: _blank
+                - text: "TDM-EST-Bus-Speeds"
+                  href: https://wfrcanalytics.github.io/TDM-EST-Bus-Speeds/
+                  target: _blank
+            - section: "Model Calibration"
+              contents:
+                - text: "TDM-CAL-Friction-Factors"
+                  href: https://wfrcanalytics.github.io/TDM-CAL-Friction-Factors/
+                  target: _blank
+                - text: "TDM-CAL-Mode-Choice"
+                  href: https://wfrcanalytics.github.io/TDM-CAL-Mode-Choice/
+                  target: _blank
+
+    - id: tdm-beta
+      title: "TDM 10.0.0 (Beta)"
+      search: true
+      style: "floating"
+      collapse-level: 2
+      contents:
+        - 1-tdm/beta/index.qmd
+        - section: "Development Status"
+          contents:
+            - 1-tdm/beta/status/overview.qmd
+            - 1-tdm/beta/status/planned-features.qmd
+
+    - id: tdm-archive
+      title: "TDM Archive"
+      search: true
+      style: "floating"
+      collapse-level: 2
+      contents:
+        - 1-tdm/archive/index.qmd
+        - section: "Release History"
+          contents:
+            - 1-tdm/archive/release-history.qmd
+        - section: "Previous Releases"
+          contents:
+            - text: "Version 9.1.0 (June 2024)"
+              href: https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases/tag/v9.1.0-official
+              target: _blank
+            - text: "Version 9.0.2 (April 2024)"
+              href: https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases/tag/v9.0.2-official
+              target: _blank
+            - text: "Version 9.0.1 (February 2024)"
+              href: https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases/tag/v9.0.1-official
+              target: _blank
+            - text: "Version 9.0.0 (January 2024)"
+              href: https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases/tag/v9.0.0-official
+              target: _blank
+            - text: "Version 8.3.2 (August 2023)"
+              href: https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases/tag/v8.3.2-official
+              target: _blank
+        - section: "Resources"
+          contents:
+            - text: "All Releases on GitHub"
+              href: https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases
+              target: _blank
+            - text: "Version Comparison Guide"
+              href: 1-tdm/archive/version-comparison.qmd
+
+    - id: remm-current
+      title: "REMM 3.0.0"
+      search: true
+      style: "floating"
+      collapse-level: 2
+      contents:
+        - 2-remm/current/index.qmd
+        - section: "Model Overview"
+          contents:
+            - 2-remm/current/overview/introduction.qmd
+            - 2-remm/current/overview/methodology.qmd
+        - section: "Components"
+          contents:
+            - text: "REMM-Parcel-Splitting"
+              href: https://wfrcanalytics.github.io/REMM-Parcel-Splitting/
+              target: _blank
+            - text: "REMM-Job-Space-Calculation"
+              href: https://wfrcanalytics.github.io/REMM-Job-Space-Calculation/
+              target: _blank
+            - text: "REMM-WF-Model-Area-Splits"
+              href: https://wfrcanalytics.github.io/REMM-WF-Model-Area-Splits/
+              target: _blank
+            - text: "REMM-SE-Descriptive-Statistics"
+              href: https://wfrcanalytics.github.io/REMM-SE-Descriptive-Statistics/
+              target: _blank
+            - text: "REMM-Process-SE-Output-For-Web"
+              href: https://wfrcanalytics.github.io/REMM-Process-SE-Output-For-Web/
+              target: _blank
+            - text: "REMM-Manage-Base-Year-Data"
+              href: https://wfrcanalytics.github.io/REMM-Manage-Base-Year-Data/
+              target: _blank
+            - text: "REMM-SE-Comparison-Tools"
+              href: https://wfrcanalytics.github.io/REMM-SE-Comparison-Tools/
+              target: _blank
+            - text: "REMM-Analysis-Tools"
+              href: https://wfrcanalytics.github.io/REMM-Analysis-Tools/
+              target: _blank
+            - text: "REMM-TAZ-SE-Review-For-MB"
+              href: https://wfrcanalytics.github.io/REMM-TAZ-SE-Review-For-MB/
+              target: _blank
+            - text: "REMM-RandomForest-Variable-Analysis"
+              href: https://wfrcanalytics.github.io/REMM-RandomForest-Variable-Analysis/
+              target: _blank
+            - text: "REMM-Process-Progression-Metrics-For-Web"
+              href: https://wfrcanalytics.github.io/REMM-Process-Progression-Metrics-For-Web/
+              target: _blank
+            - text: "REMM-Animate-Modeling-Results"
+              href: https://wfrcanalytics.github.io/REMM-Animate-Modeling-Results/
+              target: _blank
+            - text: "REMM-Input-Data-Prep-2019"
+              href: https://wfrcanalytics.github.io/REMM-Input-Data-Prep-2019/
+              target: _blank
+
+    - id: remm-beta
+      title: "REMM 3.0.2 (Beta)"
+      search: true
+      style: "floating"
+      collapse-level: 2
+      contents:
+        - 2-remm/beta/index.qmd
+        - section: "Development Status"
+          contents:
+            - 2-remm/beta/status/overview.qmd
+            - 2-remm/beta/status/planned-features.qmd
+
+    - id: remm-archive
+      title: "REMM Archive"
+      search: true
+      style: "floating"
+      contents:
+        - 2-remm/archive/index.qmd
+        - 2-remm/archive/release-history.qmd
+
+    - id: bdm-current
+      title: "BDM Current"
+      search: true
+      style: "floating"
+      collapse-level: 2
+      contents:
+        - 3-bdm/current/index.qmd
+        - section: "Model Overview"
+          contents:
+            - 3-bdm/current/overview/introduction.qmd
+            - 3-bdm/current/overview/methodology.qmd
+        - section: "Components"
+          contents:
+            - text: "BDM-Utah-Bike-Demand-Model"
+              href: https://wfrcanalytics.github.io/BDM-Utah-Bike-Demand-Model/
+              target: _blank
+            - text: "BDM-Micromobility-Toolset"
+              href: https://wfrcanalytics.github.io/BDM-Micromobility-Toolset/
+              target: _blank
+            - text: "BDM-Post-Process-Outputs"
+              href: https://wfrcanalytics.github.io/BDM-Post-Process-Outputs/
+              target: _blank
+
+    - id: bdm-beta
+      title: "BDM (Beta)"
+      search: true
+      style: "floating"
+      collapse-level: 2
+      contents:
+        - 3-bdm/beta/index.qmd
+        - section: "Development Status"
+          contents:
+            - 3-bdm/beta/status/overview.qmd
+            - 3-bdm/beta/status/planned-features.qmd
+
+    - id: bdm-archive
+      title: "BDM Archive"
+      search: true
+      style: "floating"
+      contents:
+        - 3-bdm/archive/index.qmd
+        - 3-bdm/archive/release-history.qmd
+
+    - id: tools
+      title: "Tools"
+      search: true
+      style: "floating"
+      contents:
+        - 4-tools/index.qmd
+        - section: "Visualization Tools"
+          contents:
+            - text: "Viz-Tool"
+              href: https://wfrcanalytics.github.io/Viz-Tool/
+              target: _blank
 
   page-footer:
-    left: 2025 Wasatch Front Regional Council &#8729; Made with [{{< fa brands r-project title="R Project" >}}](https://www.r-project.org/about.html){target=_blank}, [<img src="https://quarto.org/favicon.png" width="14">](https://quarto.org/){target=_blank}, [{{< fa brands git-alt title="Git alt logo" >}}](https://git-scm.com/){target=_blank} and [{{< fa brands github title="GitHub octocat logo" >}}](https://github.com/){target=_blank}
+    left: 2025 Wasatch Front Regional Council &#8729; Made with [{{< fa brands python title="Python" >}}](https://www.r-project.org/about.html){target=_blank}, [<img src="https://quarto.org/favicon.png" width="14">](https://quarto.org/){target=_blank}, [{{< fa brands git-alt title="Git alt logo" >}}](https://git-scm.com/){target=_blank} and [{{< fa brands github title="GitHub octocat logo" >}}](https://github.com/){target=_blank}
     center: | # <a href="https://github.com/WFRCAnalytics" title="GitHub" target="_blank" rel="noopener">{{< fa brands github >}}</a> &nbsp;
           <a href="https://www.facebook.com/WasatchFrontRegionalCouncil" title="Facebook" target="_blank" rel="noopener">{{< fa brands facebook >}}</a>
           &nbsp;
@@ -110,6 +409,7 @@ website:
 
 format:
   html:
+    page-layout: full
     respect-user-color-scheme: true
     theme:
       light:
