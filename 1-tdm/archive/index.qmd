@@ -24,17 +24,18 @@ For new studies and applications, please use [TDM 9.2.0](../current/index.qmd), 
 
 Please review the WFRC Travel Demand Model terms of use and data usage agreement. Your acceptance of these terms is required as a condition to proceeding with your download or use of the model.
 
-<div id="license-agreement">
-  <input type="checkbox" id="license-checkbox" aria-label="Accept license agreement">
-  <label for="license-checkbox">I agree to the WFRC TDM terms of use and will properly cite the model in any reports or publications.</label>
-</div>
-
 **Terms Summary:**
+
 - This model is provided for planning and research purposes only
 - Proper attribution to WFRC is required in all uses and publications
 - Model outputs should be interpreted by qualified transportation planning professionals
 - The model is provided "as-is" without warranty of any kind
 - Users are responsible for validating results for their specific applications
+
+<div id="license-agreement">
+  <input type="checkbox" id="license-checkbox" aria-label="Accept license agreement">
+  <label for="license-checkbox">I agree to the WFRC TDM terms of use and will properly cite the model in any reports or publications.</label>
+</div>
 :::
 
 ## Release History
@@ -73,12 +74,14 @@ WFRC uses semantic versioning for the Travel Demand Model:
 Archived model versions should only be used in specific circumstances:
 
 **Appropriate Use Cases:**
+
 - **Continuity in existing studies**: Complete a planning study that was initiated with an earlier model version
 - **Comparison and validation**: Research comparing model results across versions
 - **Historical analysis**: Understanding how forecasts have evolved over time
 - **Regulatory requirements**: When specific version is mandated by study scope or agreement
 
 **Not Recommended:**
+
 - Starting new planning studies
 - Regional Transportation Plan (RTP) development
 - Air quality conformity analysis
@@ -125,9 +128,11 @@ For questions about archived versions, [contact the WFRC Analytics team](mailto:
 ::: {.panel-tabset}
 
 ### 9.x Series (Current)
+
 **Base Year**: 2019
 
 **Key Features:**
+
 - New mode choice model structure with improved transit representation
 - Enhanced accessibility to opportunity measures
 - Updated household travel survey integration (2018 Utah Travel Survey)
@@ -138,9 +143,11 @@ For questions about archived versions, [contact the WFRC Analytics team](mailto:
 **Software**: Cube Voyager 7.0+
 
 ### 8.x Series (Previous)
+
 **Base Year**: 2017
 
 **Key Features:**
+
 - Traditional mode choice approach
 - Legacy accessibility measures
 - 2012 household travel survey
@@ -151,9 +158,11 @@ For questions about archived versions, [contact the WFRC Analytics team](mailto:
 **Software**: Cube Voyager 6.x
 
 ### 7.x Series (Legacy)
+
 **Base Year**: 2012
 
 **Key Features:**
+
 - Legacy model structure
 - Older household travel survey data
 - Limited GIS integration
@@ -170,31 +179,37 @@ For questions about archived versions, [contact the WFRC Analytics team](mailto:
 If you're currently using an archived model version and considering upgrading:
 
 **Step 1: Review Changes**
+
 - Read [What's New in 9.2.0](../current/whats-new/overview.qmd)
 - Review major methodology changes
 - Understand impact on your study
 
 **Step 2: Assess Compatibility**
+
 - Check socioeconomic data format requirements
 - Verify network file compatibility
 - Review input file formats
 
 **Step 3: Update Inputs**
+
 - Convert socioeconomic forecasts to new format
 - Update network files if needed
 - Verify zone system compatibility
 
 **Step 4: Calibration Check**
+
 - Run validation scenarios
 - Compare key outputs (VMT, mode share, volumes)
 - Adjust project-specific parameters if needed
 
 **Step 5: Validate Results**
+
 - Compare major metrics between versions
 - Document significant differences
 - Validate reasonableness of changes
 
 **Step 6: Documentation**
+
 - Update technical documentation
 - Note model version change in all materials
 - Document validation approach
@@ -202,6 +217,7 @@ If you're currently using an archived model version and considering upgrading:
 ### WFRC Assistance Available
 
 The Analytics team can provide:
+
 - **Version Selection Guidance**: Recommend appropriate version for your study
 - **Migration Support**: Assist with converting inputs and validating results
 - **Interpretation**: Explain differences in results between versions
@@ -215,6 +231,7 @@ The Analytics team can provide:
 ### Version 9.x Series
 
 **9.1.0 → 9.2.0 (June 2024 → January 2025)**
+
 - Highway network updates for projects completed through 2024
 - New accessibility to opportunity measures by mode and time threshold
 - Updated socioeconomic data coordinated with REMM
@@ -222,6 +239,7 @@ The Analytics team can provide:
 - Performance improvements in assignment procedures
 
 **9.0.x → 9.1.0 (January 2024 → June 2024)**
+
 - Network refinements for transit services
 - Calibration adjustments based on recent data
 - Transit service updates for Fall 2023 schedule changes
@@ -229,6 +247,7 @@ The Analytics team can provide:
 - Documentation updates
 
 **8.3.2 → 9.0.0 (August 2023 → January 2024)**
+
 - Complete mode choice model redesign
 - New base year (2019 vs 2017)
 - Updated household travel survey integration (2018 data)
@@ -240,6 +259,7 @@ The Analytics team can provide:
 ### Version 8.x Series
 
 **8.3.1 → 8.3.2 (June 2023 → August 2023)**
+
 - Final maintenance release for 8.x series
 - Bug fixes only, no feature changes
 - Network updates for consistency
@@ -249,11 +269,13 @@ For complete release notes, visit the [GitHub release repository](https://github
 ## Additional Resources
 
 ### Technical Documentation
+
 - [TDM 9.2.0 Overview](../current/index.qmd) - Current model documentation
 - [Model Validation](../current/validation/index.qmd) - Validation methodology and results
 - [Component Repositories](../current/development/index.qmd) - Individual model components
 
 ### External Links
+
 - [GitHub Release Repository](https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases){target="_blank"} - All releases with detailed notes
 - [WFRC Main Site](https://wfrc.org){target="_blank"} - Regional planning resources
 - [WFRC Analytics GitHub](https://github.com/WFRCAnalytics){target="_blank"} - Code repositories and tools
@@ -280,10 +302,11 @@ A: Bugs in archived versions are generally not fixed. Consider upgrading to the 
 For questions about archived model versions or assistance in selecting the appropriate version:
 
 **WFRC Analytics Team**
-Email: [analytics@wfrc.org](mailto:analytics@wfrc.org)
+Email: [analytics@wfrc.utah.gov](mailto:analytics@wfrc.utah.gov)
 Phone: (801) 363-4250
 
 **GitHub Support**
+
 - [Submit a question](https://github.com/WFRCAnalytics/wfrcanalytics.github.io/discussions){target="_blank"}
 - [Report an issue](https://github.com/WFRCAnalytics/wfrcanalytics.github.io/issues){target="_blank"}
 
