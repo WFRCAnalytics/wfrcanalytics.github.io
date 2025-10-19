@@ -82,7 +82,7 @@ website:
       - icon: github
         menu:
           - text: Source Code
-            href: https://https://github.com/WFRCAnalytics/wfrcanalytics.github.io
+            href: https://github.com/WFRCAnalytics/wfrcanalytics.github.io
             target: _blank
           - text: Report a Bug
             href: https://github.com/WFRCAnalytics/wfrcanalytics.github.io/issues/new
