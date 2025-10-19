@@ -54,10 +54,10 @@ website:
         href: 4-tools/index.qmd
       - text: Follow Us
         menu:
-          - icon: github
-            text: GitHub
-            href: https://github.com/WFRCAnalytics
-            target: _blank
+          # - icon: github
+          #   text: GitHub
+          #   href: https://github.com/WFRCAnalytics
+          #   target: _blank
           - icon: facebook
             text: Facebook
             href: https://www.facebook.com/WasatchFrontRegionalCouncil
