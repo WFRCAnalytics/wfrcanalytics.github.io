@@ -1,0 +1,277 @@
+<style>
+/* Disabled state styling */
+.disabled {
+    pointer-events: none;
+    cursor: default;
+}
+
+.disabled-overlay {
+    background-color: var(--bs-secondary-bg);
+    border-radius: 5px;
+    opacity: 0.5;
+    transition-duration: 0.5s;
+}
+
+.visible {
+    opacity: 1;
+    transition-duration: 0.5s;
+}
+
+/* Download link styling */
+.download-link {
+    color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
+    text-decoration: underline;
+}
+
+.download-link.disabled {
+    color: var(--bs-secondary-color);
+    text-decoration: none;
+}
+
+/* License agreement styling */
+#license-agreement {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 15px 0;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+}
+
+#license-checkbox {
+    margin-top: 3px;
+    cursor: pointer;
+    min-width: 18px;
+    min-height: 18px;
+    flex-shrink: 0;
+}
+
+#license-agreement label {
+    cursor: pointer;
+    user-select: none;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Download section styling */
+#download-section {
+    margin-top: 20px;
+}
+
+/* Highlight animation for license agreement */
+@keyframes highlight-pulse {
+    0% {
+        background-color: rgba(255, 193, 7, 0);
+    }
+    50% {
+        background-color: rgba(255, 193, 7, 0.3);
+    }
+    100% {
+        background-color: rgba(255, 193, 7, 0);
+    }
+}
+
+.highlight-license {
+    animation: highlight-pulse 1s ease-in-out;
+}
+</style>
+
+<script type="application/javascript">
+    // Initialize on page load
+    window.document.addEventListener("DOMContentLoaded", () => {
+        initializeLicenseAgreement();
+    });
+
+    /**
+     * Initialize license agreement functionality
+     */
+    function initializeLicenseAgreement() {
+        const checkbox = document.getElementById('license-checkbox');
+        const downloadSection = document.getElementById('download-section');
+
+        if (!checkbox || !downloadSection) {
+            return; // Elements not found, not on a download page
+        }
+
+        // Set initial state to disabled
+        setLinkEnablement(false);
+
+        // Check if user previously accepted (optional feature)
+        // Comment out these lines if you want users to accept every time
+        const storageKey = 'wfrc-tdm-license-accepted';
+        try {
+            const previouslyAccepted = sessionStorage.getItem(storageKey);
+            if (previouslyAccepted === 'true') {
+                checkbox.checked = true;
+                setLinkEnablement(true);
+            }
+        } catch (e) {
+            // sessionStorage might not be available (private browsing, etc.)
+            console.log('Unable to check previous license acceptance');
+        }
+
+        // Add change event listener to checkbox
+        checkbox.addEventListener('change', function() {
+            updateLicenseAgreement(this);
+        });
+    }
+
+    /**
+     * Enable or disable download links based on checkbox state
+     * @param {boolean} enable - Whether to enable or disable links
+     */
+    function setLinkEnablement(enable) {
+        const downloadSection = document.getElementById('download-section');
+        const downloadLinks = document.querySelectorAll('#download-section a.download-link');
+
+        if (!downloadSection || downloadLinks.length === 0) {
+            return;
+        }
+
+        // Apply overlay styling to entire download section
+        if (enable) {
+            downloadSection.classList.remove("disabled-overlay");
+            downloadSection.classList.add("visible");
+        } else {
+            downloadSection.classList.add("disabled-overlay");
+            downloadSection.classList.remove("visible");
+        }
+
+        // Enable/disable individual links
+        downloadLinks.forEach((link) => {
+            if (enable) {
+                link.classList.remove("disabled");
+                link.removeAttribute("aria-disabled");
+                link.removeAttribute("tabindex");
+            } else {
+                link.classList.add("disabled");
+                link.setAttribute("aria-disabled", "true");
+                link.setAttribute("tabindex", "-1");
+            }
+        });
+    }
+
+    /**
+     * Update download link states when license checkbox changes
+     * @param {HTMLInputElement} checkbox - The license agreement checkbox
+     */
+    function updateLicenseAgreement(checkbox) {
+        const isChecked = checkbox.checked;
+
+        // Enable or disable download links
+        setLinkEnablement(isChecked);
+
+        // Store preference in sessionStorage (persists during browser session only)
+        // Use localStorage instead of sessionStorage if you want it to persist between sessions
+        const storageKey = 'wfrc-tdm-license-accepted';
+        try {
+            if (isChecked) {
+                sessionStorage.setItem(storageKey, 'true');
+            } else {
+                sessionStorage.removeItem(storageKey);
+            }
+        } catch (e) {
+            // Storage might not be available
+            console.log('Unable to store license preference');
+        }
+    }
+
+    /**
+     * Check if license is accepted before allowing download
+     * Call this function in onclick handlers for download links
+     * @param {Event} event - The click event
+     * @returns {boolean} - True if license is accepted, false otherwise
+     */
+    function checkLicense(event) {
+        const checkbox = document.getElementById('license-checkbox');
+
+        if (!checkbox || !checkbox.checked) {
+            event.preventDefault();
+
+            // Show alert with custom message
+            alert('Please accept the WFRC TDM terms of use before downloading.\n\n' +
+                  'Scroll to the license agreement section above and check the box to proceed.');
+
+            // Scroll to and highlight the license agreement
+            const licenseSection = document.getElementById('license-agreement');
+            if (licenseSection) {
+                // Smooth scroll to license agreement
+                licenseSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center'
+                });
+
+                // Add highlight animation
+                licenseSection.classList.add('highlight-license');
+
+                // Remove highlight class after animation completes
+                setTimeout(() => {
+                    licenseSection.classList.remove('highlight-license');
+                }, 1000);
+
+                // Focus on checkbox for accessibility
+                setTimeout(() => {
+                    checkbox.focus();
+                }, 600);
+            }
+
+            return false;
+        }
+
+        // License accepted, allow download to proceed
+        return true;
+    }
+
+    /**
+     * Track download events (optional - for analytics)
+     * @param {string} version - Model version being downloaded
+     * @param {string} component - Component being downloaded (e.g., 'full-model', 'docs')
+     */
+    function trackDownload(version, component) {
+        // Log download event
+        console.log(`Download initiated: TDM ${version} - ${component}`);
+
+        // If you have Google Analytics or another analytics platform, track here
+        // Example:
+        // gtag('event', 'download', {
+        //     'event_category': 'TDM',
+        //     'event_label': `${version}-${component}`,
+        //     'value': 1
+        // });
+    }
+
+    /**
+     * Copy text to clipboard with visual feedback
+     * Useful for copying checksums or version numbers
+     * @param {string} text - Text to copy
+     * @param {HTMLElement} element - Element that triggered the copy
+     */
+    function copyToClipboard(text, element) {
+        navigator.clipboard.writeText(text).then(() => {
+            // Show success feedback
+            const originalText = element.textContent;
+            element.textContent = '✓ Copied!';
+            element.style.color = 'var(--bs-success)';
+
+            // Reset after delay
+            setTimeout(() => {
+                element.textContent = originalText;
+                element.style.color = '';
+            }, 2000);
+        }).catch((err) => {
+            console.error('Failed to copy text: ', err);
+
+            // Show error feedback
+            const originalText = element.textContent;
+            element.textContent = '✗ Failed';
+            element.style.color = 'var(--bs-danger)';
+
+            // Reset after delay
+            setTimeout(() => {
+                element.textContent = originalText;
+                element.style.color = '';
+            }, 2000);
+        });
+    }
+</script>

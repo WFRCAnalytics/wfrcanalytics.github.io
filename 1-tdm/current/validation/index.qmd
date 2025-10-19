@@ -59,8 +59,7 @@ Mode share validation by county demonstrates the model's ability to capture spat
 
 ### Chart
 ```{python}
-#| echo: false
-#| warning: false
+#| eval: false
 
 # Placeholder for actual visualization code
 # import plotly.express as px
