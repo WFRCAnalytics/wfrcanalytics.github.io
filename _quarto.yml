@@ -112,7 +112,7 @@ website:
     - id: tdm-current
       title: "TDM 9.2.0"
       search: true
-      style: "floating"
+      style: "docked"
       collapse-level: 2
       contents:
         - 1-tdm/current/index.qmd
@@ -215,7 +215,7 @@ website:
     - id: tdm-beta
       title: "TDM 10.0.0 (Beta)"
       search: true
-      style: "floating"
+      style: "docked"
       collapse-level: 2
       contents:
         - 1-tdm/beta/index.qmd
@@ -227,7 +227,7 @@ website:
     - id: tdm-archive
       title: "TDM Archive"
       search: true
-      style: "floating"
+      style: "docked"
       collapse-level: 2
       contents:
         - 1-tdm/archive/index.qmd
@@ -262,7 +262,7 @@ website:
     - id: remm-current
       title: "REMM 3.0.0"
       search: true
-      style: "floating"
+      style: "docked"
       collapse-level: 2
       contents:
         - 2-remm/current/index.qmd
@@ -315,7 +315,7 @@ website:
     - id: remm-beta
       title: "REMM 3.0.2 (Beta)"
       search: true
-      style: "floating"
+      style: "docked"
       collapse-level: 2
       contents:
         - 2-remm/beta/index.qmd
@@ -327,7 +327,7 @@ website:
     - id: remm-archive
       title: "REMM Archive"
       search: true
-      style: "floating"
+      style: "docked"
       contents:
         - 2-remm/archive/index.qmd
         - 2-remm/archive/release-history.qmd
@@ -335,7 +335,7 @@ website:
     - id: bdm-current
       title: "BDM Current"
       search: true
-      style: "floating"
+      style: "docked"
       collapse-level: 2
       contents:
         - 3-bdm/current/index.qmd
@@ -358,7 +358,7 @@ website:
     - id: bdm-beta
       title: "BDM (Beta)"
       search: true
-      style: "floating"
+      style: "docked"
       collapse-level: 2
       contents:
         - 3-bdm/beta/index.qmd
@@ -370,7 +370,7 @@ website:
     - id: bdm-archive
       title: "BDM Archive"
       search: true
-      style: "floating"
+      style: "docked"
       contents:
         - 3-bdm/archive/index.qmd
         - 3-bdm/archive/release-history.qmd
@@ -378,7 +378,7 @@ website:
     - id: tools
       title: "Tools"
       search: true
-      style: "floating"
+      style: "docked"
       contents:
         - 4-tools/index.qmd
         - section: "Visualization Tools"
