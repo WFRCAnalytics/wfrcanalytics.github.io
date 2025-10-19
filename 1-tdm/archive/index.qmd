@@ -5,7 +5,7 @@ sidebar: tdm-archive
 format:
   html:
     include-in-header:
-      - '_includes/_tdm-download.html'
+      - '../../_includes/_tdm-download.html'
 ---
 
 ## Overview

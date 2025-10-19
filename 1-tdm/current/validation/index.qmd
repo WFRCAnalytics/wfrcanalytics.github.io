@@ -2,7 +2,7 @@
 title: "Mode Share Validation"
 subtitle: "Mode Choice Model Validation"
 date: "2025-01-15"
-sidebar: tdm-920
+sidebar: tdm-current
 ---
 
 ## Overview
@@ -58,7 +58,7 @@ Mode share validation by county demonstrates the model's ability to capture spat
 ::: {.panel-tabset}
 
 ### Chart
-```{python}
+```python
 #| eval: false
 
 # Placeholder for actual visualization code
