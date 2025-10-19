@@ -31,8 +31,8 @@ website:
   cookie-consent: false
 
   navbar:
-    logo: 'assets/logo/horizontal/WFRC_logo_horizontal_color_transparent.png'
-    logo-alt: 'WFRC site theme-based logo'
+    # logo: 'assets/logo/horizontal/WFRC_logo_horizontal_color_transparent.png'
+    # logo-alt: 'WFRC site theme-based logo'
 
     right:
       - href: about.qmd
