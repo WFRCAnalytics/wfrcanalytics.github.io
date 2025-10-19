@@ -1,0 +1,63 @@
+---
+pagetitle: "404 - Page Not Found"
+page-layout: full
+toc: false
+---
+
+```{=html}
+<style>
+.error-404 {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.error-code {
+  font-size: 10rem;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.error-icon {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+</style>
+```
+
+::: {.error-404}
+
+<div class="error-icon">🚧</div>
+
+<h1 class="error-code">404</h1>
+
+## This Path Does Not Exist
+
+Use the navigation menu above to explore our analytics and modeling documentation.
+
+:::
+
+---
+
+## Still Can't Find What You Need?
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6}
+**Search Our Documentation**
+
+Use the search button at the top of the page to find specific content, or try searching on [Google](https://www.google.com/search?q=site%3Awfrcanalytics.github.io){target="_blank"}.
+:::
+
+::: {.g-col-12 .g-col-md-6}
+**Get Support**
+
+- [Contact us](contact.qmd) for assistance
+- [Report an issue](https://github.com/WFRCAnalytics/wfrcanalytics.github.io/issues/new){target="_blank"} on GitHub
+- Check our [About](about.qmd) page for more information
+:::
+
+:::
+
+---
