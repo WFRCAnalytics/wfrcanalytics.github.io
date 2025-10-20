@@ -22,7 +22,7 @@ resources:
 
 # Welcome to <span class="name-highlight">WFRC Analytics</span> documentation.
 
-This portal provides comprehensive documentation for the Wasatch Front Regional Council's analytical models and tools, including the Travel Demand Model, Real-Estate Market Model, and Bike Demand Model. Access technical documentation, validation reports, model components, and interactive tools that support evidence-based transportation planning and decision-making across the Wasatch Front region.
+The Wasatch Front Regional Council's Analytics portal serves as the central hub for technical documentation, validation reports, and resources supporting regional transportation planning. Explore our Travel Demand Model, Real-Estate Market Model, and Bike Demand Model, along with the analytical tools and methodologies that inform data-driven planning decisions across the Wasatch Front region.
 
 <!-- [Learn more about me &rarr;](/about.html) -->
 
