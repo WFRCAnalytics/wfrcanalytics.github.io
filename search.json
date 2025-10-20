@@ -9,9 +9,16 @@
   {
     "objectID": "contact.html",
     "href": "contact.html",
-    "title": "Contact",
+    "title": "Contact Us",
     "section": "",
-    "text": "If you have questions about transportation planning methodologies, want to discuss R techniques for mobility data analysis, share interesting datasets, or just want to chat about anything related to transportation and data science, please use this contact form.\n\n\n\n\n\n\n\n\nFull Name \nEmail Address \nMessage\n\n\nSend message"
+    "text": "If you have questions about the WFRC Travel Demand Model, Real-Estate Market Model, or Bike Demand Model, need technical assistance with model applications, want to discuss data or methodology, or require support for transportation planning studies in the Wasatch Front region, please contact our Analytics team.\n\n\n 41 North Rio Grande St. Suite 103, Salt Lake City, UT 84101\n\n\n (801) 363-4250\n\n\n TTY: 711\n\n\n analytics@wfrc.utah.gov\n\n\n\n\nMonday - Friday: 8:00 AM - 5:00 PM (Mountain Time)\nFor urgent matters outside of business hours, please email us and we will respond as soon as possible.\n\n\n\n\n\n\n\n\n\nFull Name \nEmail Address \nMessage\n\n\nSend message"
+  },
+  {
+    "objectID": "contact.html#office-hours",
+    "href": "contact.html#office-hours",
+    "title": "Contact Us",
+    "section": "",
+    "text": "Monday - Friday: 8:00 AM - 5:00 PM (Mountain Time)\nFor urgent matters outside of business hours, please email us and we will respond as soon as possible."
   },
   {
     "objectID": "1-tdm/index.html",
@@ -396,6 +403,6 @@
     "href": "index.html",
     "title": "Welcome to WFRC Analytics documentation.",
     "section": "",
-    "text": "The Wasatch Front Regional Council builds consensus and enhances quality of life by developing and implementing visions and plans for a well-functioning multi-modal transportation system, livable communities, a strong economy, and a healthy environment."
+    "text": "This portal provides comprehensive documentation for the Wasatch Front Regional Council’s analytical models and tools, including the Travel Demand Model, Real-Estate Market Model, and Bike Demand Model. Access technical documentation, validation reports, model components, and interactive tools that support evidence-based transportation planning and decision-making across the Wasatch Front region."
   }
 ]
