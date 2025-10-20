@@ -15,10 +15,22 @@ css:
 
 ::: {.g-col-5 #note}
 
-# Contact
+# Contact Us
 
-If you have questions about transportation planning methodologies, want to discuss R techniques for mobility data analysis, share interesting datasets, or just want to chat about anything related to transportation and data science, please use this contact form.
+If you have questions about the WFRC Travel Demand Model, Real-Estate Market Model, or Bike Demand Model, need technical assistance with model applications, want to discuss data or methodology, or require support for transportation planning studies in the Wasatch Front region, please contact our Analytics team.
 
+<ul style="list-style-type: none; padding-left: 0;">
+  <li>{{< fa location-dot >}} [41 North Rio Grande St. Suite 103, Salt Lake City, UT 84101](https://maps.app.goo.gl/c8oi9w1AtNwUbxUt8){target="_blank"}</li>
+  <li>{{< fa phone >}} [(801) 363-4250](tel:+18013634250)</li>
+  <li>{{< fa tty >}} TTY: 711</li>
+  <li>{{< fa envelope >}} [analytics@wfrc.utah.gov](mailto:analytics@wfrc.utah.gov)</li>
+</ul>
+
+## Office Hours
+
+**Monday - Friday**: 8:00 AM - 5:00 PM (Mountain Time)
+
+For urgent matters outside of business hours, please email us and we will respond as soon as possible.
 :::
 <!-- source: https://github.com/mccarthy-m-g/tidytales/blob/main/about/index.qmd#L24-L46 -->
 
