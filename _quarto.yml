@@ -111,8 +111,8 @@ website:
   sidebar:
     - id: tdm-current
       title: "TDM 9.2.0"
+      style: "floating"
       search: true
-      style: "docked"
       collapse-level: 2
       contents:
         - 1-tdm/current/index.qmd
@@ -214,8 +214,8 @@ website:
 
     - id: tdm-beta
       title: "TDM 10.0.0 (Beta)"
+      style: "floating"
       search: true
-      style: "docked"
       collapse-level: 2
       contents:
         - 1-tdm/beta/index.qmd
@@ -226,8 +226,8 @@ website:
 
     - id: tdm-archive
       title: "TDM Archive"
+      style: "floating"
       search: true
-      style: "docked"
       collapse-level: 2
       contents:
         - 1-tdm/archive/index.qmd
@@ -261,8 +261,8 @@ website:
 
     - id: remm-current
       title: "REMM 3.0.0"
+      style: "floating"
       search: true
-      style: "docked"
       collapse-level: 2
       contents:
         - 2-remm/current/index.qmd
@@ -314,8 +314,8 @@ website:
 
     - id: remm-beta
       title: "REMM 3.0.2 (Beta)"
+      style: "floating"
       search: true
-      style: "docked"
       collapse-level: 2
       contents:
         - 2-remm/beta/index.qmd
@@ -326,16 +326,16 @@ website:
 
     - id: remm-archive
       title: "REMM Archive"
+      style: "floating"
       search: true
-      style: "docked"
       contents:
         - 2-remm/archive/index.qmd
         - 2-remm/archive/release-history.qmd
 
     - id: bdm-current
       title: "BDM Current"
+      style: "floating"
       search: true
-      style: "docked"
       collapse-level: 2
       contents:
         - 3-bdm/current/index.qmd
@@ -357,8 +357,8 @@ website:
 
     - id: bdm-beta
       title: "BDM (Beta)"
+      style: "floating"
       search: true
-      style: "docked"
       collapse-level: 2
       contents:
         - 3-bdm/beta/index.qmd
@@ -369,16 +369,16 @@ website:
 
     - id: bdm-archive
       title: "BDM Archive"
+      style: "floating"
       search: true
-      style: "docked"
       contents:
         - 3-bdm/archive/index.qmd
         - 3-bdm/archive/release-history.qmd
 
     - id: tools
       title: "Tools"
+      style: "floating"
       search: true
-      style: "docked"
       contents:
         - 4-tools/index.qmd
         - section: "Visualization Tools"
@@ -411,7 +411,7 @@ format:
   html:
     page-layout: full
     grid:
-      sidebar-width: 350px
+      sidebar-width: 400px
     respect-user-color-scheme: true
     theme:
       light:
