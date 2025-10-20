@@ -50,9 +50,9 @@ website:
         # href: 2-remm/index.qmd
         menu:
           - text: Current Release (3.0.0)
-            href: 2-remm/3.0.0/index.qmd
+            href: 2-remm/current/index.qmd
           - text: Under Development (Beta)
-            href: 2-remm/3.0.2/index.qmd
+            href: 2-remm/beta/index.qmd
           - text: Archived Releases
             href: 2-remm/archive/index.qmd
       - text: Bike Demand Model

@@ -147,4 +147,4 @@ Development is underway on TDM 10.0.0, which will include:
 - Dynamic traffic assignment capabilities
 - Integration with REMM at finer geographic resolution
 
-[Learn more about TDM 10.0.0 →](../10.0.0/index.qmd)
+[Learn more about TDM 10.0.0 →](../beta/index.qmd)
