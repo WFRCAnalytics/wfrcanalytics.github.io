@@ -399,6 +399,69 @@
     ]
   },
   {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About WFRC Analytics",
+    "section": "",
+    "text": "The Wasatch Front Regional Council (WFRC) is the Metropolitan Planning Organization (MPO) and Association of Governments (AOG) serving the counties of Box Elder, Davis, Morgan, Salt Lake, Tooele, Weber, and portions of Utah County. As the federally designated MPO for the Wasatch Front region, WFRC coordinates transportation planning for one of the fastest-growing metropolitan areas in the United States, encompassing approximately 2.7 million residents across the greater Salt Lake City region."
+  },
+  {
+    "objectID": "about.html#our-organization",
+    "href": "about.html#our-organization",
+    "title": "About WFRC Analytics",
+    "section": "",
+    "text": "The Wasatch Front Regional Council (WFRC) is the Metropolitan Planning Organization (MPO) and Association of Governments (AOG) serving the counties of Box Elder, Davis, Morgan, Salt Lake, Tooele, Weber, and portions of Utah County. As the federally designated MPO for the Wasatch Front region, WFRC coordinates transportation planning for one of the fastest-growing metropolitan areas in the United States, encompassing approximately 2.7 million residents across the greater Salt Lake City region."
+  },
+  {
+    "objectID": "about.html#the-analytics-team",
+    "href": "about.html#the-analytics-team",
+    "title": "About WFRC Analytics",
+    "section": "The Analytics Team",
+    "text": "The Analytics Team\nThe WFRC Analytics team develops, maintains, and applies sophisticated modeling tools to support evidence-based transportation planning and policy decisions. Our work provides the quantitative foundation for regional transportation plans, project prioritization, air quality conformity analysis, and long-range scenario planning.\n\nWhat We Do\nTravel Demand Modeling We maintain and operate a four-step travel demand model that forecasts travel patterns, traffic volumes, and transit ridership across the region through 2050. The model incorporates socioeconomic forecasts, transportation networks, and travel behavior data to evaluate transportation investments and policy alternatives.\nSocioeconomic Forecasting Our Real-Estate Market Model (REMM) provides parcel-level forecasts of population, households, and employment, coordinating with local jurisdictions and state agencies to ensure consistency in planning assumptions across the region.\nActive Transportation Analysis The Bike Demand Model estimates bicycle and micromobility demand, supporting the development of active transportation infrastructure and evaluating the impact of bike-friendly policies and investments.\nData & Visualization We develop interactive tools and visualizations to communicate complex transportation data and modeling results to decision-makers, stakeholders, and the public."
+  },
+  {
+    "objectID": "about.html#our-region",
+    "href": "about.html#our-region",
+    "title": "About WFRC Analytics",
+    "section": "Our Region",
+    "text": "Our Region\nThe Wasatch Front region is home to Utah’s largest metropolitan area, stretching approximately 120 miles along the Wasatch Mountains from Brigham City in the north to Payson in the south. The region includes:\n\nSalt Lake County: Home to Salt Lake City, Utah’s capital and largest city\nUtah County: Including Provo and Orem, anchored by Utah Valley University and Brigham Young University\nDavis County: Northern suburban communities including Layton, Bountiful, and Farmington\nWeber County: Including Ogden, a historic railroad hub and regional employment center\nBox Elder, Morgan, and Tooele Counties: Growing communities at the region’s periphery\n\nThe region is characterized by its dramatic geography, with urban development concentrated along a narrow valley between the Wasatch Mountains to the east and Great Salt Lake to the northwest. This constrained geography creates unique transportation challenges and opportunities."
+  },
+  {
+    "objectID": "about.html#regional-transportation-context",
+    "href": "about.html#regional-transportation-context",
+    "title": "About WFRC Analytics",
+    "section": "Regional Transportation Context",
+    "text": "Regional Transportation Context\nThe Wasatch Front faces several key transportation challenges:\n\nRapid Growth: The region is among the fastest-growing metropolitan areas in the nation, adding approximately 50,000 new residents annually\nGeographic Constraints: Development is channeled along a north-south corridor, creating concentrated transportation demand\nAir Quality: Winter temperature inversions trap air pollution in the valley, making vehicle emissions a critical concern\nMulti-Modal System: The region is served by the Utah Transit Authority (UTA), operating light rail (TRAX), commuter rail (FrontRunner), bus rapid transit (BRT), and extensive bus services"
+  },
+  {
+    "objectID": "about.html#our-approach",
+    "href": "about.html#our-approach",
+    "title": "About WFRC Analytics",
+    "section": "Our Approach",
+    "text": "Our Approach\nWFRC Analytics employs industry-standard modeling tools and methodologies while continuously advancing our analytical capabilities:\n\nCube Voyager: Four-step travel demand modeling platform\nUrbanSim-Based REMM: Land use and real estate market simulation\nOpen-Source Tools: Python, R, and web-based visualization frameworks\nData Integration: Leveraging mobile device data, traffic sensors, transit ridership data, and survey information\n\nWe work collaboratively with local jurisdictions, the Utah Department of Transportation (UDOT), the Utah Transit Authority (UTA), MAG (Mountainland Association of Governments), and other planning partners to coordinate transportation planning across the region."
+  },
+  {
+    "objectID": "about.html#commitment-to-transparency",
+    "href": "about.html#commitment-to-transparency",
+    "title": "About WFRC Analytics",
+    "section": "Commitment to Transparency",
+    "text": "Commitment to Transparency\nThis documentation portal reflects our commitment to transparency and open access to planning methodologies. By making our technical documentation, validation reports, and analytical tools publicly available, we aim to:\n\nSupport informed public participation in transportation planning\nEnable academic research and education\nFacilitate coordination with planning partners\nDemonstrate accountability in the use of federal transportation funding"
+  },
+  {
+    "objectID": "about.html#technical-support",
+    "href": "about.html#technical-support",
+    "title": "About WFRC Analytics",
+    "section": "Technical Support",
+    "text": "Technical Support\nFor technical questions about our models, data requests, or assistance with transportation planning studies:\nWFRC Analytics Team Email: analytics@wfrc.utah.gov Phone: (801) 363-4250\nFor general information about WFRC’s programs and services, visit wfrc.utah.gov."
+  },
+  {
+    "objectID": "about.html#quick-facts",
+    "href": "about.html#quick-facts",
+    "title": "About WFRC Analytics",
+    "section": "Quick Facts",
+    "text": "Quick Facts\nRegion Served: 7 counties in northern Utah Population: ~2.7 million (2024) Model Base Year: 2019 Forecast Horizon: 2050 TAZs (Transportation Analysis Zones): 3,847 Current TDM Version: 9.2.0 Current REMM Version: 3.0.0\n\nLast Updated: January 2025"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Welcome to WFRC Analytics documentation.",
