@@ -83,6 +83,12 @@ div.sourceCode {
   border: 1px solid $code-block-border;
 }
 
+// Both should have the same background for consistency
+div.sourceCode,
+pre.sourceCode {
+  background-color: darken($code-block-bg, 5%);
+}
+
 // Code with filename
 .code-with-filename .code-with-filename-file {
   color: $code-color;
