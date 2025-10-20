@@ -111,7 +111,7 @@ website:
   sidebar:
     - id: tdm-current
       title: "TDM 9.2.0"
-      style: "floating"
+      style: "docked"
       search: true
       collapse-level: 2
       contents:
@@ -214,7 +214,7 @@ website:
 
     - id: tdm-beta
       title: "TDM 10.0.0 (Beta)"
-      style: "floating"
+      style: "docked"
       search: true
       collapse-level: 2
       contents:
@@ -226,7 +226,7 @@ website:
 
     - id: tdm-archive
       title: "TDM Archive"
-      style: "floating"
+      style: "docked"
       search: true
       collapse-level: 2
       contents:
@@ -261,7 +261,7 @@ website:
 
     - id: remm-current
       title: "REMM 3.0.0"
-      style: "floating"
+      style: "docked"
       search: true
       collapse-level: 2
       contents:
@@ -314,7 +314,7 @@ website:
 
     - id: remm-beta
       title: "REMM 3.0.2 (Beta)"
-      style: "floating"
+      style: "docked"
       search: true
       collapse-level: 2
       contents:
@@ -326,7 +326,7 @@ website:
 
     - id: remm-archive
       title: "REMM Archive"
-      style: "floating"
+      style: "docked"
       search: true
       contents:
         - 2-remm/archive/index.qmd
@@ -334,7 +334,7 @@ website:
 
     - id: bdm-current
       title: "BDM Current"
-      style: "floating"
+      style: "docked"
       search: true
       collapse-level: 2
       contents:
@@ -357,7 +357,7 @@ website:
 
     - id: bdm-beta
       title: "BDM (Beta)"
-      style: "floating"
+      style: "docked"
       search: true
       collapse-level: 2
       contents:
@@ -369,7 +369,7 @@ website:
 
     - id: bdm-archive
       title: "BDM Archive"
-      style: "floating"
+      style: "docked"
       search: true
       contents:
         - 3-bdm/archive/index.qmd
@@ -377,7 +377,7 @@ website:
 
     - id: tools
       title: "Tools"
-      style: "floating"
+      style: "docked"
       search: true
       contents:
         - 4-tools/index.qmd
@@ -411,7 +411,7 @@ format:
   html:
     page-layout: full
     grid:
-      sidebar-width: 400px
+      sidebar-width: 350px
     respect-user-color-scheme: true
     theme:
       light:
