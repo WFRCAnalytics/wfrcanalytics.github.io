@@ -46,11 +46,11 @@ The table below lists all previous official releases of the WFRC Travel Demand M
 
 | Version | Release Date | Status | Key Changes | Download |
 |---------|--------------|--------|-------------|----------|
-| 9.1.0 | June 2024 | Archived | Network updates, calibration refinements | <a href="https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases/tag/v9.1.0-official" class="download-link" onclick="return checkLicense(event)" target="_blank">⬇️ Download</a> |
-| 9.0.2 | April 2024 | Archived | Bug fixes and minor improvements | <a href="https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases/tag/v9.0.2-official" class="download-link" onclick="return checkLicense(event)" target="_blank">⬇️ Download</a> |
-| 9.0.1 | February 2024 | Archived | Hot fixes for 9.0.0 | <a href="https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases/tag/v9.0.1-official" class="download-link" onclick="return checkLicense(event)" target="_blank">⬇️ Download</a> |
-| 9.0.0 | January 2024 | Archived | Major update: New mode choice model, updated networks | <a href="https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases/tag/v9.0.0-official" class="download-link" onclick="return checkLicense(event)" target="_blank">⬇️ Download</a> |
-| 8.3.2 | August 2023 | Archived | Final 8.x series release | <a href="https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases/tag/v8.3.2-official" class="download-link" onclick="return checkLicense(event)" target="_blank">⬇️ Download</a> |
+| 9.1.0 | June 2024 | Archived | Network updates, calibration refinements | <a href="https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases/tag/v9.1.0-official" class="download-link" onclick="return checkLicense(event)" target="_blank">{{< fa download >}} Download</a> |
+| 9.0.2 | April 2024 | Archived | Bug fixes and minor improvements | <a href="https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases/tag/v9.0.2-official" class="download-link" onclick="return checkLicense(event)" target="_blank">{{< fa download >}} Download</a> |
+| 9.0.1 | February 2024 | Archived | Hot fixes for 9.0.0 | <a href="https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases/tag/v9.0.1-official" class="download-link" onclick="return checkLicense(event)" target="_blank">{{< fa download >}} Download</a> |
+| 9.0.0 | January 2024 | Archived | Major update: New mode choice model, updated networks | <a href="https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases/tag/v9.0.0-official" class="download-link" onclick="return checkLicense(event)" target="_blank">{{< fa download >}} Download</a> |
+| 8.3.2 | August 2023 | Archived | Final 8.x series release | <a href="https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases/tag/v8.3.2-official" class="download-link" onclick="return checkLicense(event)" target="_blank">{{< fa download >}} Download</a> |
 
 </div>
 
