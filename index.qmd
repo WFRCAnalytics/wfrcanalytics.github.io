@@ -6,9 +6,7 @@ about:
   image-width: 24em
   image-shape: rectangle
 
-format:
-  html:
-    toc: false
+toc: false
 
 header-includes: >
   <link rel="stylesheet" href="assets/theme/index.css">

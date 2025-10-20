@@ -1,6 +1,5 @@
 ---
 title: "About WFRC Analytics"
-toc: true
 ---
 
 ## Our Organization

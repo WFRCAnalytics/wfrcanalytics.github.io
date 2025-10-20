@@ -2,6 +2,7 @@
 title: License
 pagetitle: License
 date: "2025-10-15"
+toc: false
 ---
 
 <!-- Reference: https://github.com/Paulj1989/paulrjohnson.net/blob/main/license.qmd -->
