@@ -6,11 +6,9 @@ about:
   image-width: 24em
   image-shape: rectangle
 
-twitter-card:
-    title: Wasatch Front Regional Council
-    description: |
-      Wasatch Front - Regional Travel Demand Model
-    image: 'assets/logo/abbreviated/WFRC_logo_abbreviated_color_transparent.png'
+format:
+  html:
+    toc: false
 
 header-includes: >
   <link rel="stylesheet" href="assets/theme/index.css">

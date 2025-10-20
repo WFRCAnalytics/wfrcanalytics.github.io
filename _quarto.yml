@@ -413,6 +413,7 @@ format:
     grid:
       sidebar-width: 350px
     respect-user-color-scheme: true
+    toc: true
     theme:
       light:
         # - "flatly"
