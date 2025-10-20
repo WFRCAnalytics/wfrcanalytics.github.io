@@ -410,6 +410,8 @@ website:
 format:
   html:
     page-layout: full
+    grid:
+      sidebar-width: 350px
     respect-user-color-scheme: true
     theme:
       light:
