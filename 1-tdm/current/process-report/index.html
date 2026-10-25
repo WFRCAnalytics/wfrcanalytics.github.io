@@ -2,17 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>Model Process Report – Analytics</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -33,21 +39,21 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../assets/logo/abbreviated/WFRC_logo_abbreviated_color_tranparent.png" rel="icon" type="image/png">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-c38f0049333ff9206208837e54a8ee10.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-281824393110b84a35ff188c8c7b2064.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-c38f0049333ff9206208837e54a8ee10.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-b81cf0d8b620db449052b3f2608d3c06.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bd6cab3d11d92836d2d37f3952f449ac.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-b81cf0d8b620db449052b3f2608d3c06.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/quarto-axe/axe.min.js"></script>
+<script src="../../../site_libs/quarto-axe/axe-check.js" type="module"></script>
+<script id="quarto-axe-checker-options" type="text/plain">dHJ1ZQ==</script>
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-03415fb092065df7b1be27b0bc4cf731.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-8b7adb81887f987ce4c025a7130a9dd0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-03415fb092065df7b1be27b0bc4cf731.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-f7ad28be91dbaafc5a349d1977635067.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-7d2f992267eb946130f3de5404b2c1df.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-f7ad28be91dbaafc5a349d1977635067.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -75,17 +81,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<!-- Optimized Font Preloading -->
+<style>html{ scroll-behavior: smooth; }</style>
 
 
-
-<!-- Body text font (Poppins Regular) -->
-
-<link rel="preload" href="../../../assets/fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin="">
-
-
-
-<link rel="stylesheet" href="../../../assets/css/index.css">
 <meta property="og:title" content="Model Process Report – Analytics">
 <meta property="og:site_name" content="Analytics">
 <meta name="twitter:title" content="Model Process Report – Analytics">
@@ -273,8 +271,8 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../../assets\logo\abbreviated\WFRC_logo_abbreviated_color_transparent.png" alt="" class="navbar-logo light-content">
-    <img src="../../../assets\logo\abbreviated\WFRC_logo_abbreviated_white_transparent.png" alt="" class="navbar-logo dark-content">
+    <img src="..\..\..\site_libs\quarto-contrib\quarto-project\wfrc-brand\assets\logo\abbreviated\WFRC_logo_abbreviated_color_transparent.png" alt="Wasatch Front Regional Council" class="navbar-logo light-content">
+    <img src="..\..\..\site_libs\quarto-contrib\quarto-project\wfrc-brand\assets\logo\abbreviated\WFRC_logo_abbreviated_white_transparent.png" alt="Wasatch Front Regional Council" class="navbar-logo dark-content">
     </a>
     <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Analytics</span>
@@ -357,12 +355,12 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-follow-us">    
         <li>
-    <a class="dropdown-item" href="https://www.facebook.com/WasatchFrontRegionalCouncil" target="_blank"><i class="bi bi-facebook" role="img">
+    <a class="dropdown-item" href="https://www.facebook.com/WasatchFrontRegionalCouncil/" target="_blank"><i class="bi bi-facebook" role="img">
 </i> 
  <span class="dropdown-text">Facebook</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://twitter.com/wasatchcouncil" target="_blank"><i class="bi bi-twitter-x" role="img">
+    <a class="dropdown-item" href="https://twitter.com/wasatchcouncil/" target="_blank"><i class="bi bi-twitter-x" role="img">
 </i> 
  <span class="dropdown-text">X (Twitter)</span></a>
   </li>  
@@ -372,12 +370,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Instagram</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://www.linkedin.com/company/wasatch-front-regional-council" target="_blank"><i class="bi bi-linkedin" role="img">
+    <a class="dropdown-item" href="https://www.linkedin.com/company/wasatch-front-regional-council/" target="_blank"><i class="bi bi-linkedin" role="img">
 </i> 
  <span class="dropdown-text">LinkedIn</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://www.youtube.com/user/wfrcvideo" target="_blank"><i class="bi bi-youtube" role="img">
+    <a class="dropdown-item" href="https://www.youtube.com/user/wfrcvideo/" target="_blank"><i class="bi bi-youtube" role="img">
 </i> 
  <span class="dropdown-text">YouTube</span></a>
   </li>  
@@ -387,7 +385,7 @@ ul.task-list li input[type="checkbox"] {
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
     <div class="dropdown">
-      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-github"></i></a>
+      <a href="" title="GitHub" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="GitHub"><i class="bi bi-github"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
           <li>
             <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/WFRCAnalytics/wfrcanalytics.github.io" target="_blank">
@@ -433,8 +431,8 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../../../index.html" class="sidebar-logo-link">
-      <img src="../../../assets\logo\stacked\WFRC_logo_stacked_color_transparent.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
-      <img src="../../../assets\logo\stacked\WFRC_logo_stacked_white_transparent.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      <img src="..\..\..\site_libs\quarto-contrib\quarto-project\wfrc-brand\assets\logo\stacked\WFRC_logo_stacked_color_transparent.png" alt="Wasatch Front Regional Council" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="..\..\..\site_libs\quarto-contrib\quarto-project\wfrc-brand\assets\logo\stacked\WFRC_logo_stacked_white_transparent.png" alt="Wasatch Front Regional Council" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -1212,20 +1210,57 @@ ul.task-list li input[type="checkbox"] {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>2025 Wasatch Front Regional Council ∙ Made with <a href="https://www.r-project.org/about.html" target="_blank"><i class="fa-brands fa-python" title="Python" aria-label="python"></i></a>, <a href="https://quarto.org/" target="_blank"><img src="https://quarto.org/favicon.png" width="14"></a>, <a href="https://git-scm.com/" target="_blank"><i class="fa-brands fa-git-alt" title="Git alt logo" aria-label="git-alt"></i></a> and <a href="https://github.com/" target="_blank"><i class="fa-brands fa-github" title="GitHub octocat logo" aria-label="github"></i></a></p>
+<p>© 2025 <a href="https://wfrc.utah.gov/">Wasatch Front Regional Council</a></p>
 </div>   
     <div class="nav-footer-center">
-<p><a href="https://www.facebook.com/WasatchFrontRegionalCouncil" title="Facebook" target="_blank" rel="noopener"><i class="fa-brands fa-facebook" aria-label="facebook"></i></a> &nbsp; <a href="https://twitter.com/wasatchcouncil" title="X (Twitter)" target="_blank" rel="noopener"><i class="fa-brands fa-square-x-twitter" aria-label="square-x-twitter"></i></a> &nbsp; <a href="https://www.instagram.com/wasatchfrontregionalcouncil" title="Instagram" target="_blank" rel="noopener"><i class="fa-brands fa-square-instagram" aria-label="square-instagram"></i></a> &nbsp; <a href="https://www.linkedin.com/company/wasatch-front-regional-council" title="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a> &nbsp; <a href="https://www.youtube.com/user/wfrcvideo" title="YouTube" target="_blank" rel="noopener"><i class="fa-brands fa-youtube" aria-label="youtube"></i></a></p>
-</div>
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/WFRCAnalytics/" target="_blank">
+      <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.facebook.com/WasatchFrontRegionalCouncil/" target="_blank">
+      <i class="bi bi-facebook" role="img" aria-label="Facebook">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/wasatchcouncil/" target="_blank">
+      <i class="bi bi-twitter-x" role="img" aria-label="X (Twitter)">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.instagram.com/wasatchfrontregionalcouncil/" target="_blank">
+      <i class="bi bi-instagram" role="img" aria-label="Instagram">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/company/wasatch-front-regional-council/" target="_blank">
+      <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/user/wfrcvideo/" target="_blank">
+      <i class="bi bi-youtube" role="img" aria-label="YouTube">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="../../../contact.html">
+    <a class="nav-link" href="https://wfrcanalytics.github.io/contact/" target="_blank">
 <p>Contact</p>
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../../../license.html">
+    <a class="nav-link" href="https://wfrcanalytics.github.io/license/" target="_blank">
 <p>License</p>
 </a>
   </li>  
@@ -1237,4 +1272,5 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
