@@ -1,0 +1,100 @@
+/*-- scss:defaults --*/
+
+// =============================================================================
+// DARK MODE — role map. Same roles as wfrc-light.scss, pointing at the dark
+// half of the brand.yml palette. Dark is its own design (deep navy, sky-blue
+// interaction), not a lightness inversion.
+// =============================================================================
+
+$wfrc-is-dark: true;
+
+// Surfaces and ink
+$wfrc-bg:           $brand-wfrc-night;
+$wfrc-bg-alt:       $brand-wfrc-night-band;
+$wfrc-surface:      $brand-wfrc-night-surface;
+$wfrc-surface-2:    $brand-wfrc-night-raised;
+$wfrc-ink:          $brand-wfrc-snow;
+$wfrc-ink-2:        $brand-wfrc-snow-soft;
+$wfrc-line:         $brand-wfrc-night-line;
+
+// Type and interaction
+$wfrc-h1:           $brand-wfrc-ice;
+$wfrc-h2:           $brand-wfrc-sky-mid;
+$wfrc-link:         $brand-wfrc-sky;
+$wfrc-link-hover:   $brand-wfrc-sky-pale;
+$wfrc-action:       $brand-wfrc-sky;
+$wfrc-action-ink:   $brand-wfrc-night-ink;
+$wfrc-action-hover: $brand-wfrc-sky-pale;
+$wfrc-focus:        $brand-wfrc-bright-blue;
+$wfrc-rule:         $brand-wfrc-bright-blue;
+
+// Accents and color blocks
+$wfrc-accent:       $brand-wfrc-brick-bright;
+$wfrc-gold:         $brand-wfrc-gold;
+$wfrc-gold-ink:     $brand-wfrc-night;
+$wfrc-band-blue:    $brand-wfrc-night-band-blue;
+$wfrc-block-navy:   $brand-wfrc-night-block;
+$wfrc-block-mid:    $brand-wfrc-night-mid;
+$wfrc-block-teal:   $brand-wfrc-night-teal;
+$wfrc-block-brick:  $brand-wfrc-night-brick;
+$wfrc-footer-bg:    $brand-wfrc-night-block;
+$wfrc-footer-ink:   $brand-wfrc-snow;
+$wfrc-footer-link:  $brand-wfrc-ice;
+
+// Code
+$wfrc-code-bg:      $brand-wfrc-night-code;
+$wfrc-code-ink:     $brand-wfrc-snow;
+$wfrc-code-inline:  $brand-wfrc-sky-pale;
+
+// Callouts
+$wfrc-c-note:       $brand-wfrc-note-light;
+$wfrc-c-tip:        $brand-wfrc-tip-light;
+$wfrc-c-important:  $brand-wfrc-brick-light;
+$wfrc-c-warning:    $brand-wfrc-warning-bar-light;
+$wfrc-c-caution:    $brand-wfrc-caution-light;
+
+// Charts
+$wfrc-chart-1:      $brand-chart-1-dark;
+$wfrc-chart-2:      $brand-chart-2-dark;
+$wfrc-chart-3:      $brand-chart-3-dark;
+$wfrc-chart-4:      $brand-chart-4-dark;
+$wfrc-chart-5:      $brand-chart-5-dark;
+
+$wfrc-shadow:       0 2px 12px rgba(0, 0, 0, 0.40);
+
+// Bootstrap variables that follow the roles
+$link-hover-color:          $wfrc-link-hover !default;
+$body-secondary-color:      $wfrc-ink-2 !default;
+$text-muted:                $wfrc-ink-2 !default;
+$body-tertiary-bg:          $wfrc-bg-alt !default;
+$border-color:              $wfrc-line !default;
+$navbar-bg:                 $wfrc-bg !default;
+$navbar-fg:                 $wfrc-h1 !default;
+$navbar-hl:                 $wfrc-h1 !default;
+$footer-bg:                 $wfrc-footer-bg !default;
+$footer-fg:                 $wfrc-footer-ink !default;
+$card-bg:                   $wfrc-surface !default;
+$card-cap-bg:               $wfrc-surface !default;
+$card-border-color:         $wfrc-line !default;
+$code-color:                $wfrc-code-inline !default;
+$code-bg:                   $wfrc-code-bg !default;
+$code-block-bg:             $wfrc-code-bg !default;
+$table-border-color:        $wfrc-line !default;
+$table-group-separator-color: $wfrc-line !default;
+$table-hover-bg:            $wfrc-surface-2 !default;
+$toc-color:                 $wfrc-h1 !default;
+$toc-active-border:         $wfrc-rule !default;
+$toc-inactive-border:       $wfrc-line !default;
+$sidebar-bg:                $wfrc-bg !default;
+$dropdown-bg:               $wfrc-surface !default;
+$dropdown-border-color:     $wfrc-line !default;
+$dropdown-link-hover-bg:    $wfrc-surface-2 !default;
+$dropdown-link-hover-color: $wfrc-h1 !default;
+$input-bg:                  $wfrc-surface !default;
+$input-border-color:        $wfrc-line !default;
+$nav-tabs-link-active-bg:   $wfrc-surface-2 !default;
+$callout-color-note:        $wfrc-c-note !default;
+$callout-color-tip:         $wfrc-c-tip !default;
+$callout-color-important:   $wfrc-c-important !default;
+$callout-color-warning:     $wfrc-c-warning !default;
+$callout-color-caution:     $wfrc-c-caution !default;

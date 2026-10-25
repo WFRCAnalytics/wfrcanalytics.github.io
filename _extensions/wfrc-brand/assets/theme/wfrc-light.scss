@@ -1,0 +1,101 @@
+/*-- scss:defaults --*/
+
+// =============================================================================
+// LIGHT MODE — role map. Every value is a brand.yml palette name; no hex codes.
+// brand.yml (loaded last in the theme list) supplies $primary, $body-bg,
+// $body-color, headings, links and fonts. This file adds the roles brand.yml
+// has no field for.
+// =============================================================================
+
+$wfrc-is-dark: false;
+
+// Surfaces and ink
+$wfrc-bg:           $brand-wfrc-paper;
+$wfrc-bg-alt:       $brand-wfrc-band;
+$wfrc-surface:      $brand-wfrc-paper;
+$wfrc-surface-2:    $brand-wfrc-mist;
+$wfrc-ink:          $brand-wfrc-ink;
+$wfrc-ink-2:        $brand-wfrc-ink-soft;
+$wfrc-line:         $brand-wfrc-hairline;
+
+// Type and interaction
+$wfrc-h1:           $brand-wfrc-navy;
+$wfrc-h2:           $brand-wfrc-mid-blue;
+$wfrc-link:         $brand-wfrc-navy;
+$wfrc-link-hover:   $brand-wfrc-action;
+$wfrc-action:       $brand-wfrc-action;
+$wfrc-action-ink:   $brand-wfrc-paper;
+$wfrc-action-hover: $brand-wfrc-navy;
+$wfrc-focus:        $brand-wfrc-bright-blue;
+$wfrc-rule:         $brand-wfrc-bright-blue;
+
+// Accents and color blocks
+$wfrc-accent:       $brand-wfrc-brick;
+$wfrc-gold:         $brand-wfrc-gold;
+$wfrc-gold-ink:     $brand-wfrc-navy;
+$wfrc-band-blue:    $brand-wfrc-bright-blue;
+$wfrc-block-navy:   $brand-wfrc-navy;
+$wfrc-block-mid:    $brand-wfrc-mid-blue;
+$wfrc-block-teal:   $brand-wfrc-action;
+$wfrc-block-brick:  $brand-wfrc-brick-deep;
+$wfrc-footer-bg:    $brand-wfrc-navy;
+$wfrc-footer-ink:   $brand-wfrc-snow;
+$wfrc-footer-link:  $brand-wfrc-ice;
+
+// Code
+$wfrc-code-bg:      $brand-wfrc-code;
+$wfrc-code-ink:     $brand-wfrc-ink;
+$wfrc-code-inline:  $brand-wfrc-navy;
+
+// Callouts
+$wfrc-c-note:       $brand-wfrc-note;
+$wfrc-c-tip:        $brand-wfrc-tip;
+$wfrc-c-important:  $brand-wfrc-brick-deep;
+$wfrc-c-warning:    $brand-wfrc-warning-bar;
+$wfrc-c-caution:    $brand-wfrc-caution;
+
+// Charts (read by OJS and by the R, Python helpers through brand.yml)
+$wfrc-chart-1:      $brand-chart-1;
+$wfrc-chart-2:      $brand-chart-2;
+$wfrc-chart-3:      $brand-chart-3;
+$wfrc-chart-4:      $brand-chart-4;
+$wfrc-chart-5:      $brand-chart-5;
+
+$wfrc-shadow:       0 2px 10px rgba(0, 57, 91, 0.10);
+
+// Bootstrap variables that follow the roles (!default so brand.yml can still win)
+$link-hover-color:          $wfrc-link-hover !default;
+$body-secondary-color:      $wfrc-ink-2 !default;
+$text-muted:                $wfrc-ink-2 !default;
+$body-tertiary-bg:          $wfrc-bg-alt !default;
+$border-color:              $wfrc-line !default;
+$navbar-bg:                 $wfrc-bg !default;
+$navbar-fg:                 $wfrc-h1 !default;
+$navbar-hl:                 $wfrc-h1 !default;
+$footer-bg:                 $wfrc-footer-bg !default;
+$footer-fg:                 $wfrc-footer-ink !default;
+$card-bg:                   $wfrc-surface !default;
+$card-cap-bg:               $wfrc-surface !default;
+$card-border-color:         $wfrc-line !default;
+$code-color:                $wfrc-code-inline !default;
+$code-bg:                   $wfrc-code-bg !default;
+$code-block-bg:             $wfrc-code-bg !default;
+$table-border-color:        $wfrc-line !default;
+$table-group-separator-color: $wfrc-line !default;
+$table-hover-bg:            $wfrc-surface-2 !default;
+$toc-color:                 $wfrc-h1 !default;
+$toc-active-border:         $wfrc-rule !default;
+$toc-inactive-border:       $wfrc-line !default;
+$sidebar-bg:                $wfrc-bg !default;
+$dropdown-bg:               $wfrc-surface !default;
+$dropdown-border-color:     $wfrc-line !default;
+$dropdown-link-hover-bg:    $wfrc-surface-2 !default;
+$dropdown-link-hover-color: $wfrc-h1 !default;
+$input-bg:                  $wfrc-surface !default;
+$input-border-color:        $wfrc-line !default;
+$nav-tabs-link-active-bg:   $wfrc-surface-2 !default;
+$callout-color-note:        $wfrc-c-note !default;
+$callout-color-tip:         $wfrc-c-tip !default;
+$callout-color-important:   $wfrc-c-important !default;
+$callout-color-warning:     $wfrc-c-warning !default;
+$callout-color-caution:     $wfrc-c-caution !default;

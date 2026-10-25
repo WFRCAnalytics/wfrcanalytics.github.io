@@ -1,0 +1,71 @@
+title: wfrc-brand
+author: Pukar Bhandari
+version: 0.1.0
+quarto-required: ">=1.8.0"
+contributes:
+  # ── FORMAT CONTRIBUTIONS ───────────────────────────────────────────────────
+  # contributes.formats.* resolves paths relative to the extension folder.
+  # Theme layers, low to high priority:
+  #   wfrc.scss           shared structure (no color)
+  #   wfrc-light|dark     role map: brand.yml palette name per role
+  #   wfrc-overrides      every Quarto component rule, written once
+  #   brand               brand.yml last, so $brand-* variables exist in the
+  #                       layers above and brand colors/fonts always win
+  formats:
+    html:
+      axe: true
+      page-layout: full
+      toc: true
+      toc-expand: 2
+      smooth-scroll: true
+      number-sections: true
+      number-depth: 2
+      html-math-method: katex
+      code-link: true
+      code-tools: true
+      grid:
+        sidebar-width: 350px
+      theme:
+        light:
+          - assets/theme/wfrc.scss
+          - assets/theme/wfrc-light.scss
+          - assets/theme/wfrc-overrides.scss
+          - brand
+        dark:
+          - assets/theme/wfrc.scss
+          - assets/theme/wfrc-dark.scss
+          - assets/theme/wfrc-overrides.scss
+          - brand
+      highlight-style:
+        light: assets/theme/wfrc-light.theme
+        dark: assets/theme/wfrc-dark.theme
+      respect-user-color-scheme: true
+    dashboard:
+      respect-user-color-scheme: true
+      logo-alt: "Wasatch Front Regional Council"
+      theme:
+        light:
+          - assets/theme/wfrc.scss
+          - assets/theme/wfrc-light.scss
+          - assets/theme/wfrc-overrides.scss
+          - brand
+        dark:
+          - assets/theme/wfrc.scss
+          - assets/theme/wfrc-dark.scss
+          - assets/theme/wfrc-overrides.scss
+          - brand
+      highlight-style:
+        light: assets/theme/wfrc-light.theme
+        dark: assets/theme/wfrc-dark.theme
+    typst:
+      toc: true
+      number-sections: true
+      number-depth: 2
+    docx:
+      toc: true
+      number-sections: true
+      number-depth: 2
+
+  # ── RESOURCES ──────────────────────────────────────────────────────────────
+  resources:
+    - assets/

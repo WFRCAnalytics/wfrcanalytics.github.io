@@ -3,15 +3,12 @@ pagetitle: Home
 image: 'assets/logo/WFRCDieCutLogo.png'
 about:
   template: jolla
-  image-width: 24em
+  image-width: "min(24em, 100%)"
+  image-alt: "Wasatch Front Regional Council logo"
   image-shape: rectangle
 
 toc: false
 
-header-includes: >
-  <link rel="stylesheet" href="assets/theme/index.css">
-resources:
-  - assets/theme/index.css
 ---
 
 ::: {#bio}

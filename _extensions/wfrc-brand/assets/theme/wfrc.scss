@@ -1,0 +1,58 @@
+/*-- scss:defaults --*/
+
+// =============================================================================
+// WFRC shared structure — layout and sizing that is the same in light and dark.
+// No color appears here. Colors come from brand.yml (palette) and the role map
+// in wfrc-light.scss / wfrc-dark.scss.
+// Load order (low to high): wfrc.scss, wfrc-light|dark.scss, wfrc-overrides.scss, brand
+// =============================================================================
+
+// Code blocks
+$code-block-border-left: false !default;
+$code-block-padding-left: 0.6em !default;
+$code-block-bg-padding: 0.6em !default;
+$code-block-theme-dark-threshhold: 40% !default;
+
+// Callouts: left bar plus a tinted title strip. Colors set per mode.
+$callout-border-width: 4px !default;
+$callout-border-scale: 0% !default;
+$callout-icon-scale: 10% !default;
+$callout-margin-top: 1.25rem !default;
+$callout-margin-bottom: 1.25rem !default;
+
+// Table of contents and sidebar sizing
+$toc-font-size: 0.875rem !default;
+$toc-tools-font-size: 0.8rem !default;
+$sidebar-font-size: 0.925rem !default;
+$sidebar-font-size-section: 0.875rem !default;
+$sidebar-font-size-collapse: 1rem !default;
+$sidebar-font-size-section-collapse: 1.1rem !default;
+$sidebar-border: false !default;
+
+// Title block and footer
+$title-block-padding-top: 2.5em !default;
+$footer-font-size: 0.85em !default;
+
+// CSS grid: always override Bootstrap's float grid classes (kept from earlier versions)
+$enable-grid-classes: false;
+$enable-cssgrid: true;
+$grid-sidebar-width: 250px !default;
+$grid-body-width: 800px !default;
+$grid-margin-width: 250px !default;
+$grid-column-gutter-width: 1.5em !default;
+
+// Code annotation
+$code-annotation-higlight-color: #aaaaaa44 !default;
+$code-annotation-higlight-bg: #aaaaaa22 !default;
+
+// Breadcrumb
+$breadcrumb-divider: quote(">") !default;
+
+// Bootstrap component shape that brand.yml cannot express
+$card-border-width: 1px !default;
+$input-border-radius: 6px !default;
+$dropdown-border-radius: 8px !default;
+$nav-link-font-weight: 600 !default;
+$link-decoration: underline !default;
+$link-hover-decoration: none !default;
+$min-contrast-ratio: 4.5 !default;

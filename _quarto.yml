@@ -1,6 +1,10 @@
 project:
   type: website
   output-dir: docs
+  brand: _extensions/wfrc-brand/brand.yml
+
+metadata-files:
+  - _extensions/wfrc-brand/wfrc-shared.yml
 
 website:
   title: "Analytics"
@@ -66,47 +70,6 @@ website:
             href: 3-bdm/archive/index.qmd
       - text: Tools
         href: 4-tools/index.qmd
-      - text: Follow Us
-        menu:
-          # - icon: github
-          #   text: GitHub
-          #   href: https://github.com/WFRCAnalytics
-          #   target: _blank
-          - icon: facebook
-            text: Facebook
-            href: https://www.facebook.com/WasatchFrontRegionalCouncil
-            target: _blank
-          - icon: twitter-x
-            text: X (Twitter)
-            href: https://twitter.com/wasatchcouncil
-            target: _blank
-          - icon: instagram
-            text: Instagram
-            href: https://www.instagram.com/wasatchfrontregionalcouncil/
-            target: _blank
-          - text: LinkedIn
-            icon: linkedin
-            href: https://www.linkedin.com/company/wasatch-front-regional-council
-            target: _blank
-          - icon: youtube
-            text: YouTube
-            href: https://www.youtube.com/user/wfrcvideo
-            target: _blank
-    tools:
-      - icon: github
-        menu:
-          - text: Source Code
-            # icon: "code-slash"
-            href: https://github.com/WFRCAnalytics/wfrcanalytics.github.io
-            target: _blank
-          - text: Report a Bug
-            # icon: "bug"
-            href: https://github.com/WFRCAnalytics/wfrcanalytics.github.io/issues/new
-            target: _blank
-          - text: Ask a Question
-            # icon: "chat-right-text"
-            href: https://github.com/WFRCAnalytics/wfrcanalytics.github.io/discussions/new/choose
-            target: _blank
 
   sidebar:
     - id: tdm-current
@@ -386,53 +349,6 @@ website:
             - text: "Viz-Tool"
               href: https://wfrcanalytics.github.io/Viz-Tool/
               target: _blank
-
-  page-footer:
-    left: 2025 Wasatch Front Regional Council &#8729; Made with [{{< fa brands python title="Python" >}}](https://www.r-project.org/about.html){target=_blank}, [<img src="https://quarto.org/favicon.png" width="14">](https://quarto.org/){target=_blank}, [{{< fa brands git-alt title="Git alt logo" >}}](https://git-scm.com/){target=_blank} and [{{< fa brands github title="GitHub octocat logo" >}}](https://github.com/){target=_blank}
-    center: | # <a href="https://github.com/WFRCAnalytics" title="GitHub" target="_blank" rel="noopener">{{< fa brands github >}}</a> &nbsp;
-          <a href="https://www.facebook.com/WasatchFrontRegionalCouncil" title="Facebook" target="_blank" rel="noopener">{{< fa brands facebook >}}</a>
-          &nbsp;
-          <a href="https://twitter.com/wasatchcouncil" title="X (Twitter)" target="_blank" rel="noopener">{{< fa brands square-x-twitter >}}</a>
-          &nbsp;
-          <a href="https://www.instagram.com/wasatchfrontregionalcouncil" title="Instagram" target="_blank" rel="noopener">{{< fa brands square-instagram >}}</a>
-          &nbsp;
-          <a href="https://www.linkedin.com/company/wasatch-front-regional-council" title="LinkedIn" target="_blank" rel="noopener">{{< fa brands linkedin >}}</a>
-          &nbsp;
-          <a href="https://www.youtube.com/user/wfrcvideo" title="YouTube" target="_blank" rel="noopener">{{< fa brands youtube >}}</a>
-    right:
-      - text: Contact
-        aria-label: Contact Form
-        href: contact.qmd
-      - text: License
-        aria-label: License Details
-        href: license.qmd
-
-format:
-  html:
-    axe: true
-    page-layout: full
-    grid:
-      sidebar-width: 350px
-    respect-user-color-scheme: true
-    toc: true
-    theme:
-      light:
-        # - "flatly"
-        - cosmo
-        - assets/theme/index.scss
-        - assets/theme/theme-light.scss
-      dark:
-        # - "darkly"
-        - assets/theme/index.scss
-        - assets/theme/theme-dark.scss
-    # mainfont: "Roboto"
-    # monofont: "Roboto Mono"
-    css: assets/css/index.css
-    include-in-header:
-      - _includes/preload-fonts.html
-
-# Use _brand.yml
-brand: true
 
 # freeze computational output
 # (see https://quarto.org/docs/projects/code-execution.html#freeze)
