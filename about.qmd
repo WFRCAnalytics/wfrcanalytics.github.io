@@ -67,7 +67,7 @@ We work with these agencies on models and tools.
 
 <div class="partner-grid" style="--cols:3">
 <a class="partner-card" href="https://magutah.gov/" target="_blank" rel="noopener"><span class="partner-logo"><img src="assets/partners/mag.svg" alt="" loading="lazy"></span><span class="partner-name">Mountainland Association of Governments (MAG)</span><span class="partner-note">Co-developer of the Travel Demand Model</span></a>
-<a class="partner-card" href="https://www.udot.utah.gov/" target="_blank" rel="noopener"><span class="partner-logo"><img src="assets/partners/udot-mark.png" alt="" loading="lazy"></span><span class="partner-name">Utah Department of Transportation (UDOT)</span></a>
+<a class="partner-card" href="https://www.udot.utah.gov/" target="_blank" rel="noopener"><span class="partner-logo"><img src="assets/partners/udot.png" alt="" loading="lazy"></span><span class="partner-name">Utah Department of Transportation (UDOT)</span></a>
 <a class="partner-card" href="https://www.rideuta.com/" target="_blank" rel="noopener"><span class="partner-logo"><img src="assets/partners/uta.svg" alt="" loading="lazy"></span><span class="partner-name">Utah Transit Authority (UTA)</span></a>
 </div>
 
