@@ -515,7 +515,7 @@
     "href": "index.html#our-models",
     "title": "The data and models behind Wasatch Front planning.",
     "section": "Our models",
-    "text": "Our models\n\n\nTravel Demand Model\nForecasts travel on the region’s roads and transit. Documentation of record for every version lives on the WFRC site.\nOverview Documentation\n\n\nReal-Estate Market Model\nAn UrbanSim-based simulation of where people and jobs may locate, used for the region’s socioeconomic forecasts.\n Overview  Source\n\n\nBike Demand Model\nEstimates bicycle and micromobility demand to guide active transportation investments.\n Overview  Source"
+    "text": "Our models\n\n\nTravel Demand Model\nForecasts travel on the region’s roads and transit. Documentation of record for every version lives on the WFRC site.\n Overview  Documentation\n\n\nReal-Estate Market Model\nAn UrbanSim-based simulation of where people and jobs may locate, used for the region’s socioeconomic forecasts.\n Overview  Source\n\n\nBike Demand Model\nEstimates bicycle and micromobility demand to guide active transportation investments.\n Overview  Source"
   },
   {
     "objectID": "index.html#find-your-way-around",
