@@ -63,6 +63,8 @@ website:
         text: Data
       - href: https://wfrcanalytics.github.io/code/
         text: Code
+      - href: updates/index.qmd
+        text: Updates
       - href: about.qmd
         text: About
 

@@ -1,0 +1,13 @@
+---
+title: "Updates"
+description: "New releases, tools and changes from the WFRC Analytics team."
+toc: false
+listing:
+  contents: posts
+  type: default
+  sort: "date desc"
+  categories: true
+  feed: true
+  fields: [date, title, description, categories]
+  page-size: 10
+---

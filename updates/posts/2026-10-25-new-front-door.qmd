@@ -1,0 +1,15 @@
+---
+title: "A new front door for WFRC Analytics"
+description: "This site now brings the team's models, apps, maps, reports and code together in one place."
+date: 2026-10-25
+categories: [site]
+---
+
+WFRC Analytics works across many repositories, apps and reports. This site is the front door to all of it.
+
+- **[Explore](../../explore/index.qmd)** lists the live apps and maps, such as the commute flow explorers and the housing access calculator.
+- **[Models](../../models/index.qmd)** explains the Travel Demand, Real-Estate Market and Bike Demand models, with current releases and links to full documentation.
+- **[Reports & methods](../../reports/index.qmd)** collects the estimation, calibration and validation write-ups behind the models.
+- **[Data](../../data/index.qmd)** and **[Code](../../code/index.qmd)** list datasets and every repository, with a clear **Internal** label on those that need WFRC GitHub access.
+
+The lists are generated from a single catalog, so new tools appear here without hand-editing pages. Spotted something missing or wrong? Tell us through the [contact page](../../contact.qmd).

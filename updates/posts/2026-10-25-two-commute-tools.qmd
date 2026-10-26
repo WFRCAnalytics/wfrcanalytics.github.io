@@ -1,0 +1,15 @@
+---
+title: "Two commute-flow tools, two questions"
+description: "When to use the Commute Patterns map and when to use the Commute Flow Explorer."
+date: 2026-10-25
+categories: [apps, commuting]
+draft: true
+---
+
+WFRC maintains two interactive commute-flow tools built on the same Census LODES data. They answer different questions.
+
+**Use [Commute Patterns](https://wfrcanalytics.github.io/APP-WFRC-Commute-Patterns/){target="_blank"}** when your question is about a named place: cities, counties and legislative districts. It shows commute mode, travel time, distance bands and industry mix for one zone at a time.
+
+**Use [Commute Flow Explorer](https://wfrcanalytics.github.io/APP-Commute-Explorer/){target="_blank"}** when you want to draw your own catchments. Click anywhere on the map, select two to ten points, and compare flows between them using small hexagonal cells. Queries run in your browser, and a year slider covers 2002 to 2023.
+
+Both are open source. Find them in [Explore](../../explore/index.qmd).

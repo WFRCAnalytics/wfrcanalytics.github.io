@@ -25,6 +25,8 @@ Explore the travel demand, real-estate market and bike demand models that inform
 {{< include _home-featured.md >}}
 
 [Browse all apps and maps &rarr;](explore/index.qmd)
+
+{{< include _home-updates.md >}}
 :::
 
 ::: {#models .wfrc-band .column-screen}

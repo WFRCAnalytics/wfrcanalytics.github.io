@@ -136,6 +136,27 @@ def release_tables(releases):
         encoding="utf-8")
 
 
+def home_updates():
+    """Latest published posts as a Home page include; empty file when there are none."""
+    posts = []
+    for f in sorted((ROOT / "updates" / "posts").glob("*.qmd")):
+        head = yaml.safe_load(f.read_text(encoding="utf-8").split("---")[1])
+        if head.get("draft"):
+            continue
+        posts.append((str(head["date"]), head["title"], f.stem))
+    posts.sort(reverse=True)
+    lines = []
+    if posts:
+        months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+        lines = ["## Latest updates", "", "::: {.wfrc-updates}"]
+        for date, title, stem in posts[:4]:
+            _, m, d = date.split("-")
+            lines += [f"[{months[int(m) - 1]} {d}]{{.wfrc-date}} [{title}](updates/posts/{stem}.qmd)", ""]
+        lines += [":::", "", "[All updates &rarr;](updates/index.qmd)", ""]
+    (ROOT / "_home-updates.md").write_text(NL.join(lines), encoding="utf-8")
+    print(f"home: {len(posts)} published updates")
+
+
 def main():
     catalog = yaml.safe_load((ROOT / "catalog.yml").read_text(encoding="utf-8"))
     ids = [e["id"] for e in catalog]
@@ -146,6 +167,7 @@ def main():
         assert e["status"] in STATUS_LABEL, f"{e['id']}: unknown status {e['status']}"
     releases = yaml.safe_load((ROOT / "releases.yml").read_text(encoding="utf-8"))
     home_snippets(catalog, releases)
+    home_updates()
     shown = sorted((e for e in catalog if e["include"]), key=sort_key)
     release_tables(releases)
     for page, pred in PAGES.items():
