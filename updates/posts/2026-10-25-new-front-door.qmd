@@ -12,4 +12,4 @@ WFRC Analytics works across many repositories, apps and reports. This site is th
 - **[Reports & methods](../../reports/index.qmd)** collects the estimation, calibration and validation write-ups behind the models.
 - **[Data](../../data/index.qmd)** and **[Code](../../code/index.qmd)** list datasets and every repository, with a clear **Internal** label on those that need WFRC GitHub access.
 
-The lists are generated from a single catalog, so new tools appear here without hand-editing pages. Spotted something missing or wrong? Tell us through the [contact page](../../contact.qmd).
+The lists are generated from a single catalog, so new tools appear here without hand-editing pages. Spotted something missing or wrong? Tell us through the [contact page](../../contact/index.qmd).

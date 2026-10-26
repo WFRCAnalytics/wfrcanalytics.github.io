@@ -10,7 +10,7 @@ metadata-files:
 website:
   title: "Analytics"
   description: The Wasatch Front Regional Council builds consensus and enhances quality of life by developing and implementing visions and plans for a well-functioning multi-modal transportation system, livable communities, a strong economy, and a healthy environment.
-  favicon: 'assets/logo/abbreviated/WFRC_logo_abbreviated_color_tranparent.png'
+  favicon: 'assets/logo/abbreviated/WFRC_logo_abbreviated_color_transparent.png'
   site-url: 'https://wfrcanalytics.github.io'
 
   # repo-url: 'https://https://github.com/WFRCAnalytics/wfrcanalytics.github.io'
@@ -19,13 +19,6 @@ website:
   # page-navigation: false
   # back-to-top-navigation: false
   # margin-header: subscribe.html
-
-  announcement:
-    icon: info-circle
-    dismissable: true
-    content: "**Alert** - This website currently contains mostly placeholder items and is currently under development."
-    type: primary
-    position: below-navbar
 
   twitter-card:
     creator: "@wasatchcouncil"

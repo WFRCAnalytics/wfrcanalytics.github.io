@@ -55,4 +55,4 @@ The Real-Estate Market Model's household and job projections drive trip generati
 
 - The full documentation of record for every travel demand model version is on the [WFRC documentation site](https://wfrc.utah.gov/wftdm-docs/){target="_blank"}.
 - Browse the apps built on these models in [Explore](../explore/index.qmd), or the supporting reports in [Reports & methods](../reports/index.qmd).
-- To use a model or discuss a study, [contact the team](../contact.qmd).
+- To use a model or discuss a study, [contact the team](../contact/index.qmd).

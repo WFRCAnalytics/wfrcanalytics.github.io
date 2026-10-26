@@ -8,3 +8,13 @@
   line-height: 1.4;
   margin: 0;
 }
+
+/* Category chips: the default grey fails WCAG AA contrast on the brand surfaces.
+   Use the theme's body color so it follows light and dark mode. */
+body .listing-category,
+body .quarto-category > a {
+  color: var(--bs-body-color) !important;
+}
+body .quarto-category {
+  opacity: 1 !important;
+}

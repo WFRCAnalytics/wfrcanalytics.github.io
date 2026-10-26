@@ -51,4 +51,4 @@ Our work depends on partners and data from the Mountainland Association of Gover
 
 ## Get in touch
 
-For model access, data requests or help with a planning study, see the [contact page](contact.qmd). For general WFRC programs and services, visit [wfrc.utah.gov](https://wfrc.utah.gov/){target="_blank"}.
+For model access, data requests or help with a planning study, see the [contact page](contact/index.qmd). For general WFRC programs and services, visit [wfrc.utah.gov](https://wfrc.utah.gov/){target="_blank"}.

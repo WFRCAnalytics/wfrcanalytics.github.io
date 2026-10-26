@@ -92,7 +92,7 @@ Every public repository, searchable, with internal ones clearly marked.
 
 Questions, data requests or help applying our tools.
 
-[Contact us](contact.qmd){.btn .btn-sm}
+[Contact us](contact/index.qmd){.btn .btn-sm}
 :::
 :::
 :::
