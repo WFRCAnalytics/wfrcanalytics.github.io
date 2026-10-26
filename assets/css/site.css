@@ -18,3 +18,23 @@ body .quarto-category > a {
 body .quarto-category {
   opacity: 1 !important;
 }
+
+/* Listing cards: banner on top, tinted surface, lift on hover. */
+.quarto-grid-item.card {
+  background: var(--bs-tertiary-bg, var(--bs-body-bg));
+  border-color: var(--bs-border-color);
+  overflow: hidden;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.quarto-grid-item.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 57, 91, .18);
+}
+.quarto-grid-item .card-img-top {
+  object-fit: cover;
+  border-radius: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  .quarto-grid-item.card { transition: none; }
+  .quarto-grid-item.card:hover { transform: none; }
+}

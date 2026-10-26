@@ -8,6 +8,7 @@
   - Model
   - TDM
   date: 2026-10-21
+  image: ../assets/cards/mid.svg
 - title: TDM Run Results
   description: Reproducible, traceable, and publishable Cube Voyager model runs for
     sensitivity testing, project alternatives, and scenario analysis.
@@ -17,6 +18,7 @@
   - Model
   - TDM
   date: 2026-10-21
+  image: ../assets/cards/mid.svg
 - title: TDM Development
   description: Wasatch Front (WFRC + MAG) Regional Travel Demand Model. Requires WFRC
     GitHub access.
@@ -27,6 +29,7 @@
   - Model
   - TDM
   date: 2026-10-23
+  image: ../assets/cards/mid.svg
 - title: VAL School College Enrollment
   description: Validates the synthetic population against real K-12 and college enrollment.
   path: https://wfrcanalytics.github.io/TDM-VAL-SchoolCollegeEnrollment/
@@ -35,6 +38,7 @@
   - Validation
   - TDM
   date: 2026-10-14
+  image: ../assets/cards/teal.svg
 - title: INP Population Sim
   description: Prepare Input Data for PopulationSim
   path: https://wfrcanalytics.github.io/TDM-INP-PopulationSim/
@@ -43,6 +47,7 @@
   - Input data
   - TDM
   date: 2026-09-14
+  image: ../assets/cards/navy.svg
 - title: TDM Documentation
   description: A repository for the What's New Document, the Inputs Documentation,
     and the Validation Report for the Travel Demand Model. Requires WFRC GitHub access.
@@ -53,6 +58,7 @@
   - Model
   - TDM
   date: 2026-08-12
+  image: ../assets/cards/mid.svg
 - title: INP External Forecasts
   description: Volume forecasts for the model's external stations, published as a
     single Quarto report.
@@ -62,6 +68,7 @@
   - Input data
   - TDM
   date: 2026-07-29
+  image: ../assets/cards/navy.svg
 - title: INP College Enrollment
   description: Gathers college enrollment numbers by TAZ for the travel demand model.
   path: https://wfrcanalytics.github.io/TDM-INP-College-Enrollment/
@@ -70,6 +77,7 @@
   - Input data
   - TDM
   date: 2026-06-25
+  image: ../assets/cards/navy.svg
 - title: EST Auto Operating Costs
   description: Updates auto operating costs used in the Wasatch Front travel demand
     model.
@@ -79,6 +87,7 @@
   - Estimation
   - TDM
   date: 2026-04-22
+  image: ../assets/cards/mid.svg
 - title: EST TAZ Median Income
   description: Estimates median household income by TAZ for the travel demand model.
   path: https://wfrcanalytics.github.io/TDM-EST-TAZ-Median-Income/
@@ -87,6 +96,7 @@
   - Estimation
   - TDM
   date: 2026-04-22
+  image: ../assets/cards/mid.svg
 - title: EST Value Of Time
   description: Calculates values of time from ACS person data, segmented by occupancy
     and work versus non-work trips.
@@ -96,6 +106,7 @@
   - Estimation
   - TDM
   date: 2026-04-22
+  image: ../assets/cards/mid.svg
 - title: VAL Traffic Volume CCS
   description: Observed vs model volumes for the CCS data and model data with filters
     by functional type, time of day, county
@@ -105,6 +116,7 @@
   - Validation
   - TDM
   date: 2026-01-29
+  image: ../assets/cards/teal.svg
 - title: GEO Analysis Zones
   description: The source of truth for TAZ (and MAZ in the future) used in the Wasatch
     Front Travel Demand Modeling or any other applications.
@@ -114,6 +126,7 @@
   - Geography
   - TDM
   date: 2026-10-09
+  image: ../assets/cards/bright.svg
 - title: INP Work At Home
   description: The purpose of this repository is to calculate the work at home rates
     (home based jobs as well as telecommuting). . Requires WFRC GitHub access.
@@ -124,6 +137,7 @@
   - Input data
   - TDM
   date: 2026-09-09
+  image: ../assets/cards/navy.svg
 - title: EST HTS Params
   description: This repo houses all scripts used to estimate model parameters and
     adjust model inputs that draw on the household travel survey. Requires WFRC GitHub
@@ -135,6 +149,7 @@
   - Estimation
   - TDM
   date: 2026-08-17
+  image: ../assets/cards/mid.svg
 - title: GEO True Shape
   description: This repo is for processing True Shape Network out of UGRC Roadway
     Centerlines dataset
@@ -144,6 +159,7 @@
   - Geography
   - TDM
   date: 2026-07-22
+  image: ../assets/cards/bright.svg
 - title: INP K 12 Enrollment
   description: Summarizing the state school enrollment data at the TAZ level.
   path: https://github.com/WFRCAnalytics/TDM-INP-K-12-Enrollment
@@ -152,6 +168,7 @@
   - Input data
   - TDM
   date: 2026-07-21
+  image: ../assets/cards/navy.svg
 - title: CAL HBWDest Choice
   description: The purpose of this repository is to calibration and then estimate
     coefficients/constants for the HBW destination choice model. . Requires WFRC GitHub
@@ -163,6 +180,7 @@
   - Calibration
   - TDM
   date: 2026-07-09
+  image: ../assets/cards/bright.svg
 - title: EST Commercial Vehicle Model
   description: Workspace for the v10 commercial vehicle model, including consultant
     deliverables and supporting process files. Requires WFRC GitHub access.
@@ -173,6 +191,7 @@
   - Estimation
   - TDM
   date: 2026-05-20
+  image: ../assets/cards/mid.svg
 - title: CAL Mode Choice
   description: Mode choice calibration for the travel demand model. Requires WFRC
     GitHub access.
@@ -183,6 +202,7 @@
   - Calibration
   - TDM
   date: 2026-04-22
+  image: ../assets/cards/bright.svg
 - title: CAL Friction Factors
   description: This repo contains python scripts used to calibrate the friction factors
     for the WFTDM. It also includes the data munging necessary to produce observed
@@ -194,6 +214,7 @@
   - Calibration
   - TDM
   date: 2026-01-28
+  image: ../assets/cards/bright.svg
 - title: INP Socioeconomic Control Totals
   description: Estimates county-level socioeconomic control totals for the v10 travel
     demand model.
@@ -203,6 +224,7 @@
   - Input data
   - TDM
   date: 2026-01-22
+  image: ../assets/cards/navy.svg
 - title: TDM Official Releases
   description: Official Wasatch Front travel demand model releases (v9.x and later).
     Requires WFRC GitHub access.
@@ -213,6 +235,7 @@
   - Model
   - TDM
   date: 2025-11-13
+  image: ../assets/cards/mid.svg
 - title: INP TAZ Age Percent
   description: Estimates age-group shares (0-17, 18-64, 65+) for each TAZ from census
     blocks and ACS data.
@@ -222,6 +245,7 @@
   - Input data
   - TDM
   date: 2025-08-13
+  image: ../assets/cards/navy.svg
 - title: PP ATO Big5
   description: Post-processing of Access to Opportunity results.
   path: https://github.com/WFRCAnalytics/TDM-PP-ATO-Big5
@@ -230,6 +254,7 @@
   - Post-processing
   - TDM
   date: 2025-08-08
+  image: ../assets/cards/mid.svg
 - title: EST Life Cycle
   description: Defines the household life cycle categories (children and seniors)
     used in the model.
@@ -239,6 +264,7 @@
   - Estimation
   - TDM
   date: 2025-06-03
+  image: ../assets/cards/mid.svg
 - title: DEV E2 CRT Improvements
   description: Development work on E2 and CRT improvements to the travel demand model.
   path: https://github.com/WFRCAnalytics/TDM-DEV-E2-CRT-Improvements
@@ -247,6 +273,7 @@
   - Development
   - TDM
   date: 2025-05-02
+  image: ../assets/cards/navy.svg
 - title: EST Trucks Streetlight
   description: Processes and summarizes StreetLight truck data for the model.
   path: https://github.com/WFRCAnalytics/TDM-EST-Trucks-Streetlight
@@ -255,6 +282,7 @@
   - Estimation
   - TDM
   date: 2025-04-08
+  image: ../assets/cards/mid.svg
 - title: INP Census Block to TAZ
   description: TDM-Census-Block-to-TAZ
   path: https://github.com/WFRCAnalytics/TDM-INP-Census-Block-to-TAZ
@@ -263,6 +291,7 @@
   - Input data
   - TDM
   date: 2025-04-08
+  image: ../assets/cards/navy.svg
 - title: INP TAZ Renumbering
   description: Reclassifies and renumbers TAZs using ArcGIS and spatial data.
   path: https://github.com/WFRCAnalytics/TDM-INP-TAZ-Renumbering
@@ -271,6 +300,7 @@
   - Input data
   - TDM
   date: 2025-04-08
+  image: ../assets/cards/navy.svg
 - title: INP TAZ to Census Tract
   description: Assigns each TAZ to a census tract GEOID by spatial join of TAZ centroids.
   path: https://github.com/WFRCAnalytics/TDM-INP-TAZ-to-CensusTract
@@ -279,6 +309,7 @@
   - Input data
   - TDM
   date: 2025-04-08
+  image: ../assets/cards/navy.svg
 - title: INP Transit Node Renumbering
   description: Scripts that renumber transit line files to new network node numbers.
   path: https://github.com/WFRCAnalytics/TDM-INP-Transit-Node-Renumbering
@@ -287,6 +318,7 @@
   - Input data
   - TDM
   date: 2025-04-08
+  image: ../assets/cards/navy.svg
 - title: INP USTM Externals Using National Network
   description: Defines external pass-through trips by merging a national network with
     the statewide model. Requires WFRC GitHub access.
@@ -297,6 +329,7 @@
   - Input data
   - TDM
   date: 2025-04-08
+  image: ../assets/cards/navy.svg
 - title: PP Merge ATO Outputs
   description: 'Notebook demo of using Pandas to merge TDM-ATO Outputs  '
   path: https://github.com/WFRCAnalytics/TDM-PP-Merge-ATO-Outputs
@@ -305,6 +338,7 @@
   - Post-processing
   - TDM
   date: 2025-04-08
+  image: ../assets/cards/mid.svg
 - title: PP Transit Output Comparison
   description: Compares daily transit boardings by mode and route between a base and
     a proposed transit scenario.
@@ -314,6 +348,7 @@
   - Post-processing
   - TDM
   date: 2025-04-08
+  image: ../assets/cards/mid.svg
 - title: PP Average Commute Times
   description: Calculates average model commute times for RTP performance measures,
     regionally and for Equity Focus Areas.
@@ -323,6 +358,7 @@
   - Post-processing
   - TDM
   date: 2025-04-07
+  image: ../assets/cards/mid.svg
 - title: PP Plot ATO Travelsheds
   description: Plots Access to Opportunity travelsheds from model skims.
   path: https://github.com/WFRCAnalytics/TDM-PP-Plot-ATO-Travelsheds
@@ -331,6 +367,7 @@
   - Post-processing
   - TDM
   date: 2025-04-07
+  image: ../assets/cards/mid.svg
 - title: PP Trip Stats by SE and Transit Intensity
   description: Trip statistics and maps comparing centered development and transit
     intensity.
@@ -340,6 +377,7 @@
   - Post-processing
   - TDM
   date: 2025-04-07
+  image: ../assets/cards/mid.svg
 - title: SCN Centers Transit Strategy Land Use
   description: Land use calculations for testing centers and transit strategies in
     the 2027 RTP.
@@ -349,6 +387,7 @@
   - Scenario
   - TDM
   date: 2025-04-07
+  image: ../assets/cards/teal.svg
 - title: SCN Three Transit Corridors Land Use
   description: Land use calculations for testing BRT and LRT on three transit corridors.
     Requires WFRC GitHub access.
@@ -359,6 +398,7 @@
   - Scenario
   - TDM
   date: 2025-04-07
+  image: ../assets/cards/teal.svg
 - title: DEV Replace Arcpy
   description: Test geoprocessing capabilities and ease of installation of various
     open source geospatial libraries
@@ -368,6 +408,7 @@
   - Development
   - TDM
   date: 2025-04-04
+  image: ../assets/cards/navy.svg
 - title: EST Bus Speeds
   description: Estimates ratios of bus speed to traffic speed from the congested model
     network and GTFS schedules.
@@ -377,6 +418,7 @@
   - Estimation
   - TDM
   date: 2025-04-04
+  image: ../assets/cards/mid.svg
 - title: INP Parcel to TAZ
   description: Builds a lookup between parcels and TAZ IDs.
   path: https://github.com/WFRCAnalytics/TDM-INP-Parcel-to-TAZ
@@ -385,6 +427,7 @@
   - Input data
   - TDM
   date: 2025-04-04
+  image: ../assets/cards/navy.svg
 - title: INP TAZ to ZIPCode
   description: Creating a dataset that contains TAZID and ZIPCode information
   path: https://github.com/WFRCAnalytics/TDM-INP-TAZ-to-ZIPCode
@@ -393,6 +436,7 @@
   - Input data
   - TDM
   date: 2025-04-04
+  image: ../assets/cards/navy.svg
 - title: VAL Mode Share Boardings
   description: Validates model mode share against survey data.
   path: https://github.com/WFRCAnalytics/TDM-VAL-ModeShare-Boardings
@@ -401,6 +445,7 @@
   - Validation
   - TDM
   date: 2025-04-04
+  image: ../assets/cards/teal.svg
 - title: VAL OBS Ridership Comparison
   description: UTA Boardings and On-Board Survey Data from fall 2019. Requires WFRC
     GitHub access.
@@ -411,6 +456,7 @@
   - Validation
   - TDM
   date: 2025-04-04
+  image: ../assets/cards/teal.svg
 - title: VAL Scenario Comparison Toolbox
   description: Scripts for validating and viewing model outputs before the v9.1.0
     release.
@@ -420,6 +466,7 @@
   - Validation
   - TDM
   date: 2025-04-04
+  image: ../assets/cards/teal.svg
 - title: TDM v8.3.2
   description: This is the Wasatch Front Travel Demand Model v8.3.2 - 2022-02-04a.
     Requires WFRC GitHub access.
@@ -430,6 +477,7 @@
   - Model
   - TDM
   date: 2023-08-10
+  image: ../assets/cards/mid.svg
 - title: TDM v9.0 beta
   description: Shared copy of the v9.0 beta model (June 2023). Requires WFRC GitHub
     access.
@@ -440,3 +488,4 @@
   - Model
   - TDM
   date: 2023-07-03
+  image: ../assets/cards/mid.svg

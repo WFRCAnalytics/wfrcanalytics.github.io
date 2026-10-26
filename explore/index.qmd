@@ -12,9 +12,12 @@ listing:
   sort-ui: false
   filter-ui: true
   page-size: 24
+  image-height: 84px
   max-description-length: 220
 ---
 
-::: {.callout-note appearance="simple" collapse=false}
-**Internal** entries are in private repositories. Their links open only for people with WFRC GitHub access.
+::: {.callout-note}
+## Internal entries
+
+Repositories marked **Internal** are private. Their links open only for people with WFRC GitHub access.
 :::

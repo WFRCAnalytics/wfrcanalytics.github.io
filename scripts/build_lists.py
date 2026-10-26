@@ -37,6 +37,39 @@ PAGES = {
 }
 
 
+# Card banner color per kind (brand palette; see _extensions/wfrc-brand/brand.yml).
+BANNER = {"navy": "#00395B", "mid": "#2C6788", "teal": "#00799F", "bright": "#0093C5", "brick": "#B4461F"}
+KIND_BANNER = {
+    "app": "navy", "map": "teal", "model": "mid", "data": "brick", "tool": "bright", "library": "bright",
+    "estimation": "mid", "calibration": "bright", "validation": "teal", "input": "navy",
+    "post-process": "mid", "scenario": "teal", "geography": "bright", "development": "navy",
+    "analysis": "brick", "demo": "bright", "archive": "mid", "other": "mid",
+}
+WAVES = "".join(
+    f'<path d="M-20 {y}C180 {y - 60} 300 {y + 60} 520 {y - 10}S860 {y - 90} 1220 {y - 10}"/>'
+    for y in (60, 90, 120, 150, 180))
+
+
+def tint(hex_, amount):
+    """Mix a #rrggbb color with white."""
+    r, g, b = (int(hex_[i:i + 2], 16) for i in (1, 3, 5))
+    return "#%02x%02x%02x" % tuple(round(c + (255 - c) * amount) for c in (r, g, b))
+
+
+def write_banners():
+    """One decorative SVG per banner color, echoing the hero's contour lines."""
+    out = ROOT / "assets" / "cards"
+    out.mkdir(parents=True, exist_ok=True)
+    for name, hex_ in BANNER.items():
+        svg = (
+            '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 240" preserveAspectRatio="xMidYMid slice" '
+            'role="img" aria-label=""><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">'
+            f'<stop offset="0" stop-color="{hex_}"/><stop offset="1" stop-color="{tint(hex_, .38)}"/>'
+            '</linearGradient></defs><rect width="1200" height="240" fill="url(#g)"/>'
+            f'<g fill="none" stroke="#fff" stroke-opacity=".22" stroke-width="2">{WAVES}</g></svg>')
+        (out / f"{name}.svg").write_text(svg, encoding="utf-8")
+
+
 def item(e):
     """One Quarto listing item. Live site wins; otherwise link to the repo."""
     cats = [STATUS_LABEL[e["status"]]]
@@ -54,6 +87,7 @@ def item(e):
         "path": e.get("url") or e["repo"],
         "categories": cats,
         "date": e["last-push"],
+        "image": f"../assets/cards/{KIND_BANNER[e['kind']]}.svg",
     }
 
 
@@ -170,6 +204,7 @@ def main():
     home_updates()
     shown = sorted((e for e in catalog if e["include"]), key=sort_key)
     release_tables(releases)
+    write_banners()
     for page, pred in PAGES.items():
         rows = [item(e) for e in shown if pred(e)]
         out = ROOT / f"{page}.yml"

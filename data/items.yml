@@ -7,6 +7,7 @@
   - Live
   - Data
   date: 2026-07-28
+  image: ../assets/cards/brick.svg
 - title: UDOT Segment Factors
   description: Creation of seasonal, day-of-week, and hour-of-day factors.
   path: https://github.com/WFRCAnalytics/DATA-UDOT-Segment-Factors
@@ -14,6 +15,7 @@
   - Repository
   - Data
   date: 2026-10-22
+  image: ../assets/cards/brick.svg
 - title: Regional Metrics Dashboard
   description: Helper scripts for the WFRC Regional Metrics Dashboard
   path: https://github.com/WFRCAnalytics/DATA-Regional-Metrics-Dashboard
@@ -21,6 +23,7 @@
   - Repository
   - Data
   date: 2026-10-19
+  image: ../assets/cards/brick.svg
 - title: UTA Automatic Passenger Counting
   description: Loads UTA automatic passenger counting ridership data into BigQuery
     with documented processing pipelines. Requires WFRC GitHub access.
@@ -30,6 +33,7 @@
   - Internal
   - Data
   date: 2026-09-11
+  image: ../assets/cards/brick.svg
 - title: OBS Prep For TDM
   description: Prepares transit ridership and on-board survey data, and updates transit
     access parameters, for the travel demand model. Requires WFRC GitHub access.
@@ -39,6 +43,7 @@
   - Internal
   - Data
   date: 2026-04-22
+  image: ../assets/cards/brick.svg
 - title: Microtransit Prep For TDM
   description: Processes UTA microtransit data to inform how microtransit is represented
     in the travel demand model. Requires WFRC GitHub access.
@@ -48,6 +53,7 @@
   - Internal
   - Data
   date: 2026-04-01
+  image: ../assets/cards/brick.svg
 - title: HTS Big Query
   description: A repo to house SQL code to generate production tables for travel demand
     modeling purposes.
@@ -56,6 +62,7 @@
   - Repository
   - Data
   date: 2026-03-06
+  image: ../assets/cards/brick.svg
 - title: UDOT AADT Processing
   description: Processing UDOT's AADT and Truck Percent Data for TDM Purposes. Requires
     WFRC GitHub access.
@@ -65,6 +72,7 @@
   - Internal
   - Data
   date: 2026-02-19
+  image: ../assets/cards/brick.svg
 - title: Housing Within Centers
   description: Analysis to find how many primary housing units have been created after
     new SAP's were created. Requires WFRC GitHub access.
@@ -74,6 +82,7 @@
   - Internal
   - Data
   date: 2025-11-26
+  image: ../assets/cards/brick.svg
 - title: Box Elder Parcels
   description: Categorizing Box Elder parcels by Land Use into a usable REMM format.
     Requires WFRC GitHub access.
@@ -83,6 +92,7 @@
   - Internal
   - Data
   date: 2025-11-20
+  image: ../assets/cards/brick.svg
 - title: HTS Prep For TDM
   description: This repo provides an environment to keep track of all the changes
     made to the raw 2023 HTS data for the purpose of using it for the TDM. Requires
@@ -93,6 +103,7 @@
   - Internal
   - Data
   date: 2025-07-18
+  image: ../assets/cards/brick.svg
 - title: Bike Create Features
   description: Builds existing and planned bike facility layers from Utah roads and
     trails data (UGRC), identifying the best bike feature and road side.
@@ -102,6 +113,7 @@
   - Data
   - BDM
   date: 2025-06-25
+  image: ../assets/cards/brick.svg
 - title: HTS OBS Market Analysis
   description: DATA-HTS-OBS-Market-Analysis. Requires WFRC GitHub access.
   path: https://github.com/WFRCAnalytics/DATA-HTS-OBS-Market-Analysis
@@ -110,6 +122,7 @@
   - Internal
   - Data
   date: 2025-05-10
+  image: ../assets/cards/brick.svg
 - title: Merge WFRC MAG GFLU
   description: Combine and standardize WFRC and MAG's Generalized Future Land Use  GIS
     layers
@@ -118,6 +131,7 @@
   - Repository
   - Data
   date: 2025-04-16
+  image: ../assets/cards/brick.svg
 - title: GPI Forecast Review 2021
   description: Review 2021 GPI socioeconomic and employment forecasts. Requires WFRC
     GitHub access.
@@ -127,6 +141,7 @@
   - Internal
   - Data
   date: 2025-04-09
+  image: ../assets/cards/brick.svg
 - title: Official SE RTP 2019
   description: Official Socio-Economic data for the 2019 Regional Transportation Plan
   path: https://github.com/WFRCAnalytics/DATA-Official-SE-RTP-2019
@@ -134,6 +149,7 @@
   - Repository
   - Data
   date: 2025-04-09
+  image: ../assets/cards/brick.svg
 - title: COVID Compare using BTS
   description: Compares 2019 and 2020 trips, trip lengths and work-from-home levels
     using Bureau of Transportation Statistics data.
@@ -142,6 +158,7 @@
   - Repository
   - Data
   date: 2025-04-08
+  image: ../assets/cards/brick.svg
 - title: OBS TDM Boardings by Stop XY
   description: Generates boardings and alightings by mode and stop location from on-board
     survey data. Requires WFRC GitHub access.
@@ -151,6 +168,7 @@
   - Internal
   - Data
   date: 2025-04-08
+  image: ../assets/cards/brick.svg
 - title: Preliminary GPI Projection 2024
   description: Reviews preliminary Kem C. Gardner Policy Institute control totals;
     reusable for future releases. Requires WFRC GitHub access.
@@ -160,6 +178,7 @@
   - Internal
   - Data
   date: 2025-04-08
+  image: ../assets/cards/brick.svg
 - title: Transit 2014 2015
   description: Automated passenger counter transit boardings data for late 2014 and
     early 2015.
@@ -168,6 +187,7 @@
   - Repository
   - Data
   date: 2025-04-08
+  image: ../assets/cards/brick.svg
 - title: UT Sales Tax Analysis
   description: This notebook processes data from the Tax Commission into spatial,
     web-ready format
@@ -176,6 +196,7 @@
   - Repository
   - Data
   date: 2025-04-08
+  image: ../assets/cards/brick.svg
 - title: Census PUMS Household Size
   description: Downloads Census PUMS household size, bedroom and income data for Utah
     and builds summary tables.
@@ -184,6 +205,7 @@
   - Repository
   - Data
   date: 2025-04-07
+  image: ../assets/cards/brick.svg
 - title: HTS Anonymize
   description: Anonymizes Household Travel Survey data by removing precise locations
     and generalizing block groups to census tracts. Requires WFRC GitHub access.
@@ -193,6 +215,7 @@
   - Internal
   - Data
   date: 2025-04-07
+  image: ../assets/cards/brick.svg
 - title: Street Light Insight API Custom Queries
   description: Custom StreetLight Insight API queries (recreation zones, county flows,
     station areas) built before the subscription ended.
@@ -201,6 +224,7 @@
   - Repository
   - Data
   date: 2025-04-07
+  image: ../assets/cards/brick.svg
 - title: UDOT Master Segments
   description: ArcGIS Pro project that merges each submodel area's segments into one
     master road segment layer.
@@ -209,6 +233,7 @@
   - Repository
   - Data
   date: 2025-04-07
+  image: ../assets/cards/brick.svg
 - title: DWS Manufacturing Job Disaggregation
   description: Splits TAZ manufacturing jobs into NAICS 31, 32 and 33 shares for a
     freight model update. Requires WFRC GitHub access.
@@ -218,6 +243,7 @@
   - Internal
   - Data
   date: 2025-04-04
+  image: ../assets/cards/brick.svg
 - title: IPUMS Time Series
   description: Collects IPUMS time-series data through the ipumsr API into a geodatabase
     for ArcGIS Online.
@@ -226,6 +252,7 @@
   - Repository
   - Data
   date: 2025-04-04
+  image: ../assets/cards/brick.svg
 - title: Process Statewide SE to AGOL
   description: Process and upload Statewide SE forecast to ArcGIS Online. Requires
     WFRC GitHub access.
@@ -235,6 +262,7 @@
   - Internal
   - Data
   date: 2025-04-04
+  image: ../assets/cards/brick.svg
 - title: Historical Parcels
   description: Identifies regional redevelopment from historical assessor parcel data
     to inform REMM.
@@ -243,6 +271,7 @@
   - Repository
   - Data
   date: 2023-08-23
+  image: ../assets/cards/brick.svg
 - title: Continuous Count Station
   description: Notebooks for working with UDOT continuous count station traffic data,
     with a 2019 demo.
@@ -251,6 +280,7 @@
   - Repository
   - Data
   date: 2023-03-14
+  image: ../assets/cards/brick.svg
 - title: Housing Unit Inventory
   description: Create housing unit inventory for Utah Metropolitan Region using various
     data sources.
@@ -259,3 +289,4 @@
   - Repository
   - Data
   date: 2022-01-28
+  image: ../assets/cards/brick.svg

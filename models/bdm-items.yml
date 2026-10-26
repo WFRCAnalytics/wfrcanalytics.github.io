@@ -7,6 +7,7 @@
   - Analysis
   - BDM
   date: 2025-11-17
+  image: ../assets/cards/brick.svg
 - title: Utah Bike Demand Model
   description: Utah Bike Demand Model
   path: https://github.com/WFRCAnalytics/BDM-Utah-Bike-Demand-Model
@@ -15,6 +16,7 @@
   - Model
   - BDM
   date: 2026-07-07
+  image: ../assets/cards/mid.svg
 - title: Bike Create Features
   description: Builds existing and planned bike facility layers from Utah roads and
     trails data (UGRC), identifying the best bike feature and road side.
@@ -24,6 +26,7 @@
   - Data
   - BDM
   date: 2025-06-25
+  image: ../assets/cards/brick.svg
 - title: Post Process Outputs
   description: Post Process Bike Model Outputs for QAQC purposes
   path: https://github.com/WFRCAnalytics/BDM-Post-Process-Outputs
@@ -32,6 +35,7 @@
   - Model
   - BDM
   date: 2025-04-09
+  image: ../assets/cards/mid.svg
 - title: Bike Ped Demand Model
   description: GIS tool for estimating latent bike and pedestrian demand.
   path: https://github.com/WFRCAnalytics/TOOL-BikePed-Demand-Model
@@ -40,6 +44,7 @@
   - Tool
   - BDM
   date: 2025-04-09
+  image: ../assets/cards/bright.svg
 - title: Micromobility Toolset
   description: Micromobility Travel Modeling Toolkit. Requires WFRC GitHub access.
   path: https://github.com/WFRCAnalytics/BDM-Micromobility-Toolset
@@ -49,3 +54,4 @@
   - Model
   - BDM
   date: 2025-04-04
+  image: ../assets/cards/mid.svg

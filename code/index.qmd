@@ -16,6 +16,8 @@ listing:
     date: Last updated
 ---
 
-::: {.callout-note appearance="simple" collapse=false}
-**Internal** entries are in private repositories. Their links open only for people with WFRC GitHub access.
+::: {.callout-note}
+## Internal entries
+
+Repositories marked **Internal** are private. Their links open only for people with WFRC GitHub access.
 :::
