@@ -237,3 +237,11 @@ dialog.qj::backdrop { background: rgba(0, 25, 45, .55); backdrop-filter: blur(3p
 .tool-shot { display: block; width: 100%; max-width: 900px; border: 1px solid var(--wfrc-line); border-radius: 10px; margin-bottom: 1rem; }
 .cite { background: var(--bs-tertiary-bg); border-left: 4px solid #0093c5; border-radius: 0 8px 8px 0; padding: .7rem 1rem; }
 .cite p { margin: 0; }
+
+/* Card surface: the colors come from wfrc-brand 0.3.0 (--wfrc-card-bg, --wfrc-card-line). Extension cards and
+   listing cards pick them up on their own; these two are site components, so they apply them here. */
+body .feature-card,
+body .suggest li {
+  background: var(--wfrc-card-bg);
+  border-color: var(--wfrc-card-line);
+}

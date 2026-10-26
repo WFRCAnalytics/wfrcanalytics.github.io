@@ -123,6 +123,7 @@ color:
     wfrc-paper: "#FFFFFF"
     wfrc-band: "#F4F2EF"        # alternate section band (taupe tint from the live site)
     wfrc-mist: "#EAF0F4"        # raised surface, tab panes
+    wfrc-card: "#E8F5FA"        # card surface: bright blue 9% over white; apart from the page and wfrc-band
     wfrc-hairline: "#D9E0E5"
     wfrc-code: "#EEF2F5"
     wfrc-ink: "#16232C"
@@ -133,6 +134,8 @@ color:
     wfrc-night-band: "#0E2738"
     wfrc-night-surface: "#122E46"
     wfrc-night-raised: "#17384F"
+    wfrc-night-card: "#17384F"  # card surface on dark; apart from the page and wfrc-night-band
+    wfrc-night-card-line: "#2F6286"  # card border on dark (light mode mixes bright blue 24% into the hairline)
     wfrc-night-line: "#264A63"
     wfrc-night-code: "#0F2B40"
     wfrc-night-block: "#14405E" # navy color block on dark

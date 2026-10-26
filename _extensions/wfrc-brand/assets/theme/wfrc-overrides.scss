@@ -175,10 +175,13 @@ body .quarto-category > a { color: var(--bs-body-color) !important; }
 body .quarto-category { opacity: 1 !important; }
 
 // ── 5  Cards ─────────────────────────────────────────────────────────────────
+// Card surface: a light blue (dark: raised navy) that stays distinct from both the page and
+// .wfrc-band-alt. Sites can reuse the two variables for their own cards.
+:root, body { --wfrc-card-bg: #{$wfrc-card}; --wfrc-card-line: #{$wfrc-card-line}; }
 .card {
   border-radius: 10px;
-  border: 1px solid $wfrc-line;
-  background: $wfrc-surface;
+  border: 1px solid $wfrc-card-line;
+  background: $wfrc-card;
   color: $wfrc-ink;
   box-shadow: $wfrc-shadow;
   overflow: hidden;
@@ -188,18 +191,17 @@ body .quarto-category { opacity: 1 !important; }
     font-weight: 600;
     font-size: 0.95rem;
     color: $wfrc-h1;
-    background: $wfrc-surface;
-    border-bottom: 1px solid $wfrc-line;
+    background: $wfrc-card;
+    border-bottom: 1px solid $wfrc-card-line;
   }
   .card-title, .listing-title { font-family: $headings-font-family; color: $wfrc-h1; }
   .card-img-top { border-radius: 0; }
   .listing-date, .listing-author, .listing-reading-time { color: $wfrc-ink-2; }
 }
-// Listing cards (type: grid): tinted surface so they separate from the page in both modes,
-// banner image on top, lift on hover. See "Card banners" in the README.
+// Listing cards (type: grid): banner image on top, lift on hover. See "Card banners" in the README.
 .quarto-grid-item.card {
-  background: $wfrc-surface-2;
-  border-color: $wfrc-line;
+  background: $wfrc-card;
+  border-color: $wfrc-card-line;
   overflow: hidden;
   transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
 
@@ -213,6 +215,16 @@ body .quarto-category { opacity: 1 !important; }
 }
 @media (prefers-reduced-motion: reduce) {
   .quarto-grid-item.card { transition: none; &:hover { transform: none; } }
+}
+// The action blue is 4.4:1 on the light card surface; outline buttons inside cards use the link color.
+.card .btn-outline-primary {
+  --bs-btn-color: #{$wfrc-link};
+  --bs-btn-border-color: #{$wfrc-link};
+  --bs-btn-hover-bg: #{$wfrc-link};
+  --bs-btn-hover-border-color: #{$wfrc-link};
+  --bs-btn-hover-color: #{$wfrc-bg};
+  --bs-btn-active-bg: #{$wfrc-link};
+  --bs-btn-active-color: #{$wfrc-bg};
 }
 // Table listings: titles inherit the heading scale; keep them at body size.
 .quarto-listing-table .listing-title,
@@ -467,7 +479,7 @@ footer.footer {
 .quarto-dashboard {
   .navbar { border-bottom: 1px solid $wfrc-line; }
   .card { box-shadow: none; }
-  .card-toolbar, .card-footer { background: $wfrc-surface; border-color: $wfrc-line; color: $wfrc-ink-2; }
+  .card-toolbar, .card-footer { background: $wfrc-card; border-color: $wfrc-card-line; color: $wfrc-ink-2; }
 }
 
 // Observable Plot (OJS) charts take the heading font so they match the page.

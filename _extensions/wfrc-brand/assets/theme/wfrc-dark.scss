@@ -16,6 +16,8 @@ $wfrc-surface-2:    $brand-wfrc-night-raised;
 $wfrc-ink:          $brand-wfrc-snow;
 $wfrc-ink-2:        $brand-wfrc-snow-soft;
 $wfrc-line:         $brand-wfrc-night-line;
+$wfrc-card:         $brand-wfrc-night-card;
+$wfrc-card-line:    $brand-wfrc-night-card-line;
 
 // Type and interaction
 $wfrc-h1:           $brand-wfrc-ice;
@@ -73,9 +75,9 @@ $navbar-fg:                 $wfrc-h1 !default;
 $navbar-hl:                 $wfrc-h1 !default;
 $footer-bg:                 $wfrc-footer-bg !default;
 $footer-fg:                 $wfrc-footer-ink !default;
-$card-bg:                   $wfrc-surface !default;
-$card-cap-bg:               $wfrc-surface !default;
-$card-border-color:         $wfrc-line !default;
+$card-bg:                   $wfrc-card !default;
+$card-cap-bg:               $wfrc-card !default;
+$card-border-color:         $wfrc-card-line !default;
 $code-color:                $wfrc-code-inline !default;
 $code-bg:                   $wfrc-code-bg !default;
 $code-block-bg:             $wfrc-code-bg !default;

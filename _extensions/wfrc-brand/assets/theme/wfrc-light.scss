@@ -17,6 +17,8 @@ $wfrc-surface-2:    $brand-wfrc-mist;
 $wfrc-ink:          $brand-wfrc-ink;
 $wfrc-ink-2:        $brand-wfrc-ink-soft;
 $wfrc-line:         $brand-wfrc-hairline;
+$wfrc-card:         $brand-wfrc-card;
+$wfrc-card-line:    mix($brand-wfrc-bright-blue, $brand-wfrc-hairline, 24%);
 
 // Type and interaction
 $wfrc-h1:           $brand-wfrc-navy;
@@ -74,9 +76,9 @@ $navbar-fg:                 $wfrc-h1 !default;
 $navbar-hl:                 $wfrc-h1 !default;
 $footer-bg:                 $wfrc-footer-bg !default;
 $footer-fg:                 $wfrc-footer-ink !default;
-$card-bg:                   $wfrc-surface !default;
-$card-cap-bg:               $wfrc-surface !default;
-$card-border-color:         $wfrc-line !default;
+$card-bg:                   $wfrc-card !default;
+$card-cap-bg:               $wfrc-card !default;
+$card-border-color:         $wfrc-card-line !default;
 $code-color:                $wfrc-code-inline !default;
 $code-bg:                   $wfrc-code-bg !default;
 $code-block-bg:             $wfrc-code-bg !default;
