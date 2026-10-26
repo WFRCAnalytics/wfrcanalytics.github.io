@@ -1,6 +1,6 @@
 ---
 title: "Explore"
-description: "Interactive apps and maps from the WFRC Analytics team. Open a live tool, or follow the repository link to see how it is built."
+description: "A selection of webapps from the WFRC Analytics team. Open a live tool, or follow the repository link to see how it is built."
 toc: false
 aliases:
   - /4-tools/index.html
@@ -15,6 +15,12 @@ listing:
   image-height: 150px
   max-description-length: 220
 ---
+
+::: {.callout-tip}
+## Not a complete list
+
+This page covers webapps we document here. For all public maps and webapps, visit [maps.wfrc.utah.gov](https://maps.wfrc.utah.gov/){target="_blank"}.
+:::
 
 ::: {.callout-note}
 ## Internal entries

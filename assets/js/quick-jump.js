@@ -1,5 +1,5 @@
 // Quick jump: Ctrl/Cmd+K, "/" or the navbar search icon opens one search over pages, page sections and
-// every catalogued tool and repository. Replaces Quarto's page-text-only search, which cannot hold
+// every cataloged tool and repository. Replaces Quarto's page-text-only search, which cannot hold
 // external tool links. Data: /assets/data/site-index.json (from catalog.yml) and /search.json (Quarto).
 
 const KIND_RANK = { Page: 0, App: 1, Map: 1, Model: 2, Section: 3 };

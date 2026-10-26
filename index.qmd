@@ -1,6 +1,6 @@
 ---
 pagetitle: "WFRC Analytics"
-description: "Models, apps, maps and data from the Wasatch Front Regional Council analytics team."
+description: "The models, code and methods behind Wasatch Front Regional Council analytics, with links to our maps and data portals."
 toc: false
 title-block-banner: false
 ---
@@ -8,7 +8,7 @@ title-block-banner: false
 ::: {.wfrc-hero .column-screen}
 # The data and models behind [Wasatch Front planning.]{.accent}
 
-Explore the travel demand, real-estate market and bike demand models that inform regional plans, along with the apps, maps and reports built on them.
+Explore the travel demand, real-estate market and bike demand models that inform regional plans, along with a selection of the webapps, code and reports built on them.
 
 [Explore tools](explore/index.qmd){.btn .btn-light} [See the models](models/index.qmd){.btn .btn-outline-light}
 
@@ -25,7 +25,13 @@ Explore the travel demand, real-estate market and bike demand models that inform
 {{< include _home-featured.md >}}
 
 ::: {.mt-4 .mb-5}
-[Browse all apps and maps](explore/index.qmd){.btn .btn-primary}
+[Browse cataloged webapps](explore/index.qmd){.btn .btn-primary}
+:::
+
+::: {.callout-note}
+## Looking for everything WFRC publishes?
+
+This site documents a selection of our work, including the code and methods behind it. For all public maps and webapps, visit [maps.wfrc.utah.gov](https://maps.wfrc.utah.gov/){target="_blank"}. For all public datasets, visit [data.wfrc.utah.gov](https://data.wfrc.utah.gov/){target="_blank"}.
 :::
 
 {{< include _home-updates.md >}}

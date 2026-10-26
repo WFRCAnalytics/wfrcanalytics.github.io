@@ -2,13 +2,13 @@
 ::: {.wfrc-block}
 [17]{.glance-num}
 
-live apps and maps
+cataloged webapps
 :::
 
 ::: {.wfrc-block .mid}
 [170]{.glance-num}
 
-repositories catalogued
+repositories cataloged
 :::
 
 ::: {.wfrc-block .teal}

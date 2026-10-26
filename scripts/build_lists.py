@@ -113,8 +113,8 @@ def home_snippets(catalog, releases):
     shown = [e for e in catalog if e["include"]]
     live = [e for e in shown if e["kind"] in {"app", "map"} and e["status"] == "live"]
     facts = [
-        (len(live), "live apps and maps"),
-        (len(shown), "repositories catalogued"),
+        (len(live), "cataloged webapps"),
+        (len(shown), "repositories cataloged"),
         (current(releases, "tdm"), "current travel demand model"),
         (current(releases, "remm"), "current real-estate market model"),
     ]
