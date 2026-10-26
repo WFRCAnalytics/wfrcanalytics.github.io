@@ -22,11 +22,17 @@ ORG = "WFRCAnalytics"
 SKIP = {".github", "wfrcanalytics.github.io", "wfrc-brand"}
 HEADER = """# WFRC Analytics catalog -- source of truth for Explore, Reports, Data, Code pages.
 # Machine-owned (scripts/sync_catalog.py): internal, last-push, status, url.
-# Hand-owned: title, description, kind, area, featured, include, review.
+# Hand-owned: title, description, kind, area, featured, include, review, live-url, no-shot, shot-click, shot-wait.
+# no-shot: true keeps the brand banner instead of a screenshot (for sites that need a sign-in, say).
+# shot-click: CSS selector of a button to click before the screenshot (a splash screen the script cannot dismiss itself).
+# shot-wait: milliseconds to wait before the screenshot, for apps that load slowly.
+# live-url: a live site that GitHub does not know about (for example one hosted on wfrc.utah.gov).
+#   The sync checks it is reachable and copies it to url; otherwise url comes from the repo's
+#   homepage setting or its GitHub Pages site.
 # include: false hides an entry; review: new means a human has not curated it yet.
 """
 FIELDS = ["id", "title", "description", "kind", "area", "status", "internal", "repo",
-          "url", "featured", "include", "last-push", "review"]
+          "live-url", "no-shot", "shot-click", "shot-wait", "url", "featured", "include", "last-push", "review"]
 
 KIND_BY_TDM = {"EST": "estimation", "CAL": "calibration", "VAL": "validation", "INP": "input",
                "PP": "post-process", "SCN": "scenario", "GEO": "geography", "DEV": "development"}
@@ -66,11 +72,11 @@ def reachable(url, tries=2):
     return False
 
 
-def live_url(repo):
-    """Homepage URL if set, else the Pages URL; None when neither is reachable."""
+def live_url(repo, manual=None):
+    """The hand-entered live-url, else the repo homepage, else its Pages URL; None if none is reachable."""
     home = repo.get("homepageUrl")
     pages = run("gh", "api", f"repos/{ORG}/{repo['name']}/pages", "--jq", ".html_url")
-    for url in filter(None, [home, pages.stdout.strip() if pages.returncode == 0 else None]):
+    for url in filter(None, [manual, home, pages.stdout.strip() if pages.returncode == 0 else None]):
         if reachable(url):
             return url
     return None
@@ -91,7 +97,7 @@ def main():
     by_id = {e["id"]: e for e in catalog}
 
     with cf.ThreadPoolExecutor(12) as ex:
-        urls = dict(zip(repos, ex.map(live_url, repos.values())))
+        urls = dict(zip(repos, ex.map(lambda r: live_url(r, by_id.get(r["name"], {}).get("live-url")), repos.values())))
 
     changed, added = [], []
     for name, r in repos.items():

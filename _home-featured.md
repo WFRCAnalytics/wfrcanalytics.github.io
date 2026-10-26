@@ -1,6 +1,6 @@
 ::: {.feature-grid}
 ::: {.feature-card .banner-mid}
-::: {.feature-banner}
+::: {.feature-banner .has-shot style="background-image:url('assets/shots/WF-TDM-Runs.jpg')"}
 :::
 
 ::: {.feature-body}
@@ -17,7 +17,7 @@ Reproducible, traceable, and publishable Cube Voyager model runs for sensitivity
 :::
 
 ::: {.feature-card .banner-navy}
-::: {.feature-banner}
+::: {.feature-banner .has-shot style="background-image:url('assets/shots/APP-wftdm-dashboard.jpg')"}
 :::
 
 ::: {.feature-body}
@@ -33,8 +33,25 @@ Interactive dashboard summarizing travel demand model calibration results by sce
 :::
 :::
 
+::: {.feature-card .banner-navy}
+::: {.feature-banner .has-shot style="background-image:url('assets/shots/vizTool.jpg')"}
+:::
+
+::: {.feature-body}
+[App]{.wfrc-chip}
+
+### vizTool
+
+Maps and charts for exploring travel demand model results: roadways, transit, mode share, socioeconomics and access to jobs.
+
+::: {.feature-actions}
+[Open](https://wfrc.utah.gov/viztool-latest-build/){.btn .btn-primary .btn-sm target="_blank"} [Source](https://github.com/WFRCAnalytics/vizTool){.btn .btn-outline-primary .btn-sm target="_blank"}
+:::
+:::
+:::
+
 ::: {.feature-card .banner-mid}
-::: {.feature-banner}
+::: {.feature-banner .has-shot style="background-image:url('assets/shots/WF-TDM-Calibration.jpg')"}
 :::
 
 ::: {.feature-body}
@@ -51,7 +68,7 @@ Calibration scripts, configurations and targets for the model, tied to a pinned 
 :::
 
 ::: {.feature-card .banner-navy}
-::: {.feature-banner}
+::: {.feature-banner .has-shot style="background-image:url('assets/shots/APP-Commute-Explorer.jpg')"}
 :::
 
 ::: {.feature-body}
@@ -68,7 +85,7 @@ Interactive browser-based commuter flow explorer for the Wasatch Front — DuckD
 :::
 
 ::: {.feature-card .banner-teal}
-::: {.feature-banner}
+::: {.feature-banner .has-shot style="background-image:url('assets/shots/MAP-Housing-ATO-Calculator-Updated.jpg')"}
 :::
 
 ::: {.feature-body}
@@ -85,7 +102,7 @@ The Housing ATO Calculator can assist housing and land use planning efforts.
 :::
 
 ::: {.feature-card .banner-brick}
-::: {.feature-banner}
+::: {.feature-banner .has-shot style="background-image:url('assets/shots/GIS_SE2025_H3.jpg')"}
 :::
 
 ::: {.feature-body}
@@ -102,7 +119,7 @@ SE2025 H3 Socioeconomic Data Smoothing.
 :::
 
 ::: {.feature-card .banner-teal}
-::: {.feature-banner}
+::: {.feature-banner .has-shot style="background-image:url('assets/shots/MAP-Statewide-ATO-VMT.jpg')"}
 :::
 
 ::: {.feature-body}
@@ -114,23 +131,6 @@ This repo brings together the ATO and VMT data from all the models in the state 
 
 ::: {.feature-actions}
 [Open](https://wfrcanalytics.github.io/MAP-Statewide-ATO-VMT/){.btn .btn-primary .btn-sm target="_blank"} [Source](https://github.com/WFRCAnalytics/MAP-Statewide-ATO-VMT){.btn .btn-outline-primary .btn-sm target="_blank"}
-:::
-:::
-:::
-
-::: {.feature-card .banner-navy}
-::: {.feature-banner}
-:::
-
-::: {.feature-body}
-[App]{.wfrc-chip}
-
-### Commute Patterns Map
-
-An interactive WebAssembly-powered map for exploring commute flow patterns across the Wasatch Front region, built on open-source tools and hosted on...
-
-::: {.feature-actions}
-[Open](https://wfrcanalytics.github.io/APP-WFRC-Commute-Patterns/){.btn .btn-primary .btn-sm target="_blank"} [Source](https://github.com/WFRCAnalytics/APP-WFRC-Commute-Patterns){.btn .btn-outline-primary .btn-sm target="_blank"}
 :::
 :::
 :::

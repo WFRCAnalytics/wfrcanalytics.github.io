@@ -1,0 +1,90 @@
+# Weekly refresh: re-sync the catalog from GitHub, retake stale screenshots, rebuild, check links and
+# accessibility, and open a pull request for a human to review. Nothing is published from here;
+# merging the pull request triggers publish.yml.
+name: Weekly refresh
+
+on:
+  schedule:
+    - cron: "0 14 * * 1"        # Mondays, 14:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    env:
+      # A fine-grained token with read-only "Metadata" access to the organization's repositories lets the
+      # sync see private repositories too. Without the secret only public repositories are seen, and
+      # private entries are left exactly as they are in catalog.yml.
+      GH_TOKEN: ${{ secrets.CATALOG_TOKEN || github.token }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install pyyaml
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: scripts/tools/package-lock.json
+      - run: npm ci
+        working-directory: scripts/tools
+
+      - uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Sync catalog from GitHub
+        id: sync
+        run: |
+          python scripts/sync_catalog.py | tee sync.log
+          echo "summary<<EOF" >> "$GITHUB_OUTPUT"; head -40 sync.log >> "$GITHUB_OUTPUT"; echo "EOF" >> "$GITHUB_OUTPUT"
+
+      - name: Retake screenshots that are new or stale
+        run: node capture-screenshots.mjs
+        working-directory: scripts/tools
+
+      - name: Build lists and render the site
+        run: |
+          python scripts/build_lists.py
+          quarto render
+
+      - name: Check links
+        id: links
+        continue-on-error: true
+        run: |
+          python scripts/check_links.py docs --external | tee links.log
+          echo "summary<<EOF" >> "$GITHUB_OUTPUT"; head -40 links.log >> "$GITHUB_OUTPUT"; echo "EOF" >> "$GITHUB_OUTPUT"
+
+      - name: Accessibility sweep
+        id: qa
+        continue-on-error: true
+        run: node qa-sweep.mjs --quick
+        working-directory: scripts/tools
+
+      - name: Open or update the pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: bot/weekly-refresh
+          delete-branch: true
+          commit-message: "Weekly refresh: catalog, screenshots and site data"
+          title: "Weekly refresh"
+          labels: automated
+          body: |
+            Automated weekly refresh. Review the catalog changes, then merge to publish.
+
+            ### Catalog sync
+            ```
+            ${{ steps.sync.outputs.summary }}
+            ```
+            New repositories arrive hidden (`include: false`, `review: new`). Set a title, description,
+            `kind` and `include: true` in `catalog.yml` to show one.
+
+            ### Links
+            ```
+            ${{ steps.links.outputs.summary }}
+            ```
+            Accessibility sweep: **${{ steps.qa.outcome }}** (details in the workflow run).

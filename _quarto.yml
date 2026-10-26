@@ -6,6 +6,8 @@ project:
     - _extensions/wfrc-brand/assets/cards/*.svg
     - assets/data/site-index.json
     - assets/js/lost-map.js
+    - assets/js/quick-jump.js
+    - assets/shots/*.jpg
   brand: _extensions/wfrc-brand/brand.yml
 
 metadata-files:
@@ -32,7 +34,16 @@ website:
   open-graph: true
   cookie-consent: false
 
+  # Quarto's built-in search only covers page text and cannot hold external links; the quick-jump
+  # palette (assets/js/quick-jump.js) replaces it. Its shortcuts are turned off to avoid a clash.
+  search:
+    keyboard-shortcut: []
+
   navbar:
+    tools:
+      - icon: search
+        text: Search
+        href: "#quick-jump"
     # logo: 'assets/logo/horizontal/WFRC_logo_horizontal_color_transparent.png'
     # logo-alt: 'WFRC site theme-based logo'
 
@@ -68,7 +79,9 @@ website:
 format:
   html:
     css: assets/css/site.css
-    include-in-header: assets/js/listing-chips.html
+    include-in-header:
+      - assets/js/listing-chips.html
+      - assets/js/quick-jump.html
 
 # freeze computational output
 # (see https://quarto.org/docs/projects/code-execution.html#freeze)

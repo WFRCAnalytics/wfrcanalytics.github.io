@@ -59,7 +59,7 @@ Two repositories apply the model in a traceable, repeatable way:
 - **[TDM run results](https://wfrcanalytics.github.io/WF-TDM-Runs/){target="_blank"}** publishes experiment results, such as sensitivity tests, project alternatives and forecasting scenarios. Each run records exactly which model version and settings produced it.
 - **[TDM calibration reports](https://wfrcanalytics.github.io/WF-TDM-Calibration/){target="_blank"}** show each calibration iteration. Calibration is tied to a pinned model version so that results can be reproduced.
 
-The **[calibration dashboard](https://wfrcanalytics.github.io/APP-wftdm-dashboard/){target="_blank"}** summarizes calibration results by scenario, and the [vizTool](https://github.com/WFRCAnalytics/vizTool){target="_blank"} helps explore model results through maps and charts.
+The **[calibration dashboard](https://wfrcanalytics.github.io/APP-wftdm-dashboard/){target="_blank"}** summarizes calibration results by scenario, and the [vizTool](https://wfrc.utah.gov/viztool-latest-build/){target="_blank"} ([source](https://github.com/WFRCAnalytics/vizTool){target="_blank"}) helps explore model results through maps and charts.
 
 ## Geography
 

@@ -1,0 +1,162 @@
+{
+ "MAP-Housing-ATO-Calculator-Updated": {
+  "captured": "2026-10-26T05:32:53.005Z",
+  "lastPush": "2026-09-23",
+  "url": "https://wfrcanalytics.github.io/MAP-Housing-ATO-Calculator-Updated/"
+ },
+ "APP-Commute-Explorer": {
+  "captured": "2026-10-26T05:31:18.798Z",
+  "lastPush": "2026-06-30",
+  "url": "https://wfrcanalytics.github.io/APP-Commute-Explorer/"
+ },
+ "APP-Project-Scoresheet": {
+  "captured": "2026-10-26T05:31:47.721Z",
+  "lastPush": "2026-09-18",
+  "url": "https://wfrcanalytics.github.io/APP-Project-Scoresheet/"
+ },
+ "APP-WFRC-Commute-Patterns": {
+  "captured": "2026-10-26T05:31:52.889Z",
+  "lastPush": "2026-09-22",
+  "url": "https://wfrcanalytics.github.io/APP-WFRC-Commute-Patterns/"
+ },
+ "APP-wftdm-dashboard": {
+  "captured": "2026-10-26T05:31:58.058Z",
+  "lastPush": "2026-10-23",
+  "url": "https://wfrcanalytics.github.io/APP-wftdm-dashboard/"
+ },
+ "DATA-Commercial-Vehicle-Observed-for-TDM": {
+  "captured": "2026-10-26T05:32:17.875Z",
+  "lastPush": "2026-07-28",
+  "url": "https://wfrcanalytics.github.io/DATA-Commercial-Vehicle-Observed-for-TDM/"
+ },
+ "GIS-adhoc-analyses": {
+  "captured": "2026-10-26T05:32:23.100Z",
+  "lastPush": "2026-10-13",
+  "url": "https://wfrcanalytics.github.io/GIS-adhoc-analyses/"
+ },
+ "GIS-Bikeway-by-City": {
+  "captured": "2026-10-26T05:32:29.278Z",
+  "lastPush": "2025-11-17",
+  "url": "https://wfrcanalytics.github.io/GIS-Bikeway-by-City/"
+ },
+ "GIS-GTFS-vs-LIN": {
+  "captured": "2026-10-26T05:32:34.377Z",
+  "lastPush": "2026-07-08",
+  "url": "https://wfrcanalytics.github.io/GIS-GTFS-vs-LIN/"
+ },
+ "GIS_SE2025_H3": {
+  "captured": "2026-10-26T05:32:39.386Z",
+  "lastPush": "2026-09-22",
+  "url": "https://wfrcanalytics.github.io/GIS_SE2025_H3/"
+ },
+ "MAP-Housing-Unit-Inventory-Explorer": {
+  "captured": "2026-10-26T05:36:25.586Z",
+  "lastPush": "2025-06-06",
+  "url": "https://wfrc.org/housing-inventory-explorer"
+ },
+ "MAP-Statewide-ATO-VMT": {
+  "captured": "2026-10-26T05:33:20.506Z",
+  "lastPush": "2026-08-14",
+  "url": "https://wfrcanalytics.github.io/MAP-Statewide-ATO-VMT/"
+ },
+ "REMM-Result-Review-Tool": {
+  "captured": "2026-10-26T05:33:25.601Z",
+  "lastPush": "2026-09-11",
+  "url": "https://wfrcanalytics.github.io/REMM-Result-Review-Tool/"
+ },
+ "TDM-EST-Auto-Operating-Costs": {
+  "captured": "2026-10-26T05:33:30.978Z",
+  "lastPush": "2026-04-22",
+  "url": "https://wfrcanalytics.github.io/TDM-EST-Auto-Operating-Costs/"
+ },
+ "TDM-EST-TAZ-Median-Income": {
+  "captured": "2026-10-26T05:33:41.975Z",
+  "lastPush": "2026-04-22",
+  "url": "https://wfrcanalytics.github.io/TDM-EST-TAZ-Median-Income/"
+ },
+ "TDM-EST-Value-Of-Time": {
+  "captured": "2026-10-26T05:33:47.198Z",
+  "lastPush": "2026-04-22",
+  "url": "https://wfrcanalytics.github.io/TDM-EST-Value-Of-Time/"
+ },
+ "TDM-INP-College-Enrollment": {
+  "captured": "2026-10-26T05:33:57.787Z",
+  "lastPush": "2026-06-25",
+  "url": "https://wfrcanalytics.github.io/TDM-INP-College-Enrollment/"
+ },
+ "TDM-INP-External-Forecasts": {
+  "captured": "2026-10-26T05:34:03.041Z",
+  "lastPush": "2026-07-29",
+  "url": "https://wfrcanalytics.github.io/TDM-INP-External-Forecasts/"
+ },
+ "TDM-INP-PopulationSim": {
+  "captured": "2026-10-26T05:34:07.846Z",
+  "lastPush": "2026-09-14",
+  "url": "https://wfrcanalytics.github.io/TDM-INP-PopulationSim/"
+ },
+ "TDM-VAL-SchoolCollegeEnrollment": {
+  "captured": "2026-10-26T05:34:13.654Z",
+  "lastPush": "2026-10-14",
+  "url": "https://wfrcanalytics.github.io/TDM-VAL-SchoolCollegeEnrollment/"
+ },
+ "TDM-VAL-TrafficVolume-CCS": {
+  "captured": "2026-10-26T05:34:19.322Z",
+  "lastPush": "2026-01-29",
+  "url": "https://wfrcanalytics.github.io/TDM-VAL-TrafficVolume-CCS/"
+ },
+ "WF-TDM-Calibration": {
+  "captured": "2026-10-26T05:34:32.791Z",
+  "lastPush": "2026-10-21",
+  "url": "https://wfrcanalytics.github.io/WF-TDM-Calibration/"
+ },
+ "WF-TDM-Runs": {
+  "captured": "2026-10-26T05:34:37.749Z",
+  "lastPush": "2026-10-21",
+  "url": "https://wfrcanalytics.github.io/WF-TDM-Runs/"
+ },
+ "vizTool": {
+  "captured": "2026-10-26T05:34:27.527Z",
+  "lastPush": "2026-08-27",
+  "url": "https://wfrc.utah.gov/viztool-latest-build/"
+ },
+ "APP-HTS-Trip-Length-Shiny-2012": {
+  "captured": "2026-10-26T05:31:31.668Z",
+  "lastPush": "2025-04-07",
+  "url": "https://wfrc.shinyapps.io/2012-utah-household-travel-survey-trip-length-distribution/"
+ },
+ "APP-HTS-Trip-Purpose-Shiny": {
+  "captured": "2026-10-26T05:31:42.621Z",
+  "lastPush": "2025-09-24",
+  "url": "https://wfrc.shinyapps.io/2023-utah-household-travel-survey-trips-generated/"
+ },
+ "ATO-Impact-Tool": {
+  "captured": "2026-10-26T05:32:06.815Z",
+  "lastPush": "2026-07-09",
+  "url": "https://wfrc.utah.gov/access-to-opportunities/"
+ },
+ "DATA-Bike-Create-Features": {
+  "captured": "2026-10-26T05:32:12.782Z",
+  "lastPush": "2025-06-25",
+  "url": "https://utah.maps.arcgis.com/apps/mapviewer/index.html?webmap=6ad72cac07b6464f9542e7daaa884b44"
+ },
+ "MAP-ATO": {
+  "captured": "2026-10-26T05:36:41.035Z",
+  "lastPush": "2025-04-08",
+  "url": "https://wfrc.utah.gov/ato-map/"
+ },
+ "MAP-Housing-ATO-Calculator-Weber": {
+  "captured": "2026-10-26T05:32:57.871Z",
+  "lastPush": "2025-09-22",
+  "url": "https://storymaps.arcgis.com/stories/1dcbc0b7e56e4a60aeb10956d1520772"
+ },
+ "MAP-Small-Districts-OD": {
+  "captured": "2026-10-26T05:33:12.355Z",
+  "lastPush": "2025-04-08",
+  "url": "https://wfrc.utah.gov/small-districts-od-map/"
+ },
+ "TDM-GEO-AnalysisZones": {
+  "captured": "2026-10-26T05:33:52.637Z",
+  "lastPush": "2026-10-09",
+  "url": "https://wfrc.maps.arcgis.com/home/item.html?id=6cdfccde494d41a291de6da3c8c1bf08"
+ }
+}

@@ -45,6 +45,14 @@ KIND_BANNER = {
     "post-process": "mid", "scenario": "teal", "geography": "bright", "development": "navy",
     "analysis": "brick", "demo": "bright", "archive": "mid", "other": "mid",
 }
+def card_image(e, prefix):
+    """Screenshot of the live tool when one has been captured, otherwise the brand banner for its kind."""
+    shot = ROOT / "assets" / "shots" / f"{e['id']}.jpg"
+    if shot.exists() and not e.get("no-shot"):
+        return f"{prefix}assets/shots/{e['id']}.jpg"
+    return f"{prefix}_extensions/wfrc-brand/assets/cards/{KIND_BANNER[e['kind']]}.svg"
+
+
 def item(e):
     """One Quarto listing item. Live site wins; otherwise link to the repo."""
     cats = [STATUS_LABEL[e["status"]]]
@@ -62,7 +70,7 @@ def item(e):
         "path": e.get("url") or e["repo"],
         "categories": cats,
         "date": e["last-push"],
-        "image": f"../_extensions/wfrc-brand/assets/cards/{KIND_BANNER[e['kind']]}.svg",
+        "image": card_image(e, "../"),
     }
 
 
@@ -77,7 +85,7 @@ def _neg(d):
 
 NL = chr(10)
 FEATURED_ORDER = [  # home page shows the first eight that are public, live and featured
-    "WF-TDM-Runs", "APP-wftdm-dashboard", "WF-TDM-Calibration",
+    "WF-TDM-Runs", "APP-wftdm-dashboard", "vizTool", "WF-TDM-Calibration",
     "APP-Commute-Explorer", "MAP-Housing-ATO-Calculator-Updated", "GIS_SE2025_H3",
     "MAP-Statewide-ATO-VMT", "APP-WFRC-Commute-Patterns", "REMM-Result-Review-Tool",
 ]
@@ -119,7 +127,11 @@ def home_snippets(catalog, releases):
     out = ["::: {.feature-grid}"]
     for e in picks:
         banner = KIND_BANNER[e["kind"]]
-        out += [f"::: {{.feature-card .banner-{banner}}}", "::: {.feature-banner}", ":::", "",
+        shot = ROOT / "assets" / "shots" / f"{e['id']}.jpg"
+        if e.get("no-shot"):
+            shot = ROOT / "assets" / "shots" / "__none__.jpg"
+        style = f' style="background-image:url(\'assets/shots/{e["id"]}.jpg\')"' if shot.exists() else ""
+        out += [f"::: {{.feature-card .banner-{banner}}}", f"::: {{.feature-banner{' .has-shot' if shot.exists() else ''}{style}}}", ":::", "",
                 "::: {.feature-body}", f"[{KIND_LABEL[e['kind']]}]{{.wfrc-chip}}", "",
                 f"### {e['title']}", "",
                 short(e["description"]), "",
@@ -147,8 +159,10 @@ def site_index(catalog):
     for e in catalog:
         if not e["include"] or e["internal"]:
             continue
-        rows.append({"title": e["title"], "url": e.get("url") or e["repo"], "id": e["id"],
-                     "kind": KIND_LABEL[e["kind"]]})
+        suffix = " (archived)" if e["status"] == "archived" else ""
+        rows.append({"title": e["title"] + suffix, "url": e.get("url") or e["repo"], "id": e["id"],
+                     "kind": KIND_LABEL[e["kind"]], "desc": (e["description"] or "")[:160],
+                     **({"f": 1} if e["featured"] and e["status"] == "live" else {})})
     out = ROOT / "assets" / "data" / "site-index.json"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(rows, separators=(",", ":")), encoding="utf-8")

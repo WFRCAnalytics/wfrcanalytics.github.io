@@ -1,0 +1,31 @@
+# Publish the site to the gh-pages branch whenever main changes (for example when the weekly refresh
+# pull request is merged), or on demand.
+name: Publish
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "_design/**"
+      - "_pipeline.md"
+      - "README.md"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install pyyaml
+      - uses: quarto-dev/quarto-actions/setup@v2
+      - name: Render and publish to gh-pages
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

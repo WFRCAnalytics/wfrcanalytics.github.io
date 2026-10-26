@@ -42,9 +42,9 @@ body { --wfrc-line: color-mix(in srgb, var(--bs-body-color) 16%, var(--bs-body-b
   box-shadow: 0 8px 24px rgba(0, 57, 91, .18);
 }
 .feature-banner {
-  height: 76px;
+  height: 130px;
   background-size: cover;
-  background-position: center;
+  background-position: top center;
 }
 .feature-card.banner-navy .feature-banner { background-image: url("../../_extensions/wfrc-brand/assets/cards/navy.svg"); }
 .feature-card.banner-mid .feature-banner { background-image: url("../../_extensions/wfrc-brand/assets/cards/mid.svg"); }
@@ -199,3 +199,36 @@ body.quarto-dark .lost-card .accent { color: #febc46; }
   }
   .lost-stage { height: clamp(560px, 82vh, 800px); }
 }
+
+/* Quick jump palette (assets/js/quick-jump.js). Quarto's own search UI is hidden; this replaces it. */
+#quarto-search, .quarto-search { display: none !important; }
+dialog.qj {
+  width: min(660px, 94vw); max-height: 78vh; margin: 10vh auto auto; padding: 0;
+  border: 1px solid var(--wfrc-line); border-radius: 14px;
+  background: var(--bs-body-bg); color: var(--bs-body-color);
+  box-shadow: 0 24px 70px rgba(0, 20, 40, .35); overflow: hidden;
+}
+dialog.qj::backdrop { background: rgba(0, 25, 45, .55); backdrop-filter: blur(3px); }
+.qj-box { display: flex; flex-direction: column; max-height: 78vh; }
+.qj-input {
+  width: 100%; border: 0; border-bottom: 1px solid var(--wfrc-line); border-radius: 0;
+  padding: 1.1rem 1.25rem; font-size: 1.1rem; background: transparent; color: inherit; outline: none;
+}
+.qj-input:focus-visible { box-shadow: inset 0 -3px 0 #0093c5; }
+#qj-list { list-style: none; margin: 0; padding: .4rem; overflow-y: auto; }
+#qj-list [role=option] {
+  display: grid; grid-template-columns: 1fr auto; gap: .1rem .75rem; align-items: baseline;
+  padding: .55rem .8rem; border-radius: 8px; cursor: pointer;
+}
+#qj-list [role=option][aria-selected=true] { background: var(--bs-tertiary-bg); box-shadow: inset 3px 0 #0093c5; }
+.qj-title { font-weight: 600; }
+.qj-desc { grid-column: 1 / -1; font-size: .82rem; }
+.qj-group { padding: .6rem .8rem .2rem; font: 700 .72rem var(--bs-headings-font-family); letter-spacing: .06em; text-transform: uppercase; }
+.qj-empty { padding: 1rem .8rem; }
+.qj-foot { margin: 0; padding: .55rem 1rem; border-top: 1px solid var(--wfrc-line); font-size: .78rem; background: var(--bs-tertiary-bg); }
+.qj-foot kbd { padding: .05rem .35rem; font-size: .72rem; }
+.qj mark { background: color-mix(in srgb, #febc46 55%, transparent); color: inherit; padding: 0 .1em; border-radius: 3px; }
+
+/* Screenshots on cards: show the top of the page rather than the middle. */
+.quarto-grid-item .card-img-top { object-position: top center; }
+.feature-banner.has-shot { border-bottom: 1px solid var(--wfrc-line); }

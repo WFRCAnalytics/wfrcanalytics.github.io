@@ -10,7 +10,7 @@ listing:
   sort-ui: false
   filter-ui: true
   page-size: 24
-  image-height: 84px
+  image-height: 150px
   max-description-length: 220
 ---
 
