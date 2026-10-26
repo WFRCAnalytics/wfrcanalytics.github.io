@@ -11,7 +11,7 @@ Principle: **this site explains and points; each tool keeps living in its own re
 - 188 repos (140 public, 48 private); 185 after excluding `.github`, this site and `wfrc-brand`. Naming prefixes (TDM-, REMM-, APP-, MAP-, DATA-, GIS-, TOOL-…) are the existing taxonomy.
 - 27 have a reachable live site (GitHub Pages, shinyapps.io, wfrc.org). The rest are repo-only.
 - Current sidebars hard-code ~100 links; ~35 return 404 (repos with no Pages site, private repos, or renamed: `Viz-Tool` is `vizTool`). All "Previous Releases" links point at a private repo.
-- Status: TDM 9.2.0 current / 10.0.0 beta; REMM 3.0.0 current / 3.0.2 beta.
+- Status: TDM 9.3.0 current / 10.0.0 beta; REMM 3.0.0 current / 3.0.2 beta.
 
 ## 3. Information architecture
 

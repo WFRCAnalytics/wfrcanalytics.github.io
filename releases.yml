@@ -15,7 +15,8 @@ tdm:
   docs-home: https://wfrc.utah.gov/wftdm-docs/
   releases:
     - {version: "10.0.0", status: beta,     date: "2026-09", note: "Beta 2", docs-url: https://wfrc.utah.gov/wftdm-docs/v10x/v1000/index.html}
-    - {version: "9.2.0",  status: current,  date: "2025-11", docs-url: https://wfrc.utah.gov/wftdm-docs/v9x/v920/index.html}
+    - {version: "9.3.0",  status: current,  date: "2026-10", docs-url: https://wfrc.utah.gov/wftdm-docs/v9x/v930/index.html}
+    - {version: "9.2.0",  status: archived, date: "2025-11", docs-url: https://wfrc.utah.gov/wftdm-docs/v9x/v920/index.html}
     - {version: "9.1.1",  status: archived, date: "2025-05", docs-url: https://wfrc.utah.gov/wftdm-docs/v9x/v911/index.html}
     - {version: "9.1.0",  status: archived, date: "2024-10", docs-url: https://wfrc.utah.gov/wftdm-docs/v9x/v910/index.html}
     - {version: "9.0.2",  status: archived, date: "2024-07", docs-url: https://wfrc.utah.gov/wftdm-docs/v9x/v902/index.html}
