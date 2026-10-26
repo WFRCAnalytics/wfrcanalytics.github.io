@@ -1,0 +1,20 @@
+---
+title: "Data"
+description: "Datasets and data-preparation work. Repositories marked Internal require WFRC GitHub access."
+toc: false
+listing:
+  contents: items.yml
+  type: grid
+  sort: false
+  categories: true
+  sort-ui: false
+  filter-ui: true
+  page-size: 24
+  max-description-length: 220
+---
+
+Datasets and data-preparation work. Repositories marked Internal require WFRC GitHub access.
+
+::: {.callout-note appearance="simple" collapse=false}
+**Internal** entries are in private repositories. Their links open only for people with WFRC GitHub access.
+:::

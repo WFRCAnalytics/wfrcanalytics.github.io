@@ -1,6 +1,7 @@
 project:
   type: website
   output-dir: docs
+  pre-render: scripts/build_lists.py
   brand: _extensions/wfrc-brand/brand.yml
 
 metadata-files:
@@ -8,7 +9,7 @@ metadata-files:
 
 website:
   title: "Analytics"
-  description: The Wasatch Front Regional Council builds consensus and enhances quality of life by developing and implementing visions and plans for a well-functioning multi-modal transportation system, livable communities, a strong economy, and a healthy environment.The Wasatch Front Regional Council builds consensus and enhances quality of life by developing and implementing visions and plans for a well-functioning multi-modal transportation system, livable communities, a strong economy, and a healthy environment.
+  description: The Wasatch Front Regional Council builds consensus and enhances quality of life by developing and implementing visions and plans for a well-functioning multi-modal transportation system, livable communities, a strong economy, and a healthy environment.
   favicon: 'assets/logo/abbreviated/WFRC_logo_abbreviated_color_tranparent.png'
   site-url: 'https://wfrcanalytics.github.io'
 
@@ -39,37 +40,28 @@ website:
     # logo-alt: 'WFRC site theme-based logo'
 
     right:
+      - href: explore/index.qmd
+        text: Explore
+      - text: Models
+        menu:
+          - text: Travel Demand Model
+            href: 1-tdm/index.qmd
+          - text: Real-Estate Market Model
+            href: 2-remm/index.qmd
+          - text: Bike Demand Model
+            href: 3-bdm/index.qmd
+          - text: "---"
+          - text: TDM documentation
+            href: https://wfrc.utah.gov/wftdm-docs/
+            target: _blank
+      - href: reports/index.qmd
+        text: Reports
+      - href: data/index.qmd
+        text: Data
+      - href: code/index.qmd
+        text: Code
       - href: about.qmd
         text: About
-      - text: Travel Demand Model
-        # href: 1-tdm/index.qmd
-        menu:
-          - text: Current Official Release (9.2.0)
-            href: 1-tdm/current/index.qmd
-          - text: Under Development (10.0.0 - Beta)
-            href: 1-tdm/beta/index.qmd
-          - text: Archived Releases
-            href: 1-tdm/archive/index.qmd
-      - text: Real-Estate Market Model
-        # href: 2-remm/index.qmd
-        menu:
-          - text: Current Release (3.0.0)
-            href: 2-remm/current/index.qmd
-          - text: Under Development (Beta)
-            href: 2-remm/beta/index.qmd
-          - text: Archived Releases
-            href: 2-remm/archive/index.qmd
-      - text: Bike Demand Model
-        # href: 3-bdm/index.qmd
-        menu:
-          - text: Current Release
-            href: 3-bdm/current/index.qmd
-          - text: Under Development (Beta)
-            href: 3-bdm/beta/index.qmd
-          - text: Archived Releases
-            href: 3-bdm/archive/index.qmd
-      - text: Tools
-        href: 4-tools/index.qmd
 
   sidebar:
     - id: tdm-current
@@ -110,38 +102,11 @@ website:
             - text: "---"
             - section: "Inputs Processing"
               contents:
-                - text: "TDM-INP-TAZ-Age-Percent"
-                  href: https://wfrcanalytics.github.io/TDM-INP-TAZ-Age-Percent/
-                  target: _blank
                 - text: "TDM-INP-External-Forecasts"
                   href: https://wfrcanalytics.github.io/TDM-INP-External-Forecasts/
                   target: _blank
-                - text: "TDM-INP-K-12-Enrollment"
-                  href: https://wfrcanalytics.github.io/TDM-INP-K-12-Enrollment/
-                  target: _blank
                 - text: "TDM-INP-College-Enrollment"
                   href: https://wfrcanalytics.github.io/TDM-INP-College-Enrollment/
-                  target: _blank
-                - text: "TDM-INP-TAZ-Renumbering"
-                  href: https://wfrcanalytics.github.io/TDM-INP-TAZ-Renumbering/
-                  target: _blank
-                - text: "TDM-INP-TAZ-to-CensusTract"
-                  href: https://wfrcanalytics.github.io/TDM-INP-TAZ-to-CensusTract/
-                  target: _blank
-                - text: "TDM-INP-USTM-Externals-Using-National-Network"
-                  href: https://wfrcanalytics.github.io/TDM-INP-USTM-Externals-Using-National-Network/
-                  target: _blank
-                - text: "TDM-INP-Transit-Node-Renumbering"
-                  href: https://wfrcanalytics.github.io/TDM-INP-Transit-Node-Renumbering/
-                  target: _blank
-                - text: "TDM-INP-Census-Block-to-TAZ"
-                  href: https://wfrcanalytics.github.io/TDM-INP-Census-Block-to-TAZ/
-                  target: _blank
-                - text: "TDM-INP-Parcel-to-TAZ"
-                  href: https://wfrcanalytics.github.io/TDM-INP-Parcel-to-TAZ/
-                  target: _blank
-                - text: "TDM-INP-TAZ-to-ZIPCode"
-                  href: https://wfrcanalytics.github.io/TDM-INP-TAZ-to-ZIPCode/
                   target: _blank
             - section: "Estimate Parameters"
               contents:
@@ -154,26 +119,13 @@ website:
                 - text: "TDM-EST-Value-Of-Time"
                   href: https://wfrcanalytics.github.io/TDM-EST-Value-Of-Time/
                   target: _blank
-                - text: "TDM-EST-HTS-Params"
-                  href: https://wfrcanalytics.github.io/TDM-EST-HTS-Params/
-                  target: _blank
-                - text: "TDM-EST-LifeCycle"
-                  href: https://wfrcanalytics.github.io/TDM-EST-LifeCycle/
-                  target: _blank
-                - text: "TDM-EST-Trucks-Streetlight"
-                  href: https://wfrcanalytics.github.io/TDM-EST-Trucks-Streetlight/
-                  target: _blank
-                - text: "TDM-EST-Bus-Speeds"
-                  href: https://wfrcanalytics.github.io/TDM-EST-Bus-Speeds/
-                  target: _blank
             - section: "Model Calibration"
               contents:
-                - text: "TDM-CAL-Friction-Factors"
-                  href: https://wfrcanalytics.github.io/TDM-CAL-Friction-Factors/
+                - text: "Calibration reports"
+                  href: https://wfrcanalytics.github.io/WF-TDM-Calibration/
                   target: _blank
-                - text: "TDM-CAL-Mode-Choice"
-                  href: https://wfrcanalytics.github.io/TDM-CAL-Mode-Choice/
-                  target: _blank
+                - text: "All components (Code catalog)"
+                  href: code/index.qmd
 
     - id: tdm-beta
       title: "TDM 10.0.0 (Beta)"
@@ -182,10 +134,6 @@ website:
       collapse-level: 2
       contents:
         - 1-tdm/beta/index.qmd
-        - section: "Development Status"
-          contents:
-            - 1-tdm/beta/status/overview.qmd
-            - 1-tdm/beta/status/planned-features.qmd
 
     - id: tdm-archive
       title: "TDM Archive"
@@ -194,33 +142,31 @@ website:
       collapse-level: 2
       contents:
         - 1-tdm/archive/index.qmd
-        - section: "Release History"
-          contents:
-            - 1-tdm/archive/release-history.qmd
         - section: "Previous Releases"
           contents:
+            - text: "Version 9.1.1"
+              href: https://wfrc.utah.gov/wftdm-docs/v9x/v911/index.html
+              target: _blank
             - text: "Version 9.1.0 (June 2024)"
-              href: https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases/tag/v9.1.0-official
+              href: https://wfrc.utah.gov/wftdm-docs/v9x/v910/index.html
               target: _blank
             - text: "Version 9.0.2 (April 2024)"
-              href: https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases/tag/v9.0.2-official
+              href: https://wfrc.utah.gov/wftdm-docs/v9x/v902/index.html
               target: _blank
             - text: "Version 9.0.1 (February 2024)"
-              href: https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases/tag/v9.0.1-official
+              href: https://wfrc.utah.gov/wftdm-docs/v9x/v901/index.html
               target: _blank
             - text: "Version 9.0.0 (January 2024)"
-              href: https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases/tag/v9.0.0-official
+              href: https://wfrc.utah.gov/wftdm-docs/v9x/v900/index.html
               target: _blank
             - text: "Version 8.3.2 (August 2023)"
-              href: https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases/tag/v8.3.2-official
+              href: https://wfrc.utah.gov/wftdm-docs/v8x/v832/index.html
               target: _blank
         - section: "Resources"
           contents:
-            - text: "All Releases on GitHub"
-              href: https://github.com/WFRCAnalytics/WF-TDM-Official-Releases/releases
+            - text: "All versions (documentation)"
+              href: https://wfrc.utah.gov/wftdm-docs/
               target: _blank
-            - text: "Version Comparison Guide"
-              href: 1-tdm/archive/version-comparison.qmd
 
     - id: remm-current
       title: "REMM 3.0.0"
@@ -229,51 +175,10 @@ website:
       collapse-level: 2
       contents:
         - 2-remm/current/index.qmd
-        - section: "Model Overview"
-          contents:
-            - 2-remm/current/overview/introduction.qmd
-            - 2-remm/current/overview/methodology.qmd
         - section: "Components"
           contents:
-            - text: "REMM-Parcel-Splitting"
-              href: https://wfrcanalytics.github.io/REMM-Parcel-Splitting/
-              target: _blank
-            - text: "REMM-Job-Space-Calculation"
-              href: https://wfrcanalytics.github.io/REMM-Job-Space-Calculation/
-              target: _blank
-            - text: "REMM-WF-Model-Area-Splits"
-              href: https://wfrcanalytics.github.io/REMM-WF-Model-Area-Splits/
-              target: _blank
-            - text: "REMM-SE-Descriptive-Statistics"
-              href: https://wfrcanalytics.github.io/REMM-SE-Descriptive-Statistics/
-              target: _blank
-            - text: "REMM-Process-SE-Output-For-Web"
-              href: https://wfrcanalytics.github.io/REMM-Process-SE-Output-For-Web/
-              target: _blank
-            - text: "REMM-Manage-Base-Year-Data"
-              href: https://wfrcanalytics.github.io/REMM-Manage-Base-Year-Data/
-              target: _blank
-            - text: "REMM-SE-Comparison-Tools"
-              href: https://wfrcanalytics.github.io/REMM-SE-Comparison-Tools/
-              target: _blank
-            - text: "REMM-Analysis-Tools"
-              href: https://wfrcanalytics.github.io/REMM-Analysis-Tools/
-              target: _blank
-            - text: "REMM-TAZ-SE-Review-For-MB"
-              href: https://wfrcanalytics.github.io/REMM-TAZ-SE-Review-For-MB/
-              target: _blank
-            - text: "REMM-RandomForest-Variable-Analysis"
-              href: https://wfrcanalytics.github.io/REMM-RandomForest-Variable-Analysis/
-              target: _blank
-            - text: "REMM-Process-Progression-Metrics-For-Web"
-              href: https://wfrcanalytics.github.io/REMM-Process-Progression-Metrics-For-Web/
-              target: _blank
-            - text: "REMM-Animate-Modeling-Results"
-              href: https://wfrcanalytics.github.io/REMM-Animate-Modeling-Results/
-              target: _blank
-            - text: "REMM-Input-Data-Prep-2019"
-              href: https://wfrcanalytics.github.io/REMM-Input-Data-Prep-2019/
-              target: _blank
+            - text: "All components (Code catalog)"
+              href: code/index.qmd
 
     - id: remm-beta
       title: "REMM 3.0.2 (Beta)"
@@ -282,10 +187,6 @@ website:
       collapse-level: 2
       contents:
         - 2-remm/beta/index.qmd
-        - section: "Development Status"
-          contents:
-            - 2-remm/beta/status/overview.qmd
-            - 2-remm/beta/status/planned-features.qmd
 
     - id: remm-archive
       title: "REMM Archive"
@@ -293,7 +194,6 @@ website:
       search: true
       contents:
         - 2-remm/archive/index.qmd
-        - 2-remm/archive/release-history.qmd
 
     - id: bdm-current
       title: "BDM Current"
@@ -308,15 +208,8 @@ website:
             - 3-bdm/current/overview/methodology.qmd
         - section: "Components"
           contents:
-            - text: "BDM-Utah-Bike-Demand-Model"
-              href: https://wfrcanalytics.github.io/BDM-Utah-Bike-Demand-Model/
-              target: _blank
-            - text: "BDM-Micromobility-Toolset"
-              href: https://wfrcanalytics.github.io/BDM-Micromobility-Toolset/
-              target: _blank
-            - text: "BDM-Post-Process-Outputs"
-              href: https://wfrcanalytics.github.io/BDM-Post-Process-Outputs/
-              target: _blank
+            - text: "All components (Code catalog)"
+              href: code/index.qmd
 
     - id: bdm-beta
       title: "BDM (Beta)"
@@ -346,9 +239,11 @@ website:
         - 4-tools/index.qmd
         - section: "Visualization Tools"
           contents:
-            - text: "Viz-Tool"
-              href: https://wfrcanalytics.github.io/Viz-Tool/
+            - text: "vizTool"
+              href: https://github.com/WFRCAnalytics/vizTool
               target: _blank
+            - text: "All apps and maps"
+              href: explore/index.qmd
 
 # freeze computational output
 # (see https://quarto.org/docs/projects/code-execution.html#freeze)

@@ -1,0 +1,20 @@
+---
+title: "Explore"
+description: "Interactive apps and maps from the WFRC Analytics team. Open a live tool, or follow the repository link to see how it is built."
+toc: false
+listing:
+  contents: items.yml
+  type: grid
+  sort: false
+  categories: true
+  sort-ui: false
+  filter-ui: true
+  page-size: 24
+  max-description-length: 220
+---
+
+Interactive apps and maps from the WFRC Analytics team. Open a live tool, or follow the repository link to see how it is built.
+
+::: {.callout-note appearance="simple" collapse=false}
+**Internal** entries are in private repositories. Their links open only for people with WFRC GitHub access.
+:::

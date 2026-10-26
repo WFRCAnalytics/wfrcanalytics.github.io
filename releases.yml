@@ -1,0 +1,32 @@
+# Model releases -- single source for release tables and "current version" facts.
+# status: current | beta | archived.  date: YYYY-MM (null = to be confirmed).
+# docs-url points to the public documentation of record; never link private repos here.
+
+tdm:
+  name: Travel Demand Model
+  short: TDM
+  docs-home: https://wfrc.utah.gov/wftdm-docs/
+  releases:
+    - {version: "10.0.0", status: beta,     date: null,    docs-url: https://wfrc.utah.gov/wftdm-docs/v10x/v1000/index.html}
+    - {version: "9.2.0",  status: current,  date: null,    docs-url: https://wfrc.utah.gov/wftdm-docs/v9x/v920/index.html}
+    - {version: "9.1.1",  status: archived, date: null,    docs-url: https://wfrc.utah.gov/wftdm-docs/v9x/v911/index.html}
+    - {version: "9.1.0",  status: archived, date: "2024-06", docs-url: https://wfrc.utah.gov/wftdm-docs/v9x/v910/index.html}
+    - {version: "9.0.2",  status: archived, date: "2024-04", docs-url: https://wfrc.utah.gov/wftdm-docs/v9x/v902/index.html}
+    - {version: "9.0.1",  status: archived, date: "2024-02", docs-url: https://wfrc.utah.gov/wftdm-docs/v9x/v901/index.html}
+    - {version: "9.0.0",  status: archived, date: "2024-01", docs-url: https://wfrc.utah.gov/wftdm-docs/v9x/v900/index.html}
+    - {version: "8.3.2",  status: archived, date: "2023-08", docs-url: https://wfrc.utah.gov/wftdm-docs/v8x/v832/index.html}
+
+remm:
+  name: Real-Estate Market Model
+  short: REMM
+  docs-home: https://github.com/WFRCAnalytics/REMM-v3.0
+  releases:
+    - {version: "3.0.2", status: beta,    date: null, docs-url: null}
+    - {version: "3.0.0", status: current, date: null, docs-url: https://github.com/WFRCAnalytics/REMM-v3.0}
+
+bdm:
+  name: Bike Demand Model
+  short: BDM
+  docs-home: https://github.com/WFRCAnalytics/BDM-Utah-Bike-Demand-Model
+  releases:
+    - {version: "current", status: current, date: null, docs-url: https://github.com/WFRCAnalytics/BDM-Utah-Bike-Demand-Model}

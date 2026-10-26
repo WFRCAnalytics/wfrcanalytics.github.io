@@ -1,0 +1,23 @@
+---
+title: "Code"
+description: "Every WFRC Analytics repository. Search by name, or filter by status, kind and model area."
+toc: false
+listing:
+  contents: items.yml
+  type: table
+  sort: false
+  categories: true
+  sort-ui: false
+  filter-ui: true
+  page-size: 24
+  max-description-length: 220
+  fields: [title, description, categories, date]
+  field-display-names:
+    date: Last updated
+---
+
+Every WFRC Analytics repository. Search by name, or filter by status, kind and model area.
+
+::: {.callout-note appearance="simple" collapse=false}
+**Internal** entries are in private repositories. Their links open only for people with WFRC GitHub access.
+:::

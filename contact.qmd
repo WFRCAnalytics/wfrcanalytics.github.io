@@ -1,60 +1,18 @@
 ---
 pagetitle: Contact
-name: Contact Form
+title: Contact
+toc: false
 page-layout: article
-format:
-  html:
-    grid:
-      margin-width: 0px
-      sidebar-width: 0px
-    toc: false
-css:
-  - /assets/css/contact.css
 ---
 
-::: {.grid}
+Questions about the Travel Demand Model, Real-Estate Market Model or Bike Demand Model, data requests, or help applying our tools to a planning study? Reach the Analytics team directly.
 
-::: {.g-col-5 #note}
+- {{< fa envelope >}} [analytics@wfrc.utah.gov](mailto:analytics@wfrc.utah.gov)
+- {{< fa location-dot >}} [41 North Rio Grande St. Suite 103, Salt Lake City, UT 84101](https://maps.app.goo.gl/c8oi9w1AtNwUbxUt8){target="_blank"}
+- {{< fa tty >}} TTY: 711
 
-# Contact Us
+## Found a problem with a tool or this site?
 
-If you have questions about the WFRC Travel Demand Model, Real-Estate Market Model, or Bike Demand Model, need technical assistance with model applications, want to discuss data or methodology, or require support for transportation planning studies in the Wasatch Front region, please contact our Analytics team.
+Open an issue in the relevant repository. For this website, use [Report a bug](https://github.com/WFRCAnalytics/wfrcanalytics.github.io/issues/new){target="_blank"} or [Ask a question](https://github.com/WFRCAnalytics/wfrcanalytics.github.io/discussions/new/choose){target="_blank"}. Tool-specific repositories are listed in the [Code catalog](code/index.qmd).
 
-<ul style="list-style-type: none; padding-left: 0;">
-  <li>{{< fa location-dot >}} [41 North Rio Grande St. Suite 103, Salt Lake City, UT 84101](https://maps.app.goo.gl/c8oi9w1AtNwUbxUt8){target="_blank"}</li>
-  <li>{{< fa phone >}} [(801) 363-4250](tel:+18013634250)</li>
-  <li>{{< fa tty >}} TTY: 711</li>
-  <li>{{< fa envelope >}} [analytics@wfrc.utah.gov](mailto:analytics@wfrc.utah.gov)</li>
-</ul>
-
-## Office Hours
-
-**Monday - Friday**: 8:00 AM - 5:00 PM (Mountain Time)
-
-For urgent matters outside of business hours, please email us and we will respond as soon as possible.
-:::
-<!-- source: https://github.com/mccarthy-m-g/tidytales/blob/main/about/index.qmd#L24-L46 -->
-
-::: {.g-col-1}
-:::
-
-::: {.g-col-6 #form}
-
-<form action="https://formspree.io/f/xxxxxxxx" method="POST" accept-charset="utf-8">
-
-
-<label for="full-name">Full Name</label>
-<input type="text" name="name" id="full-name" class="form-control" placeholder="First and Last" required>
-
-<label for="email-address">Email Address</label>
-<input type="email" name="_replyto" id="email-address" class="form-control" placeholder="your@email.here" required>
-
-<label for="message">Message</label>
-  <textarea rows="14" name="message" id="message" class="form-control" placeholder="Type your message here" required></textarea>
-
-<button type="submit" class="btn btn-primary mt-4">Send message</button>
-</form>
-:::
-
-:::
-<!-- end grid -->
+For general information about WFRC programs and services, visit [wfrc.utah.gov](https://wfrc.utah.gov){target="_blank"}.
