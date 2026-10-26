@@ -10,7 +10,7 @@
 <atom:link href="https://wfrcanalytics.github.io/updates/index.xml" rel="self" type="application/rss+xml"/>
 <description>New releases, tools and changes from the WFRC Analytics team.</description>
 <generator>quarto-1.10.19</generator>
-<lastBuildDate>Sun, 25 Oct 2026 06:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sun, 25 Oct 2026 00:00:00 GMT</lastBuildDate>
 <item>
   <title>A new front door for WFRC Analytics</title>
   <link>https://wfrcanalytics.github.io/updates/posts/2026-10-25-new-front-door.html</link>
@@ -34,7 +34,7 @@
  ]]></description>
   <category>site</category>
   <guid>https://wfrcanalytics.github.io/updates/posts/2026-10-25-new-front-door.html</guid>
-  <pubDate>Sun, 25 Oct 2026 06:00:00 GMT</pubDate>
+  <pubDate>Sun, 25 Oct 2026 00:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>

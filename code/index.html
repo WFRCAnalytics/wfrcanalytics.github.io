@@ -54,9 +54,9 @@ ul.task-list li input[type="checkbox"] {
 <script id="quarto-axe-checker-options" type="text/plain">dHJ1ZQ==</script>
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-0756f8518ec0967a70b41786b4745d2c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-72597b3082f95eb44c4d1a7ce3261060.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-0756f8518ec0967a70b41786b4745d2c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-5c7f346ac78d5653bb901f48effb41a8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-61a64ec896cb6f19873e67cc833181f1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-5c7f346ac78d5653bb901f48effb41a8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -111,61 +111,33 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <style>html{ scroll-behavior: smooth; }</style>
 <script>
-
 // Table listings print categories as plain text ("Live, App"). Turn them into pills,
-
 // and re-run whenever the listing re-renders (filter, page, sort).
-
 (function () {
-
   var STATE = { Live: 'chip-live', Internal: 'chip-internal', Archived: 'chip-archived' };
-
   function chips(root) {
-
     root.querySelectorAll('.quarto-listing-table .listing-categories:not([data-chips])').forEach(function (cell) {
-
       var names = cell.textContent.split(',').map(function (s) { return s.trim(); }).filter(Boolean);
-
       cell.setAttribute('data-chips', '1');
-
       cell.textContent = '';
-
       names.forEach(function (name) {
-
         var chip = document.createElement('span');
-
         chip.className = 'wfrc-chip ' + (STATE[name] || '');
-
         chip.textContent = name;
-
         cell.appendChild(chip);
-
       });
-
     });
-
   }
-
   function start() {
-
     chips(document);
-
     new MutationObserver(function () { chips(document); })
-
       .observe(document.body, { childList: true, subtree: true });
-
   }
-
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);
-
   else start();
-
 })();
-
 </script>
-
 <script type="module" src="../assets/js/quick-jump.js"></script>
-
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
@@ -387,8 +359,8 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="..\site_libs\quarto-contrib\quarto-project\wfrc-brand\assets\logo\abbreviated\WFRC_logo_abbreviated_color_transparent.png" alt="Wasatch Front Regional Council" class="navbar-logo light-content">
-    <img src="..\site_libs\quarto-contrib\quarto-project\wfrc-brand\assets\logo\abbreviated\WFRC_logo_abbreviated_white_transparent.png" alt="Wasatch Front Regional Council" class="navbar-logo dark-content">
+    <img src="../site_libs/quarto-contrib/quarto-project/wfrc-brand/assets/logo/abbreviated/WFRC_logo_abbreviated_color_transparent.png" alt="Wasatch Front Regional Council" class="navbar-logo light-content">
+    <img src="../site_libs/quarto-contrib/quarto-project/wfrc-brand/assets/logo/abbreviated/WFRC_logo_abbreviated_white_transparent.png" alt="Wasatch Front Regional Council" class="navbar-logo dark-content">
     </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Analytics</span>
@@ -596,7 +568,7 @@ Last updated
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-categories="TGl2ZSUyQ0FwcA==" data-listing-date-sort="1792735200000" data-listing-title-sort="TDM Calibration Dashboard">
+<tr data-index="0" data-categories="TGl2ZSUyQ0FwcA==" data-listing-date-sort="1792713600000" data-listing-title-sort="TDM Calibration Dashboard">
 <td>
 <a href="https://wfrcanalytics.github.io/APP-wftdm-dashboard/" class="title listing-title">TDM Calibration Dashboard</a>
 </td>
@@ -612,7 +584,7 @@ Last updated
 
 </tr>
 
-<tr data-index="1" data-categories="TGl2ZSUyQ01vZGVsJTJDVERN" data-listing-date-sort="1792562400000" data-listing-title-sort="TDM Calibration Reports">
+<tr data-index="1" data-categories="TGl2ZSUyQ01vZGVsJTJDVERN" data-listing-date-sort="1792540800000" data-listing-title-sort="TDM Calibration Reports">
 <td>
 <a href="https://wfrcanalytics.github.io/WF-TDM-Calibration/" class="title listing-title">TDM Calibration Reports</a>
 </td>
@@ -628,7 +600,7 @@ Last updated
 
 </tr>
 
-<tr data-index="2" data-categories="TGl2ZSUyQ01vZGVsJTJDVERN" data-listing-date-sort="1792562400000" data-listing-title-sort="TDM Run Results">
+<tr data-index="2" data-categories="TGl2ZSUyQ01vZGVsJTJDVERN" data-listing-date-sort="1792540800000" data-listing-title-sort="TDM Run Results">
 <td>
 <a href="https://wfrcanalytics.github.io/WF-TDM-Runs/" class="title listing-title">TDM Run Results</a>
 </td>
@@ -644,7 +616,7 @@ Last updated
 
 </tr>
 
-<tr data-index="3" data-categories="TGl2ZSUyQ01hcA==" data-listing-date-sort="1790143200000" data-listing-title-sort="Housing ATO Calculator">
+<tr data-index="3" data-categories="TGl2ZSUyQ01hcA==" data-listing-date-sort="1790121600000" data-listing-title-sort="Housing ATO Calculator">
 <td>
 <a href="https://wfrcanalytics.github.io/MAP-Housing-ATO-Calculator-Updated/" class="title listing-title">Housing ATO Calculator</a>
 </td>
@@ -660,7 +632,7 @@ Last updated
 
 </tr>
 
-<tr data-index="4" data-categories="TGl2ZSUyQ0FwcA==" data-listing-date-sort="1790056800000" data-listing-title-sort="Commute Patterns Map">
+<tr data-index="4" data-categories="TGl2ZSUyQ0FwcA==" data-listing-date-sort="1790035200000" data-listing-title-sort="Commute Patterns Map">
 <td>
 <a href="https://wfrcanalytics.github.io/APP-WFRC-Commute-Patterns/" class="title listing-title">Commute Patterns Map</a>
 </td>
@@ -676,7 +648,7 @@ Last updated
 
 </tr>
 
-<tr data-index="5" data-categories="TGl2ZSUyQ0FuYWx5c2lz" data-listing-date-sort="1790056800000" data-listing-title-sort="SE 2025 Urban Form D Variables">
+<tr data-index="5" data-categories="TGl2ZSUyQ0FuYWx5c2lz" data-listing-date-sort="1790035200000" data-listing-title-sort="SE 2025 Urban Form D Variables">
 <td>
 <a href="https://wfrcanalytics.github.io/GIS_SE2025_H3/" class="title listing-title">SE 2025 Urban Form D Variables</a>
 </td>
@@ -692,7 +664,7 @@ Last updated
 
 </tr>
 
-<tr data-index="6" data-categories="TGl2ZSUyQ0FwcA==" data-listing-date-sort="1789711200000" data-listing-title-sort="Proposal Evaluation Scoresheet">
+<tr data-index="6" data-categories="TGl2ZSUyQ0FwcA==" data-listing-date-sort="1789689600000" data-listing-title-sort="Proposal Evaluation Scoresheet">
 <td>
 <a href="https://wfrcanalytics.github.io/APP-Project-Scoresheet/" class="title listing-title">Proposal Evaluation Scoresheet</a>
 </td>
@@ -708,7 +680,7 @@ Last updated
 
 </tr>
 
-<tr data-index="7" data-categories="TGl2ZSUyQ0FuYWx5c2lzJTJDUkVNTQ==" data-listing-date-sort="1789106400000" data-listing-title-sort="REMM Result Review Tool">
+<tr data-index="7" data-categories="TGl2ZSUyQ0FuYWx5c2lzJTJDUkVNTQ==" data-listing-date-sort="1789084800000" data-listing-title-sort="REMM Result Review Tool">
 <td>
 <a href="https://wfrcanalytics.github.io/REMM-Result-Review-Tool/" class="title listing-title">REMM Result Review Tool</a>
 </td>
@@ -724,7 +696,7 @@ Last updated
 
 </tr>
 
-<tr data-index="8" data-categories="TGl2ZSUyQ0FwcA==" data-listing-date-sort="1787810400000" data-listing-title-sort="vizTool">
+<tr data-index="8" data-categories="TGl2ZSUyQ0FwcA==" data-listing-date-sort="1787788800000" data-listing-title-sort="vizTool">
 <td>
 <a href="https://wfrc.utah.gov/viztool-latest-build/" class="title listing-title">vizTool</a>
 </td>
@@ -740,7 +712,7 @@ Last updated
 
 </tr>
 
-<tr data-index="9" data-categories="TGl2ZSUyQ01hcA==" data-listing-date-sort="1786687200000" data-listing-title-sort="Statewide ATO and VMT Map">
+<tr data-index="9" data-categories="TGl2ZSUyQ01hcA==" data-listing-date-sort="1786665600000" data-listing-title-sort="Statewide ATO and VMT Map">
 <td>
 <a href="https://wfrcanalytics.github.io/MAP-Statewide-ATO-VMT/" class="title listing-title">Statewide ATO and VMT Map</a>
 </td>
@@ -756,7 +728,7 @@ Last updated
 
 </tr>
 
-<tr data-index="10" data-categories="TGl2ZSUyQ0FwcA==" data-listing-date-sort="1782799200000" data-listing-title-sort="Commute Flow Explorer">
+<tr data-index="10" data-categories="TGl2ZSUyQ0FwcA==" data-listing-date-sort="1782777600000" data-listing-title-sort="Commute Flow Explorer">
 <td>
 <a href="https://wfrcanalytics.github.io/APP-Commute-Explorer/" class="title listing-title">Commute Flow Explorer</a>
 </td>
@@ -772,7 +744,7 @@ Last updated
 
 </tr>
 
-<tr data-index="11" data-categories="TGl2ZSUyQ0ludGVybmFsJTJDTW9kZWwlMkNURE0=" data-listing-date-sort="1792735200000" data-listing-title-sort="TDM Development">
+<tr data-index="11" data-categories="TGl2ZSUyQ0ludGVybmFsJTJDTW9kZWwlMkNURE0=" data-listing-date-sort="1792713600000" data-listing-title-sort="TDM Development">
 <td>
 <a href="https://wfrc.utah.gov/wftdm-docs/" class="title listing-title">TDM Development</a>
 </td>
@@ -788,7 +760,7 @@ Last updated
 
 </tr>
 
-<tr data-index="12" data-categories="TGl2ZSUyQ1ZhbGlkYXRpb24lMkNURE0=" data-listing-date-sort="1791957600000" data-listing-title-sort="VAL School College Enrollment">
+<tr data-index="12" data-categories="TGl2ZSUyQ1ZhbGlkYXRpb24lMkNURE0=" data-listing-date-sort="1791936000000" data-listing-title-sort="VAL School College Enrollment">
 <td>
 <a href="https://wfrcanalytics.github.io/TDM-VAL-SchoolCollegeEnrollment/" class="title listing-title">VAL School College Enrollment</a>
 </td>
@@ -804,7 +776,7 @@ Last updated
 
 </tr>
 
-<tr data-index="13" data-categories="TGl2ZSUyQ0FuYWx5c2lz" data-listing-date-sort="1791871200000" data-listing-title-sort="adhoc analyses">
+<tr data-index="13" data-categories="TGl2ZSUyQ0FuYWx5c2lz" data-listing-date-sort="1791849600000" data-listing-title-sort="adhoc analyses">
 <td>
 <a href="https://wfrcanalytics.github.io/GIS-adhoc-analyses/" class="title listing-title">adhoc analyses</a>
 </td>
@@ -820,7 +792,7 @@ Last updated
 
 </tr>
 
-<tr data-index="14" data-categories="TGl2ZSUyQ0dlb2dyYXBoeSUyQ1RETQ==" data-listing-date-sort="1791525600000" data-listing-title-sort="GEO Analysis Zones">
+<tr data-index="14" data-categories="TGl2ZSUyQ0dlb2dyYXBoeSUyQ1RETQ==" data-listing-date-sort="1791504000000" data-listing-title-sort="GEO Analysis Zones">
 <td>
 <a href="https://wfrc.maps.arcgis.com/home/item.html?id=6cdfccde494d41a291de6da3c8c1bf08" class="title listing-title">GEO Analysis Zones</a>
 </td>
@@ -836,7 +808,7 @@ Last updated
 
 </tr>
 
-<tr data-index="15" data-categories="TGl2ZSUyQ0ludGVybmFsJTJDQXBw" data-listing-date-sort="1791439200000" data-listing-title-sort="Utah HTS Visualization Dashboard">
+<tr data-index="15" data-categories="TGl2ZSUyQ0ludGVybmFsJTJDQXBw" data-listing-date-sort="1791417600000" data-listing-title-sort="Utah HTS Visualization Dashboard">
 <td>
 <a href="https://wfrc.shinyapps.io/2023-utah-household-travel-survey/" class="title listing-title">Utah HTS Visualization Dashboard</a>
 </td>
@@ -852,7 +824,7 @@ Last updated
 
 </tr>
 
-<tr data-index="16" data-categories="TGl2ZSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1789365600000" data-listing-title-sort="INP Population Sim">
+<tr data-index="16" data-categories="TGl2ZSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1789344000000" data-listing-title-sort="INP Population Sim">
 <td>
 <a href="https://wfrcanalytics.github.io/TDM-INP-PopulationSim/" class="title listing-title">INP Population Sim</a>
 </td>
@@ -868,7 +840,7 @@ Last updated
 
 </tr>
 
-<tr data-index="17" data-categories="TGl2ZSUyQ0ludGVybmFsJTJDTW9kZWwlMkNURE0=" data-listing-date-sort="1786514400000" data-listing-title-sort="TDM Documentation">
+<tr data-index="17" data-categories="TGl2ZSUyQ0ludGVybmFsJTJDTW9kZWwlMkNURE0=" data-listing-date-sort="1786492800000" data-listing-title-sort="TDM Documentation">
 <td>
 <a href="https://wfrc.utah.gov/wftdm-docs/" class="title listing-title">TDM Documentation</a>
 </td>
@@ -884,7 +856,7 @@ Last updated
 
 </tr>
 
-<tr data-index="18" data-categories="TGl2ZSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1785304800000" data-listing-title-sort="INP External Forecasts">
+<tr data-index="18" data-categories="TGl2ZSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1785283200000" data-listing-title-sort="INP External Forecasts">
 <td>
 <a href="https://wfrcanalytics.github.io/TDM-INP-External-Forecasts/" class="title listing-title">INP External Forecasts</a>
 </td>
@@ -900,7 +872,7 @@ Last updated
 
 </tr>
 
-<tr data-index="19" data-categories="TGl2ZSUyQ0RhdGE=" data-listing-date-sort="1785218400000" data-listing-title-sort="Commercial Vehicle Observed for TDM">
+<tr data-index="19" data-categories="TGl2ZSUyQ0RhdGE=" data-listing-date-sort="1785196800000" data-listing-title-sort="Commercial Vehicle Observed for TDM">
 <td>
 <a href="https://wfrcanalytics.github.io/DATA-Commercial-Vehicle-Observed-for-TDM/" class="title listing-title">Commercial Vehicle Observed for TDM</a>
 </td>
@@ -916,7 +888,7 @@ Last updated
 
 </tr>
 
-<tr data-index="20" data-categories="TGl2ZSUyQ0FuYWx5c2lz" data-listing-date-sort="1783576800000" data-listing-title-sort="ATO Impact Tool">
+<tr data-index="20" data-categories="TGl2ZSUyQ0FuYWx5c2lz" data-listing-date-sort="1783555200000" data-listing-title-sort="ATO Impact Tool">
 <td>
 <a href="https://wfrc.utah.gov/access-to-opportunities/" class="title listing-title">ATO Impact Tool</a>
 </td>
@@ -932,7 +904,7 @@ Last updated
 
 </tr>
 
-<tr data-index="21" data-categories="TGl2ZSUyQ0FuYWx5c2lz" data-listing-date-sort="1783490400000" data-listing-title-sort="GTFS vs LIN">
+<tr data-index="21" data-categories="TGl2ZSUyQ0FuYWx5c2lz" data-listing-date-sort="1783468800000" data-listing-title-sort="GTFS vs LIN">
 <td>
 <a href="https://wfrcanalytics.github.io/GIS-GTFS-vs-LIN/" class="title listing-title">GTFS vs LIN</a>
 </td>
@@ -948,7 +920,7 @@ Last updated
 
 </tr>
 
-<tr data-index="22" data-categories="TGl2ZSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1782367200000" data-listing-title-sort="INP College Enrollment">
+<tr data-index="22" data-categories="TGl2ZSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1782345600000" data-listing-title-sort="INP College Enrollment">
 <td>
 <a href="https://wfrcanalytics.github.io/TDM-INP-College-Enrollment/" class="title listing-title">INP College Enrollment</a>
 </td>
@@ -964,7 +936,7 @@ Last updated
 
 </tr>
 
-<tr data-index="23" data-categories="TGl2ZSUyQ0VzdGltYXRpb24lMkNURE0=" data-listing-date-sort="1776837600000" data-listing-title-sort="EST Auto Operating Costs">
+<tr data-index="23" data-categories="TGl2ZSUyQ0VzdGltYXRpb24lMkNURE0=" data-listing-date-sort="1776816000000" data-listing-title-sort="EST Auto Operating Costs">
 <td>
 <a href="https://wfrcanalytics.github.io/TDM-EST-Auto-Operating-Costs/" class="title listing-title">EST Auto Operating Costs</a>
 </td>
@@ -980,7 +952,7 @@ Last updated
 
 </tr>
 
-<tr data-index="24" data-categories="TGl2ZSUyQ0VzdGltYXRpb24lMkNURE0=" data-listing-date-sort="1776837600000" data-listing-title-sort="EST TAZ Median Income">
+<tr data-index="24" data-categories="TGl2ZSUyQ0VzdGltYXRpb24lMkNURE0=" data-listing-date-sort="1776816000000" data-listing-title-sort="EST TAZ Median Income">
 <td>
 <a href="https://wfrcanalytics.github.io/TDM-EST-TAZ-Median-Income/" class="title listing-title">EST TAZ Median Income</a>
 </td>
@@ -996,7 +968,7 @@ Last updated
 
 </tr>
 
-<tr data-index="25" data-categories="TGl2ZSUyQ0VzdGltYXRpb24lMkNURE0=" data-listing-date-sort="1776837600000" data-listing-title-sort="EST Value Of Time">
+<tr data-index="25" data-categories="TGl2ZSUyQ0VzdGltYXRpb24lMkNURE0=" data-listing-date-sort="1776816000000" data-listing-title-sort="EST Value Of Time">
 <td>
 <a href="https://wfrcanalytics.github.io/TDM-EST-Value-Of-Time/" class="title listing-title">EST Value Of Time</a>
 </td>
@@ -1012,7 +984,7 @@ Last updated
 
 </tr>
 
-<tr data-index="26" data-categories="TGl2ZSUyQ1ZhbGlkYXRpb24lMkNURE0=" data-listing-date-sort="1769670000000" data-listing-title-sort="VAL Traffic Volume CCS">
+<tr data-index="26" data-categories="TGl2ZSUyQ1ZhbGlkYXRpb24lMkNURE0=" data-listing-date-sort="1769644800000" data-listing-title-sort="VAL Traffic Volume CCS">
 <td>
 <a href="https://wfrcanalytics.github.io/TDM-VAL-TrafficVolume-CCS/" class="title listing-title">VAL Traffic Volume CCS</a>
 </td>
@@ -1028,7 +1000,7 @@ Last updated
 
 </tr>
 
-<tr data-index="27" data-categories="TGl2ZSUyQ0ludGVybmFsJTJDQXBw" data-listing-date-sort="1766386800000" data-listing-title-sort="GPI Forecast Analysis 2025">
+<tr data-index="27" data-categories="TGl2ZSUyQ0ludGVybmFsJTJDQXBw" data-listing-date-sort="1766361600000" data-listing-title-sort="GPI Forecast Analysis 2025">
 <td>
 <a href="https://wfrc.shinyapps.io/GPI-Forecast-Analysis-2025/" class="title listing-title">GPI Forecast Analysis 2025</a>
 </td>
@@ -1044,7 +1016,7 @@ Last updated
 
 </tr>
 
-<tr data-index="28" data-categories="TGl2ZSUyQ0FuYWx5c2lzJTJDQkRN" data-listing-date-sort="1763362800000" data-listing-title-sort="Bikeway by City">
+<tr data-index="28" data-categories="TGl2ZSUyQ0FuYWx5c2lzJTJDQkRN" data-listing-date-sort="1763337600000" data-listing-title-sort="Bikeway by City">
 <td>
 <a href="https://wfrcanalytics.github.io/GIS-Bikeway-by-City/" class="title listing-title">Bikeway by City</a>
 </td>
@@ -1060,7 +1032,7 @@ Last updated
 
 </tr>
 
-<tr data-index="29" data-categories="TGl2ZSUyQ0ludGVybmFsJTJDTW9kZWwlMkNURE0=" data-listing-date-sort="1763017200000" data-listing-title-sort="TDM Official Releases">
+<tr data-index="29" data-categories="TGl2ZSUyQ0ludGVybmFsJTJDTW9kZWwlMkNURE0=" data-listing-date-sort="1762992000000" data-listing-title-sort="TDM Official Releases">
 <td>
 <a href="https://wfrc.utah.gov/wftdm-docs/" class="title listing-title">TDM Official Releases</a>
 </td>
@@ -1076,7 +1048,7 @@ Last updated
 
 </tr>
 
-<tr data-index="30" data-categories="TGl2ZSUyQ0FwcA==" data-listing-date-sort="1758693600000" data-listing-title-sort="HTS Trip Purpose Shiny">
+<tr data-index="30" data-categories="TGl2ZSUyQ0FwcA==" data-listing-date-sort="1758672000000" data-listing-title-sort="HTS Trip Purpose Shiny">
 <td>
 <a href="https://wfrc.shinyapps.io/2023-utah-household-travel-survey-trips-generated/" class="title listing-title">HTS Trip Purpose Shiny</a>
 </td>
@@ -1092,7 +1064,7 @@ Last updated
 
 </tr>
 
-<tr data-index="31" data-categories="TGl2ZSUyQ01hcA==" data-listing-date-sort="1758520800000" data-listing-title-sort="Housing ATO Calculator Weber">
+<tr data-index="31" data-categories="TGl2ZSUyQ01hcA==" data-listing-date-sort="1758499200000" data-listing-title-sort="Housing ATO Calculator Weber">
 <td>
 <a href="https://storymaps.arcgis.com/stories/1dcbc0b7e56e4a60aeb10956d1520772" class="title listing-title">Housing ATO Calculator Weber</a>
 </td>
@@ -1108,7 +1080,7 @@ Last updated
 
 </tr>
 
-<tr data-index="32" data-categories="TGl2ZSUyQ0RhdGElMkNCRE0=" data-listing-date-sort="1750831200000" data-listing-title-sort="Bike Create Features">
+<tr data-index="32" data-categories="TGl2ZSUyQ0RhdGElMkNCRE0=" data-listing-date-sort="1750809600000" data-listing-title-sort="Bike Create Features">
 <td>
 <a href="https://utah.maps.arcgis.com/apps/mapviewer/index.html?webmap=6ad72cac07b6464f9542e7daaa884b44" class="title listing-title">Bike Create Features</a>
 </td>
@@ -1124,7 +1096,7 @@ Last updated
 
 </tr>
 
-<tr data-index="33" data-categories="TGl2ZSUyQ01hcA==" data-listing-date-sort="1749189600000" data-listing-title-sort="Housing Unit Inventory Explorer">
+<tr data-index="33" data-categories="TGl2ZSUyQ01hcA==" data-listing-date-sort="1749168000000" data-listing-title-sort="Housing Unit Inventory Explorer">
 <td>
 <a href="https://wfrc.org/housing-inventory-explorer" class="title listing-title">Housing Unit Inventory Explorer</a>
 </td>
@@ -1140,7 +1112,7 @@ Last updated
 
 </tr>
 
-<tr data-index="34" data-categories="TGl2ZSUyQ01hcA==" data-listing-date-sort="1744092000000" data-listing-title-sort="ATO">
+<tr data-index="34" data-categories="TGl2ZSUyQ01hcA==" data-listing-date-sort="1744070400000" data-listing-title-sort="ATO">
 <td>
 <a href="https://wfrc.utah.gov/ato-map/" class="title listing-title">ATO</a>
 </td>
@@ -1156,7 +1128,7 @@ Last updated
 
 </tr>
 
-<tr data-index="35" data-categories="TGl2ZSUyQ01hcA==" data-listing-date-sort="1744092000000" data-listing-title-sort="Small Districts OD">
+<tr data-index="35" data-categories="TGl2ZSUyQ01hcA==" data-listing-date-sort="1744070400000" data-listing-title-sort="Small Districts OD">
 <td>
 <a href="https://wfrc.utah.gov/small-districts-od-map/" class="title listing-title">Small Districts OD</a>
 </td>
@@ -1172,7 +1144,7 @@ Last updated
 
 </tr>
 
-<tr data-index="36" data-categories="TGl2ZSUyQ0FwcA==" data-listing-date-sort="1744005600000" data-listing-title-sort="HTS Trip Length Shiny">
+<tr data-index="36" data-categories="TGl2ZSUyQ0FwcA==" data-listing-date-sort="1743984000000" data-listing-title-sort="HTS Trip Length Shiny">
 <td>
 <a href="https://wfrc.shinyapps.io/2023-utah-household-travel-survey-trip-duration-distribution/" class="title listing-title">HTS Trip Length Shiny</a>
 </td>
@@ -1188,7 +1160,7 @@ Last updated
 
 </tr>
 
-<tr data-index="37" data-categories="TGl2ZSUyQ0FwcA==" data-listing-date-sort="1744005600000" data-listing-title-sort="HTS Trip Length Shiny 2012">
+<tr data-index="37" data-categories="TGl2ZSUyQ0FwcA==" data-listing-date-sort="1743984000000" data-listing-title-sort="HTS Trip Length Shiny 2012">
 <td>
 <a href="https://wfrc.shinyapps.io/2012-utah-household-travel-survey-trip-length-distribution/" class="title listing-title">HTS Trip Length Shiny 2012</a>
 </td>
@@ -1204,7 +1176,7 @@ Last updated
 
 </tr>
 
-<tr data-index="38" data-categories="TGl2ZSUyQ01hcA==" data-listing-date-sort="1744005600000" data-listing-title-sort="Environmental Resiliency">
+<tr data-index="38" data-categories="TGl2ZSUyQ01hcA==" data-listing-date-sort="1743984000000" data-listing-title-sort="Environmental Resiliency">
 <td>
 <a href="https://wfrc.utah.gov/rtp-2023-impact-map/" class="title listing-title">Environmental Resiliency</a>
 </td>
@@ -1220,7 +1192,7 @@ Last updated
 
 </tr>
 
-<tr data-index="39" data-categories="TGl2ZSUyQ0VzdGltYXRpb24lMkNURE0=" data-listing-date-sort="1743746400000" data-listing-title-sort="EST Bus Speeds">
+<tr data-index="39" data-categories="TGl2ZSUyQ0VzdGltYXRpb24lMkNURE0=" data-listing-date-sort="1743724800000" data-listing-title-sort="EST Bus Speeds">
 <td>
 <a href="https://christopher-day.shinyapps.io/bus_speeds_viewer/" class="title listing-title">EST Bus Speeds</a>
 </td>
@@ -1236,7 +1208,7 @@ Last updated
 
 </tr>
 
-<tr data-index="40" data-categories="UmVwb3NpdG9yeSUyQ0RhdGE=" data-listing-date-sort="1792648800000" data-listing-title-sort="UDOT Segment Factors">
+<tr data-index="40" data-categories="UmVwb3NpdG9yeSUyQ0RhdGE=" data-listing-date-sort="1792627200000" data-listing-title-sort="UDOT Segment Factors">
 <td>
 <a href="https://github.com/WFRCAnalytics/DATA-UDOT-Segment-Factors" class="title listing-title">UDOT Segment Factors</a>
 </td>
@@ -1252,7 +1224,7 @@ Last updated
 
 </tr>
 
-<tr data-index="41" data-categories="UmVwb3NpdG9yeSUyQ0RhdGE=" data-listing-date-sort="1792389600000" data-listing-title-sort="Regional Metrics Dashboard">
+<tr data-index="41" data-categories="UmVwb3NpdG9yeSUyQ0RhdGE=" data-listing-date-sort="1792368000000" data-listing-title-sort="Regional Metrics Dashboard">
 <td>
 <a href="https://github.com/WFRCAnalytics/DATA-Regional-Metrics-Dashboard" class="title listing-title">Regional Metrics Dashboard</a>
 </td>
@@ -1268,7 +1240,7 @@ Last updated
 
 </tr>
 
-<tr data-index="42" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lz" data-listing-date-sort="1791439200000" data-listing-title-sort="Opportunity Zones Info Sheets">
+<tr data-index="42" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lz" data-listing-date-sort="1791417600000" data-listing-title-sort="Opportunity Zones Info Sheets">
 <td>
 <a href="https://github.com/WFRCAnalytics/GIS_OpportunityZones_InfoSheets" class="title listing-title">Opportunity Zones Info Sheets</a>
 </td>
@@ -1284,7 +1256,7 @@ Last updated
 
 </tr>
 
-<tr data-index="43" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDQXBw" data-listing-date-sort="1790661600000" data-listing-title-sort="Benefit Cost Analysis">
+<tr data-index="43" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDQXBw" data-listing-date-sort="1790640000000" data-listing-title-sort="Benefit Cost Analysis">
 <td>
 <a href="https://github.com/WFRCAnalytics/APP-Benefit-Cost-Analysis" class="title listing-title">Benefit Cost Analysis</a>
 </td>
@@ -1300,7 +1272,7 @@ Last updated
 
 </tr>
 
-<tr data-index="44" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YQ==" data-listing-date-sort="1790229600000" data-listing-title-sort="ABM INP Microzones">
+<tr data-index="44" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YQ==" data-listing-date-sort="1790208000000" data-listing-title-sort="ABM INP Microzones">
 <td>
 <a href="https://github.com/WFRCAnalytics/ABM-INP-Microzones" class="title listing-title">ABM INP Microzones</a>
 </td>
@@ -1316,7 +1288,7 @@ Last updated
 
 </tr>
 
-<tr data-index="45" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lz" data-listing-date-sort="1789538400000" data-listing-title-sort="FORECAST Traffic Volume">
+<tr data-index="45" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lz" data-listing-date-sort="1789516800000" data-listing-title-sort="FORECAST Traffic Volume">
 <td>
 <a href="https://github.com/WFRCAnalytics/FORECAST-Traffic-Volume" class="title listing-title">FORECAST Traffic Volume</a>
 </td>
@@ -1332,7 +1304,7 @@ Last updated
 
 </tr>
 
-<tr data-index="46" data-categories="UmVwb3NpdG9yeSUyQ01vZGVsJTJDUkVNTQ==" data-listing-date-sort="1789452000000" data-listing-title-sort="REMM 3.0 model">
+<tr data-index="46" data-categories="UmVwb3NpdG9yeSUyQ01vZGVsJTJDUkVNTQ==" data-listing-date-sort="1789430400000" data-listing-title-sort="REMM 3.0 model">
 <td>
 <a href="https://github.com/WFRCAnalytics/REMM-v3.0" class="title listing-title">REMM 3.0 model</a>
 </td>
@@ -1348,7 +1320,7 @@ Last updated
 
 </tr>
 
-<tr data-index="47" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRGF0YQ==" data-listing-date-sort="1789106400000" data-listing-title-sort="UTA Automatic Passenger Counting">
+<tr data-index="47" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRGF0YQ==" data-listing-date-sort="1789084800000" data-listing-title-sort="UTA Automatic Passenger Counting">
 <td>
 <a href="https://github.com/WFRCAnalytics/DATA-UTA-Automatic-Passenger-Counting" class="title listing-title">UTA Automatic Passenger Counting</a>
 </td>
@@ -1364,7 +1336,7 @@ Last updated
 
 </tr>
 
-<tr data-index="48" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDSW5wdXQlMjBkYXRhJTJDVERN" data-listing-date-sort="1788933600000" data-listing-title-sort="INP Work At Home">
+<tr data-index="48" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDSW5wdXQlMjBkYXRhJTJDVERN" data-listing-date-sort="1788912000000" data-listing-title-sort="INP Work At Home">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-INP-Work-At-Home" class="title listing-title">INP Work At Home</a>
 </td>
@@ -1380,7 +1352,7 @@ Last updated
 
 </tr>
 
-<tr data-index="49" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDQXBw" data-listing-date-sort="1788847200000" data-listing-title-sort="ATO Interactive">
+<tr data-index="49" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDQXBw" data-listing-date-sort="1788825600000" data-listing-title-sort="ATO Interactive">
 <td>
 <a href="https://github.com/WFRCAnalytics/APP-ATO-Interactive" class="title listing-title">ATO Interactive</a>
 </td>
@@ -1396,7 +1368,7 @@ Last updated
 
 </tr>
 
-<tr data-index="50" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRXN0aW1hdGlvbiUyQ1RETQ==" data-listing-date-sort="1786946400000" data-listing-title-sort="EST HTS Params">
+<tr data-index="50" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRXN0aW1hdGlvbiUyQ1RETQ==" data-listing-date-sort="1786924800000" data-listing-title-sort="EST HTS Params">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-EST-HTS-Params" class="title listing-title">EST HTS Params</a>
 </td>
@@ -1412,7 +1384,7 @@ Last updated
 
 </tr>
 
-<tr data-index="51" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDQW5hbHlzaXM=" data-listing-date-sort="1784786400000" data-listing-title-sort="RTP Phasing Criteria">
+<tr data-index="51" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDQW5hbHlzaXM=" data-listing-date-sort="1784764800000" data-listing-title-sort="RTP Phasing Criteria">
 <td>
 <a href="https://github.com/WFRCAnalytics/GIS-RTP-Phasing-Criteria" class="title listing-title">RTP Phasing Criteria</a>
 </td>
@@ -1428,7 +1400,7 @@ Last updated
 
 </tr>
 
-<tr data-index="52" data-categories="UmVwb3NpdG9yeSUyQ0dlb2dyYXBoeSUyQ1RETQ==" data-listing-date-sort="1784700000000" data-listing-title-sort="GEO True Shape">
+<tr data-index="52" data-categories="UmVwb3NpdG9yeSUyQ0dlb2dyYXBoeSUyQ1RETQ==" data-listing-date-sort="1784678400000" data-listing-title-sort="GEO True Shape">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-GEO-TrueShape" class="title listing-title">GEO True Shape</a>
 </td>
@@ -1444,7 +1416,7 @@ Last updated
 
 </tr>
 
-<tr data-index="53" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1784613600000" data-listing-title-sort="INP K 12 Enrollment">
+<tr data-index="53" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1784592000000" data-listing-title-sort="INP K 12 Enrollment">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-INP-K-12-Enrollment" class="title listing-title">INP K 12 Enrollment</a>
 </td>
@@ -1460,7 +1432,7 @@ Last updated
 
 </tr>
 
-<tr data-index="54" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDQ2FsaWJyYXRpb24lMkNURE0=" data-listing-date-sort="1783576800000" data-listing-title-sort="CAL HBWDest Choice">
+<tr data-index="54" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDQ2FsaWJyYXRpb24lMkNURE0=" data-listing-date-sort="1783555200000" data-listing-title-sort="CAL HBWDest Choice">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-CAL-HBWDestChoice" class="title listing-title">CAL HBWDest Choice</a>
 </td>
@@ -1476,7 +1448,7 @@ Last updated
 
 </tr>
 
-<tr data-index="55" data-categories="UmVwb3NpdG9yeSUyQ01vZGVsJTJDQkRN" data-listing-date-sort="1783404000000" data-listing-title-sort="Utah Bike Demand Model">
+<tr data-index="55" data-categories="UmVwb3NpdG9yeSUyQ01vZGVsJTJDQkRN" data-listing-date-sort="1783382400000" data-listing-title-sort="Utah Bike Demand Model">
 <td>
 <a href="https://github.com/WFRCAnalytics/BDM-Utah-Bike-Demand-Model" class="title listing-title">Utah Bike Demand Model</a>
 </td>
@@ -1492,7 +1464,7 @@ Last updated
 
 </tr>
 
-<tr data-index="56" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRXN0aW1hdGlvbiUyQ1RETQ==" data-listing-date-sort="1779256800000" data-listing-title-sort="EST Commercial Vehicle Model">
+<tr data-index="56" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRXN0aW1hdGlvbiUyQ1RETQ==" data-listing-date-sort="1779235200000" data-listing-title-sort="EST Commercial Vehicle Model">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-EST-Commercial-Vehicle-Model" class="title listing-title">EST Commercial Vehicle Model</a>
 </td>
@@ -1508,7 +1480,7 @@ Last updated
 
 </tr>
 
-<tr data-index="57" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRGF0YQ==" data-listing-date-sort="1776837600000" data-listing-title-sort="OBS Prep For TDM">
+<tr data-index="57" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRGF0YQ==" data-listing-date-sort="1776816000000" data-listing-title-sort="OBS Prep For TDM">
 <td>
 <a href="https://github.com/WFRCAnalytics/DATA-OBS-Prep-For-TDM" class="title listing-title">OBS Prep For TDM</a>
 </td>
@@ -1524,7 +1496,7 @@ Last updated
 
 </tr>
 
-<tr data-index="58" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDQ2FsaWJyYXRpb24lMkNURE0=" data-listing-date-sort="1776837600000" data-listing-title-sort="CAL Mode Choice">
+<tr data-index="58" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDQ2FsaWJyYXRpb24lMkNURE0=" data-listing-date-sort="1776816000000" data-listing-title-sort="CAL Mode Choice">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-CAL-Mode-Choice" class="title listing-title">CAL Mode Choice</a>
 </td>
@@ -1540,7 +1512,7 @@ Last updated
 
 </tr>
 
-<tr data-index="59" data-categories="UmVwb3NpdG9yeSUyQ0FwcA==" data-listing-date-sort="1776146400000" data-listing-title-sort="3D Households Jobs Forecast">
+<tr data-index="59" data-categories="UmVwb3NpdG9yeSUyQ0FwcA==" data-listing-date-sort="1776124800000" data-listing-title-sort="3D Households Jobs Forecast">
 <td>
 <a href="https://github.com/WFRCAnalytics/APP-3D-Households-Jobs-Forecast" class="title listing-title">3D Households Jobs Forecast</a>
 </td>
@@ -1556,7 +1528,7 @@ Last updated
 
 </tr>
 
-<tr data-index="60" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRGF0YQ==" data-listing-date-sort="1775023200000" data-listing-title-sort="Microtransit Prep For TDM">
+<tr data-index="60" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRGF0YQ==" data-listing-date-sort="1775001600000" data-listing-title-sort="Microtransit Prep For TDM">
 <td>
 <a href="https://github.com/WFRCAnalytics/DATA-Microtransit-Prep-For-TDM" class="title listing-title">Microtransit Prep For TDM</a>
 </td>
@@ -1572,7 +1544,7 @@ Last updated
 
 </tr>
 
-<tr data-index="61" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDVG9vbA==" data-listing-date-sort="1774332000000" data-listing-title-sort="Generate SE Feedback Emails">
+<tr data-index="61" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDVG9vbA==" data-listing-date-sort="1774310400000" data-listing-title-sort="Generate SE Feedback Emails">
 <td>
 <a href="https://github.com/WFRCAnalytics/TOOL-Generate-SE-Feedback-Emails" class="title listing-title">Generate SE Feedback Emails</a>
 </td>
@@ -1588,7 +1560,7 @@ Last updated
 
 </tr>
 
-<tr data-index="62" data-categories="UmVwb3NpdG9yeSUyQ0RhdGE=" data-listing-date-sort="1772780400000" data-listing-title-sort="HTS Big Query">
+<tr data-index="62" data-categories="UmVwb3NpdG9yeSUyQ0RhdGE=" data-listing-date-sort="1772755200000" data-listing-title-sort="HTS Big Query">
 <td>
 <a href="https://github.com/WFRCAnalytics/DATA-HTS-BigQuery" class="title listing-title">HTS Big Query</a>
 </td>
@@ -1604,7 +1576,7 @@ Last updated
 
 </tr>
 
-<tr data-index="63" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRGF0YQ==" data-listing-date-sort="1771484400000" data-listing-title-sort="UDOT AADT Processing">
+<tr data-index="63" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRGF0YQ==" data-listing-date-sort="1771459200000" data-listing-title-sort="UDOT AADT Processing">
 <td>
 <a href="https://github.com/WFRCAnalytics/DATA-UDOT-AADT-Processing" class="title listing-title">UDOT AADT Processing</a>
 </td>
@@ -1620,7 +1592,7 @@ Last updated
 
 </tr>
 
-<tr data-index="64" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDQ2FsaWJyYXRpb24lMkNURE0=" data-listing-date-sort="1769583600000" data-listing-title-sort="CAL Friction Factors">
+<tr data-index="64" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDQ2FsaWJyYXRpb24lMkNURE0=" data-listing-date-sort="1769558400000" data-listing-title-sort="CAL Friction Factors">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-CAL-Friction-Factors" class="title listing-title">CAL Friction Factors</a>
 </td>
@@ -1636,7 +1608,7 @@ Last updated
 
 </tr>
 
-<tr data-index="65" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDQW5hbHlzaXMlMkNSRU1N" data-listing-date-sort="1769497200000" data-listing-title-sort="Job Space Calculation">
+<tr data-index="65" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDQW5hbHlzaXMlMkNSRU1N" data-listing-date-sort="1769472000000" data-listing-title-sort="Job Space Calculation">
 <td>
 <a href="https://github.com/WFRCAnalytics/REMM-Job-Space-Calculation" class="title listing-title">Job Space Calculation</a>
 </td>
@@ -1652,7 +1624,7 @@ Last updated
 
 </tr>
 
-<tr data-index="66" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1769065200000" data-listing-title-sort="INP Socioeconomic Control Totals">
+<tr data-index="66" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1769040000000" data-listing-title-sort="INP Socioeconomic Control Totals">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-INP-Socioeconomic-Control-Totals" class="title listing-title">INP Socioeconomic Control Totals</a>
 </td>
@@ -1668,7 +1640,7 @@ Last updated
 
 </tr>
 
-<tr data-index="67" data-categories="UmVwb3NpdG9yeSUyQ0xpYnJhcnk=" data-listing-date-sort="1767682800000" data-listing-title-sort="Urbansim WFRC">
+<tr data-index="67" data-categories="UmVwb3NpdG9yeSUyQ0xpYnJhcnk=" data-listing-date-sort="1767657600000" data-listing-title-sort="Urbansim WFRC">
 <td>
 <a href="https://github.com/WFRCAnalytics/PY-Urbansim-WFRC" class="title listing-title">Urbansim WFRC</a>
 </td>
@@ -1684,7 +1656,7 @@ Last updated
 
 </tr>
 
-<tr data-index="68" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDQXBw" data-listing-date-sort="1766386800000" data-listing-title-sort="Socioeconomic Control Totals">
+<tr data-index="68" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDQXBw" data-listing-date-sort="1766361600000" data-listing-title-sort="Socioeconomic Control Totals">
 <td>
 <a href="https://github.com/WFRCAnalytics/APP-Socioeconomic-Control-Totals" class="title listing-title">Socioeconomic Control Totals</a>
 </td>
@@ -1700,7 +1672,7 @@ Last updated
 
 </tr>
 
-<tr data-index="69" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDQW5hbHlzaXM=" data-listing-date-sort="1765954800000" data-listing-title-sort="Housing ATO Calculator Web App Builder Devel">
+<tr data-index="69" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDQW5hbHlzaXM=" data-listing-date-sort="1765929600000" data-listing-title-sort="Housing ATO Calculator Web App Builder Devel">
 <td>
 <a href="https://github.com/WFRCAnalytics/Housing-ATO-Calculator-WebAppBuilder-Devel" class="title listing-title">Housing ATO Calculator Web App Builder Devel</a>
 </td>
@@ -1716,7 +1688,7 @@ Last updated
 
 </tr>
 
-<tr data-index="70" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDQW5hbHlzaXM=" data-listing-date-sort="1765263600000" data-listing-title-sort="Housing Within Centers SAP">
+<tr data-index="70" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDQW5hbHlzaXM=" data-listing-date-sort="1765238400000" data-listing-title-sort="Housing Within Centers SAP">
 <td>
 <a href="https://github.com/WFRCAnalytics/Housing-Within-Centers-SAP" class="title listing-title">Housing Within Centers SAP</a>
 </td>
@@ -1732,7 +1704,7 @@ Last updated
 
 </tr>
 
-<tr data-index="71" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRGF0YQ==" data-listing-date-sort="1764140400000" data-listing-title-sort="Housing Within Centers">
+<tr data-index="71" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRGF0YQ==" data-listing-date-sort="1764115200000" data-listing-title-sort="Housing Within Centers">
 <td>
 <a href="https://github.com/WFRCAnalytics/DATA-Housing-Within-Centers" class="title listing-title">Housing Within Centers</a>
 </td>
@@ -1748,7 +1720,7 @@ Last updated
 
 </tr>
 
-<tr data-index="72" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRGF0YQ==" data-listing-date-sort="1763622000000" data-listing-title-sort="Box Elder Parcels">
+<tr data-index="72" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRGF0YQ==" data-listing-date-sort="1763596800000" data-listing-title-sort="Box Elder Parcels">
 <td>
 <a href="https://github.com/WFRCAnalytics/DATA-BoxElder-Parcels" class="title listing-title">Box Elder Parcels</a>
 </td>
@@ -1764,7 +1736,7 @@ Last updated
 
 </tr>
 
-<tr data-index="73" data-categories="QXJjaGl2ZWQlMkNNYXA=" data-listing-date-sort="1762758000000" data-listing-title-sort="Census LEHD Commute Patterns">
+<tr data-index="73" data-categories="QXJjaGl2ZWQlMkNNYXA=" data-listing-date-sort="1762732800000" data-listing-title-sort="Census LEHD Commute Patterns">
 <td>
 <a href="https://wfrc.utah.gov/commuter-flow-map/" class="title listing-title">Census LEHD Commute Patterns</a>
 </td>
@@ -1780,7 +1752,7 @@ Last updated
 
 </tr>
 
-<tr data-index="74" data-categories="QXJjaGl2ZWQlMkNNYXA=" data-listing-date-sort="1762326000000" data-listing-title-sort="Housing ATO Calculator">
+<tr data-index="74" data-categories="QXJjaGl2ZWQlMkNNYXA=" data-listing-date-sort="1762300800000" data-listing-title-sort="Housing ATO Calculator">
 <td>
 <a href="https://wfrc.org/housing-ato-calculator-map/" class="title listing-title">Housing ATO Calculator</a>
 </td>
@@ -1796,7 +1768,7 @@ Last updated
 
 </tr>
 
-<tr data-index="75" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDTWFw" data-listing-date-sort="1759903200000" data-listing-title-sort="Locus OD Data Explorer">
+<tr data-index="75" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDTWFw" data-listing-date-sort="1759881600000" data-listing-title-sort="Locus OD Data Explorer">
 <td>
 <a href="https://github.com/WFRCAnalytics/MAP-Locus-OD-Data-Explorer" class="title listing-title">Locus OD Data Explorer</a>
 </td>
@@ -1812,7 +1784,7 @@ Last updated
 
 </tr>
 
-<tr data-index="76" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lzJTJDUkVNTQ==" data-listing-date-sort="1758520800000" data-listing-title-sort="Parcel Splitting">
+<tr data-index="76" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lzJTJDUkVNTQ==" data-listing-date-sort="1758499200000" data-listing-title-sort="Parcel Splitting">
 <td>
 <a href="https://github.com/WFRCAnalytics/REMM-Parcel-Splitting" class="title listing-title">Parcel Splitting</a>
 </td>
@@ -1828,7 +1800,7 @@ Last updated
 
 </tr>
 
-<tr data-index="77" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1755064800000" data-listing-title-sort="INP TAZ Age Percent">
+<tr data-index="77" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1755043200000" data-listing-title-sort="INP TAZ Age Percent">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-INP-TAZ-Age-Percent" class="title listing-title">INP TAZ Age Percent</a>
 </td>
@@ -1844,7 +1816,7 @@ Last updated
 
 </tr>
 
-<tr data-index="78" data-categories="UmVwb3NpdG9yeSUyQ1Bvc3QtcHJvY2Vzc2luZyUyQ1RETQ==" data-listing-date-sort="1754632800000" data-listing-title-sort="PP ATO Big5">
+<tr data-index="78" data-categories="UmVwb3NpdG9yeSUyQ1Bvc3QtcHJvY2Vzc2luZyUyQ1RETQ==" data-listing-date-sort="1754611200000" data-listing-title-sort="PP ATO Big5">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-PP-ATO-Big5" class="title listing-title">PP ATO Big5</a>
 </td>
@@ -1860,7 +1832,7 @@ Last updated
 
 </tr>
 
-<tr data-index="79" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lzJTJDUkVNTQ==" data-listing-date-sort="1753250400000" data-listing-title-sort="WF Model Area Splits">
+<tr data-index="79" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lzJTJDUkVNTQ==" data-listing-date-sort="1753228800000" data-listing-title-sort="WF Model Area Splits">
 <td>
 <a href="https://github.com/WFRCAnalytics/REMM-WF-Model-Area-Splits" class="title listing-title">WF Model Area Splits</a>
 </td>
@@ -1876,7 +1848,7 @@ Last updated
 
 </tr>
 
-<tr data-index="80" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRGF0YQ==" data-listing-date-sort="1752818400000" data-listing-title-sort="HTS Prep For TDM">
+<tr data-index="80" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRGF0YQ==" data-listing-date-sort="1752796800000" data-listing-title-sort="HTS Prep For TDM">
 <td>
 <a href="https://github.com/WFRCAnalytics/DATA-HTS-Prep-For-TDM" class="title listing-title">HTS Prep For TDM</a>
 </td>
@@ -1892,7 +1864,7 @@ Last updated
 
 </tr>
 
-<tr data-index="81" data-categories="UmVwb3NpdG9yeSUyQ0VzdGltYXRpb24lMkNURE0=" data-listing-date-sort="1748930400000" data-listing-title-sort="EST Life Cycle">
+<tr data-index="81" data-categories="UmVwb3NpdG9yeSUyQ0VzdGltYXRpb24lMkNURE0=" data-listing-date-sort="1748908800000" data-listing-title-sort="EST Life Cycle">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-EST-LifeCycle" class="title listing-title">EST Life Cycle</a>
 </td>
@@ -1908,7 +1880,7 @@ Last updated
 
 </tr>
 
-<tr data-index="82" data-categories="UmVwb3NpdG9yeSUyQ1Rvb2w=" data-listing-date-sort="1748844000000" data-listing-title-sort="Centers Capacity">
+<tr data-index="82" data-categories="UmVwb3NpdG9yeSUyQ1Rvb2w=" data-listing-date-sort="1748822400000" data-listing-title-sort="Centers Capacity">
 <td>
 <a href="https://github.com/WFRCAnalytics/TOOL-Centers-Capacity" class="title listing-title">Centers Capacity</a>
 </td>
@@ -1924,7 +1896,7 @@ Last updated
 
 </tr>
 
-<tr data-index="83" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRGF0YQ==" data-listing-date-sort="1746856800000" data-listing-title-sort="HTS OBS Market Analysis">
+<tr data-index="83" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRGF0YQ==" data-listing-date-sort="1746835200000" data-listing-title-sort="HTS OBS Market Analysis">
 <td>
 <a href="https://github.com/WFRCAnalytics/DATA-HTS-OBS-Market-Analysis" class="title listing-title">HTS OBS Market Analysis</a>
 </td>
@@ -1940,7 +1912,7 @@ Last updated
 
 </tr>
 
-<tr data-index="84" data-categories="UmVwb3NpdG9yeSUyQ0RldmVsb3BtZW50JTJDVERN" data-listing-date-sort="1746165600000" data-listing-title-sort="DEV E2 CRT Improvements">
+<tr data-index="84" data-categories="UmVwb3NpdG9yeSUyQ0RldmVsb3BtZW50JTJDVERN" data-listing-date-sort="1746144000000" data-listing-title-sort="DEV E2 CRT Improvements">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-DEV-E2-CRT-Improvements" class="title listing-title">DEV E2 CRT Improvements</a>
 </td>
@@ -1956,7 +1928,7 @@ Last updated
 
 </tr>
 
-<tr data-index="85" data-categories="UmVwb3NpdG9yeSUyQ0RhdGE=" data-listing-date-sort="1744783200000" data-listing-title-sort="Merge WFRC MAG GFLU">
+<tr data-index="85" data-categories="UmVwb3NpdG9yeSUyQ0RhdGE=" data-listing-date-sort="1744761600000" data-listing-title-sort="Merge WFRC MAG GFLU">
 <td>
 <a href="https://github.com/WFRCAnalytics/DATA-Merge-WFRC-MAG-GFLU" class="title listing-title">Merge WFRC MAG GFLU</a>
 </td>
@@ -1972,7 +1944,7 @@ Last updated
 
 </tr>
 
-<tr data-index="86" data-categories="UmVwb3NpdG9yeSUyQ01vZGVsJTJDQkRN" data-listing-date-sort="1744178400000" data-listing-title-sort="Post Process Outputs">
+<tr data-index="86" data-categories="UmVwb3NpdG9yeSUyQ01vZGVsJTJDQkRN" data-listing-date-sort="1744156800000" data-listing-title-sort="Post Process Outputs">
 <td>
 <a href="https://github.com/WFRCAnalytics/BDM-Post-Process-Outputs" class="title listing-title">Post Process Outputs</a>
 </td>
@@ -1988,7 +1960,7 @@ Last updated
 
 </tr>
 
-<tr data-index="87" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRGF0YQ==" data-listing-date-sort="1744178400000" data-listing-title-sort="GPI Forecast Review 2021">
+<tr data-index="87" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRGF0YQ==" data-listing-date-sort="1744156800000" data-listing-title-sort="GPI Forecast Review 2021">
 <td>
 <a href="https://github.com/WFRCAnalytics/DATA-GPI-Forecast-Review-2021" class="title listing-title">GPI Forecast Review 2021</a>
 </td>
@@ -2004,7 +1976,7 @@ Last updated
 
 </tr>
 
-<tr data-index="88" data-categories="UmVwb3NpdG9yeSUyQ0RhdGE=" data-listing-date-sort="1744178400000" data-listing-title-sort="Official SE RTP 2019">
+<tr data-index="88" data-categories="UmVwb3NpdG9yeSUyQ0RhdGE=" data-listing-date-sort="1744156800000" data-listing-title-sort="Official SE RTP 2019">
 <td>
 <a href="https://github.com/WFRCAnalytics/DATA-Official-SE-RTP-2019" class="title listing-title">Official SE RTP 2019</a>
 </td>
@@ -2020,7 +1992,7 @@ Last updated
 
 </tr>
 
-<tr data-index="89" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lz" data-listing-date-sort="1744178400000" data-listing-title-sort="Housing Inventory Overlay Version">
+<tr data-index="89" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lz" data-listing-date-sort="1744156800000" data-listing-title-sort="Housing Inventory Overlay Version">
 <td>
 <a href="https://github.com/WFRCAnalytics/GIS-Housing-Inventory-Overlay-Version" class="title listing-title">Housing Inventory Overlay Version</a>
 </td>
@@ -2036,7 +2008,7 @@ Last updated
 
 </tr>
 
-<tr data-index="90" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lz" data-listing-date-sort="1744178400000" data-listing-title-sort="Parking Lots">
+<tr data-index="90" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lz" data-listing-date-sort="1744156800000" data-listing-title-sort="Parking Lots">
 <td>
 <a href="https://github.com/WFRCAnalytics/GIS-Parking-Lots" class="title listing-title">Parking Lots</a>
 </td>
@@ -2052,7 +2024,7 @@ Last updated
 
 </tr>
 
-<tr data-index="91" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lz" data-listing-date-sort="1744178400000" data-listing-title-sort="TAZ Grouping Analysis Variables">
+<tr data-index="91" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lz" data-listing-date-sort="1744156800000" data-listing-title-sort="TAZ Grouping Analysis Variables">
 <td>
 <a href="https://github.com/WFRCAnalytics/GIS-TAZ-Grouping-Analysis-Variables" class="title listing-title">TAZ Grouping Analysis Variables</a>
 </td>
@@ -2068,7 +2040,7 @@ Last updated
 
 </tr>
 
-<tr data-index="92" data-categories="UmVwb3NpdG9yeSUyQ0xpYnJhcnk=" data-listing-date-sort="1744178400000" data-listing-title-sort="Orca WFRC">
+<tr data-index="92" data-categories="UmVwb3NpdG9yeSUyQ0xpYnJhcnk=" data-listing-date-sort="1744156800000" data-listing-title-sort="Orca WFRC">
 <td>
 <a href="https://github.com/WFRCAnalytics/PY-Orca-WFRC" class="title listing-title">Orca WFRC</a>
 </td>
@@ -2084,7 +2056,7 @@ Last updated
 
 </tr>
 
-<tr data-index="93" data-categories="UmVwb3NpdG9yeSUyQ1Rvb2wlMkNCRE0=" data-listing-date-sort="1744178400000" data-listing-title-sort="Bike Ped Demand Model">
+<tr data-index="93" data-categories="UmVwb3NpdG9yeSUyQ1Rvb2wlMkNCRE0=" data-listing-date-sort="1744156800000" data-listing-title-sort="Bike Ped Demand Model">
 <td>
 <a href="https://github.com/WFRCAnalytics/TOOL-BikePed-Demand-Model" class="title listing-title">Bike Ped Demand Model</a>
 </td>
@@ -2100,7 +2072,7 @@ Last updated
 
 </tr>
 
-<tr data-index="94" data-categories="UmVwb3NpdG9yeSUyQ1Rvb2w=" data-listing-date-sort="1744178400000" data-listing-title-sort="Create Residential Capacity Classes">
+<tr data-index="94" data-categories="UmVwb3NpdG9yeSUyQ1Rvb2w=" data-listing-date-sort="1744156800000" data-listing-title-sort="Create Residential Capacity Classes">
 <td>
 <a href="https://github.com/WFRCAnalytics/TOOL-Create-Residential-Capacity-Classes" class="title listing-title">Create Residential Capacity Classes</a>
 </td>
@@ -2116,7 +2088,7 @@ Last updated
 
 </tr>
 
-<tr data-index="95" data-categories="UmVwb3NpdG9yeSUyQ1Rvb2w=" data-listing-date-sort="1744178400000" data-listing-title-sort="Network To Graph">
+<tr data-index="95" data-categories="UmVwb3NpdG9yeSUyQ1Rvb2w=" data-listing-date-sort="1744156800000" data-listing-title-sort="Network To Graph">
 <td>
 <a href="https://github.com/WFRCAnalytics/TOOL-Network-To-Graph" class="title listing-title">Network To Graph</a>
 </td>
@@ -2132,7 +2104,7 @@ Last updated
 
 </tr>
 
-<tr data-index="96" data-categories="UmVwb3NpdG9yeSUyQ1Rvb2w=" data-listing-date-sort="1744178400000" data-listing-title-sort="Pseudo Parcels">
+<tr data-index="96" data-categories="UmVwb3NpdG9yeSUyQ1Rvb2w=" data-listing-date-sort="1744156800000" data-listing-title-sort="Pseudo Parcels">
 <td>
 <a href="https://github.com/WFRCAnalytics/TOOL-PseudoParcels" class="title listing-title">Pseudo Parcels</a>
 </td>
@@ -2148,7 +2120,7 @@ Last updated
 
 </tr>
 
-<tr data-index="97" data-categories="UmVwb3NpdG9yeSUyQ0RhdGE=" data-listing-date-sort="1744092000000" data-listing-title-sort="COVID Compare using BTS">
+<tr data-index="97" data-categories="UmVwb3NpdG9yeSUyQ0RhdGE=" data-listing-date-sort="1744070400000" data-listing-title-sort="COVID Compare using BTS">
 <td>
 <a href="https://github.com/WFRCAnalytics/DATA-COVID-Compare-using-BTS" class="title listing-title">COVID Compare using BTS</a>
 </td>
@@ -2164,7 +2136,7 @@ Last updated
 
 </tr>
 
-<tr data-index="98" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRGF0YQ==" data-listing-date-sort="1744092000000" data-listing-title-sort="OBS TDM Boardings by Stop XY">
+<tr data-index="98" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRGF0YQ==" data-listing-date-sort="1744070400000" data-listing-title-sort="OBS TDM Boardings by Stop XY">
 <td>
 <a href="https://github.com/WFRCAnalytics/DATA-OBS-TDM-Boardings-by-Stop-XY" class="title listing-title">OBS TDM Boardings by Stop XY</a>
 </td>
@@ -2180,7 +2152,7 @@ Last updated
 
 </tr>
 
-<tr data-index="99" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRGF0YQ==" data-listing-date-sort="1744092000000" data-listing-title-sort="Preliminary GPI Projection 2024">
+<tr data-index="99" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRGF0YQ==" data-listing-date-sort="1744070400000" data-listing-title-sort="Preliminary GPI Projection 2024">
 <td>
 <a href="https://github.com/WFRCAnalytics/DATA-Preliminary-GPI-Projection-2024" class="title listing-title">Preliminary GPI Projection 2024</a>
 </td>
@@ -2196,7 +2168,7 @@ Last updated
 
 </tr>
 
-<tr data-index="100" data-categories="UmVwb3NpdG9yeSUyQ0RhdGE=" data-listing-date-sort="1744092000000" data-listing-title-sort="Transit 2014 2015">
+<tr data-index="100" data-categories="UmVwb3NpdG9yeSUyQ0RhdGE=" data-listing-date-sort="1744070400000" data-listing-title-sort="Transit 2014 2015">
 <td>
 <a href="https://github.com/WFRCAnalytics/DATA-Transit-2014-2015" class="title listing-title">Transit 2014 2015</a>
 </td>
@@ -2212,7 +2184,7 @@ Last updated
 
 </tr>
 
-<tr data-index="101" data-categories="UmVwb3NpdG9yeSUyQ0RhdGE=" data-listing-date-sort="1744092000000" data-listing-title-sort="UT Sales Tax Analysis">
+<tr data-index="101" data-categories="UmVwb3NpdG9yeSUyQ0RhdGE=" data-listing-date-sort="1744070400000" data-listing-title-sort="UT Sales Tax Analysis">
 <td>
 <a href="https://github.com/WFRCAnalytics/DATA-UT-Sales-Tax-Analysis" class="title listing-title">UT Sales Tax Analysis</a>
 </td>
@@ -2228,7 +2200,7 @@ Last updated
 
 </tr>
 
-<tr data-index="102" data-categories="UmVwb3NpdG9yeSUyQ01hcA==" data-listing-date-sort="1744092000000" data-listing-title-sort="Special Generators">
+<tr data-index="102" data-categories="UmVwb3NpdG9yeSUyQ01hcA==" data-listing-date-sort="1744070400000" data-listing-title-sort="Special Generators">
 <td>
 <a href="https://github.com/WFRCAnalytics/MAP-Special-Generators" class="title listing-title">Special Generators</a>
 </td>
@@ -2244,7 +2216,7 @@ Last updated
 
 </tr>
 
-<tr data-index="103" data-categories="UmVwb3NpdG9yeSUyQ0VzdGltYXRpb24lMkNURE0=" data-listing-date-sort="1744092000000" data-listing-title-sort="EST Trucks Streetlight">
+<tr data-index="103" data-categories="UmVwb3NpdG9yeSUyQ0VzdGltYXRpb24lMkNURE0=" data-listing-date-sort="1744070400000" data-listing-title-sort="EST Trucks Streetlight">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-EST-Trucks-Streetlight" class="title listing-title">EST Trucks Streetlight</a>
 </td>
@@ -2260,7 +2232,7 @@ Last updated
 
 </tr>
 
-<tr data-index="104" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1744092000000" data-listing-title-sort="INP Census Block to TAZ">
+<tr data-index="104" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1744070400000" data-listing-title-sort="INP Census Block to TAZ">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-INP-Census-Block-to-TAZ" class="title listing-title">INP Census Block to TAZ</a>
 </td>
@@ -2276,7 +2248,7 @@ Last updated
 
 </tr>
 
-<tr data-index="105" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1744092000000" data-listing-title-sort="INP TAZ Renumbering">
+<tr data-index="105" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1744070400000" data-listing-title-sort="INP TAZ Renumbering">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-INP-TAZ-Renumbering" class="title listing-title">INP TAZ Renumbering</a>
 </td>
@@ -2292,7 +2264,7 @@ Last updated
 
 </tr>
 
-<tr data-index="106" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1744092000000" data-listing-title-sort="INP TAZ to Census Tract">
+<tr data-index="106" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1744070400000" data-listing-title-sort="INP TAZ to Census Tract">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-INP-TAZ-to-CensusTract" class="title listing-title">INP TAZ to Census Tract</a>
 </td>
@@ -2308,7 +2280,7 @@ Last updated
 
 </tr>
 
-<tr data-index="107" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1744092000000" data-listing-title-sort="INP Transit Node Renumbering">
+<tr data-index="107" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1744070400000" data-listing-title-sort="INP Transit Node Renumbering">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-INP-Transit-Node-Renumbering" class="title listing-title">INP Transit Node Renumbering</a>
 </td>
@@ -2324,7 +2296,7 @@ Last updated
 
 </tr>
 
-<tr data-index="108" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDSW5wdXQlMjBkYXRhJTJDVERN" data-listing-date-sort="1744092000000" data-listing-title-sort="INP USTM Externals Using National Network">
+<tr data-index="108" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDSW5wdXQlMjBkYXRhJTJDVERN" data-listing-date-sort="1744070400000" data-listing-title-sort="INP USTM Externals Using National Network">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-INP-USTM-Externals-Using-National-Network" class="title listing-title">INP USTM Externals Using National Network</a>
 </td>
@@ -2340,7 +2312,7 @@ Last updated
 
 </tr>
 
-<tr data-index="109" data-categories="UmVwb3NpdG9yeSUyQ1Bvc3QtcHJvY2Vzc2luZyUyQ1RETQ==" data-listing-date-sort="1744092000000" data-listing-title-sort="PP Merge ATO Outputs">
+<tr data-index="109" data-categories="UmVwb3NpdG9yeSUyQ1Bvc3QtcHJvY2Vzc2luZyUyQ1RETQ==" data-listing-date-sort="1744070400000" data-listing-title-sort="PP Merge ATO Outputs">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-PP-Merge-ATO-Outputs" class="title listing-title">PP Merge ATO Outputs</a>
 </td>
@@ -2356,7 +2328,7 @@ Last updated
 
 </tr>
 
-<tr data-index="110" data-categories="UmVwb3NpdG9yeSUyQ1Bvc3QtcHJvY2Vzc2luZyUyQ1RETQ==" data-listing-date-sort="1744092000000" data-listing-title-sort="PP Transit Output Comparison">
+<tr data-index="110" data-categories="UmVwb3NpdG9yeSUyQ1Bvc3QtcHJvY2Vzc2luZyUyQ1RETQ==" data-listing-date-sort="1744070400000" data-listing-title-sort="PP Transit Output Comparison">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-PP-Transit-Output-Comparison" class="title listing-title">PP Transit Output Comparison</a>
 </td>
@@ -2372,7 +2344,7 @@ Last updated
 
 </tr>
 
-<tr data-index="111" data-categories="UmVwb3NpdG9yeSUyQ1Rvb2w=" data-listing-date-sort="1744092000000" data-listing-title-sort="Centers Capacity City">
+<tr data-index="111" data-categories="UmVwb3NpdG9yeSUyQ1Rvb2w=" data-listing-date-sort="1744070400000" data-listing-title-sort="Centers Capacity City">
 <td>
 <a href="https://github.com/WFRCAnalytics/TOOL-Centers-Capacity-City" class="title listing-title">Centers Capacity City</a>
 </td>
@@ -2388,7 +2360,7 @@ Last updated
 
 </tr>
 
-<tr data-index="112" data-categories="UmVwb3NpdG9yeSUyQ1Rvb2w=" data-listing-date-sort="1744092000000" data-listing-title-sort="Combine USTM SE">
+<tr data-index="112" data-categories="UmVwb3NpdG9yeSUyQ1Rvb2w=" data-listing-date-sort="1744070400000" data-listing-title-sort="Combine USTM SE">
 <td>
 <a href="https://github.com/WFRCAnalytics/TOOL-Combine-USTM-SE" class="title listing-title">Combine USTM SE</a>
 </td>
@@ -2404,7 +2376,7 @@ Last updated
 
 </tr>
 
-<tr data-index="113" data-categories="UmVwb3NpdG9yeSUyQ1Rvb2w=" data-listing-date-sort="1744092000000" data-listing-title-sort="Parcel Redevelopment Potential">
+<tr data-index="113" data-categories="UmVwb3NpdG9yeSUyQ1Rvb2w=" data-listing-date-sort="1744070400000" data-listing-title-sort="Parcel Redevelopment Potential">
 <td>
 <a href="https://github.com/WFRCAnalytics/TOOL-Parcel-Redevelopment-Potential" class="title listing-title">Parcel Redevelopment Potential</a>
 </td>
@@ -2420,7 +2392,7 @@ Last updated
 
 </tr>
 
-<tr data-index="114" data-categories="UmVwb3NpdG9yeSUyQ1Rvb2w=" data-listing-date-sort="1744092000000" data-listing-title-sort="Residential Capacity">
+<tr data-index="114" data-categories="UmVwb3NpdG9yeSUyQ1Rvb2w=" data-listing-date-sort="1744070400000" data-listing-title-sort="Residential Capacity">
 <td>
 <a href="https://github.com/WFRCAnalytics/TOOL-Residential-Capacity" class="title listing-title">Residential Capacity</a>
 </td>
@@ -2436,7 +2408,7 @@ Last updated
 
 </tr>
 
-<tr data-index="115" data-categories="UmVwb3NpdG9yeSUyQ0RhdGE=" data-listing-date-sort="1744005600000" data-listing-title-sort="Census PUMS Household Size">
+<tr data-index="115" data-categories="UmVwb3NpdG9yeSUyQ0RhdGE=" data-listing-date-sort="1743984000000" data-listing-title-sort="Census PUMS Household Size">
 <td>
 <a href="https://github.com/WFRCAnalytics/DATA-Census-PUMS-Household-Size" class="title listing-title">Census PUMS Household Size</a>
 </td>
@@ -2452,7 +2424,7 @@ Last updated
 
 </tr>
 
-<tr data-index="116" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRGF0YQ==" data-listing-date-sort="1744005600000" data-listing-title-sort="HTS Anonymize">
+<tr data-index="116" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRGF0YQ==" data-listing-date-sort="1743984000000" data-listing-title-sort="HTS Anonymize">
 <td>
 <a href="https://github.com/WFRCAnalytics/DATA-HTS-Anonymize" class="title listing-title">HTS Anonymize</a>
 </td>
@@ -2468,7 +2440,7 @@ Last updated
 
 </tr>
 
-<tr data-index="117" data-categories="UmVwb3NpdG9yeSUyQ0RhdGE=" data-listing-date-sort="1744005600000" data-listing-title-sort="Street Light Insight API Custom Queries">
+<tr data-index="117" data-categories="UmVwb3NpdG9yeSUyQ0RhdGE=" data-listing-date-sort="1743984000000" data-listing-title-sort="Street Light Insight API Custom Queries">
 <td>
 <a href="https://github.com/WFRCAnalytics/DATA-StreetLight-Insight-API-Custom-Queries" class="title listing-title">Street Light Insight API Custom Queries</a>
 </td>
@@ -2484,7 +2456,7 @@ Last updated
 
 </tr>
 
-<tr data-index="118" data-categories="UmVwb3NpdG9yeSUyQ0RhdGE=" data-listing-date-sort="1744005600000" data-listing-title-sort="UDOT Master Segments">
+<tr data-index="118" data-categories="UmVwb3NpdG9yeSUyQ0RhdGE=" data-listing-date-sort="1743984000000" data-listing-title-sort="UDOT Master Segments">
 <td>
 <a href="https://github.com/WFRCAnalytics/DATA-UDOT-Master-Segments" class="title listing-title">UDOT Master Segments</a>
 </td>
@@ -2500,7 +2472,7 @@ Last updated
 
 </tr>
 
-<tr data-index="119" data-categories="UmVwb3NpdG9yeSUyQ01hcA==" data-listing-date-sort="1744005600000" data-listing-title-sort="Congestion Forecast">
+<tr data-index="119" data-categories="UmVwb3NpdG9yeSUyQ01hcA==" data-listing-date-sort="1743984000000" data-listing-title-sort="Congestion Forecast">
 <td>
 <a href="https://github.com/WFRCAnalytics/MAP-Congestion-Forecast" class="title listing-title">Congestion Forecast</a>
 </td>
@@ -2516,7 +2488,7 @@ Last updated
 
 </tr>
 
-<tr data-index="120" data-categories="UmVwb3NpdG9yeSUyQ01hcA==" data-listing-date-sort="1744005600000" data-listing-title-sort="Major Transit Investment Corridors">
+<tr data-index="120" data-categories="UmVwb3NpdG9yeSUyQ01hcA==" data-listing-date-sort="1743984000000" data-listing-title-sort="Major Transit Investment Corridors">
 <td>
 <a href="https://github.com/WFRCAnalytics/MAP-Major-Transit-Investment-Corridors" class="title listing-title">Major Transit Investment Corridors</a>
 </td>
@@ -2532,7 +2504,7 @@ Last updated
 
 </tr>
 
-<tr data-index="121" data-categories="UmVwb3NpdG9yeSUyQ1Bvc3QtcHJvY2Vzc2luZyUyQ1RETQ==" data-listing-date-sort="1744005600000" data-listing-title-sort="PP Average Commute Times">
+<tr data-index="121" data-categories="UmVwb3NpdG9yeSUyQ1Bvc3QtcHJvY2Vzc2luZyUyQ1RETQ==" data-listing-date-sort="1743984000000" data-listing-title-sort="PP Average Commute Times">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-PP-Average-Commute-Times" class="title listing-title">PP Average Commute Times</a>
 </td>
@@ -2548,7 +2520,7 @@ Last updated
 
 </tr>
 
-<tr data-index="122" data-categories="UmVwb3NpdG9yeSUyQ1Bvc3QtcHJvY2Vzc2luZyUyQ1RETQ==" data-listing-date-sort="1744005600000" data-listing-title-sort="PP Plot ATO Travelsheds">
+<tr data-index="122" data-categories="UmVwb3NpdG9yeSUyQ1Bvc3QtcHJvY2Vzc2luZyUyQ1RETQ==" data-listing-date-sort="1743984000000" data-listing-title-sort="PP Plot ATO Travelsheds">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-PP-Plot-ATO-Travelsheds" class="title listing-title">PP Plot ATO Travelsheds</a>
 </td>
@@ -2564,7 +2536,7 @@ Last updated
 
 </tr>
 
-<tr data-index="123" data-categories="UmVwb3NpdG9yeSUyQ1Bvc3QtcHJvY2Vzc2luZyUyQ1RETQ==" data-listing-date-sort="1744005600000" data-listing-title-sort="PP Trip Stats by SE and Transit Intensity">
+<tr data-index="123" data-categories="UmVwb3NpdG9yeSUyQ1Bvc3QtcHJvY2Vzc2luZyUyQ1RETQ==" data-listing-date-sort="1743984000000" data-listing-title-sort="PP Trip Stats by SE and Transit Intensity">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-PP-Trip-Stats-by-SE-and-Transit-Intensity" class="title listing-title">PP Trip Stats by SE and Transit Intensity</a>
 </td>
@@ -2580,7 +2552,7 @@ Last updated
 
 </tr>
 
-<tr data-index="124" data-categories="UmVwb3NpdG9yeSUyQ1NjZW5hcmlvJTJDVERN" data-listing-date-sort="1744005600000" data-listing-title-sort="SCN Centers Transit Strategy Land Use">
+<tr data-index="124" data-categories="UmVwb3NpdG9yeSUyQ1NjZW5hcmlvJTJDVERN" data-listing-date-sort="1743984000000" data-listing-title-sort="SCN Centers Transit Strategy Land Use">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-SCN-Centers-Transit-Strategy-Land-Use" class="title listing-title">SCN Centers Transit Strategy Land Use</a>
 </td>
@@ -2596,7 +2568,7 @@ Last updated
 
 </tr>
 
-<tr data-index="125" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDU2NlbmFyaW8lMkNURE0=" data-listing-date-sort="1744005600000" data-listing-title-sort="SCN Three Transit Corridors Land Use">
+<tr data-index="125" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDU2NlbmFyaW8lMkNURE0=" data-listing-date-sort="1743984000000" data-listing-title-sort="SCN Three Transit Corridors Land Use">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-SCN-Three-Transit-Corridors-Land-Use" class="title listing-title">SCN Three Transit Corridors Land Use</a>
 </td>
@@ -2612,7 +2584,7 @@ Last updated
 
 </tr>
 
-<tr data-index="126" data-categories="UmVwb3NpdG9yeSUyQ0FwcA==" data-listing-date-sort="1743746400000" data-listing-title-sort="Equity Focus Areas">
+<tr data-index="126" data-categories="UmVwb3NpdG9yeSUyQ0FwcA==" data-listing-date-sort="1743724800000" data-listing-title-sort="Equity Focus Areas">
 <td>
 <a href="https://github.com/WFRCAnalytics/APP-EquityFocusAreas" class="title listing-title">Equity Focus Areas</a>
 </td>
@@ -2628,7 +2600,7 @@ Last updated
 
 </tr>
 
-<tr data-index="127" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lz" data-listing-date-sort="1743746400000" data-listing-title-sort="ATO Recalc Exploration">
+<tr data-index="127" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lz" data-listing-date-sort="1743724800000" data-listing-title-sort="ATO Recalc Exploration">
 <td>
 <a href="https://github.com/WFRCAnalytics/ATO-Recalc-Exploration" class="title listing-title">ATO Recalc Exploration</a>
 </td>
@@ -2644,7 +2616,7 @@ Last updated
 
 </tr>
 
-<tr data-index="128" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lz" data-listing-date-sort="1743746400000" data-listing-title-sort="ATO Workplace TAZ Based">
+<tr data-index="128" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lz" data-listing-date-sort="1743724800000" data-listing-title-sort="ATO Workplace TAZ Based">
 <td>
 <a href="https://github.com/WFRCAnalytics/ATO-Workplace-TAZ-Based" class="title listing-title">ATO Workplace TAZ Based</a>
 </td>
@@ -2660,7 +2632,7 @@ Last updated
 
 </tr>
 
-<tr data-index="129" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDTW9kZWwlMkNCRE0=" data-listing-date-sort="1743746400000" data-listing-title-sort="Micromobility Toolset">
+<tr data-index="129" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDTW9kZWwlMkNCRE0=" data-listing-date-sort="1743724800000" data-listing-title-sort="Micromobility Toolset">
 <td>
 <a href="https://github.com/WFRCAnalytics/BDM-Micromobility-Toolset" class="title listing-title">Micromobility Toolset</a>
 </td>
@@ -2676,7 +2648,7 @@ Last updated
 
 </tr>
 
-<tr data-index="130" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRGF0YQ==" data-listing-date-sort="1743746400000" data-listing-title-sort="DWS Manufacturing Job Disaggregation">
+<tr data-index="130" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRGF0YQ==" data-listing-date-sort="1743724800000" data-listing-title-sort="DWS Manufacturing Job Disaggregation">
 <td>
 <a href="https://github.com/WFRCAnalytics/DATA-DWS-Manufacturing-Job-Disaggregation" class="title listing-title">DWS Manufacturing Job Disaggregation</a>
 </td>
@@ -2692,7 +2664,7 @@ Last updated
 
 </tr>
 
-<tr data-index="131" data-categories="UmVwb3NpdG9yeSUyQ0RhdGE=" data-listing-date-sort="1743746400000" data-listing-title-sort="IPUMS Time Series">
+<tr data-index="131" data-categories="UmVwb3NpdG9yeSUyQ0RhdGE=" data-listing-date-sort="1743724800000" data-listing-title-sort="IPUMS Time Series">
 <td>
 <a href="https://github.com/WFRCAnalytics/DATA-IPUMS-Time-Series" class="title listing-title">IPUMS Time Series</a>
 </td>
@@ -2708,7 +2680,7 @@ Last updated
 
 </tr>
 
-<tr data-index="132" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRGF0YQ==" data-listing-date-sort="1743746400000" data-listing-title-sort="Process Statewide SE to AGOL">
+<tr data-index="132" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRGF0YQ==" data-listing-date-sort="1743724800000" data-listing-title-sort="Process Statewide SE to AGOL">
 <td>
 <a href="https://github.com/WFRCAnalytics/DATA-Process-Statewide-SE-to-AGOL" class="title listing-title">Process Statewide SE to AGOL</a>
 </td>
@@ -2724,7 +2696,7 @@ Last updated
 
 </tr>
 
-<tr data-index="133" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDQW5hbHlzaXM=" data-listing-date-sort="1743746400000" data-listing-title-sort="RTP2023 Phasing Criteria">
+<tr data-index="133" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDQW5hbHlzaXM=" data-listing-date-sort="1743724800000" data-listing-title-sort="RTP2023 Phasing Criteria">
 <td>
 <a href="https://github.com/WFRCAnalytics/GIS-RTP2023-PhasingCriteria" class="title listing-title">RTP2023 Phasing Criteria</a>
 </td>
@@ -2740,7 +2712,7 @@ Last updated
 
 </tr>
 
-<tr data-index="134" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lz" data-listing-date-sort="1743746400000" data-listing-title-sort="TIP Public Comment Processing">
+<tr data-index="134" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lz" data-listing-date-sort="1743724800000" data-listing-title-sort="TIP Public Comment Processing">
 <td>
 <a href="https://github.com/WFRCAnalytics/GIS-TIP-Public-Comment-Processing" class="title listing-title">TIP Public Comment Processing</a>
 </td>
@@ -2756,7 +2728,7 @@ Last updated
 
 </tr>
 
-<tr data-index="135" data-categories="UmVwb3NpdG9yeSUyQ01hcA==" data-listing-date-sort="1743746400000" data-listing-title-sort="Household Job Forecast">
+<tr data-index="135" data-categories="UmVwb3NpdG9yeSUyQ01hcA==" data-listing-date-sort="1743724800000" data-listing-title-sort="Household Job Forecast">
 <td>
 <a href="https://github.com/WFRCAnalytics/MAP-Household-Job-Forecast" class="title listing-title">Household Job Forecast</a>
 </td>
@@ -2772,7 +2744,7 @@ Last updated
 
 </tr>
 
-<tr data-index="136" data-categories="UmVwb3NpdG9yeSUyQ01hcA==" data-listing-date-sort="1743746400000" data-listing-title-sort="Statewide HH Job Forecast">
+<tr data-index="136" data-categories="UmVwb3NpdG9yeSUyQ01hcA==" data-listing-date-sort="1743724800000" data-listing-title-sort="Statewide HH Job Forecast">
 <td>
 <a href="https://github.com/WFRCAnalytics/MAP-Statewide-HH-Job-Forecast" class="title listing-title">Statewide HH Job Forecast</a>
 </td>
@@ -2788,7 +2760,7 @@ Last updated
 
 </tr>
 
-<tr data-index="137" data-categories="UmVwb3NpdG9yeSUyQ01hcA==" data-listing-date-sort="1743746400000" data-listing-title-sort="Utah Household Job Forecast">
+<tr data-index="137" data-categories="UmVwb3NpdG9yeSUyQ01hcA==" data-listing-date-sort="1743724800000" data-listing-title-sort="Utah Household Job Forecast">
 <td>
 <a href="https://github.com/WFRCAnalytics/MAP-Utah-Household-Job-Forecast" class="title listing-title">Utah Household Job Forecast</a>
 </td>
@@ -2804,7 +2776,7 @@ Last updated
 
 </tr>
 
-<tr data-index="138" data-categories="UmVwb3NpdG9yeSUyQ0RldmVsb3BtZW50JTJDVERN" data-listing-date-sort="1743746400000" data-listing-title-sort="DEV Replace Arcpy">
+<tr data-index="138" data-categories="UmVwb3NpdG9yeSUyQ0RldmVsb3BtZW50JTJDVERN" data-listing-date-sort="1743724800000" data-listing-title-sort="DEV Replace Arcpy">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-DEV-Replace-Arcpy" class="title listing-title">DEV Replace Arcpy</a>
 </td>
@@ -2820,7 +2792,7 @@ Last updated
 
 </tr>
 
-<tr data-index="139" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1743746400000" data-listing-title-sort="INP Parcel to TAZ">
+<tr data-index="139" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1743724800000" data-listing-title-sort="INP Parcel to TAZ">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-INP-Parcel-to-TAZ" class="title listing-title">INP Parcel to TAZ</a>
 </td>
@@ -2836,7 +2808,7 @@ Last updated
 
 </tr>
 
-<tr data-index="140" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1743746400000" data-listing-title-sort="INP TAZ to ZIPCode">
+<tr data-index="140" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1743724800000" data-listing-title-sort="INP TAZ to ZIPCode">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-INP-TAZ-to-ZIPCode" class="title listing-title">INP TAZ to ZIPCode</a>
 </td>
@@ -2852,7 +2824,7 @@ Last updated
 
 </tr>
 
-<tr data-index="141" data-categories="UmVwb3NpdG9yeSUyQ1ZhbGlkYXRpb24lMkNURE0=" data-listing-date-sort="1743746400000" data-listing-title-sort="VAL Mode Share Boardings">
+<tr data-index="141" data-categories="UmVwb3NpdG9yeSUyQ1ZhbGlkYXRpb24lMkNURE0=" data-listing-date-sort="1743724800000" data-listing-title-sort="VAL Mode Share Boardings">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-VAL-ModeShare-Boardings" class="title listing-title">VAL Mode Share Boardings</a>
 </td>
@@ -2868,7 +2840,7 @@ Last updated
 
 </tr>
 
-<tr data-index="142" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDVmFsaWRhdGlvbiUyQ1RETQ==" data-listing-date-sort="1743746400000" data-listing-title-sort="VAL OBS Ridership Comparison">
+<tr data-index="142" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDVmFsaWRhdGlvbiUyQ1RETQ==" data-listing-date-sort="1743724800000" data-listing-title-sort="VAL OBS Ridership Comparison">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-VAL-OBS-Ridership-Comparison" class="title listing-title">VAL OBS Ridership Comparison</a>
 </td>
@@ -2884,7 +2856,7 @@ Last updated
 
 </tr>
 
-<tr data-index="143" data-categories="UmVwb3NpdG9yeSUyQ1ZhbGlkYXRpb24lMkNURE0=" data-listing-date-sort="1743746400000" data-listing-title-sort="VAL Scenario Comparison Toolbox">
+<tr data-index="143" data-categories="UmVwb3NpdG9yeSUyQ1ZhbGlkYXRpb24lMkNURE0=" data-listing-date-sort="1743724800000" data-listing-title-sort="VAL Scenario Comparison Toolbox">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-VAL-Scenario-Comparison-Toolbox" class="title listing-title">VAL Scenario Comparison Toolbox</a>
 </td>
@@ -2900,7 +2872,7 @@ Last updated
 
 </tr>
 
-<tr data-index="144" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDVG9vbA==" data-listing-date-sort="1743746400000" data-listing-title-sort="AGOL Mgmt">
+<tr data-index="144" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDVG9vbA==" data-listing-date-sort="1743724800000" data-listing-title-sort="AGOL Mgmt">
 <td>
 <a href="https://github.com/WFRCAnalytics/TOOL-AGOL-Mgmt" class="title listing-title">AGOL Mgmt</a>
 </td>
@@ -2916,7 +2888,7 @@ Last updated
 
 </tr>
 
-<tr data-index="145" data-categories="UmVwb3NpdG9yeSUyQ1Rvb2w=" data-listing-date-sort="1743746400000" data-listing-title-sort="SWSLCo Land Use Allocation">
+<tr data-index="145" data-categories="UmVwb3NpdG9yeSUyQ1Rvb2w=" data-listing-date-sort="1743724800000" data-listing-title-sort="SWSLCo Land Use Allocation">
 <td>
 <a href="https://github.com/WFRCAnalytics/TOOL-SWSLCo-Land-Use-Allocation" class="title listing-title">SWSLCo Land Use Allocation</a>
 </td>
@@ -2932,7 +2904,7 @@ Last updated
 
 </tr>
 
-<tr data-index="146" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDVG9vbA==" data-listing-date-sort="1743746400000" data-listing-title-sort="Website Sandbox">
+<tr data-index="146" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDVG9vbA==" data-listing-date-sort="1743724800000" data-listing-title-sort="Website Sandbox">
 <td>
 <a href="https://github.com/WFRCAnalytics/TOOL-Website-Sandbox" class="title listing-title">Website Sandbox</a>
 </td>
@@ -2948,7 +2920,7 @@ Last updated
 
 </tr>
 
-<tr data-index="147" data-categories="UmVwb3NpdG9yeSUyQ0FwcA==" data-listing-date-sort="1743487200000" data-listing-title-sort="Unified Plan Tools Page">
+<tr data-index="147" data-categories="UmVwb3NpdG9yeSUyQ0FwcA==" data-listing-date-sort="1743465600000" data-listing-title-sort="Unified Plan Tools Page">
 <td>
 <a href="https://github.com/WFRCAnalytics/APP-Unified-Plan-Tools-Page" class="title listing-title">Unified Plan Tools Page</a>
 </td>
@@ -2964,7 +2936,7 @@ Last updated
 
 </tr>
 
-<tr data-index="148" data-categories="UmVwb3NpdG9yeSUyQ01hcA==" data-listing-date-sort="1729576800000" data-listing-title-sort="Workshop Sketch">
+<tr data-index="148" data-categories="UmVwb3NpdG9yeSUyQ01hcA==" data-listing-date-sort="1729555200000" data-listing-title-sort="Workshop Sketch">
 <td>
 <a href="https://github.com/WFRCAnalytics/MAP-Workshop-Sketch" class="title listing-title">Workshop Sketch</a>
 </td>
@@ -2980,7 +2952,7 @@ Last updated
 
 </tr>
 
-<tr data-index="149" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lzJTJDUkVNTQ==" data-listing-date-sort="1723528800000" data-listing-title-sort="SE Descriptive Statistics">
+<tr data-index="149" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lzJTJDUkVNTQ==" data-listing-date-sort="1723507200000" data-listing-title-sort="SE Descriptive Statistics">
 <td>
 <a href="https://github.com/WFRCAnalytics/REMM-SE-Descriptive-Statistics" class="title listing-title">SE Descriptive Statistics</a>
 </td>
@@ -2996,7 +2968,7 @@ Last updated
 
 </tr>
 
-<tr data-index="150" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lzJTJDUkVNTQ==" data-listing-date-sort="1697090400000" data-listing-title-sort="Process SE Output For Web">
+<tr data-index="150" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lzJTJDUkVNTQ==" data-listing-date-sort="1697068800000" data-listing-title-sort="Process SE Output For Web">
 <td>
 <a href="https://github.com/WFRCAnalytics/REMM-Process-SE-Output-For-Web" class="title listing-title">Process SE Output For Web</a>
 </td>
@@ -3012,7 +2984,7 @@ Last updated
 
 </tr>
 
-<tr data-index="151" data-categories="UmVwb3NpdG9yeSUyQ0RhdGE=" data-listing-date-sort="1692770400000" data-listing-title-sort="Historical Parcels">
+<tr data-index="151" data-categories="UmVwb3NpdG9yeSUyQ0RhdGE=" data-listing-date-sort="1692748800000" data-listing-title-sort="Historical Parcels">
 <td>
 <a href="https://github.com/WFRCAnalytics/DATA-Historical-Parcels" class="title listing-title">Historical Parcels</a>
 </td>
@@ -3028,7 +3000,7 @@ Last updated
 
 </tr>
 
-<tr data-index="152" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lz" data-listing-date-sort="1692770400000" data-listing-title-sort="OUG Tools">
+<tr data-index="152" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lz" data-listing-date-sort="1692748800000" data-listing-title-sort="OUG Tools">
 <td>
 <a href="https://github.com/WFRCAnalytics/GIS-OUG-Tools" class="title listing-title">OUG Tools</a>
 </td>
@@ -3044,7 +3016,7 @@ Last updated
 
 </tr>
 
-<tr data-index="153" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDTW9kZWwlMkNURE0=" data-listing-date-sort="1691647200000" data-listing-title-sort="TDM v8.3.2">
+<tr data-index="153" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDTW9kZWwlMkNURE0=" data-listing-date-sort="1691625600000" data-listing-title-sort="TDM v8.3.2">
 <td>
 <a href="https://github.com/WFRCAnalytics/WF-TDM-v8.3.2" class="title listing-title">TDM v8.3.2</a>
 </td>
@@ -3060,7 +3032,7 @@ Last updated
 
 </tr>
 
-<tr data-index="154" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDTW9kZWwlMkNURE0=" data-listing-date-sort="1688364000000" data-listing-title-sort="TDM v9.0 beta">
+<tr data-index="154" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDTW9kZWwlMkNURE0=" data-listing-date-sort="1688342400000" data-listing-title-sort="TDM v9.0 beta">
 <td>
 <a href="https://github.com/WFRCAnalytics/WF-TDM-v9.0-beta" class="title listing-title">TDM v9.0 beta</a>
 </td>
@@ -3076,7 +3048,7 @@ Last updated
 
 </tr>
 
-<tr data-index="155" data-categories="UmVwb3NpdG9yeSUyQ01vZGVsJTJDUkVNTQ==" data-listing-date-sort="1687413600000" data-listing-title-sort="REMM 1.0 model (previous)">
+<tr data-index="155" data-categories="UmVwb3NpdG9yeSUyQ01vZGVsJTJDUkVNTQ==" data-listing-date-sort="1687392000000" data-listing-title-sort="REMM 1.0 model (previous)">
 <td>
 <a href="https://github.com/WFRCAnalytics/REMM-v1.0" class="title listing-title">REMM 1.0 model (previous)</a>
 </td>
@@ -3092,7 +3064,7 @@ Last updated
 
 </tr>
 
-<tr data-index="156" data-categories="UmVwb3NpdG9yeSUyQ01vZGVsJTJDUkVNTQ==" data-listing-date-sort="1687413600000" data-listing-title-sort="REMM 2.0 model (previous)">
+<tr data-index="156" data-categories="UmVwb3NpdG9yeSUyQ01vZGVsJTJDUkVNTQ==" data-listing-date-sort="1687392000000" data-listing-title-sort="REMM 2.0 model (previous)">
 <td>
 <a href="https://github.com/WFRCAnalytics/REMM-v2.0" class="title listing-title">REMM 2.0 model (previous)</a>
 </td>
@@ -3108,7 +3080,7 @@ Last updated
 
 </tr>
 
-<tr data-index="157" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDQW5hbHlzaXMlMkNSRU1N" data-listing-date-sort="1686117600000" data-listing-title-sort="Manage Base Year Data">
+<tr data-index="157" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDQW5hbHlzaXMlMkNSRU1N" data-listing-date-sort="1686096000000" data-listing-title-sort="Manage Base Year Data">
 <td>
 <a href="https://github.com/WFRCAnalytics/REMM-Manage-Base-Year-Data" class="title listing-title">Manage Base Year Data</a>
 </td>
@@ -3124,7 +3096,7 @@ Last updated
 
 </tr>
 
-<tr data-index="158" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lzJTJDUkVNTQ==" data-listing-date-sort="1682402400000" data-listing-title-sort="SE Comparison Tools">
+<tr data-index="158" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lzJTJDUkVNTQ==" data-listing-date-sort="1682380800000" data-listing-title-sort="SE Comparison Tools">
 <td>
 <a href="https://github.com/WFRCAnalytics/REMM-SE-Comparison-Tools" class="title listing-title">SE Comparison Tools</a>
 </td>
@@ -3140,7 +3112,7 @@ Last updated
 
 </tr>
 
-<tr data-index="159" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDT3RoZXI=" data-listing-date-sort="1681365600000" data-listing-title-sort="REMM3 TDM9 Internal Use">
+<tr data-index="159" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDT3RoZXI=" data-listing-date-sort="1681344000000" data-listing-title-sort="REMM3 TDM9 Internal Use">
 <td>
 <a href="https://github.com/WFRCAnalytics/REMM3_TDM9_Internal_Use" class="title listing-title">REMM3 TDM9 Internal Use</a>
 </td>
@@ -3156,7 +3128,7 @@ Last updated
 
 </tr>
 
-<tr data-index="160" data-categories="UmVwb3NpdG9yeSUyQ0RhdGE=" data-listing-date-sort="1678773600000" data-listing-title-sort="Continuous Count Station">
+<tr data-index="160" data-categories="UmVwb3NpdG9yeSUyQ0RhdGE=" data-listing-date-sort="1678752000000" data-listing-title-sort="Continuous Count Station">
 <td>
 <a href="https://github.com/WFRCAnalytics/DATA-Continuous-Count-Station" class="title listing-title">Continuous Count Station</a>
 </td>
@@ -3172,7 +3144,7 @@ Last updated
 
 </tr>
 
-<tr data-index="161" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lzJTJDUkVNTQ==" data-listing-date-sort="1674802800000" data-listing-title-sort="Analysis Tools">
+<tr data-index="161" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lzJTJDUkVNTQ==" data-listing-date-sort="1674777600000" data-listing-title-sort="Analysis Tools">
 <td>
 <a href="https://github.com/WFRCAnalytics/REMM-Analysis-Tools" class="title listing-title">Analysis Tools</a>
 </td>
@@ -3188,7 +3160,7 @@ Last updated
 
 </tr>
 
-<tr data-index="162" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lzJTJDUkVNTQ==" data-listing-date-sort="1665468000000" data-listing-title-sort="TAZ SE Review For MB">
+<tr data-index="162" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lzJTJDUkVNTQ==" data-listing-date-sort="1665446400000" data-listing-title-sort="TAZ SE Review For MB">
 <td>
 <a href="https://github.com/WFRCAnalytics/REMM-TAZ-SE-Review-For-MB" class="title listing-title">TAZ SE Review For MB</a>
 </td>
@@ -3204,7 +3176,7 @@ Last updated
 
 </tr>
 
-<tr data-index="163" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lzJTJDUkVNTQ==" data-listing-date-sort="1657173600000" data-listing-title-sort="Random Forest Variable Analysis">
+<tr data-index="163" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lzJTJDUkVNTQ==" data-listing-date-sort="1657152000000" data-listing-title-sort="Random Forest Variable Analysis">
 <td>
 <a href="https://github.com/WFRCAnalytics/REMM-RandomForest-Variable-Analysis" class="title listing-title">Random Forest Variable Analysis</a>
 </td>
@@ -3220,7 +3192,7 @@ Last updated
 
 </tr>
 
-<tr data-index="164" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lzJTJDUkVNTQ==" data-listing-date-sort="1655186400000" data-listing-title-sort="Process Progression Metrics For Web">
+<tr data-index="164" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lzJTJDUkVNTQ==" data-listing-date-sort="1655164800000" data-listing-title-sort="Process Progression Metrics For Web">
 <td>
 <a href="https://github.com/WFRCAnalytics/REMM-Process-Progression-Metrics-For-Web" class="title listing-title">Process Progression Metrics For Web</a>
 </td>
@@ -3236,7 +3208,7 @@ Last updated
 
 </tr>
 
-<tr data-index="165" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lzJTJDUkVNTQ==" data-listing-date-sort="1653976800000" data-listing-title-sort="Input Data Prep 2019">
+<tr data-index="165" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lzJTJDUkVNTQ==" data-listing-date-sort="1653955200000" data-listing-title-sort="Input Data Prep 2019">
 <td>
 <a href="https://github.com/WFRCAnalytics/REMM-Input-Data-Prep-2019" class="title listing-title">Input Data Prep 2019</a>
 </td>
@@ -3252,7 +3224,7 @@ Last updated
 
 </tr>
 
-<tr data-index="166" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lzJTJDUkVNTQ==" data-listing-date-sort="1651903200000" data-listing-title-sort="Animate Modeling Results">
+<tr data-index="166" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lzJTJDUkVNTQ==" data-listing-date-sort="1651881600000" data-listing-title-sort="Animate Modeling Results">
 <td>
 <a href="https://github.com/WFRCAnalytics/REMM-Animate-Modeling-Results" class="title listing-title">Animate Modeling Results</a>
 </td>
@@ -3268,7 +3240,7 @@ Last updated
 
 </tr>
 
-<tr data-index="167" data-categories="UmVwb3NpdG9yeSUyQ01vZGVsJTJDUkVNTQ==" data-listing-date-sort="1650866400000" data-listing-title-sort="REMM 2 (2019, previous)">
+<tr data-index="167" data-categories="UmVwb3NpdG9yeSUyQ01vZGVsJTJDUkVNTQ==" data-listing-date-sort="1650844800000" data-listing-title-sort="REMM 2 (2019, previous)">
 <td>
 <a href="https://github.com/WFRCAnalytics/REMM2-2019" class="title listing-title">REMM 2 (2019, previous)</a>
 </td>
@@ -3284,7 +3256,7 @@ Last updated
 
 </tr>
 
-<tr data-index="168" data-categories="UmVwb3NpdG9yeSUyQ0RhdGE=" data-listing-date-sort="1643353200000" data-listing-title-sort="Housing Unit Inventory">
+<tr data-index="168" data-categories="UmVwb3NpdG9yeSUyQ0RhdGE=" data-listing-date-sort="1643328000000" data-listing-title-sort="Housing Unit Inventory">
 <td>
 <a href="https://github.com/WFRCAnalytics/DATA-Housing-Unit-Inventory" class="title listing-title">Housing Unit Inventory</a>
 </td>
@@ -3300,7 +3272,7 @@ Last updated
 
 </tr>
 
-<tr data-index="169" data-categories="UmVwb3NpdG9yeSUyQ01vZGVsJTJDUkVNTQ==" data-listing-date-sort="1587362400000" data-listing-title-sort="REMM 1.0 original (previous)">
+<tr data-index="169" data-categories="UmVwb3NpdG9yeSUyQ01vZGVsJTJDUkVNTQ==" data-listing-date-sort="1587340800000" data-listing-title-sort="REMM 1.0 original (previous)">
 <td>
 <a href="https://github.com/WFRCAnalytics/REMMOneDotOh" class="title listing-title">REMM 1.0 original (previous)</a>
 </td>
@@ -3324,99 +3296,52 @@ Last updated
 </nav>
 </div></main> <!-- /main -->
 <script>
-
 // Accessibility fixes for things Quarto and its libraries render but cannot configure.
-
 // Included on every page through wfrc-shared.yml (format.html.include-after-body).
-
 (function () {
-
   function fix(root) {
-
     // Listing banners are decorative; Quarto drops an empty `image-alt`.
-
     root.querySelectorAll('img.thumbnail-image:not([alt])').forEach(function (img) {
-
       img.setAttribute('alt', '');
-
     });
-
     // Quarto only sets `title` on the color-scheme toggle: add an accessible name and a clearer tooltip.
-
     root.querySelectorAll('.quarto-color-scheme-toggle:not([aria-label])').forEach(function (a) {
-
       a.setAttribute('aria-label', 'Toggle light and dark mode');
-
       a.setAttribute('title', 'Toggle light / dark');
-
     });
-
     // Collapsible callouts put aria-expanded on a plain div: make it a real, keyboard-operable button.
-
     root.querySelectorAll('.callout-header[aria-expanded]:not([role])').forEach(function (h) {
-
       h.setAttribute('role', 'button');
-
       h.setAttribute('tabindex', '0');
-
       h.addEventListener('keydown', function (e) {
-
         if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); h.click(); }
-
       });
-
     });
-
     // Observable Plot labels bare <g> marks; aria-label is not allowed on a role-less element.
-
     root.querySelectorAll('[class^="plot-"] g[aria-label]:not([role])').forEach(function (g) {
-
       g.removeAttribute('aria-label');
-
     });
-
     // Scrollable regions must be reachable by keyboard.
-
     root.querySelectorAll('pre, div.sourceCode, .card, .card-body, .table-striped, table, .cell-output-display').forEach(function (el) {
-
       if (el.hasAttribute('tabindex') || el.matches('a, button, input, select, textarea')) return;
-
       var o = getComputedStyle(el);
-
       var scrolls = /(auto|scroll)/.test(o.overflowX + o.overflowY) &&
-
         (el.scrollWidth > el.clientWidth + 1 || el.scrollHeight > el.clientHeight + 1);
-
       if (scrolls) el.setAttribute('tabindex', '0');
-
     });
-
   }
-
   var queued = false;
-
   function schedule() {
-
     if (queued) return;
-
     queued = true;
-
     requestAnimationFrame(function () { queued = false; fix(document); });
-
   }
-
   fix(document);
-
   new MutationObserver(schedule).observe(document.body, { childList: true, subtree: true });
-
   window.addEventListener('resize', schedule);
-
   window.addEventListener('load', function () { setTimeout(schedule, 800); setTimeout(schedule, 2500); });
-
 })();
-
 </script>
-
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

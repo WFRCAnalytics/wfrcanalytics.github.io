@@ -54,9 +54,9 @@ ul.task-list li input[type="checkbox"] {
 <script id="quarto-axe-checker-options" type="text/plain">dHJ1ZQ==</script>
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-0756f8518ec0967a70b41786b4745d2c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-72597b3082f95eb44c4d1a7ce3261060.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-0756f8518ec0967a70b41786b4745d2c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-5c7f346ac78d5653bb901f48effb41a8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-61a64ec896cb6f19873e67cc833181f1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-5c7f346ac78d5653bb901f48effb41a8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -111,61 +111,33 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <style>html{ scroll-behavior: smooth; }</style>
 <script>
-
 // Table listings print categories as plain text ("Live, App"). Turn them into pills,
-
 // and re-run whenever the listing re-renders (filter, page, sort).
-
 (function () {
-
   var STATE = { Live: 'chip-live', Internal: 'chip-internal', Archived: 'chip-archived' };
-
   function chips(root) {
-
     root.querySelectorAll('.quarto-listing-table .listing-categories:not([data-chips])').forEach(function (cell) {
-
       var names = cell.textContent.split(',').map(function (s) { return s.trim(); }).filter(Boolean);
-
       cell.setAttribute('data-chips', '1');
-
       cell.textContent = '';
-
       names.forEach(function (name) {
-
         var chip = document.createElement('span');
-
         chip.className = 'wfrc-chip ' + (STATE[name] || '');
-
         chip.textContent = name;
-
         cell.appendChild(chip);
-
       });
-
     });
-
   }
-
   function start() {
-
     chips(document);
-
     new MutationObserver(function () { chips(document); })
-
       .observe(document.body, { childList: true, subtree: true });
-
   }
-
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);
-
   else start();
-
 })();
-
 </script>
-
 <script type="module" src="../assets/js/quick-jump.js"></script>
-
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
@@ -387,8 +359,8 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="..\site_libs\quarto-contrib\quarto-project\wfrc-brand\assets\logo\abbreviated\WFRC_logo_abbreviated_color_transparent.png" alt="Wasatch Front Regional Council" class="navbar-logo light-content">
-    <img src="..\site_libs\quarto-contrib\quarto-project\wfrc-brand\assets\logo\abbreviated\WFRC_logo_abbreviated_white_transparent.png" alt="Wasatch Front Regional Council" class="navbar-logo dark-content">
+    <img src="../site_libs/quarto-contrib/quarto-project/wfrc-brand/assets/logo/abbreviated/WFRC_logo_abbreviated_color_transparent.png" alt="Wasatch Front Regional Council" class="navbar-logo light-content">
+    <img src="../site_libs/quarto-contrib/quarto-project/wfrc-brand/assets/logo/abbreviated/WFRC_logo_abbreviated_white_transparent.png" alt="Wasatch Front Regional Council" class="navbar-logo dark-content">
     </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Analytics</span>
@@ -717,7 +689,7 @@ window.Quarto = {
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-categories="TGl2ZSUyQ01vZGVsJTJDVERN" data-listing-date-sort="1792562400000" data-listing-title-sort="TDM Calibration Reports">
+<tr data-index="0" data-categories="TGl2ZSUyQ01vZGVsJTJDVERN" data-listing-date-sort="1792540800000" data-listing-title-sort="TDM Calibration Reports">
 <td>
 <a href="https://wfrcanalytics.github.io/WF-TDM-Calibration/" class="title listing-title">TDM Calibration Reports</a>
 </td>
@@ -733,7 +705,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="1" data-categories="TGl2ZSUyQ01vZGVsJTJDVERN" data-listing-date-sort="1792562400000" data-listing-title-sort="TDM Run Results">
+<tr data-index="1" data-categories="TGl2ZSUyQ01vZGVsJTJDVERN" data-listing-date-sort="1792540800000" data-listing-title-sort="TDM Run Results">
 <td>
 <a href="https://wfrcanalytics.github.io/WF-TDM-Runs/" class="title listing-title">TDM Run Results</a>
 </td>
@@ -749,7 +721,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="2" data-categories="TGl2ZSUyQ0ludGVybmFsJTJDTW9kZWwlMkNURE0=" data-listing-date-sort="1792735200000" data-listing-title-sort="TDM Development">
+<tr data-index="2" data-categories="TGl2ZSUyQ0ludGVybmFsJTJDTW9kZWwlMkNURE0=" data-listing-date-sort="1792713600000" data-listing-title-sort="TDM Development">
 <td>
 <a href="https://wfrc.utah.gov/wftdm-docs/" class="title listing-title">TDM Development</a>
 </td>
@@ -765,7 +737,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="3" data-categories="TGl2ZSUyQ1ZhbGlkYXRpb24lMkNURE0=" data-listing-date-sort="1791957600000" data-listing-title-sort="VAL School College Enrollment">
+<tr data-index="3" data-categories="TGl2ZSUyQ1ZhbGlkYXRpb24lMkNURE0=" data-listing-date-sort="1791936000000" data-listing-title-sort="VAL School College Enrollment">
 <td>
 <a href="https://wfrcanalytics.github.io/TDM-VAL-SchoolCollegeEnrollment/" class="title listing-title">VAL School College Enrollment</a>
 </td>
@@ -781,7 +753,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="4" data-categories="TGl2ZSUyQ0dlb2dyYXBoeSUyQ1RETQ==" data-listing-date-sort="1791525600000" data-listing-title-sort="GEO Analysis Zones">
+<tr data-index="4" data-categories="TGl2ZSUyQ0dlb2dyYXBoeSUyQ1RETQ==" data-listing-date-sort="1791504000000" data-listing-title-sort="GEO Analysis Zones">
 <td>
 <a href="https://wfrc.maps.arcgis.com/home/item.html?id=6cdfccde494d41a291de6da3c8c1bf08" class="title listing-title">GEO Analysis Zones</a>
 </td>
@@ -797,7 +769,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="5" data-categories="TGl2ZSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1789365600000" data-listing-title-sort="INP Population Sim">
+<tr data-index="5" data-categories="TGl2ZSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1789344000000" data-listing-title-sort="INP Population Sim">
 <td>
 <a href="https://wfrcanalytics.github.io/TDM-INP-PopulationSim/" class="title listing-title">INP Population Sim</a>
 </td>
@@ -813,7 +785,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="6" data-categories="TGl2ZSUyQ0ludGVybmFsJTJDTW9kZWwlMkNURE0=" data-listing-date-sort="1786514400000" data-listing-title-sort="TDM Documentation">
+<tr data-index="6" data-categories="TGl2ZSUyQ0ludGVybmFsJTJDTW9kZWwlMkNURE0=" data-listing-date-sort="1786492800000" data-listing-title-sort="TDM Documentation">
 <td>
 <a href="https://wfrc.utah.gov/wftdm-docs/" class="title listing-title">TDM Documentation</a>
 </td>
@@ -829,7 +801,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="7" data-categories="TGl2ZSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1785304800000" data-listing-title-sort="INP External Forecasts">
+<tr data-index="7" data-categories="TGl2ZSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1785283200000" data-listing-title-sort="INP External Forecasts">
 <td>
 <a href="https://wfrcanalytics.github.io/TDM-INP-External-Forecasts/" class="title listing-title">INP External Forecasts</a>
 </td>
@@ -845,7 +817,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="8" data-categories="TGl2ZSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1782367200000" data-listing-title-sort="INP College Enrollment">
+<tr data-index="8" data-categories="TGl2ZSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1782345600000" data-listing-title-sort="INP College Enrollment">
 <td>
 <a href="https://wfrcanalytics.github.io/TDM-INP-College-Enrollment/" class="title listing-title">INP College Enrollment</a>
 </td>
@@ -861,7 +833,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="9" data-categories="TGl2ZSUyQ0VzdGltYXRpb24lMkNURE0=" data-listing-date-sort="1776837600000" data-listing-title-sort="EST Auto Operating Costs">
+<tr data-index="9" data-categories="TGl2ZSUyQ0VzdGltYXRpb24lMkNURE0=" data-listing-date-sort="1776816000000" data-listing-title-sort="EST Auto Operating Costs">
 <td>
 <a href="https://wfrcanalytics.github.io/TDM-EST-Auto-Operating-Costs/" class="title listing-title">EST Auto Operating Costs</a>
 </td>
@@ -877,7 +849,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="10" data-categories="TGl2ZSUyQ0VzdGltYXRpb24lMkNURE0=" data-listing-date-sort="1776837600000" data-listing-title-sort="EST TAZ Median Income">
+<tr data-index="10" data-categories="TGl2ZSUyQ0VzdGltYXRpb24lMkNURE0=" data-listing-date-sort="1776816000000" data-listing-title-sort="EST TAZ Median Income">
 <td>
 <a href="https://wfrcanalytics.github.io/TDM-EST-TAZ-Median-Income/" class="title listing-title">EST TAZ Median Income</a>
 </td>
@@ -893,7 +865,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="11" data-categories="TGl2ZSUyQ0VzdGltYXRpb24lMkNURE0=" data-listing-date-sort="1776837600000" data-listing-title-sort="EST Value Of Time">
+<tr data-index="11" data-categories="TGl2ZSUyQ0VzdGltYXRpb24lMkNURE0=" data-listing-date-sort="1776816000000" data-listing-title-sort="EST Value Of Time">
 <td>
 <a href="https://wfrcanalytics.github.io/TDM-EST-Value-Of-Time/" class="title listing-title">EST Value Of Time</a>
 </td>
@@ -909,7 +881,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="12" data-categories="TGl2ZSUyQ1ZhbGlkYXRpb24lMkNURE0=" data-listing-date-sort="1769670000000" data-listing-title-sort="VAL Traffic Volume CCS">
+<tr data-index="12" data-categories="TGl2ZSUyQ1ZhbGlkYXRpb24lMkNURE0=" data-listing-date-sort="1769644800000" data-listing-title-sort="VAL Traffic Volume CCS">
 <td>
 <a href="https://wfrcanalytics.github.io/TDM-VAL-TrafficVolume-CCS/" class="title listing-title">VAL Traffic Volume CCS</a>
 </td>
@@ -925,7 +897,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="13" data-categories="TGl2ZSUyQ0ludGVybmFsJTJDTW9kZWwlMkNURE0=" data-listing-date-sort="1763017200000" data-listing-title-sort="TDM Official Releases">
+<tr data-index="13" data-categories="TGl2ZSUyQ0ludGVybmFsJTJDTW9kZWwlMkNURE0=" data-listing-date-sort="1762992000000" data-listing-title-sort="TDM Official Releases">
 <td>
 <a href="https://wfrc.utah.gov/wftdm-docs/" class="title listing-title">TDM Official Releases</a>
 </td>
@@ -941,7 +913,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="14" data-categories="TGl2ZSUyQ0VzdGltYXRpb24lMkNURE0=" data-listing-date-sort="1743746400000" data-listing-title-sort="EST Bus Speeds">
+<tr data-index="14" data-categories="TGl2ZSUyQ0VzdGltYXRpb24lMkNURE0=" data-listing-date-sort="1743724800000" data-listing-title-sort="EST Bus Speeds">
 <td>
 <a href="https://christopher-day.shinyapps.io/bus_speeds_viewer/" class="title listing-title">EST Bus Speeds</a>
 </td>
@@ -957,7 +929,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="15" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDSW5wdXQlMjBkYXRhJTJDVERN" data-listing-date-sort="1788933600000" data-listing-title-sort="INP Work At Home">
+<tr data-index="15" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDSW5wdXQlMjBkYXRhJTJDVERN" data-listing-date-sort="1788912000000" data-listing-title-sort="INP Work At Home">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-INP-Work-At-Home" class="title listing-title">INP Work At Home</a>
 </td>
@@ -973,7 +945,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="16" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRXN0aW1hdGlvbiUyQ1RETQ==" data-listing-date-sort="1786946400000" data-listing-title-sort="EST HTS Params">
+<tr data-index="16" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRXN0aW1hdGlvbiUyQ1RETQ==" data-listing-date-sort="1786924800000" data-listing-title-sort="EST HTS Params">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-EST-HTS-Params" class="title listing-title">EST HTS Params</a>
 </td>
@@ -989,7 +961,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="17" data-categories="UmVwb3NpdG9yeSUyQ0dlb2dyYXBoeSUyQ1RETQ==" data-listing-date-sort="1784700000000" data-listing-title-sort="GEO True Shape">
+<tr data-index="17" data-categories="UmVwb3NpdG9yeSUyQ0dlb2dyYXBoeSUyQ1RETQ==" data-listing-date-sort="1784678400000" data-listing-title-sort="GEO True Shape">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-GEO-TrueShape" class="title listing-title">GEO True Shape</a>
 </td>
@@ -1005,7 +977,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="18" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1784613600000" data-listing-title-sort="INP K 12 Enrollment">
+<tr data-index="18" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1784592000000" data-listing-title-sort="INP K 12 Enrollment">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-INP-K-12-Enrollment" class="title listing-title">INP K 12 Enrollment</a>
 </td>
@@ -1021,7 +993,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="19" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDQ2FsaWJyYXRpb24lMkNURE0=" data-listing-date-sort="1783576800000" data-listing-title-sort="CAL HBWDest Choice">
+<tr data-index="19" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDQ2FsaWJyYXRpb24lMkNURE0=" data-listing-date-sort="1783555200000" data-listing-title-sort="CAL HBWDest Choice">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-CAL-HBWDestChoice" class="title listing-title">CAL HBWDest Choice</a>
 </td>
@@ -1037,7 +1009,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="20" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRXN0aW1hdGlvbiUyQ1RETQ==" data-listing-date-sort="1779256800000" data-listing-title-sort="EST Commercial Vehicle Model">
+<tr data-index="20" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRXN0aW1hdGlvbiUyQ1RETQ==" data-listing-date-sort="1779235200000" data-listing-title-sort="EST Commercial Vehicle Model">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-EST-Commercial-Vehicle-Model" class="title listing-title">EST Commercial Vehicle Model</a>
 </td>
@@ -1053,7 +1025,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="21" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDQ2FsaWJyYXRpb24lMkNURE0=" data-listing-date-sort="1776837600000" data-listing-title-sort="CAL Mode Choice">
+<tr data-index="21" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDQ2FsaWJyYXRpb24lMkNURE0=" data-listing-date-sort="1776816000000" data-listing-title-sort="CAL Mode Choice">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-CAL-Mode-Choice" class="title listing-title">CAL Mode Choice</a>
 </td>
@@ -1069,7 +1041,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="22" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDQ2FsaWJyYXRpb24lMkNURE0=" data-listing-date-sort="1769583600000" data-listing-title-sort="CAL Friction Factors">
+<tr data-index="22" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDQ2FsaWJyYXRpb24lMkNURE0=" data-listing-date-sort="1769558400000" data-listing-title-sort="CAL Friction Factors">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-CAL-Friction-Factors" class="title listing-title">CAL Friction Factors</a>
 </td>
@@ -1085,7 +1057,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="23" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1769065200000" data-listing-title-sort="INP Socioeconomic Control Totals">
+<tr data-index="23" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1769040000000" data-listing-title-sort="INP Socioeconomic Control Totals">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-INP-Socioeconomic-Control-Totals" class="title listing-title">INP Socioeconomic Control Totals</a>
 </td>
@@ -1101,7 +1073,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="24" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1755064800000" data-listing-title-sort="INP TAZ Age Percent">
+<tr data-index="24" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1755043200000" data-listing-title-sort="INP TAZ Age Percent">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-INP-TAZ-Age-Percent" class="title listing-title">INP TAZ Age Percent</a>
 </td>
@@ -1117,7 +1089,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="25" data-categories="UmVwb3NpdG9yeSUyQ1Bvc3QtcHJvY2Vzc2luZyUyQ1RETQ==" data-listing-date-sort="1754632800000" data-listing-title-sort="PP ATO Big5">
+<tr data-index="25" data-categories="UmVwb3NpdG9yeSUyQ1Bvc3QtcHJvY2Vzc2luZyUyQ1RETQ==" data-listing-date-sort="1754611200000" data-listing-title-sort="PP ATO Big5">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-PP-ATO-Big5" class="title listing-title">PP ATO Big5</a>
 </td>
@@ -1133,7 +1105,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="26" data-categories="UmVwb3NpdG9yeSUyQ0VzdGltYXRpb24lMkNURE0=" data-listing-date-sort="1748930400000" data-listing-title-sort="EST Life Cycle">
+<tr data-index="26" data-categories="UmVwb3NpdG9yeSUyQ0VzdGltYXRpb24lMkNURE0=" data-listing-date-sort="1748908800000" data-listing-title-sort="EST Life Cycle">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-EST-LifeCycle" class="title listing-title">EST Life Cycle</a>
 </td>
@@ -1149,7 +1121,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="27" data-categories="UmVwb3NpdG9yeSUyQ0RldmVsb3BtZW50JTJDVERN" data-listing-date-sort="1746165600000" data-listing-title-sort="DEV E2 CRT Improvements">
+<tr data-index="27" data-categories="UmVwb3NpdG9yeSUyQ0RldmVsb3BtZW50JTJDVERN" data-listing-date-sort="1746144000000" data-listing-title-sort="DEV E2 CRT Improvements">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-DEV-E2-CRT-Improvements" class="title listing-title">DEV E2 CRT Improvements</a>
 </td>
@@ -1165,7 +1137,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="28" data-categories="UmVwb3NpdG9yeSUyQ0VzdGltYXRpb24lMkNURE0=" data-listing-date-sort="1744092000000" data-listing-title-sort="EST Trucks Streetlight">
+<tr data-index="28" data-categories="UmVwb3NpdG9yeSUyQ0VzdGltYXRpb24lMkNURE0=" data-listing-date-sort="1744070400000" data-listing-title-sort="EST Trucks Streetlight">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-EST-Trucks-Streetlight" class="title listing-title">EST Trucks Streetlight</a>
 </td>
@@ -1181,7 +1153,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="29" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1744092000000" data-listing-title-sort="INP Census Block to TAZ">
+<tr data-index="29" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1744070400000" data-listing-title-sort="INP Census Block to TAZ">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-INP-Census-Block-to-TAZ" class="title listing-title">INP Census Block to TAZ</a>
 </td>
@@ -1197,7 +1169,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="30" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1744092000000" data-listing-title-sort="INP TAZ Renumbering">
+<tr data-index="30" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1744070400000" data-listing-title-sort="INP TAZ Renumbering">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-INP-TAZ-Renumbering" class="title listing-title">INP TAZ Renumbering</a>
 </td>
@@ -1213,7 +1185,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="31" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1744092000000" data-listing-title-sort="INP TAZ to Census Tract">
+<tr data-index="31" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1744070400000" data-listing-title-sort="INP TAZ to Census Tract">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-INP-TAZ-to-CensusTract" class="title listing-title">INP TAZ to Census Tract</a>
 </td>
@@ -1229,7 +1201,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="32" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1744092000000" data-listing-title-sort="INP Transit Node Renumbering">
+<tr data-index="32" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1744070400000" data-listing-title-sort="INP Transit Node Renumbering">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-INP-Transit-Node-Renumbering" class="title listing-title">INP Transit Node Renumbering</a>
 </td>
@@ -1245,7 +1217,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="33" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDSW5wdXQlMjBkYXRhJTJDVERN" data-listing-date-sort="1744092000000" data-listing-title-sort="INP USTM Externals Using National Network">
+<tr data-index="33" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDSW5wdXQlMjBkYXRhJTJDVERN" data-listing-date-sort="1744070400000" data-listing-title-sort="INP USTM Externals Using National Network">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-INP-USTM-Externals-Using-National-Network" class="title listing-title">INP USTM Externals Using National Network</a>
 </td>
@@ -1261,7 +1233,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="34" data-categories="UmVwb3NpdG9yeSUyQ1Bvc3QtcHJvY2Vzc2luZyUyQ1RETQ==" data-listing-date-sort="1744092000000" data-listing-title-sort="PP Merge ATO Outputs">
+<tr data-index="34" data-categories="UmVwb3NpdG9yeSUyQ1Bvc3QtcHJvY2Vzc2luZyUyQ1RETQ==" data-listing-date-sort="1744070400000" data-listing-title-sort="PP Merge ATO Outputs">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-PP-Merge-ATO-Outputs" class="title listing-title">PP Merge ATO Outputs</a>
 </td>
@@ -1277,7 +1249,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="35" data-categories="UmVwb3NpdG9yeSUyQ1Bvc3QtcHJvY2Vzc2luZyUyQ1RETQ==" data-listing-date-sort="1744092000000" data-listing-title-sort="PP Transit Output Comparison">
+<tr data-index="35" data-categories="UmVwb3NpdG9yeSUyQ1Bvc3QtcHJvY2Vzc2luZyUyQ1RETQ==" data-listing-date-sort="1744070400000" data-listing-title-sort="PP Transit Output Comparison">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-PP-Transit-Output-Comparison" class="title listing-title">PP Transit Output Comparison</a>
 </td>
@@ -1293,7 +1265,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="36" data-categories="UmVwb3NpdG9yeSUyQ1Bvc3QtcHJvY2Vzc2luZyUyQ1RETQ==" data-listing-date-sort="1744005600000" data-listing-title-sort="PP Average Commute Times">
+<tr data-index="36" data-categories="UmVwb3NpdG9yeSUyQ1Bvc3QtcHJvY2Vzc2luZyUyQ1RETQ==" data-listing-date-sort="1743984000000" data-listing-title-sort="PP Average Commute Times">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-PP-Average-Commute-Times" class="title listing-title">PP Average Commute Times</a>
 </td>
@@ -1309,7 +1281,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="37" data-categories="UmVwb3NpdG9yeSUyQ1Bvc3QtcHJvY2Vzc2luZyUyQ1RETQ==" data-listing-date-sort="1744005600000" data-listing-title-sort="PP Plot ATO Travelsheds">
+<tr data-index="37" data-categories="UmVwb3NpdG9yeSUyQ1Bvc3QtcHJvY2Vzc2luZyUyQ1RETQ==" data-listing-date-sort="1743984000000" data-listing-title-sort="PP Plot ATO Travelsheds">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-PP-Plot-ATO-Travelsheds" class="title listing-title">PP Plot ATO Travelsheds</a>
 </td>
@@ -1325,7 +1297,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="38" data-categories="UmVwb3NpdG9yeSUyQ1Bvc3QtcHJvY2Vzc2luZyUyQ1RETQ==" data-listing-date-sort="1744005600000" data-listing-title-sort="PP Trip Stats by SE and Transit Intensity">
+<tr data-index="38" data-categories="UmVwb3NpdG9yeSUyQ1Bvc3QtcHJvY2Vzc2luZyUyQ1RETQ==" data-listing-date-sort="1743984000000" data-listing-title-sort="PP Trip Stats by SE and Transit Intensity">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-PP-Trip-Stats-by-SE-and-Transit-Intensity" class="title listing-title">PP Trip Stats by SE and Transit Intensity</a>
 </td>
@@ -1341,7 +1313,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="39" data-categories="UmVwb3NpdG9yeSUyQ1NjZW5hcmlvJTJDVERN" data-listing-date-sort="1744005600000" data-listing-title-sort="SCN Centers Transit Strategy Land Use">
+<tr data-index="39" data-categories="UmVwb3NpdG9yeSUyQ1NjZW5hcmlvJTJDVERN" data-listing-date-sort="1743984000000" data-listing-title-sort="SCN Centers Transit Strategy Land Use">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-SCN-Centers-Transit-Strategy-Land-Use" class="title listing-title">SCN Centers Transit Strategy Land Use</a>
 </td>
@@ -1357,7 +1329,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="40" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDU2NlbmFyaW8lMkNURE0=" data-listing-date-sort="1744005600000" data-listing-title-sort="SCN Three Transit Corridors Land Use">
+<tr data-index="40" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDU2NlbmFyaW8lMkNURE0=" data-listing-date-sort="1743984000000" data-listing-title-sort="SCN Three Transit Corridors Land Use">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-SCN-Three-Transit-Corridors-Land-Use" class="title listing-title">SCN Three Transit Corridors Land Use</a>
 </td>
@@ -1373,7 +1345,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="41" data-categories="UmVwb3NpdG9yeSUyQ0RldmVsb3BtZW50JTJDVERN" data-listing-date-sort="1743746400000" data-listing-title-sort="DEV Replace Arcpy">
+<tr data-index="41" data-categories="UmVwb3NpdG9yeSUyQ0RldmVsb3BtZW50JTJDVERN" data-listing-date-sort="1743724800000" data-listing-title-sort="DEV Replace Arcpy">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-DEV-Replace-Arcpy" class="title listing-title">DEV Replace Arcpy</a>
 </td>
@@ -1389,7 +1361,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="42" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1743746400000" data-listing-title-sort="INP Parcel to TAZ">
+<tr data-index="42" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1743724800000" data-listing-title-sort="INP Parcel to TAZ">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-INP-Parcel-to-TAZ" class="title listing-title">INP Parcel to TAZ</a>
 </td>
@@ -1405,7 +1377,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="43" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1743746400000" data-listing-title-sort="INP TAZ to ZIPCode">
+<tr data-index="43" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1743724800000" data-listing-title-sort="INP TAZ to ZIPCode">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-INP-TAZ-to-ZIPCode" class="title listing-title">INP TAZ to ZIPCode</a>
 </td>
@@ -1421,7 +1393,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="44" data-categories="UmVwb3NpdG9yeSUyQ1ZhbGlkYXRpb24lMkNURE0=" data-listing-date-sort="1743746400000" data-listing-title-sort="VAL Mode Share Boardings">
+<tr data-index="44" data-categories="UmVwb3NpdG9yeSUyQ1ZhbGlkYXRpb24lMkNURE0=" data-listing-date-sort="1743724800000" data-listing-title-sort="VAL Mode Share Boardings">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-VAL-ModeShare-Boardings" class="title listing-title">VAL Mode Share Boardings</a>
 </td>
@@ -1437,7 +1409,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="45" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDVmFsaWRhdGlvbiUyQ1RETQ==" data-listing-date-sort="1743746400000" data-listing-title-sort="VAL OBS Ridership Comparison">
+<tr data-index="45" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDVmFsaWRhdGlvbiUyQ1RETQ==" data-listing-date-sort="1743724800000" data-listing-title-sort="VAL OBS Ridership Comparison">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-VAL-OBS-Ridership-Comparison" class="title listing-title">VAL OBS Ridership Comparison</a>
 </td>
@@ -1453,7 +1425,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="46" data-categories="UmVwb3NpdG9yeSUyQ1ZhbGlkYXRpb24lMkNURE0=" data-listing-date-sort="1743746400000" data-listing-title-sort="VAL Scenario Comparison Toolbox">
+<tr data-index="46" data-categories="UmVwb3NpdG9yeSUyQ1ZhbGlkYXRpb24lMkNURE0=" data-listing-date-sort="1743724800000" data-listing-title-sort="VAL Scenario Comparison Toolbox">
 <td>
 <a href="https://github.com/WFRCAnalytics/TDM-VAL-Scenario-Comparison-Toolbox" class="title listing-title">VAL Scenario Comparison Toolbox</a>
 </td>
@@ -1469,7 +1441,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="47" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDTW9kZWwlMkNURE0=" data-listing-date-sort="1691647200000" data-listing-title-sort="TDM v8.3.2">
+<tr data-index="47" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDTW9kZWwlMkNURE0=" data-listing-date-sort="1691625600000" data-listing-title-sort="TDM v8.3.2">
 <td>
 <a href="https://github.com/WFRCAnalytics/WF-TDM-v8.3.2" class="title listing-title">TDM v8.3.2</a>
 </td>
@@ -1485,7 +1457,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="48" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDTW9kZWwlMkNURE0=" data-listing-date-sort="1688364000000" data-listing-title-sort="TDM v9.0 beta">
+<tr data-index="48" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDTW9kZWwlMkNURE0=" data-listing-date-sort="1688342400000" data-listing-title-sort="TDM v9.0 beta">
 <td>
 <a href="https://github.com/WFRCAnalytics/WF-TDM-v9.0-beta" class="title listing-title">TDM v9.0 beta</a>
 </td>
@@ -1515,99 +1487,52 @@ window.Quarto = {
 
 </main> <!-- /main -->
 <script>
-
 // Accessibility fixes for things Quarto and its libraries render but cannot configure.
-
 // Included on every page through wfrc-shared.yml (format.html.include-after-body).
-
 (function () {
-
   function fix(root) {
-
     // Listing banners are decorative; Quarto drops an empty `image-alt`.
-
     root.querySelectorAll('img.thumbnail-image:not([alt])').forEach(function (img) {
-
       img.setAttribute('alt', '');
-
     });
-
     // Quarto only sets `title` on the color-scheme toggle: add an accessible name and a clearer tooltip.
-
     root.querySelectorAll('.quarto-color-scheme-toggle:not([aria-label])').forEach(function (a) {
-
       a.setAttribute('aria-label', 'Toggle light and dark mode');
-
       a.setAttribute('title', 'Toggle light / dark');
-
     });
-
     // Collapsible callouts put aria-expanded on a plain div: make it a real, keyboard-operable button.
-
     root.querySelectorAll('.callout-header[aria-expanded]:not([role])').forEach(function (h) {
-
       h.setAttribute('role', 'button');
-
       h.setAttribute('tabindex', '0');
-
       h.addEventListener('keydown', function (e) {
-
         if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); h.click(); }
-
       });
-
     });
-
     // Observable Plot labels bare <g> marks; aria-label is not allowed on a role-less element.
-
     root.querySelectorAll('[class^="plot-"] g[aria-label]:not([role])').forEach(function (g) {
-
       g.removeAttribute('aria-label');
-
     });
-
     // Scrollable regions must be reachable by keyboard.
-
     root.querySelectorAll('pre, div.sourceCode, .card, .card-body, .table-striped, table, .cell-output-display').forEach(function (el) {
-
       if (el.hasAttribute('tabindex') || el.matches('a, button, input, select, textarea')) return;
-
       var o = getComputedStyle(el);
-
       var scrolls = /(auto|scroll)/.test(o.overflowX + o.overflowY) &&
-
         (el.scrollWidth > el.clientWidth + 1 || el.scrollHeight > el.clientHeight + 1);
-
       if (scrolls) el.setAttribute('tabindex', '0');
-
     });
-
   }
-
   var queued = false;
-
   function schedule() {
-
     if (queued) return;
-
     queued = true;
-
     requestAnimationFrame(function () { queued = false; fix(document); });
-
   }
-
   fix(document);
-
   new MutationObserver(schedule).observe(document.body, { childList: true, subtree: true });
-
   window.addEventListener('resize', schedule);
-
   window.addEventListener('load', function () { setTimeout(schedule, 800); setTimeout(schedule, 2500); });
-
 })();
-
 </script>
-
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

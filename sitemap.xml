@@ -2,62 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://wfrcanalytics.github.io/updates/posts/2026-10-25-new-front-door.html</loc>
-    <lastmod>2026-10-26T03:14:06.431Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wfrcanalytics.github.io/scripts/tools/qa-report.html</loc>
-    <lastmod>2026-10-26T05:40:39.051Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wfrcanalytics.github.io/models/tdm.html</loc>
-    <lastmod>2026-10-26T04:58:02.599Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wfrcanalytics.github.io/models/index.html</loc>
-    <lastmod>2026-10-26T03:14:06.427Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wfrcanalytics.github.io/license/index.html</loc>
-    <lastmod>2026-10-26T03:14:06.421Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wfrcanalytics.github.io/explore/index.html</loc>
-    <lastmod>2026-10-26T04:42:44.617Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wfrcanalytics.github.io/contact/index.html</loc>
-    <lastmod>2026-10-26T03:14:06.419Z</lastmod>
+    <lastmod>2026-10-26T05:41:23.826Z</lastmod>
   </url>
   <url>
     <loc>https://wfrcanalytics.github.io/about.html</loc>
-    <lastmod>2026-10-26T03:14:06.415Z</lastmod>
+    <lastmod>2026-10-26T05:41:23.815Z</lastmod>
   </url>
   <url>
-    <loc>https://wfrcanalytics.github.io/code/index.html</loc>
-    <lastmod>2026-10-26T03:14:06.418Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wfrcanalytics.github.io/data/index.html</loc>
-    <lastmod>2026-10-26T04:42:44.617Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wfrcanalytics.github.io/index.html</loc>
-    <lastmod>2026-10-26T03:14:06.421Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wfrcanalytics.github.io/models/bdm.html</loc>
-    <lastmod>2026-10-26T03:14:06.423Z</lastmod>
+    <loc>https://wfrcanalytics.github.io/explore/index.html</loc>
+    <lastmod>2026-10-26T05:41:23.825Z</lastmod>
   </url>
   <url>
     <loc>https://wfrcanalytics.github.io/models/remm.html</loc>
-    <lastmod>2026-10-26T03:14:06.427Z</lastmod>
+    <lastmod>2026-10-26T05:41:23.825Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wfrcanalytics.github.io/models/bdm.html</loc>
+    <lastmod>2026-10-26T05:41:23.825Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wfrcanalytics.github.io/code/index.html</loc>
+    <lastmod>2026-10-26T05:41:23.823Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wfrcanalytics.github.io/contact/index.html</loc>
+    <lastmod>2026-10-26T05:41:23.825Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wfrcanalytics.github.io/license/index.html</loc>
+    <lastmod>2026-10-26T05:41:23.825Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wfrcanalytics.github.io/index.html</loc>
+    <lastmod>2026-10-26T05:41:23.825Z</lastmod>
   </url>
   <url>
     <loc>https://wfrcanalytics.github.io/reports/index.html</loc>
-    <lastmod>2026-10-26T04:42:44.617Z</lastmod>
+    <lastmod>2026-10-26T05:41:23.825Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wfrcanalytics.github.io/models/index.html</loc>
+    <lastmod>2026-10-26T05:41:23.825Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wfrcanalytics.github.io/models/tdm.html</loc>
+    <lastmod>2026-10-26T05:41:23.825Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wfrcanalytics.github.io/data/index.html</loc>
+    <lastmod>2026-10-26T05:41:23.825Z</lastmod>
   </url>
   <url>
     <loc>https://wfrcanalytics.github.io/updates/index.html</loc>
-    <lastmod>2026-10-26T03:14:06.430Z</lastmod>
+    <lastmod>2026-10-26T05:41:23.826Z</lastmod>
   </url>
 </urlset>

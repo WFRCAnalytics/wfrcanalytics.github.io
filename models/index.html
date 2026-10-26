@@ -52,9 +52,9 @@ ul.task-list li input[type="checkbox"] {
 <script id="quarto-axe-checker-options" type="text/plain">dHJ1ZQ==</script>
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-0756f8518ec0967a70b41786b4745d2c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-72597b3082f95eb44c4d1a7ce3261060.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-0756f8518ec0967a70b41786b4745d2c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-5c7f346ac78d5653bb901f48effb41a8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-61a64ec896cb6f19873e67cc833181f1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-5c7f346ac78d5653bb901f48effb41a8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -79,61 +79,33 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <script>
-
 // Table listings print categories as plain text ("Live, App"). Turn them into pills,
-
 // and re-run whenever the listing re-renders (filter, page, sort).
-
 (function () {
-
   var STATE = { Live: 'chip-live', Internal: 'chip-internal', Archived: 'chip-archived' };
-
   function chips(root) {
-
     root.querySelectorAll('.quarto-listing-table .listing-categories:not([data-chips])').forEach(function (cell) {
-
       var names = cell.textContent.split(',').map(function (s) { return s.trim(); }).filter(Boolean);
-
       cell.setAttribute('data-chips', '1');
-
       cell.textContent = '';
-
       names.forEach(function (name) {
-
         var chip = document.createElement('span');
-
         chip.className = 'wfrc-chip ' + (STATE[name] || '');
-
         chip.textContent = name;
-
         cell.appendChild(chip);
-
       });
-
     });
-
   }
-
   function start() {
-
     chips(document);
-
     new MutationObserver(function () { chips(document); })
-
       .observe(document.body, { childList: true, subtree: true });
-
   }
-
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);
-
   else start();
-
 })();
-
 </script>
-
 <script type="module" src="../assets/js/quick-jump.js"></script>
-
 <script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
 <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
 <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
@@ -329,8 +301,8 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="..\site_libs\quarto-contrib\quarto-project\wfrc-brand\assets\logo\abbreviated\WFRC_logo_abbreviated_color_transparent.png" alt="Wasatch Front Regional Council" class="navbar-logo light-content">
-    <img src="..\site_libs\quarto-contrib\quarto-project\wfrc-brand\assets\logo\abbreviated\WFRC_logo_abbreviated_white_transparent.png" alt="Wasatch Front Regional Council" class="navbar-logo dark-content">
+    <img src="../site_libs/quarto-contrib/quarto-project/wfrc-brand/assets/logo/abbreviated/WFRC_logo_abbreviated_color_transparent.png" alt="Wasatch Front Regional Council" class="navbar-logo light-content">
+    <img src="../site_libs/quarto-contrib/quarto-project/wfrc-brand/assets/logo/abbreviated/WFRC_logo_abbreviated_white_transparent.png" alt="Wasatch Front Regional Council" class="navbar-logo dark-content">
     </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Analytics</span>
@@ -544,99 +516,52 @@ ul.task-list li input[type="checkbox"] {
 
 </main> <!-- /main -->
 <script>
-
 // Accessibility fixes for things Quarto and its libraries render but cannot configure.
-
 // Included on every page through wfrc-shared.yml (format.html.include-after-body).
-
 (function () {
-
   function fix(root) {
-
     // Listing banners are decorative; Quarto drops an empty `image-alt`.
-
     root.querySelectorAll('img.thumbnail-image:not([alt])').forEach(function (img) {
-
       img.setAttribute('alt', '');
-
     });
-
     // Quarto only sets `title` on the color-scheme toggle: add an accessible name and a clearer tooltip.
-
     root.querySelectorAll('.quarto-color-scheme-toggle:not([aria-label])').forEach(function (a) {
-
       a.setAttribute('aria-label', 'Toggle light and dark mode');
-
       a.setAttribute('title', 'Toggle light / dark');
-
     });
-
     // Collapsible callouts put aria-expanded on a plain div: make it a real, keyboard-operable button.
-
     root.querySelectorAll('.callout-header[aria-expanded]:not([role])').forEach(function (h) {
-
       h.setAttribute('role', 'button');
-
       h.setAttribute('tabindex', '0');
-
       h.addEventListener('keydown', function (e) {
-
         if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); h.click(); }
-
       });
-
     });
-
     // Observable Plot labels bare <g> marks; aria-label is not allowed on a role-less element.
-
     root.querySelectorAll('[class^="plot-"] g[aria-label]:not([role])').forEach(function (g) {
-
       g.removeAttribute('aria-label');
-
     });
-
     // Scrollable regions must be reachable by keyboard.
-
     root.querySelectorAll('pre, div.sourceCode, .card, .card-body, .table-striped, table, .cell-output-display').forEach(function (el) {
-
       if (el.hasAttribute('tabindex') || el.matches('a, button, input, select, textarea')) return;
-
       var o = getComputedStyle(el);
-
       var scrolls = /(auto|scroll)/.test(o.overflowX + o.overflowY) &&
-
         (el.scrollWidth > el.clientWidth + 1 || el.scrollHeight > el.clientHeight + 1);
-
       if (scrolls) el.setAttribute('tabindex', '0');
-
     });
-
   }
-
   var queued = false;
-
   function schedule() {
-
     if (queued) return;
-
     queued = true;
-
     requestAnimationFrame(function () { queued = false; fix(document); });
-
   }
-
   fix(document);
-
   new MutationObserver(schedule).observe(document.body, { childList: true, subtree: true });
-
   window.addEventListener('resize', schedule);
-
   window.addEventListener('load', function () { setTimeout(schedule, 800); setTimeout(schedule, 2500); });
-
 })();
-
 </script>
-
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
