@@ -7,7 +7,7 @@ image: ../assets/shots/MAP-Housing-ATO-Calculator-Updated.jpg
 
 [![](../assets/shots/MAP-Housing-ATO-Calculator-Updated.jpg){.tool-shot fig-alt="Screenshot of Housing ATO Calculator; opens the tool in a new tab"}](https://wfrc.utah.gov/housing-ato-calculator-map/){target=_blank}
 
-[Open the tool](https://wfrc.utah.gov/housing-ato-calculator-map/){.btn .btn-primary target=_blank} [Source code](https://github.com/WFRCAnalytics/MAP-Housing-ATO-Calculator-Updated){.btn .btn-outline-primary target=_blank}
+[{{< fa arrow-up-right-from-square >}} Open the tool](https://wfrc.utah.gov/housing-ato-calculator-map/){.btn .btn-primary target=_blank} [{{< fa brands github >}} Source code](https://github.com/WFRCAnalytics/MAP-Housing-ATO-Calculator-Updated){.btn .btn-outline-primary target=_blank}
 
 ## What it answers
 
@@ -43,4 +43,4 @@ Wasatch Front Regional Council. (2026). *Housing ATO Calculator* [Online tool]. 
 
 ## Questions or problems?
 
-Email [analytics@wfrc.utah.gov](mailto:analytics@wfrc.utah.gov) or [open an issue](https://github.com/WFRCAnalytics/MAP-Housing-ATO-Calculator-Updated/issues){target=_blank} on the source repository. See also [all apps and maps](../explore/index.qmd).
+{{< fa envelope >}} Email [analytics@wfrc.utah.gov](mailto:analytics@wfrc.utah.gov) or {{< fa bug >}} [open an issue](https://github.com/WFRCAnalytics/MAP-Housing-ATO-Calculator-Updated/issues){target=_blank} on the source repository. See also [all apps and maps](../explore/index.qmd).

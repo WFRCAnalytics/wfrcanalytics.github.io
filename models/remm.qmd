@@ -77,10 +77,10 @@ The [REMM Result Review Tool](https://wfrcanalytics.github.io/REMM-Result-Review
 
 ## Documentation and code
 
-- [Model source code (REMM-v3.0)](https://github.com/WFRCAnalytics/REMM-v3.0){target="_blank"}
-- [Model documentation](https://docs.google.com/document/d/1zF3MWmOhru1-82TL6yOfIDP_rhoKDDRYtqSdHP4eJcQ/edit?tab=t.0){target="_blank"}. The model authors note it still needs updating.
-- [Full installation instructions](https://docs.google.com/document/d/1QW1MMaRt1T9WUiNs4Ig9TdYE77BgdEVSFF-uPRnV2rk/edit){target="_blank"}
-- [WFRC's UrbanSim fork](https://github.com/WFRCAnalytics/PY-Urbansim-WFRC){target="_blank"}, based on UrbanSim by Paul Waddell. Questions about UrbanSim itself go to the [upstream project](https://github.com/udst/urbansim){target="_blank"}.
+- {{< fa brands github >}} [Model source code (REMM-v3.0)](https://github.com/WFRCAnalytics/REMM-v3.0){target="_blank"}
+- {{< fa file-lines >}} [Model documentation](https://docs.google.com/document/d/1zF3MWmOhru1-82TL6yOfIDP_rhoKDDRYtqSdHP4eJcQ/edit?tab=t.0){target="_blank"}. The model authors note it still needs updating.
+- {{< fa file-lines >}} [Full installation instructions](https://docs.google.com/document/d/1QW1MMaRt1T9WUiNs4Ig9TdYE77BgdEVSFF-uPRnV2rk/edit){target="_blank"}
+- {{< fa brands github >}} [WFRC's UrbanSim fork](https://github.com/WFRCAnalytics/PY-Urbansim-WFRC){target="_blank"}, based on UrbanSim by Paul Waddell. Questions about UrbanSim itself go to the [upstream project](https://github.com/udst/urbansim){target="_blank"}.
 
 ## Supporting tools and analyses
 

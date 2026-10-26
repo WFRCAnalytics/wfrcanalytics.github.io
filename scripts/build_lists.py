@@ -208,8 +208,8 @@ def tool_pages(catalog):
         lines += ["---", ""]
         if has_shot:
             lines += [f"[![](../assets/shots/{tid}.jpg){{.tool-shot fig-alt=\"Screenshot of {e['title']}; opens the tool in a new tab\"}}]({e['url']}){{target=_blank}}", ""]
-        lines += [f"[Open the tool]({e['url']}){{.btn .btn-primary target=_blank}} "
-                  f"[Source code]({e['repo']}){{.btn .btn-outline-primary target=_blank}}", "",
+        lines += [f"[{{{{< fa arrow-up-right-from-square >}}}} Open the tool]({e['url']}){{.btn .btn-primary target=_blank}} "
+                  f"[{{{{< fa brands github >}}}} Source code]({e['repo']}){{.btn .btn-outline-primary target=_blank}}", "",
                   "## What it answers", "", f"**{d['question']}**", "", f"*For:* {d['audience']}", "",
                   "## What is inside", ""]
         lines += [f"- {x}" for x in d["inside"]] + ["", "## Where the data comes from", ""]
@@ -222,7 +222,7 @@ def tool_pages(catalog):
                   "## How to cite", "", "::: {.cite}",
                   f"Wasatch Front Regional Council. ({year}). *{e['title']}* [Online tool]. {e['url']}", ":::", "",
                   "## Questions or problems?", "",
-                  f"Email [analytics@wfrc.utah.gov](mailto:analytics@wfrc.utah.gov) or [open an issue]({e['repo']}/issues){{target=_blank}} "
+                  f"{{{{< fa envelope >}}}} Email [analytics@wfrc.utah.gov](mailto:analytics@wfrc.utah.gov) or {{{{< fa bug >}}}} [open an issue]({e['repo']}/issues){{target=_blank}} "
                   "on the source repository. See also [all apps and maps](../explore/index.qmd).", ""]
         (out_dir / f"{tid}.qmd").write_text(NL.join(lines), encoding="utf-8")
     for old in out_dir.glob("*.qmd"):          # a tool dropped from tool-details.yml loses its page

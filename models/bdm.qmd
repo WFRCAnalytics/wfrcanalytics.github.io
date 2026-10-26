@@ -59,10 +59,10 @@ The Bike Demand Model does not currently publish numbered releases. The reposito
 
 ## Documentation
 
-- [Source code and instructions](https://github.com/WFRCAnalytics/BDM-Utah-Bike-Demand-Model){target="_blank"}
-- Model design specification (PDF, dated January 28, 2021), in the repository's `Model_Design` folder
-- [Design meeting notes](https://github.com/RSGInc/utah_bike_demand_model/wiki){target="_blank"}
-- [Bike model coefficients tracker](https://docs.google.com/spreadsheets/d/1lWqqHUEF0IOpqIgNil0gEWuN29oVjzCsLly4eeluqpA/edit?usp=sharing){target="_blank"}
+- {{< fa brands github >}} [Source code and instructions](https://github.com/WFRCAnalytics/BDM-Utah-Bike-Demand-Model){target="_blank"}
+- {{< fa file-pdf >}} Model design specification (PDF, dated January 28, 2021), in the repository's `Model_Design` folder
+- {{< fa book >}} [Design meeting notes](https://github.com/RSGInc/utah_bike_demand_model/wiki){target="_blank"}
+- {{< fa table >}} [Bike model coefficients tracker](https://docs.google.com/spreadsheets/d/1lWqqHUEF0IOpqIgNil0gEWuN29oVjzCsLly4eeluqpA/edit?usp=sharing){target="_blank"}
 
 ## Related bike work
 

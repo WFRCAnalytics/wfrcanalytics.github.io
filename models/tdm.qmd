@@ -40,7 +40,7 @@ model partners
 
 Documentation of record lives on the WFRC site, with a page for every version.
 
-- [Documentation for all versions](https://wfrc.utah.gov/wftdm-docs/){target="_blank"}
+- {{< fa file-lines >}} [Documentation for all versions](https://wfrc.utah.gov/wftdm-docs/){target="_blank"}
 - Version 9.x documents: a *What's New* document describing changes since the last release, and a *Model Validation Report* covering trip generation, distribution, mode choice and highway assignment.
 - Version 10 documents: a *Data Dictionary* and a *Model Validation Report*.
 

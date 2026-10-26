@@ -7,7 +7,7 @@ image: ../assets/shots/vizTool.jpg
 
 [![](../assets/shots/vizTool.jpg){.tool-shot fig-alt="Screenshot of vizTool; opens the tool in a new tab"}](https://wfrc.utah.gov/viztool-latest-build/){target=_blank}
 
-[Open the tool](https://wfrc.utah.gov/viztool-latest-build/){.btn .btn-primary target=_blank} [Source code](https://github.com/WFRCAnalytics/vizTool){.btn .btn-outline-primary target=_blank}
+[{{< fa arrow-up-right-from-square >}} Open the tool](https://wfrc.utah.gov/viztool-latest-build/){.btn .btn-primary target=_blank} [{{< fa brands github >}} Source code](https://github.com/WFRCAnalytics/vizTool){.btn .btn-outline-primary target=_blank}
 
 ## What it answers
 
@@ -42,4 +42,4 @@ Wasatch Front Regional Council. (2026). *vizTool* [Online tool]. https://wfrc.ut
 
 ## Questions or problems?
 
-Email [analytics@wfrc.utah.gov](mailto:analytics@wfrc.utah.gov) or [open an issue](https://github.com/WFRCAnalytics/vizTool/issues){target=_blank} on the source repository. See also [all apps and maps](../explore/index.qmd).
+{{< fa envelope >}} Email [analytics@wfrc.utah.gov](mailto:analytics@wfrc.utah.gov) or {{< fa bug >}} [open an issue](https://github.com/WFRCAnalytics/vizTool/issues){target=_blank} on the source repository. See also [all apps and maps](../explore/index.qmd).

@@ -7,7 +7,7 @@ image: ../assets/shots/WF-TDM-Calibration.jpg
 
 [![](../assets/shots/WF-TDM-Calibration.jpg){.tool-shot fig-alt="Screenshot of TDM Calibration Reports; opens the tool in a new tab"}](https://wfrcanalytics.github.io/WF-TDM-Calibration/){target=_blank}
 
-[Open the tool](https://wfrcanalytics.github.io/WF-TDM-Calibration/){.btn .btn-primary target=_blank} [Source code](https://github.com/WFRCAnalytics/WF-TDM-Calibration){.btn .btn-outline-primary target=_blank}
+[{{< fa arrow-up-right-from-square >}} Open the tool](https://wfrcanalytics.github.io/WF-TDM-Calibration/){.btn .btn-primary target=_blank} [{{< fa brands github >}} Source code](https://github.com/WFRCAnalytics/WF-TDM-Calibration){.btn .btn-outline-primary target=_blank}
 
 ## What it answers
 
@@ -41,4 +41,4 @@ Wasatch Front Regional Council. (2026). *TDM Calibration Reports* [Online tool].
 
 ## Questions or problems?
 
-Email [analytics@wfrc.utah.gov](mailto:analytics@wfrc.utah.gov) or [open an issue](https://github.com/WFRCAnalytics/WF-TDM-Calibration/issues){target=_blank} on the source repository. See also [all apps and maps](../explore/index.qmd).
+{{< fa envelope >}} Email [analytics@wfrc.utah.gov](mailto:analytics@wfrc.utah.gov) or {{< fa bug >}} [open an issue](https://github.com/WFRCAnalytics/WF-TDM-Calibration/issues){target=_blank} on the source repository. See also [all apps and maps](../explore/index.qmd).

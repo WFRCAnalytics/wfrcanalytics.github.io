@@ -42,7 +42,7 @@ The full letter is at the top of the model repository's page, which you can read
 
 Email WFRC. WFRC's page says to contact the data scientist who handles model requests:
 
-- [Suzie Swim, WFRC Data Scientist](mailto:suzie.swim@wfrc.utah.gov): suzie.swim@wfrc.utah.gov
+- {{< fa user >}} [Suzie Swim, WFRC Data Scientist](mailto:suzie.swim@wfrc.utah.gov): suzie.swim@wfrc.utah.gov
 
 Tell them who you are, what you plan to use the model for, and your GitHub username. WFRC and MAG (which co-develops the model) both support model users. If you are unsure whom to write to, use the [contact page](../contact/index.qmd).
 

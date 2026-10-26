@@ -7,9 +7,9 @@ page-layout: article
 
 Questions about the Travel Demand Model, Real-Estate Market Model or Bike Demand Model, data requests, or help applying our tools to a planning study? Reach the Analytics team directly.
 
-- [analytics@wfrc.utah.gov](mailto:analytics@wfrc.utah.gov)
-- [41 North Rio Grande St. Suite 103, Salt Lake City, UT 84101](https://maps.app.goo.gl/c8oi9w1AtNwUbxUt8){target="_blank"}
-- TTY: 711
+{{< fa envelope >}} [analytics@wfrc.utah.gov](mailto:analytics@wfrc.utah.gov)\
+{{< fa location-dot >}} [41 North Rio Grande St. Suite 103, Salt Lake City, UT 84101](https://maps.app.goo.gl/c8oi9w1AtNwUbxUt8){target="_blank"}\
+{{< fa tty >}} TTY: 711
 
 ## Found a problem with a tool or this site?
 

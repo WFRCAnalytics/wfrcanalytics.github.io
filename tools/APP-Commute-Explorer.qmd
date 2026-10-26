@@ -7,7 +7,7 @@ image: ../assets/shots/APP-Commute-Explorer.jpg
 
 [![](../assets/shots/APP-Commute-Explorer.jpg){.tool-shot fig-alt="Screenshot of Commute Flow Explorer; opens the tool in a new tab"}](https://wfrcanalytics.github.io/APP-Commute-Explorer/){target=_blank}
 
-[Open the tool](https://wfrcanalytics.github.io/APP-Commute-Explorer/){.btn .btn-primary target=_blank} [Source code](https://github.com/WFRCAnalytics/APP-Commute-Explorer){.btn .btn-outline-primary target=_blank}
+[{{< fa arrow-up-right-from-square >}} Open the tool](https://wfrcanalytics.github.io/APP-Commute-Explorer/){.btn .btn-primary target=_blank} [{{< fa brands github >}} Source code](https://github.com/WFRCAnalytics/APP-Commute-Explorer){.btn .btn-outline-primary target=_blank}
 
 ## What it answers
 
@@ -44,4 +44,4 @@ Wasatch Front Regional Council. (2026). *Commute Flow Explorer* [Online tool]. h
 
 ## Questions or problems?
 
-Email [analytics@wfrc.utah.gov](mailto:analytics@wfrc.utah.gov) or [open an issue](https://github.com/WFRCAnalytics/APP-Commute-Explorer/issues){target=_blank} on the source repository. See also [all apps and maps](../explore/index.qmd).
+{{< fa envelope >}} Email [analytics@wfrc.utah.gov](mailto:analytics@wfrc.utah.gov) or {{< fa bug >}} [open an issue](https://github.com/WFRCAnalytics/APP-Commute-Explorer/issues){target=_blank} on the source repository. See also [all apps and maps](../explore/index.qmd).
