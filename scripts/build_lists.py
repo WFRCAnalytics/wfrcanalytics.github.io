@@ -115,12 +115,17 @@ def home_snippets(catalog, releases):
     by_id = {e["id"]: e for e in shown}
     picks = [by_id[i] for i in FEATURED_ORDER
              if i in by_id and by_id[i]["featured"] and not by_id[i]["internal"] and by_id[i].get("url")][:8]
-    out = ['::: {.wfrc-blocks}']
-    for n, e in enumerate(picks):
-        out += [f"::: {{.wfrc-block{BLOCK_CLASS[n % 4]}}}", f"### {e['title']}", "",
+    out = ["::: {.feature-grid}"]
+    for e in picks:
+        banner = KIND_BANNER[e["kind"]]
+        out += [f"::: {{.feature-card .banner-{banner}}}", "::: {.feature-banner}", ":::", "",
+                "::: {.feature-body}", f"[{KIND_LABEL[e['kind']]}]{{.wfrc-chip}}", "",
+                f"### {e['title']}", "",
                 short(e["description"]), "",
-                f"[Open]({e['url']}){{.btn .btn-sm target=\"_blank\"}} "
-                f"[Source]({e['repo']}){{.btn .btn-sm .btn-outline-secondary target=\"_blank\"}}", ":::", ""]
+                "::: {.feature-actions}",
+                f"[Open]({e['url']}){{.btn .btn-primary .btn-sm target=\"_blank\"}} "
+                f"[Source]({e['repo']}){{.btn .btn-outline-primary .btn-sm target=\"_blank\"}}",
+                ":::", ":::", ":::", ""]
     out += [":::", ""]
     (ROOT / "_home-featured.md").write_text(NL.join(out), encoding="utf-8")
     print(f"home: {len(facts)} facts, {len(picks)} featured")
