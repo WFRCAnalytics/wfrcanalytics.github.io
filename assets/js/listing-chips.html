@@ -1,0 +1,27 @@
+<script>
+// Table listings print categories as plain text ("Live, App"). Turn them into pills,
+// and re-run whenever the listing re-renders (filter, page, sort).
+(function () {
+  var STATE = { Live: 'chip-live', Internal: 'chip-internal', Archived: 'chip-archived' };
+  function chips(root) {
+    root.querySelectorAll('.quarto-listing-table .listing-categories:not([data-chips])').forEach(function (cell) {
+      var names = cell.textContent.split(',').map(function (s) { return s.trim(); }).filter(Boolean);
+      cell.setAttribute('data-chips', '1');
+      cell.textContent = '';
+      names.forEach(function (name) {
+        var chip = document.createElement('span');
+        chip.className = 'wfrc-chip ' + (STATE[name] || '');
+        chip.textContent = name;
+        cell.appendChild(chip);
+      });
+    });
+  }
+  function start() {
+    chips(document);
+    new MutationObserver(function () { chips(document); })
+      .observe(document.body, { childList: true, subtree: true });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);
+  else start();
+})();
+</script>

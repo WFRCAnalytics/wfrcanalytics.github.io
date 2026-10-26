@@ -66,6 +66,7 @@ website:
 format:
   html:
     css: assets/css/site.css
+    include-in-header: assets/js/listing-chips.html
 
 # freeze computational output
 # (see https://quarto.org/docs/projects/code-execution.html#freeze)
