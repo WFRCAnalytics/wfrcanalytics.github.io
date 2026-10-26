@@ -46,7 +46,7 @@ This site documents a selection of our work, including the code and methods behi
 
 Forecasts travel on the region's roads and transit. Documentation of record for every version lives on the WFRC site.
 
-[Overview](models/tdm.qmd){.btn .btn-sm} [Documentation](https://wfrc.utah.gov/wftdm-docs/){.btn .btn-sm .btn-outline-light target="_blank"}
+[{{< fa circle-info >}} Overview](models/tdm.qmd){.btn .btn-sm} [{{< fa file-lines >}} Documentation](https://wfrc.utah.gov/wftdm-docs/){.btn .btn-sm .btn-outline-light target="_blank"}
 :::
 
 ::: {.wfrc-block .mid}
