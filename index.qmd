@@ -1,26 +1,96 @@
 ---
-pagetitle: Home
-image: 'assets/logo/WFRCDieCutLogo.png'
-about:
-  template: jolla
-  image-width: "min(24em, 100%)"
-  image-alt: "Wasatch Front Regional Council logo"
-  image-shape: rectangle
-
+pagetitle: "WFRC Analytics"
+description: "Models, apps, maps and data from the Wasatch Front Regional Council analytics team."
 toc: false
-
+title-block-banner: false
 ---
 
-::: {#bio}
+::: {.wfrc-hero .column-screen}
+# The data and models behind [Wasatch Front planning.]{.accent}
 
-# Welcome to <span class="name-highlight">WFRC Analytics</span> documentation.
+Explore the travel demand, real-estate market and bike demand models that inform regional plans, along with the apps, maps and reports built on them.
 
-The Wasatch Front Regional Council's Analytics portal serves as the central hub for technical documentation, validation reports, and resources supporting regional transportation planning. Explore our Travel Demand Model, Real-Estate Market Model, and Bike Demand Model, along with the analytical tools and methodologies that inform data-driven planning decisions across the Wasatch Front region.
+[Explore tools](explore/index.qmd){.btn .btn-light} [See the models](#models){.btn .btn-outline-light}
 
-<!-- [Learn more about me &rarr;](/about.html) -->
+[Travel demand]{.wfrc-chip} [Land use]{.wfrc-chip} [Active transportation]{.wfrc-chip} [Open source]{.wfrc-chip}
+:::
 
-::: {#landing-icons}
-<!-- [{{< fa brands github title="GitHub" >}}](https://github.com/WFRCAnalytics){target="_blank"} &nbsp; -->
-[{{< fa brands facebook title="Facebook" >}}](https://www.facebook.com/WasatchFrontRegionalCouncil){target="_blank"} &nbsp; [{{< fa brands square-x-twitter title="X (Twitter)" >}}](https://twitter.com/wasatchcouncil){target="_blank"} &nbsp; [{{< fa brands square-instagram title="Instagram" >}}](https://www.instagram.com/wasatchfrontregionalcouncil){target="_blank"} &nbsp; [{{< fa brands linkedin title="LinkedIn" >}}](https://www.linkedin.com/company/wasatch-front-regional-council){target="_blank"} &nbsp; [{{< fa brands youtube title="YouTube" >}}](https://www.youtube.com/@WasatchFrontRegionalCouncil){target="_blank"} &nbsp;
+::: {.wfrc-band-alt .column-screen}
+## At a glance
+
+{{< include _home-facts.md >}}
+
+## Featured tools
+
+{{< include _home-featured.md >}}
+
+[Browse all apps and maps &rarr;](explore/index.qmd)
+:::
+
+::: {#models .wfrc-band .column-screen}
+## Our models
+
+::: {.wfrc-blocks}
+::: {.wfrc-block}
+### Travel Demand Model
+
+Forecasts travel on the region's roads and transit. Documentation of record for every version lives on the WFRC site.
+
+[Overview](1-tdm/index.qmd){.btn .btn-sm} [Documentation](https://wfrc.utah.gov/wftdm-docs/){.btn .btn-sm .btn-outline-light target="_blank"}
+:::
+
+::: {.wfrc-block .mid}
+### Real-Estate Market Model
+
+An UrbanSim-based simulation of where people and jobs may locate, used for the region's socioeconomic forecasts.
+
+[Overview](2-remm/index.qmd){.btn .btn-sm} [Source](https://github.com/WFRCAnalytics/REMM-v3.0){.btn .btn-sm .btn-outline-light target="_blank"}
+:::
+
+::: {.wfrc-block .brick}
+### Bike Demand Model
+
+Estimates bicycle and micromobility demand to guide active transportation investments.
+
+[Overview](3-bdm/index.qmd){.btn .btn-sm} [Source](https://github.com/WFRCAnalytics/BDM-Utah-Bike-Demand-Model){.btn .btn-sm .btn-outline-light target="_blank"}
+:::
+:::
+:::
+
+::: {.wfrc-band-alt .column-screen}
+## Find your way around
+
+::: {.wfrc-blocks}
+::: {.wfrc-block .teal}
+### Reports and methods
+
+How inputs are built, parameters estimated, and models calibrated and validated.
+
+[Read the reports](reports/index.qmd){.btn .btn-sm}
+:::
+
+::: {.wfrc-block}
+### Data
+
+Datasets and the preparation work behind them.
+
+[Browse data](data/index.qmd){.btn .btn-sm}
+:::
+
+::: {.wfrc-block .mid}
+### Code
+
+Every public repository, searchable, with internal ones clearly marked.
+
+[Search the code](code/index.qmd){.btn .btn-sm}
+:::
+
+::: {.wfrc-block .brick}
+### Get in touch
+
+Questions, data requests or help applying our tools.
+
+[Contact us](contact.qmd){.btn .btn-sm}
+:::
 :::
 :::

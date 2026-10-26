@@ -58,7 +58,7 @@ website:
         text: Reports
       - href: data/index.qmd
         text: Data
-      - href: code/index.qmd
+      - href: https://wfrcanalytics.github.io/code/
         text: Code
       - href: about.qmd
         text: About
@@ -125,7 +125,7 @@ website:
                   href: https://wfrcanalytics.github.io/WF-TDM-Calibration/
                   target: _blank
                 - text: "All components (Code catalog)"
-                  href: code/index.qmd
+                  href: https://wfrcanalytics.github.io/code/
 
     - id: tdm-beta
       title: "TDM 10.0.0 (Beta)"
@@ -178,7 +178,7 @@ website:
         - section: "Components"
           contents:
             - text: "All components (Code catalog)"
-              href: code/index.qmd
+              href: https://wfrcanalytics.github.io/code/
 
     - id: remm-beta
       title: "REMM 3.0.2 (Beta)"
@@ -209,7 +209,7 @@ website:
         - section: "Components"
           contents:
             - text: "All components (Code catalog)"
-              href: code/index.qmd
+              href: https://wfrcanalytics.github.io/code/
 
     - id: bdm-beta
       title: "BDM (Beta)"
@@ -243,7 +243,7 @@ website:
               href: https://github.com/WFRCAnalytics/vizTool
               target: _blank
             - text: "All apps and maps"
-              href: explore/index.qmd
+              href: https://wfrcanalytics.github.io/explore/
 
 # freeze computational output
 # (see https://quarto.org/docs/projects/code-execution.html#freeze)

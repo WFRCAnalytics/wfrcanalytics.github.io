@@ -16,8 +16,6 @@ listing:
     date: Last updated
 ---
 
-Every WFRC Analytics repository. Search by name, or filter by status, kind and model area.
-
 ::: {.callout-note appearance="simple" collapse=false}
 **Internal** entries are in private repositories. Their links open only for people with WFRC GitHub access.
 :::

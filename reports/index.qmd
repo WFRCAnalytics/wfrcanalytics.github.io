@@ -13,8 +13,6 @@ listing:
   max-description-length: 220
 ---
 
-Estimation, calibration, validation and analysis write-ups behind the models. Live reports are listed first.
-
 ::: {.callout-note appearance="simple" collapse=false}
 **Internal** entries are in private repositories. Their links open only for people with WFRC GitHub access.
 :::

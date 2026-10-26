@@ -5,7 +5,6 @@
   categories:
   - Live
   - Analysis
-  - General
   date: 2026-09-22
 - title: REMM Result Review Tool
   description: This tool is used to help REMM model development. Will be incorporated
@@ -30,7 +29,6 @@
   categories:
   - Live
   - Analysis
-  - General
   date: 2026-10-13
 - title: INP Population Sim
   description: Prepare Input Data for PopulationSim
@@ -55,7 +53,6 @@
   categories:
   - Live
   - Analysis
-  - General
   date: 2026-07-08
 - title: INP College Enrollment
   description: Gathers college enrollment numbers by TAZ for the travel demand model.
@@ -106,7 +103,6 @@
   categories:
   - Live
   - Analysis
-  - General
   date: 2025-11-17
 - title: GEO Analysis Zones
   description: The source of truth for TAZ (and MAZ in the future) used in the Wasatch
@@ -124,7 +120,6 @@
   categories:
   - Repository
   - Analysis
-  - General
   date: 2026-10-08
 - title: ABM INP Microzones
   description: one stop shop for delineating microzones for WFRC models
@@ -132,7 +127,6 @@
   categories:
   - Repository
   - Input data
-  - General
   date: 2026-09-24
 - title: FORECAST Traffic Volume
   description: 'Notebooks and two web apps for traffic volume forecasts: the ART review
@@ -141,11 +135,10 @@
   categories:
   - Repository
   - Analysis
-  - General
   date: 2026-09-16
 - title: INP Work At Home
   description: The purpose of this repository is to calculate the work at home rates
-    (home based jobs as well as telecommuting).  Requires WFRC GitHub access.
+    (home based jobs as well as telecommuting). . Requires WFRC GitHub access.
   path: https://github.com/WFRCAnalytics/TDM-INP-Work-At-Home
   categories:
   - Repository
@@ -166,13 +159,12 @@
   date: 2026-08-17
 - title: RTP Phasing Criteria
   description: A workspace for calculating phasing criteria scores on a project level
-    basis. Active Transportation, Roadway & Transit Requires WFRC GitHub access.
+    basis. Active Transportation, Roadway & Transit. Requires WFRC GitHub access.
   path: https://github.com/WFRCAnalytics/GIS-RTP-Phasing-Criteria
   categories:
   - Repository
   - Internal
   - Analysis
-  - General
   date: 2026-07-23
 - title: GEO True Shape
   description: This repo is for processing True Shape Network out of UGRC Roadway
@@ -198,11 +190,10 @@
   categories:
   - Repository
   - Analysis
-  - General
   date: 2026-07-09
 - title: CAL HBWDest Choice
   description: The purpose of this repository is to calibration and then estimate
-    coefficients/constants for the HBW destination choice model.  Requires WFRC GitHub
+    coefficients/constants for the HBW destination choice model. . Requires WFRC GitHub
     access.
   path: https://github.com/WFRCAnalytics/TDM-CAL-HBWDestChoice
   categories:
@@ -234,7 +225,7 @@
 - title: CAL Friction Factors
   description: This repo contains python scripts used to calibrate the friction factors
     for the WFTDM. It also includes the data munging necessary to produce observed
-    trip length frequency charts.  Requires WFRC GitHub access.
+    trip length frequency charts. . Requires WFRC GitHub access.
   path: https://github.com/WFRCAnalytics/TDM-CAL-Friction-Factors
   categories:
   - Repository
@@ -244,7 +235,7 @@
   date: 2026-01-28
 - title: Job Space Calculation
   description: use county controls, building square feet, and dws to distribute job
-    spaces at a taz level Requires WFRC GitHub access.
+    spaces at a taz level. Requires WFRC GitHub access.
   path: https://github.com/WFRCAnalytics/REMM-Job-Space-Calculation
   categories:
   - Repository
@@ -269,17 +260,15 @@
   - Repository
   - Internal
   - Analysis
-  - General
   date: 2025-12-17
 - title: Housing Within Centers SAP
-  description: Analysis of primary homes created in SAP's since adoption of the plans
+  description: Analysis of primary homes created in SAP's since adoption of the plans.
     Requires WFRC GitHub access.
   path: https://github.com/WFRCAnalytics/Housing-Within-Centers-SAP
   categories:
   - Repository
   - Internal
   - Analysis
-  - General
   date: 2025-12-09
 - title: Parcel Splitting
   description: Parcel splitting step in preparing REMM inputs.
@@ -339,7 +328,6 @@
   categories:
   - Repository
   - Analysis
-  - General
   date: 2025-04-09
 - title: Parking Lots
   description: Exploration of detecting parking lots from imagery with ArcGIS deep
@@ -348,7 +336,6 @@
   categories:
   - Repository
   - Analysis
-  - General
   date: 2025-04-09
 - title: TAZ Grouping Analysis Variables
   description: Create road composition and socioeconomic variables for similar TAZ
@@ -356,7 +343,6 @@
   categories:
   - Repository
   - Analysis
-  - General
   date: 2025-04-09
 - title: EST Trucks Streetlight
   description: Processes and summarizes StreetLight truck data for the model.
@@ -476,7 +462,6 @@
   categories:
   - Repository
   - Analysis
-  - General
   date: 2025-04-04
 - title: ATO Workplace TAZ Based
   description: Code base for calculating traffic analysis zone (TAZ) based workplace
@@ -485,16 +470,14 @@
   categories:
   - Repository
   - Analysis
-  - General
   date: 2025-04-04
 - title: RTP2023 Phasing Criteria
-  description: 2023 WFRC RTP phasing criteria Requires WFRC GitHub access.
+  description: 2023 WFRC RTP phasing criteria. Requires WFRC GitHub access.
   path: https://github.com/WFRCAnalytics/GIS-RTP2023-PhasingCriteria
   categories:
   - Repository
   - Internal
   - Analysis
-  - General
   date: 2025-04-04
 - title: TIP Public Comment Processing
   description: Processes public comments on the Transportation Improvement Program.
@@ -502,7 +485,6 @@
   categories:
   - Repository
   - Analysis
-  - General
   date: 2025-04-04
 - title: DEV Replace Arcpy
   description: Test geoprocessing capabilities and ease of installation of various
@@ -547,7 +529,7 @@
   - TDM
   date: 2025-04-04
 - title: VAL OBS Ridership Comparison
-  description: UTA Boardings and On-Board Survey Data from fall 2019 Requires WFRC
+  description: UTA Boardings and On-Board Survey Data from fall 2019. Requires WFRC
     GitHub access.
   path: https://github.com/WFRCAnalytics/TDM-VAL-OBS-Ridership-Comparison
   categories:
@@ -590,7 +572,6 @@
   categories:
   - Repository
   - Analysis
-  - General
   date: 2023-08-23
 - title: Manage Base Year Data
   description: Workspace to inspect, check and convert base year data into REMM-ready
