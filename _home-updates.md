@@ -5,4 +5,6 @@
 
 :::
 
-[All updates &rarr;](updates/index.qmd)
+::: {.mt-4}
+[All updates](updates/index.qmd){.btn .btn-primary}
+:::

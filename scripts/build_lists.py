@@ -160,7 +160,7 @@ def home_updates():
         for date, title, stem in posts[:4]:
             _, m, d = date.split("-")
             lines += [f"[{months[int(m) - 1]} {d}]{{.wfrc-date}} [{title}](updates/posts/{stem}.qmd)", ""]
-        lines += [":::", "", "[All updates &rarr;](updates/index.qmd)", ""]
+        lines += [":::", "", "::: {.mt-4}", "[All updates](updates/index.qmd){.btn .btn-primary}", ":::", ""]
     (ROOT / "_home-updates.md").write_text(NL.join(lines), encoding="utf-8")
     print(f"home: {len(posts)} published updates")
 

@@ -24,7 +24,9 @@ Explore the travel demand, real-estate market and bike demand models that inform
 
 {{< include _home-featured.md >}}
 
-[Browse all apps and maps &rarr;](explore/index.qmd)
+::: {.mt-4 .mb-5}
+[Browse all apps and maps](explore/index.qmd){.btn .btn-primary}
+:::
 
 {{< include _home-updates.md >}}
 :::
