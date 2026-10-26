@@ -155,6 +155,15 @@ def site_index(catalog):
     print(f"site-index.json: {len(rows)} entries")
 
 
+def pretty_month(date, note=None):
+    """'2025-11' -> 'Nov 2025' (plus an optional note); missing dates show a dash."""
+    if not date:
+        return "&mdash;"
+    months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    year, month = str(date).split("-")[:2]
+    return f"{months[int(month) - 1]} {year}" + (f" ({note.lower()})" if note else "")
+
+
 def release_tables(releases):
     """One markdown table per model, included by the model pages."""
     for key, model in releases.items():
@@ -162,7 +171,7 @@ def release_tables(releases):
         for r in model["releases"]:
             doc = f"[Open]({r['docs-url']}){{target=_blank}}" if r["docs-url"] else "&mdash;"
             rows.append(f"| {str(r['version']).capitalize()} | {r['status'].capitalize()} | "
-                        f"{r['date'] or '&mdash;'} | {doc} |")
+                        f"{pretty_month(r['date'], r.get('note'))} | {doc} |")
         out = ROOT / "models" / f"_releases-{key}.md"
         out.parent.mkdir(exist_ok=True)
         out.write_text(NL.join(rows) + NL, encoding="utf-8")
