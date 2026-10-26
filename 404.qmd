@@ -1,65 +1,176 @@
 ---
-pagetitle: "404 - Page Not Found"
+pagetitle: "404 - Off the map"
+description: "This page is off the map. Here is the nearest station."
 page-layout: full
 toc: false
+title-block-banner: false
+code-copy: false
 ---
 
-```{=html}
-<style>
-.error-404 {
-  text-align: center;
-  padding: 2rem 1rem;
+```{ojs}
+//| echo: false
+//| output: false
+// GitHub Pages serves this page at the URL that failed, so the pathname is the broken address.
+path = decodeURIComponent(location.pathname)
+
+siteIndex = fetch("/assets/data/site-index.json").then(r => r.json())
+
+norm = s => s.toLowerCase().replace(/\.html?$/, "").replace(/\/index$/, "").replace(/^\/+|\/+$/g, "")
+words = s => norm(s).split(/[^a-z0-9]+/).filter(w => w && w !== "index" && w !== "www")
+lev = (a, b) => {
+  const m = Array.from({length: a.length + 1}, (_, i) => [i]);
+  for (let j = 1; j <= b.length; j++) m[0][j] = j;
+  for (let i = 1; i <= a.length; i++)
+    for (let j = 1; j <= b.length; j++)
+      m[i][j] = Math.min(m[i-1][j] + 1, m[i][j-1] + 1, m[i-1][j-1] + (a[i-1] === b[j-1] ? 0 : 1));
+  return m[a.length][b.length];
+}
+sim = (a, b) => (a || b) ? 1 - lev(a, b) / Math.max(a.length, b.length) : 0
+simk = (g, k) => g.length >= 4 && k.includes(g) ? Math.max(sim(g, k), 0.85) : sim(g, k)
+
+scored = {
+  const segs = norm(path).split("/").filter(Boolean);
+  const cands = segs.filter(g => g.length >= 4).length ? segs.filter(g => g.length >= 4) : segs;
+  const first = segs[0] || "";
+  const wanted = new Set(words(path));
+  const rows = siteIndex.map(d => {
+    const keys = [norm(d.title), norm(d.id), norm(new URL(d.url, location.origin).pathname).split("/").pop()];
+    const s = Math.max(...cands.flatMap(g => keys.map(k => simk(g, k) * (g === cands[cands.length - 1] ? 1 : 0.65))), 0);
+    const dw = new Set([...words(d.title), ...words(d.id)]);
+    const overlap = [...wanted].filter(w => dw.has(w)).length / (new Set([...wanted, ...dw]).size || 1);
+    const bonus = first && d.url.startsWith("/" + first + "/") ? 0.15 : 0;
+    const isParent = d.url !== "/" && path.startsWith(d.url) ? -0.08 : 0;
+    return {...d, score: 0.65 * s + 0.2 * overlap + bonus + isParent};
+  }).sort((a, b) => b.score - a.score).slice(0, 5);
+  const u = rows.map(r => 7 * r.score), mx = Math.max(...u);
+  const den = u.reduce((t, x) => t + Math.exp(x - mx), 0);
+  return rows.map((r, i) => ({...r, p: Math.exp(u[i] - mx) / den}));
 }
 
-.error-code {
-  font-size: 8rem;
-  font-weight: 800;
-  line-height: 1;
-  margin: 0;
-  font-family: 'Roboto Condensed', sans-serif;
+// The map's stations are the site's sections. Work out which one is nearest to the best guess.
+stations = [
+  {name: "Home", url: "/"}, {name: "Explore", url: "/explore/"}, {name: "Models", url: "/models/"},
+  {name: "Reports", url: "/reports/"}, {name: "Data", url: "/data/"}, {name: "Code", url: "/code/"},
+  {name: "Updates", url: "/updates/"}, {name: "About", url: "/about.html"}
+]
+stationOf = d => {
+  const byUrl = {"/": "Home", "/explore/": "Explore", "/reports/": "Reports", "/data/": "Data", "/code/": "Code",
+    "/updates/": "Updates", "/about.html": "About", "/contact/": "About", "/license/": "About"};
+  if (d.kind === "Page") return d.url.startsWith("/models/") ? "Models" : (byUrl[d.url] || "Home");
+  if (["App", "Map"].includes(d.kind)) return "Explore";
+  if (d.kind === "Data") return "Data";
+  if (d.kind === "Model") return "Models";
+  if (["Estimation", "Calibration", "Validation", "Input data", "Post-processing", "Scenario", "Geography", "Development", "Analysis"].includes(d.kind)) return "Reports";
+  return "Code";
 }
+targetStation = Math.max(0, stations.findIndex(s => s.name === stationOf(scored[0])))
 
-.error-icon {
-  font-size: 5rem;
-  margin-bottom: 1rem;
-}
-</style>
+legacyTarget = [
+  [/^\/1-tdm\//, "/models/tdm.html", "Travel Demand Model"],
+  [/^\/2-remm\//, "/models/remm.html", "Real-Estate Market Model"],
+  [/^\/3-bdm\//, "/models/bdm.html", "Bike Demand Model"],
+  [/^\/4-tools\//, "/explore/", "Explore"]
+].find(([re]) => re.test(path))
+redirect = (legacyTarget
+  ? {url: legacyTarget[1], name: legacyTarget[2], why: "This page has moved.", seconds: 3}
+  : (scored[0].p > 0.75 && scored[0].score > 0.6 && scored[0].url.startsWith("/")
+      ? {url: scored[0].url, name: scored[0].title, why: "That looks like a typo.", seconds: 6} : null))
+
+reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches
+shortPath = path.length > 34 ? "…" + path.slice(-33) : path
+issueUrl = "https://github.com/WFRCAnalytics/wfrcanalytics.github.io/issues/new?title=" +
+  encodeURIComponent("Broken link: " + path) + "&body=" +
+  encodeURIComponent("Page requested: " + location.href + "\nCame from: " + (document.referrer || "(typed or bookmarked)"))
+lostModule = import("/assets/js/lost-map.js")
 ```
 
-::: {.error-404}
-
-<div class="error-icon">🚧</div>
-
-<h1 class="error-code">404</h1>
-
-## This Path Does Not Exist. {.text-center}
-
-Use the navigation menu above to explore our analytics and modeling documentation.
-
+::: {.column-screen}
+```{ojs}
+//| echo: false
+{
+  const best = stations[targetStation];
+  const root = html`<section class="lost" aria-labelledby="lost-title">
+    <div class="lost-card">
+      <p class="lost-eyebrow">Error 404 · Route not found</p>
+      <h1 id="lost-title">Well, this is <span class="accent">off the map.</span></h1>
+      <p><code class="lost-path">${shortPath}</code> is not on any route we serve. The nearest station to where you were headed is
+        <strong>${best.name}</strong>.</p>
+      <p class="lost-actions">
+        <a class="btn btn-primary" href="${scored[0].url}" target="${scored[0].url.startsWith("http") ? "_blank" : null}">Take me to ${scored[0].title}</a>
+        <a class="btn btn-outline-primary" href="/">Home</a></p>
+      <p class="lost-actions">
+        <button class="btn btn-sm btn-outline-primary" type="button" data-poster>Save this map as an image</button>
+        <a class="btn btn-sm btn-outline-primary" href="${issueUrl}" target="_blank" rel="noopener">Report the broken link</a></p>
+      <p class="lost-note">Every broken address draws its own terrain. This one is yours.</p>
+    </div>
+    <div class="lost-stage"></div>
+  </section>`;
+  const mod = await lostModule;
+  const map = mod.createLostMap({d3, stage: root.querySelector(".lost-stage"), seedText: path, stations, target: targetStation, reduceMotion});
+  root.querySelector("[data-poster]").onclick = async () => {
+    const blob = await map.poster("Off the map: " + shortPath, "Nearest station: " + best.name + " · Wasatch Front Regional Council Analytics");
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob); a.download = "off-the-map.png"; a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+  };
+  invalidation.then(() => map.destroy());
+  return root;
+}
+```
 :::
 
----
+::: {.wfrc-band-alt .column-screen}
 
-::: {.text-center}
-## Still Can't Find What You Need?
+```{ojs}
+//| echo: false
+{
+  if (!redirect) return html``;
+  let left = redirect.seconds;
+  const el = html`<div class="redirect-strip" role="region" aria-label="Automatic redirect">
+    <span class="redirect-text">${redirect.why} Taking you to <strong>${redirect.name}</strong> in <span class="redirect-count" aria-hidden="true">${left}</span> seconds.</span>
+    <a class="btn btn-primary btn-sm" href="${redirect.url}">Go now</a>
+    <button class="btn btn-outline-primary btn-sm" type="button">Stay here</button></div>`;
+  const count = el.querySelector(".redirect-count");
+  const id = setInterval(() => { left -= 1; count.textContent = left; if (left <= 0) location.replace(redirect.url); }, 1000);
+  el.querySelector("button").onclick = () => { clearInterval(id); el.querySelector(".redirect-text").textContent = "Okay, you can stay here and look around."; el.querySelectorAll("a, button").forEach(x => x.remove()); };
+  invalidation.then(() => clearInterval(id));
+  return el;
+}
+```
+
+## Closest destinations
+
+```{ojs}
+//| echo: false
+html`<ol class="suggest">${scored.map((d, i) => html`<li class="${i === 0 ? "top" : ""}">
+  <a href="${d.url}" target="${d.url.startsWith("http") ? "_blank" : null}" rel="${d.url.startsWith("http") ? "noopener" : null}">${d.title}</a>
+  <span class="wfrc-chip">${d.kind}</span>
+  <span class="suggest-p">${Math.round(100 * d.p)}% likely</span>
+</li>`)}</ol>
+<p class="suggest-note">${scored[0].score < 0.4 ? html`<strong>Nothing here is a close match,</strong> so these are only the least unlikely options. ` : ""}Likelihoods come from a quick spelling and keyword match against this site's pages and tools. They are not a forecast.</p>`
+```
+
+## Or search the site
+
+```{ojs}
+//| echo: false
+viewof query = html`<input type="search" class="form-control notfound-search" placeholder="Search tools, models and pages" aria-label="Search tools, models and pages" autocomplete="off">`
+```
+
+```{ojs}
+//| echo: false
+{
+  const q = query.trim().toLowerCase();
+  if (!q) return html`<p class="suggest-note">Type a few letters to see matches.</p>`;
+  const hits = siteIndex.filter(d => (d.title + " " + d.id).toLowerCase().includes(q)).slice(0, 8);
+  if (!hits.length) return html`<p class="suggest-note">Nothing matches “${query}”.</p>`;
+  return html`<ul class="suggest">${hits.map(d => html`<li><a href="${d.url}" target="${d.url.startsWith("http") ? "_blank" : null}" rel="${d.url.startsWith("http") ? "noopener" : null}">${d.title}</a>
+    <span class="wfrc-chip">${d.kind}</span></li>`)}</ul>`;
+}
+```
+
+<noscript>
+**Looking for something?** Try the [home page](/), [Explore](/explore/), [Models](/models/), [Reports](/reports/), [Data](/data/), [Code](/code/) or [Contact](/contact/).
+</noscript>
+
 :::
-
-::: {.grid}
-
-::: {.g-col-12 .g-col-md-6}
-**Search Our Documentation**
-
-Use the search button at the top of the page to find specific content, or try searching on [Google](https://www.google.com/search?q=site%3Awfrcanalytics.github.io){target="_blank"}.
-:::
-
-::: {.g-col-12 .g-col-md-6}
-**Get Support**
-
-- [Contact us](contact/index.qmd) for assistance
-- [Report an issue](https://github.com/WFRCAnalytics/wfrcanalytics.github.io/issues/new){target="_blank"} on GitHub
-- Check our [About](about.qmd) page for more information
-:::
-
-:::
-
----

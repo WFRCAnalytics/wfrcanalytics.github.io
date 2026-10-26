@@ -6,6 +6,7 @@ Run automatically via `project: pre-render` in _quarto.yml, or by hand:
     python scripts/build_lists.py
 """
 from pathlib import Path
+import json
 import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -131,6 +132,29 @@ def home_snippets(catalog, releases):
     print(f"home: {len(facts)} facts, {len(picks)} featured")
 
 
+SITE_PAGES = [  # (title, path) -- the pages every visitor might be looking for
+    ("Home", "/"), ("Explore apps and maps", "/explore/"), ("Models", "/models/"),
+    ("Travel Demand Model", "/models/tdm.html"), ("Real-Estate Market Model", "/models/remm.html"),
+    ("Bike Demand Model", "/models/bdm.html"), ("Reports and methods", "/reports/"), ("Data", "/data/"),
+    ("Code", "/code/"), ("Updates", "/updates/"), ("About", "/about.html"),
+    ("Contact", "/contact/"), ("License", "/license/"),
+]
+
+
+def site_index(catalog):
+    """Small JSON used by the 404 page to suggest where a mistyped URL was meant to go."""
+    rows = [{"title": t, "url": u, "id": u.strip("/") or "home", "kind": "Page"} for t, u in SITE_PAGES]
+    for e in catalog:
+        if not e["include"] or e["internal"]:
+            continue
+        rows.append({"title": e["title"], "url": e.get("url") or e["repo"], "id": e["id"],
+                     "kind": KIND_LABEL[e["kind"]]})
+    out = ROOT / "assets" / "data" / "site-index.json"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(json.dumps(rows, separators=(",", ":")), encoding="utf-8")
+    print(f"site-index.json: {len(rows)} entries")
+
+
 def release_tables(releases):
     """One markdown table per model, included by the model pages."""
     for key, model in releases.items():
@@ -181,6 +205,7 @@ def main():
     releases = yaml.safe_load((ROOT / "releases.yml").read_text(encoding="utf-8"))
     home_snippets(catalog, releases)
     home_updates()
+    site_index(catalog)
     shown = sorted((e for e in catalog if e["include"]), key=sort_key)
     release_tables(releases)
     for page, pred in PAGES.items():

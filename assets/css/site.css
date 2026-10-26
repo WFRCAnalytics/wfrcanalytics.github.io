@@ -123,3 +123,79 @@ body { --wfrc-line: color-mix(in srgb, var(--bs-body-color) 16%, var(--bs-body-b
   background: transparent;
   border-style: dashed;
 }
+
+/* 404 page: suggestion list, search and redirect strip */
+.suggest { list-style: none; padding: 0; margin: 0 0 1rem; }
+.suggest li {
+  display: flex; flex-wrap: wrap; align-items: center; gap: .5rem;
+  padding: .7rem .9rem; margin-bottom: .5rem;
+  background: var(--bs-tertiary-bg, var(--bs-body-bg));
+  border: 1px solid var(--wfrc-line);
+  border-radius: 10px;
+}
+.suggest li.top { border-left: 4px solid #c85327; }
+.suggest a { font-weight: 600; margin-right: auto; }
+.suggest-p { font-size: .8rem; font-variant-numeric: tabular-nums; }
+.suggest-note { font-size: .85rem; }
+.notfound-search { max-width: 36rem; margin-bottom: 1rem; }
+/* On phones the map labels would shrink below readable size; the list underneath carries the same information. */
+@media (max-width: 575px) {
+  .dest-title, .dest-p, .origin-label { display: none; }
+}
+
+/* 404: automatic redirect strip and simulation chart */
+.redirect-strip {
+  display: flex; flex-wrap: wrap; align-items: center; gap: .75rem;
+  padding: .8rem 1rem; margin-bottom: 1.5rem;
+  background: color-mix(in srgb, #febc46 28%, var(--bs-body-bg));
+  border: 1px solid #c28a00;
+  border-left-width: 4px;
+  border-radius: 10px;
+}
+.redirect-text { margin-right: auto; }
+.redirect-count { font-variant-numeric: tabular-nums; font-weight: 700; }
+
+/* 404 alternative "Off the map": generative topo map with the site's sections as transit stations. */
+.lost { position: relative; background: var(--bs-body-bg); }
+.lost-stage { position: relative; height: clamp(440px, 78vh, 780px); overflow: hidden; }
+.lost-canvas { position: absolute; inset: 0; display: block; }
+.lost-layer { position: absolute; inset: 0; pointer-events: none; }
+.lost-layer > * { pointer-events: auto; }
+.station {
+  position: absolute; transform: translate(16px, -50%);
+  font: 600 .85rem var(--bs-headings-font-family);
+  color: var(--bs-body-color); text-decoration: none; white-space: nowrap;
+  background: color-mix(in srgb, var(--bs-body-bg) 82%, transparent);
+  border: 1px solid var(--wfrc-line); border-radius: 999px; padding: .15rem .65rem;
+  backdrop-filter: blur(3px);
+}
+.station:hover, .station:focus-visible { background: var(--bs-body-bg); border-color: #0093c5; }
+.station.dest { background: #febc46; border-color: #c28a00; color: #00253c; font-weight: 700; }
+.pin-label {
+  position: absolute; transform: translate(calc(-100% - 16px), -50%); pointer-events: none !important;
+  font: 700 .8rem var(--bs-headings-font-family); color: #fff;
+  background: #b4461f; border-radius: 999px; padding: .15rem .6rem; white-space: nowrap;
+}
+.lost-card {
+  position: relative; z-index: 2;
+  padding: 1.5rem 20px 1rem;
+}
+.lost-card h1 { font-size: clamp(2rem, 4.5vw, 3.2rem); margin: .25rem 0 .6rem; border: 0; }
+.lost-card .accent { color: #b4461f; }
+body.quarto-dark .lost-card .accent { color: #febc46; }
+.lost-eyebrow { font: 700 .8rem var(--bs-headings-font-family); letter-spacing: .08em; text-transform: uppercase; margin: 0; }
+.lost-path { word-break: break-all; }
+.lost-actions { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0 0 .6rem; }
+.lost-note { font-size: .85rem; margin: 0; }
+@media (min-width: 992px) {
+  .lost-card {
+    position: absolute; z-index: 3;
+    left: max(20px, calc((100vw - 1100px) / 2)); top: 50%; transform: translateY(-50%);
+    width: min(28rem, 42vw);
+    background: color-mix(in srgb, var(--bs-body-bg) 86%, transparent);
+    border: 1px solid var(--wfrc-line); border-radius: 14px;
+    padding: 1.6rem 1.8rem; backdrop-filter: blur(8px);
+    box-shadow: 0 10px 40px rgba(0, 57, 91, .18);
+  }
+  .lost-stage { height: clamp(560px, 82vh, 800px); }
+}

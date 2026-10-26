@@ -4,6 +4,8 @@ project:
   pre-render: scripts/build_lists.py
   resources:
     - _extensions/wfrc-brand/assets/cards/*.svg
+    - assets/data/site-index.json
+    - assets/js/lost-map.js
   brand: _extensions/wfrc-brand/brand.yml
 
 metadata-files:
