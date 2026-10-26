@@ -245,3 +245,7 @@ body .suggest li {
   background: var(--wfrc-card-bg);
   border-color: var(--wfrc-card-line);
 }
+
+/* The repo-actions dropdown (GitHub icon) is the last item in the navbar, so open it right-aligned
+   like the other navbar dropdowns; left-aligned it runs off the edge of the screen. */
+.quarto-navbar-tools .dropdown-menu { --bs-position: end; right: 0; left: auto; }
