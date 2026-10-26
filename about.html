@@ -494,16 +494,32 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="partners-and-data-sources" class="level2">
 <h2 class="anchored" data-anchor-id="partners-and-data-sources">Partners and data sources</h2>
-<p>Our work depends on these partners and data providers:</p>
-<ul>
-<li><a href="https://magutah.gov/" target="_blank">Mountainland Association of Governments (MAG)</a>, co-developer of the Travel Demand Model</li>
-<li><a href="https://www.udot.utah.gov/" target="_blank">Utah Department of Transportation (UDOT)</a></li>
-<li><a href="https://www.rideuta.com/" target="_blank">Utah Transit Authority (UTA)</a></li>
-<li><a href="https://gardner.utah.edu/" target="_blank">Kem C. Gardner Policy Institute, University of Utah</a></li>
-<li><a href="https://jobs.utah.gov/" target="_blank">Utah Department of Workforce Services (DWS)</a></li>
-<li><a href="https://gis.utah.gov/" target="_blank">Utah Geospatial Resource Center (UGRC)</a></li>
-<li><a href="https://www.census.gov/" target="_blank">U.S. Census Bureau</a></li>
-</ul>
+<style>
+.partner-grid{display:grid;grid-template-columns:repeat(var(--cols),1fr);gap:1rem;margin:1rem 0 2rem}
+@media (max-width:768px){.partner-grid{grid-template-columns:repeat(auto-fill,minmax(12rem,1fr))}}
+.partner-grid>p{display:contents}
+.partner-card{display:flex;flex-direction:column;gap:.5rem;padding:.75rem;background:color-mix(in srgb,var(--bs-body-color) 8%,var(--bs-body-bg));border:1px solid rgba(128,128,128,.35);border-radius:.5rem;text-decoration:none;color:inherit}
+.partner-card:hover{border-color:currentColor}
+.partner-logo{display:flex;align-items:center;justify-content:center;height:4rem;padding:.5rem;border-radius:.375rem;background:#fff}
+.partner-logo.dark{background:#2b2b2b}
+.partner-logo img{max-width:100%;max-height:100%;object-fit:contain}
+.partner-name{font-weight:600}
+.partner-note{font-size:.875rem;opacity:.75}
+</style>
+<section id="partners" class="level3">
+<h3 class="anchored" data-anchor-id="partners">Partners</h3>
+<p>We work with these agencies on models and tools.</p>
+<div class="partner-grid" style="--cols:3">
+<p><a class="partner-card" href="https://magutah.gov/" target="_blank" rel="noopener"><span class="partner-logo"><img src="assets/partners/mag.svg" alt="" loading="lazy"></span><span class="partner-name">Mountainland Association of Governments (MAG)</span><span class="partner-note">Co-developer of the Travel Demand Model</span></a> <a class="partner-card" href="https://www.udot.utah.gov/" target="_blank" rel="noopener"><span class="partner-logo"><img src="assets/partners/udot-mark.png" alt="" loading="lazy"></span><span class="partner-name">Utah Department of Transportation (UDOT)</span></a> <a class="partner-card" href="https://www.rideuta.com/" target="_blank" rel="noopener"><span class="partner-logo"><img src="assets/partners/uta.svg" alt="" loading="lazy"></span><span class="partner-name">Utah Transit Authority (UTA)</span></a></p>
+</div>
+</section>
+<section id="data-sources" class="level3">
+<h3 class="anchored" data-anchor-id="data-sources">Data sources</h3>
+<p>Our models and tools draw on data from these providers.</p>
+<div class="partner-grid" style="--cols:4">
+<p><a class="partner-card" href="https://gardner.utah.edu/" target="_blank" rel="noopener"><span class="partner-logo dark"><img src="assets/partners/gardner.webp" alt="" loading="lazy"></span><span class="partner-name">Kem C. Gardner Policy Institute, University of Utah</span></a> <a class="partner-card" href="https://gis.utah.gov/" target="_blank" rel="noopener"><span class="partner-logo"><img src="assets/partners/ugrc.png" alt="" loading="lazy"></span><span class="partner-name">Utah Geospatial Resource Center (UGRC)</span></a> <a class="partner-card" href="https://www.census.gov/" target="_blank" rel="noopener"><span class="partner-logo"><img src="assets/partners/census.svg" alt="" loading="lazy"></span><span class="partner-name">U.S. Census Bureau</span></a> <a class="partner-card" href="https://jobs.utah.gov/" target="_blank" rel="noopener"><span class="partner-logo"><img src="assets/partners/dws.png" alt="" loading="lazy"></span><span class="partner-name">Utah Department of Workforce Services (DWS)</span></a></p>
+</div>
+</section>
 </section>
 <section id="get-in-touch" class="level2">
 <h2 class="anchored" data-anchor-id="get-in-touch">Get in touch</h2>

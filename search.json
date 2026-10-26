@@ -39,7 +39,7 @@
     "href": "about.html#partners-and-data-sources",
     "title": "About WFRC Analytics",
     "section": "Partners and data sources",
-    "text": "Partners and data sources\nOur work depends on these partners and data providers:\n\nMountainland Association of Governments (MAG), co-developer of the Travel Demand Model\nUtah Department of Transportation (UDOT)\nUtah Transit Authority (UTA)\nKem C. Gardner Policy Institute, University of Utah\nUtah Department of Workforce Services (DWS)\nUtah Geospatial Resource Center (UGRC)\nU.S. Census Bureau"
+    "text": "Partners and data sources\n\n\nPartners\nWe work with these agencies on models and tools.\n\nMountainland Association of Governments (MAG)Co-developer of the Travel Demand Model Utah Department of Transportation (UDOT) Utah Transit Authority (UTA)\n\n\n\nData sources\nOur models and tools draw on data from these providers.\n\nKem C. Gardner Policy Institute, University of Utah Utah Geospatial Resource Center (UGRC) U.S. Census Bureau Utah Department of Workforce Services (DWS)"
   },
   {
     "objectID": "about.html#get-in-touch",
@@ -67,7 +67,7 @@
     "href": "models/tdm.html#documentation",
     "title": "Travel Demand Model",
     "section": "Documentation",
-    "text": "Documentation\nDocumentation of record lives on the WFRC site, with a page for every version.\n\nDocumentation for all versions\nVersion 9.x documents: a What’s New document describing changes since the last release, and a Model Validation Report covering trip generation, distribution, mode choice and highway assignment.\nVersion 10 documents: a Data Dictionary and a Model Validation Report."
+    "text": "Documentation\nDocumentation of record lives on the WFRC site, with a page for every version.\n\n Documentation for all versions\nVersion 9.x documents: a What’s New document describing changes since the last release, and a Model Validation Report covering trip generation, distribution, mode choice and highway assignment.\nVersion 10 documents: a Data Dictionary and a Model Validation Report."
   },
   {
     "objectID": "models/tdm.html#releases",
@@ -123,7 +123,7 @@
     "href": "models/get-the-model.html#getting-the-travel-demand-model",
     "title": "Get the model",
     "section": "Getting the Travel Demand Model",
-    "text": "Getting the Travel Demand Model\n\n\n1. Read the release letter\nEveryone who uses the model agrees to the release letter. In short:\n\nYou are responsible for how you apply the model and interpret its results.\nContact WFRC or MAG staff before applying it, especially a new release, to discuss your planned use, method and whether you have the current version. Staff can revoke access if this is skipped.\nIf you modify the model, keep a record of the changes and say so when you share results.\nPlease give feedback on how the model performs, and ask for enhancements.\nDo not pass the model on. Send others to request it from WFRC or MAG, so they get the current version and join the Model User Group email list.\n\nThe full letter is at the top of the model repository’s page, which you can read once you have access.\n\n\n2. Ask for access\nEmail WFRC. WFRC’s page says to contact the data scientist who handles model requests:\n\nSuzie Swim, WFRC Data Scientist: suzie.swim@wfrc.utah.gov\n\nTell them who you are, what you plan to use the model for, and your GitHub username. WFRC and MAG (which co-develops the model) both support model users. If you are unsure whom to write to, use the contact page.\nYou will also need a GitHub account. The model lives in a private repository, so WFRC grants access to it. The repository’s documentation says users must have a GitHub account and may lose repository access if they do not follow the release letter.\n\n\n3. Download a release\nOnce you have access, open the model repository’s Releases page and choose a version. Under Assets, download Source code. You can instead fork the repository and clone it to your computer.\nVersions listed there: 10.0.0 (beta), 9.2.0, 9.1.1, 9.1.0, 9.0.2, 9.0.1, 9.0.0 and 8.3.2. For a study that must follow adopted plans, use the current release (9.2.0) unless WFRC staff advise otherwise.\n\n\n4. Read the documentation\nDocumentation for every version is on the WFRC documentation site: for example, version 9.2.0 has a What’s New document and a Model Validation Report. Version 10 documentation is under development.\nSee the release table for the version history and dates.\n\n\n5. Ask questions\nThe repository has two channels. Use the right one so the team can respond quickly:\n\nDiscussions for general questions, ideas and troubleshooting.\nIssues for actionable items such as bug fixes and feature requests.\n\nFor anything else, email WFRC or MAG staff directly.\n\n\nWhat is in the model\nWFRC describes it as a modified four-step, trip-based model with a travel-time feedback loop. It forecasts traffic volumes and transit ridership through 2050. The release includes networks for base, existing and future years, reflecting funded Transportation Improvement Program projects and the adopted Regional Transportation Plans (both fiscally constrained and needs-based), with matching socioeconomic projections in the WFRC area."
+    "text": "Getting the Travel Demand Model\n\n\n1. Read the release letter\nEveryone who uses the model agrees to the release letter. In short:\n\nYou are responsible for how you apply the model and interpret its results.\nContact WFRC or MAG staff before applying it, especially a new release, to discuss your planned use, method and whether you have the current version. Staff can revoke access if this is skipped.\nIf you modify the model, keep a record of the changes and say so when you share results.\nPlease give feedback on how the model performs, and ask for enhancements.\nDo not pass the model on. Send others to request it from WFRC or MAG, so they get the current version and join the Model User Group email list.\n\nThe full letter is at the top of the model repository’s page, which you can read once you have access.\n\n\n2. Ask for access\nEmail WFRC. WFRC’s page says to contact the data scientist who handles model requests:\n\n Suzie Swim, WFRC Data Scientist: suzie.swim@wfrc.utah.gov\n\nTell them who you are, what you plan to use the model for, and your GitHub username. WFRC and MAG (which co-develops the model) both support model users. If you are unsure whom to write to, use the contact page.\nYou will also need a GitHub account. The model lives in a private repository, so WFRC grants access to it. The repository’s documentation says users must have a GitHub account and may lose repository access if they do not follow the release letter.\n\n\n3. Download a release\nOnce you have access, open the model repository’s Releases page and choose a version. Under Assets, download Source code. You can instead fork the repository and clone it to your computer.\nVersions listed there: 10.0.0 (beta), 9.2.0, 9.1.1, 9.1.0, 9.0.2, 9.0.1, 9.0.0 and 8.3.2. For a study that must follow adopted plans, use the current release (9.2.0) unless WFRC staff advise otherwise.\n\n\n4. Read the documentation\nDocumentation for every version is on the WFRC documentation site: for example, version 9.2.0 has a What’s New document and a Model Validation Report. Version 10 documentation is under development.\nSee the release table for the version history and dates.\n\n\n5. Ask questions\nThe repository has two channels. Use the right one so the team can respond quickly:\n\nDiscussions for general questions, ideas and troubleshooting.\nIssues for actionable items such as bug fixes and feature requests.\n\nFor anything else, email WFRC or MAG staff directly.\n\n\nWhat is in the model\nWFRC describes it as a modified four-step, trip-based model with a travel-time feedback loop. It forecasts traffic volumes and transit ridership through 2050. The release includes networks for base, existing and future years, reflecting funded Transportation Improvement Program projects and the adopted Regional Transportation Plans (both fiscally constrained and needs-based), with matching socioeconomic projections in the WFRC area."
   },
   {
     "objectID": "models/get-the-model.html#data-you-can-download-without-asking",
@@ -172,7 +172,7 @@
     "href": "models/bdm.html#documentation",
     "title": "Bike Demand Model",
     "section": "Documentation",
-    "text": "Documentation\n\nSource code and instructions\nModel design specification (PDF, dated January 28, 2021), in the repository’s Model_Design folder\nDesign meeting notes\nBike model coefficients tracker"
+    "text": "Documentation\n\n Source code and instructions\n Model design specification (PDF, dated January 28, 2021), in the repository’s Model_Design folder\n Design meeting notes\n Bike model coefficients tracker"
   },
   {
     "objectID": "models/bdm.html#related-bike-work",
@@ -193,7 +193,7 @@
     "href": "tools/APP-Project-Scoresheet.html",
     "title": "Proposal Evaluation Scoresheet",
     "section": "",
-    "text": "Open the tool Source code"
+    "text": "Open the tool  Source code"
   },
   {
     "objectID": "tools/APP-Project-Scoresheet.html#what-it-answers",
@@ -235,14 +235,14 @@
     "href": "tools/APP-Project-Scoresheet.html#questions-or-problems",
     "title": "Proposal Evaluation Scoresheet",
     "section": "Questions or problems?",
-    "text": "Questions or problems?\nEmail analytics@wfrc.utah.gov or open an issue on the source repository. See also all apps and maps."
+    "text": "Questions or problems?\n Email analytics@wfrc.utah.gov or  open an issue on the source repository. See also all apps and maps."
   },
   {
     "objectID": "tools/APP-wftdm-dashboard.html",
     "href": "tools/APP-wftdm-dashboard.html",
     "title": "TDM Calibration Dashboard",
     "section": "",
-    "text": "Open the tool Source code"
+    "text": "Open the tool  Source code"
   },
   {
     "objectID": "tools/APP-wftdm-dashboard.html#what-it-answers",
@@ -284,14 +284,14 @@
     "href": "tools/APP-wftdm-dashboard.html#questions-or-problems",
     "title": "TDM Calibration Dashboard",
     "section": "Questions or problems?",
-    "text": "Questions or problems?\nEmail analytics@wfrc.utah.gov or open an issue on the source repository. See also all apps and maps."
+    "text": "Questions or problems?\n Email analytics@wfrc.utah.gov or  open an issue on the source repository. See also all apps and maps."
   },
   {
     "objectID": "tools/WF-TDM-Calibration.html",
     "href": "tools/WF-TDM-Calibration.html",
     "title": "TDM Calibration Reports",
     "section": "",
-    "text": "Open the tool Source code"
+    "text": "Open the tool  Source code"
   },
   {
     "objectID": "tools/WF-TDM-Calibration.html#what-it-answers",
@@ -333,14 +333,14 @@
     "href": "tools/WF-TDM-Calibration.html#questions-or-problems",
     "title": "TDM Calibration Reports",
     "section": "Questions or problems?",
-    "text": "Questions or problems?\nEmail analytics@wfrc.utah.gov or open an issue on the source repository. See also all apps and maps."
+    "text": "Questions or problems?\n Email analytics@wfrc.utah.gov or  open an issue on the source repository. See also all apps and maps."
   },
   {
     "objectID": "tools/WF-TDM-Runs.html",
     "href": "tools/WF-TDM-Runs.html",
     "title": "TDM Run Results",
     "section": "",
-    "text": "Open the tool Source code"
+    "text": "Open the tool  Source code"
   },
   {
     "objectID": "tools/WF-TDM-Runs.html#what-it-answers",
@@ -382,14 +382,14 @@
     "href": "tools/WF-TDM-Runs.html#questions-or-problems",
     "title": "TDM Run Results",
     "section": "Questions or problems?",
-    "text": "Questions or problems?\nEmail analytics@wfrc.utah.gov or open an issue on the source repository. See also all apps and maps."
+    "text": "Questions or problems?\n Email analytics@wfrc.utah.gov or  open an issue on the source repository. See also all apps and maps."
   },
   {
     "objectID": "tools/GIS_SE2025_H3.html",
     "href": "tools/GIS_SE2025_H3.html",
     "title": "SE 2025 Urban Form D Variables",
     "section": "",
-    "text": "Open the tool Source code"
+    "text": "Open the tool  Source code"
   },
   {
     "objectID": "tools/GIS_SE2025_H3.html#what-it-answers",
@@ -431,14 +431,14 @@
     "href": "tools/GIS_SE2025_H3.html#questions-or-problems",
     "title": "SE 2025 Urban Form D Variables",
     "section": "Questions or problems?",
-    "text": "Questions or problems?\nEmail analytics@wfrc.utah.gov or open an issue on the source repository. See also all apps and maps."
+    "text": "Questions or problems?\n Email analytics@wfrc.utah.gov or  open an issue on the source repository. See also all apps and maps."
   },
   {
     "objectID": "tools/MAP-Statewide-ATO-VMT.html",
     "href": "tools/MAP-Statewide-ATO-VMT.html",
     "title": "Statewide ATO and VMT Map",
     "section": "",
-    "text": "Open the tool Source code"
+    "text": "Open the tool  Source code"
   },
   {
     "objectID": "tools/MAP-Statewide-ATO-VMT.html#what-it-answers",
@@ -480,7 +480,7 @@
     "href": "tools/MAP-Statewide-ATO-VMT.html#questions-or-problems",
     "title": "Statewide ATO and VMT Map",
     "section": "Questions or problems?",
-    "text": "Questions or problems?\nEmail analytics@wfrc.utah.gov or open an issue on the source repository. See also all apps and maps."
+    "text": "Questions or problems?\n Email analytics@wfrc.utah.gov or  open an issue on the source repository. See also all apps and maps."
   },
   {
     "objectID": "index.html",
@@ -515,7 +515,7 @@
     "href": "index.html#our-models",
     "title": "The data and models behind Wasatch Front planning.",
     "section": "Our models",
-    "text": "Our models\n\n\nTravel Demand Model\nForecasts travel on the region’s roads and transit. Documentation of record for every version lives on the WFRC site.\nOverview Documentation\n\n\nReal-Estate Market Model\nAn UrbanSim-based simulation of where people and jobs may locate, used for the region’s socioeconomic forecasts.\nOverview Source\n\n\nBike Demand Model\nEstimates bicycle and micromobility demand to guide active transportation investments.\nOverview Source"
+    "text": "Our models\n\n\nTravel Demand Model\nForecasts travel on the region’s roads and transit. Documentation of record for every version lives on the WFRC site.\nOverview Documentation\n\n\nReal-Estate Market Model\nAn UrbanSim-based simulation of where people and jobs may locate, used for the region’s socioeconomic forecasts.\n Overview  Source\n\n\nBike Demand Model\nEstimates bicycle and micromobility demand to guide active transportation investments.\n Overview  Source"
   },
   {
     "objectID": "index.html#find-your-way-around",
@@ -529,7 +529,7 @@
     "href": "contact/index.html",
     "title": "Contact",
     "section": "",
-    "text": "Questions about the Travel Demand Model, Real-Estate Market Model or Bike Demand Model, data requests, or help applying our tools to a planning study? Reach the Analytics team directly."
+    "text": "Questions about the Travel Demand Model, Real-Estate Market Model or Bike Demand Model, data requests, or help applying our tools to a planning study? Reach the Analytics team directly.\nanalytics@wfrc.utah.gov\n 41 North Rio Grande St. Suite 103, Salt Lake City, UT 84101\n TTY: 711"
   },
   {
     "objectID": "contact/index.html#found-a-problem-with-a-tool-or-this-site",
@@ -550,7 +550,7 @@
     "href": "tools/MAP-Housing-ATO-Calculator-Updated.html",
     "title": "Housing ATO Calculator",
     "section": "",
-    "text": "Open the tool Source code"
+    "text": "Open the tool  Source code"
   },
   {
     "objectID": "tools/MAP-Housing-ATO-Calculator-Updated.html#what-it-answers",
@@ -592,14 +592,14 @@
     "href": "tools/MAP-Housing-ATO-Calculator-Updated.html#questions-or-problems",
     "title": "Housing ATO Calculator",
     "section": "Questions or problems?",
-    "text": "Questions or problems?\nEmail analytics@wfrc.utah.gov or open an issue on the source repository. See also all apps and maps."
+    "text": "Questions or problems?\n Email analytics@wfrc.utah.gov or  open an issue on the source repository. See also all apps and maps."
   },
   {
     "objectID": "tools/REMM-Result-Review-Tool.html",
     "href": "tools/REMM-Result-Review-Tool.html",
     "title": "REMM Result Review Tool",
     "section": "",
-    "text": "Open the tool Source code"
+    "text": "Open the tool  Source code"
   },
   {
     "objectID": "tools/REMM-Result-Review-Tool.html#what-it-answers",
@@ -641,14 +641,14 @@
     "href": "tools/REMM-Result-Review-Tool.html#questions-or-problems",
     "title": "REMM Result Review Tool",
     "section": "Questions or problems?",
-    "text": "Questions or problems?\nEmail analytics@wfrc.utah.gov or open an issue on the source repository. See also all apps and maps."
+    "text": "Questions or problems?\n Email analytics@wfrc.utah.gov or  open an issue on the source repository. See also all apps and maps."
   },
   {
     "objectID": "tools/APP-WFRC-Commute-Patterns.html",
     "href": "tools/APP-WFRC-Commute-Patterns.html",
     "title": "Commute Patterns Map",
     "section": "",
-    "text": "Open the tool Source code"
+    "text": "Open the tool  Source code"
   },
   {
     "objectID": "tools/APP-WFRC-Commute-Patterns.html#what-it-answers",
@@ -690,14 +690,14 @@
     "href": "tools/APP-WFRC-Commute-Patterns.html#questions-or-problems",
     "title": "Commute Patterns Map",
     "section": "Questions or problems?",
-    "text": "Questions or problems?\nEmail analytics@wfrc.utah.gov or open an issue on the source repository. See also all apps and maps."
+    "text": "Questions or problems?\n Email analytics@wfrc.utah.gov or  open an issue on the source repository. See also all apps and maps."
   },
   {
     "objectID": "tools/vizTool.html",
     "href": "tools/vizTool.html",
     "title": "vizTool",
     "section": "",
-    "text": "Open the tool Source code"
+    "text": "Open the tool  Source code"
   },
   {
     "objectID": "tools/vizTool.html#what-it-answers",
@@ -739,14 +739,14 @@
     "href": "tools/vizTool.html#questions-or-problems",
     "title": "vizTool",
     "section": "Questions or problems?",
-    "text": "Questions or problems?\nEmail analytics@wfrc.utah.gov or open an issue on the source repository. See also all apps and maps."
+    "text": "Questions or problems?\n Email analytics@wfrc.utah.gov or  open an issue on the source repository. See also all apps and maps."
   },
   {
     "objectID": "tools/APP-Commute-Explorer.html",
     "href": "tools/APP-Commute-Explorer.html",
     "title": "Commute Flow Explorer",
     "section": "",
-    "text": "Open the tool Source code"
+    "text": "Open the tool  Source code"
   },
   {
     "objectID": "tools/APP-Commute-Explorer.html#what-it-answers",
@@ -788,7 +788,7 @@
     "href": "tools/APP-Commute-Explorer.html#questions-or-problems",
     "title": "Commute Flow Explorer",
     "section": "Questions or problems?",
-    "text": "Questions or problems?\nEmail analytics@wfrc.utah.gov or open an issue on the source repository. See also all apps and maps."
+    "text": "Questions or problems?\n Email analytics@wfrc.utah.gov or  open an issue on the source repository. See also all apps and maps."
   },
   {
     "objectID": "reports/index.html",
@@ -872,7 +872,7 @@
     "href": "models/remm.html#documentation-and-code",
     "title": "Real-Estate Market Model",
     "section": "Documentation and code",
-    "text": "Documentation and code\n\nModel source code (REMM-v3.0)\nModel documentation. The model authors note it still needs updating.\nFull installation instructions\nWFRC’s UrbanSim fork, based on UrbanSim by Paul Waddell. Questions about UrbanSim itself go to the upstream project."
+    "text": "Documentation and code\n\n Model source code (REMM-v3.0)\n Model documentation. The model authors note it still needs updating.\n Full installation instructions\n WFRC’s UrbanSim fork, based on UrbanSim by Paul Waddell. Questions about UrbanSim itself go to the upstream project."
   },
   {
     "objectID": "models/remm.html#supporting-tools-and-analyses",
