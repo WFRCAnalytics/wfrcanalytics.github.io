@@ -153,7 +153,7 @@ SITE_PAGES = [  # (title, path) -- the pages every visitor might be looking for
     ("Travel Demand Model", "/models/tdm.html"), ("Real-Estate Market Model", "/models/remm.html"),
     ("Bike Demand Model", "/models/bdm.html"), ("Get the model", "/models/get-the-model.html"), ("Reports and methods", "/reports/"), ("Data", "/data/"),
     ("Code", "/code/"), ("Updates", "/updates/"), ("About", "/about.html"),
-    ("Contact", "/contact/"), ("License", "/license/"),
+    ("Contact", "/contact/"), ("Terms of use", "/terms/"),
 ]
 
 

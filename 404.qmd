@@ -55,7 +55,7 @@ stations = [
 ]
 stationOf = d => {
   const byUrl = {"/": "Home", "/explore/": "Explore", "/reports/": "Reports", "/data/": "Data", "/code/": "Code",
-    "/updates/": "Updates", "/about.html": "About", "/contact/": "About", "/license/": "About"};
+    "/updates/": "Updates", "/about.html": "About", "/contact/": "About", "/terms/": "About"};
   if (d.kind === "Page") return d.url.startsWith("/models/") ? "Models" : (byUrl[d.url] || "Home");
   if (["App", "Map"].includes(d.kind)) return "Explore";
   if (d.kind === "Data") return "Data";

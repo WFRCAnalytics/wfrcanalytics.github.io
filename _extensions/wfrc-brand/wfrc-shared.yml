@@ -70,10 +70,10 @@ website:
 
   # Footer — all three columns are org-wide defaults.
   # Right column links are site-relative: every site needs contact/index.qmd and
-  # license/index.qmd (templates in _extensions/wfrc-brand/templates/). Local previews
+  # terms/index.qmd (templates in _extensions/wfrc-brand/templates/). Local previews
   # then stay local instead of jumping to the live site.
   page-footer:
-    left: "© 2025 [Wasatch Front Regional Council](https://wfrc.utah.gov/)"
+    left: "© {{< year >}} [Wasatch Front Regional Council](https://wfrc.utah.gov/)"
     center:
       - icon: github
         href: https://github.com/WFRCAnalytics/
@@ -103,9 +103,9 @@ website:
       - text: Contact
         aria-label: Contact
         href: contact/index.qmd
-      - text: License
-        aria-label: License
-        href: license/index.qmd
+      - text: Terms of use
+        aria-label: Terms of use
+        href: terms/index.qmd
 
 # ── HTML format defaults ──────────────────────────────────────────────────────
 # These live here (not only in _extension.yml) because Quarto applies

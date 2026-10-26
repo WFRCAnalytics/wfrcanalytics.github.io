@@ -1,0 +1,52 @@
+---
+title: Terms of use
+pagetitle: Terms of use
+description: "This site's material is for public use. Data from other organizations stays under its original terms."
+toc: false
+page-layout: article
+---
+
+<!-- Template from wfrc-brand. Copy to terms/index.qmd; the shared footer links here. This wording is a draft: have WFRC communications or legal confirm it before publishing. -->
+
+The Wasatch Front Regional Council (WFRC) is a public agency. This site and the tools on it are published for public use, and no license or fee is attached to what the team produces. Data from other organizations is different: it keeps its original terms.
+
+## Material made by [team name]
+
+You may read, share, link to and build on the pages, charts, maps and apps this team created. There is no license to request and no fee. Because WFRC is a public agency, its data and methods must not be misrepresented, so reuse comes with three conditions:
+
+1. **Credit the work and link to the source.** For example: *Wasatch Front Regional Council. (2026). [Tool name] [Online tool]. https://example.org/tool/*
+
+2. **If you modify, adapt or build on our work, you must say clearly what you changed.** Describe the changes to the data, the method, the settings or the presentation, and name who made them. A changed version must never be presented as WFRC's own. For example: *"Based on WFRC's [Tool name] (2026). Modified by [organization]: [what changed]."*
+
+3. **Do not imply that WFRC endorses your version, your conclusions or your product.** Do not use the WFRC name or logo in a way that suggests it does.
+
+These conditions apply to results from our tools and models as well as to the pages and maps themselves.
+
+## Data from other sources
+
+Many tools combine WFRC's work with data from other organizations. **That data keeps its original copyright and terms, and you must follow them if you reuse it.** Check the provider before you republish, redistribute or build a product on it.
+
+| Source | Used for |
+|---|---|
+| [Example data provider](https://example.org/) | Replace with what this site uses the data for |
+| [Another data provider](https://example.org/) | Replace with what this site uses the data for |
+
+## Models
+
+<!-- Delete this section if the site has no models. -->
+
+Describe how models are shared, for example by request under a release letter, and link to that page.
+
+## Source code
+
+<!-- Delete this section if the site has no public source code. -->
+
+The source code for this site is in its GitHub repository. Libraries and data used inside it keep their own licenses and terms.
+
+## No warranty
+
+Tools and data are provided in good faith as best-effort planning products. You are responsible for how you apply them and interpret their results.
+
+## Questions
+
+If you are unsure whether you may reuse something, [contact the team](../contact/index.qmd).
