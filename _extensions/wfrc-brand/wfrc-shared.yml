@@ -1,6 +1,6 @@
 website:
   # Paths in this file must include the _extensions folder path
-  # favicon: "_extensions/WFRCAnalytics/wfrc-brand/assets/logo/abbreviated/WFRC_logo_abbreviated_color_transparent.png"
+  # favicon: "_extensions/wfrc-brand/assets/logo/abbreviated/WFRC_logo_abbreviated_color_transparent.png"
 
   twitter-card:
     creator: "@wasatchcouncil"
@@ -69,8 +69,9 @@ website:
             target: _blank
 
   # Footer — all three columns are org-wide defaults.
-  # Right column uses absolute URLs to the main analytics site so Contact
-  # and License work from any downstream project without needing local pages.
+  # Right column links are site-relative: every site needs contact/index.qmd and
+  # license/index.qmd (templates in _extensions/wfrc-brand/templates/). Local previews
+  # then stay local instead of jumping to the live site.
   page-footer:
     left: "© 2025 [Wasatch Front Regional Council](https://wfrc.utah.gov/)"
     center:
@@ -101,12 +102,10 @@ website:
     right:
       - text: Contact
         aria-label: Contact
-        href: https://wfrcanalytics.github.io/contact/
-        target: _blank
+        href: contact/index.qmd
       - text: License
         aria-label: License
-        href: https://wfrcanalytics.github.io/license/
-        target: _blank
+        href: license/index.qmd
 
 # ── HTML format defaults ──────────────────────────────────────────────────────
 # These live here (not only in _extension.yml) because Quarto applies
@@ -132,6 +131,9 @@ format:
       light: _extensions/wfrc-brand/assets/theme/wfrc-light.theme
       dark: _extensions/wfrc-brand/assets/theme/wfrc-dark.theme
     respect-user-color-scheme: true
+    link-external-newwindow: true
+    # Accessibility fixes: decorative listing banners, toggle name, Plot/callout ARIA, scroll regions.
+    include-after-body: _extensions/wfrc-brand/assets/js/a11y-fixes.html
     axe: true
     page-layout: full
     toc: true

@@ -8,7 +8,7 @@
   - Analysis
   - REMM
   date: 2026-09-11
-  image: ../assets/cards/brick.svg
+  image: ../_extensions/wfrc-brand/assets/cards/brick.svg
 - title: REMM 3.0 model
   description: Real Estate Market Model (Wasatch Front Implementation of Urbansim)
   path: https://github.com/WFRCAnalytics/REMM-v3.0
@@ -17,7 +17,7 @@
   - Model
   - REMM
   date: 2026-09-15
-  image: ../assets/cards/mid.svg
+  image: ../_extensions/wfrc-brand/assets/cards/mid.svg
 - title: Job Space Calculation
   description: use county controls, building square feet, and dws to distribute job
     spaces at a taz level. Requires WFRC GitHub access.
@@ -28,7 +28,7 @@
   - Analysis
   - REMM
   date: 2026-01-27
-  image: ../assets/cards/brick.svg
+  image: ../_extensions/wfrc-brand/assets/cards/brick.svg
 - title: Parcel Splitting
   description: Parcel splitting step in preparing REMM inputs.
   path: https://github.com/WFRCAnalytics/REMM-Parcel-Splitting
@@ -37,7 +37,7 @@
   - Analysis
   - REMM
   date: 2025-09-22
-  image: ../assets/cards/brick.svg
+  image: ../_extensions/wfrc-brand/assets/cards/brick.svg
 - title: WF Model Area Splits
   description: Forecast percentage of HH, pop, and employment within REMM modeling
     area vs within the UDOT space
@@ -47,7 +47,7 @@
   - Analysis
   - REMM
   date: 2025-07-23
-  image: ../assets/cards/brick.svg
+  image: ../_extensions/wfrc-brand/assets/cards/brick.svg
 - title: SE Descriptive Statistics
   description: This notebook calculates descriptive statistics (including the average)  of
     SE values of multiple REMM runs
@@ -57,7 +57,7 @@
   - Analysis
   - REMM
   date: 2024-08-13
-  image: ../assets/cards/brick.svg
+  image: ../_extensions/wfrc-brand/assets/cards/brick.svg
 - title: Process SE Output For Web
   description: Process TAZ level REMM output to various TAZ 9.0.0 geographies for
     SE Data Reviewer Web App
@@ -67,7 +67,7 @@
   - Analysis
   - REMM
   date: 2023-10-12
-  image: ../assets/cards/brick.svg
+  image: ../_extensions/wfrc-brand/assets/cards/brick.svg
 - title: REMM 1.0 model (previous)
   description: Real Estate Market Model - Version 1
   path: https://github.com/WFRCAnalytics/REMM-v1.0
@@ -76,7 +76,7 @@
   - Model
   - REMM
   date: 2023-06-22
-  image: ../assets/cards/mid.svg
+  image: ../_extensions/wfrc-brand/assets/cards/mid.svg
 - title: REMM 2.0 model (previous)
   description: Real Estate Market Model - Version 2
   path: https://github.com/WFRCAnalytics/REMM-v2.0
@@ -85,7 +85,7 @@
   - Model
   - REMM
   date: 2023-06-22
-  image: ../assets/cards/mid.svg
+  image: ../_extensions/wfrc-brand/assets/cards/mid.svg
 - title: Manage Base Year Data
   description: Workspace to inspect, check and convert base year data into REMM-ready
     inputs. Requires WFRC GitHub access.
@@ -96,7 +96,7 @@
   - Analysis
   - REMM
   date: 2023-06-07
-  image: ../assets/cards/brick.svg
+  image: ../_extensions/wfrc-brand/assets/cards/brick.svg
 - title: SE Comparison Tools
   description: REMM-SE-Comparison-Tools
   path: https://github.com/WFRCAnalytics/REMM-SE-Comparison-Tools
@@ -105,7 +105,7 @@
   - Analysis
   - REMM
   date: 2023-04-25
-  image: ../assets/cards/brick.svg
+  image: ../_extensions/wfrc-brand/assets/cards/brick.svg
 - title: Analysis Tools
   description: Notebooks and scripts for various REMM-related tasks
   path: https://github.com/WFRCAnalytics/REMM-Analysis-Tools
@@ -114,7 +114,7 @@
   - Analysis
   - REMM
   date: 2023-01-27
-  image: ../assets/cards/brick.svg
+  image: ../_extensions/wfrc-brand/assets/cards/brick.svg
 - title: TAZ SE Review For MB
   description: REMM TAZ-level SE review environment
   path: https://github.com/WFRCAnalytics/REMM-TAZ-SE-Review-For-MB
@@ -123,7 +123,7 @@
   - Analysis
   - REMM
   date: 2022-10-11
-  image: ../assets/cards/brick.svg
+  image: ../_extensions/wfrc-brand/assets/cards/brick.svg
 - title: Random Forest Variable Analysis
   description: Random forest analysis to select the top variables for REMM estimation.
   path: https://github.com/WFRCAnalytics/REMM-RandomForest-Variable-Analysis
@@ -132,7 +132,7 @@
   - Analysis
   - REMM
   date: 2022-07-07
-  image: ../assets/cards/brick.svg
+  image: ../_extensions/wfrc-brand/assets/cards/brick.svg
 - title: Process Progression Metrics For Web
   description: Process progression metrics output for use in the web app
   path: https://github.com/WFRCAnalytics/REMM-Process-Progression-Metrics-For-Web
@@ -141,7 +141,7 @@
   - Analysis
   - REMM
   date: 2022-06-14
-  image: ../assets/cards/brick.svg
+  image: ../_extensions/wfrc-brand/assets/cards/brick.svg
 - title: Input Data Prep 2019
   description: REMM-Input-Data-Prep-2019
   path: https://github.com/WFRCAnalytics/REMM-Input-Data-Prep-2019
@@ -150,7 +150,7 @@
   - Analysis
   - REMM
   date: 2022-05-31
-  image: ../assets/cards/brick.svg
+  image: ../_extensions/wfrc-brand/assets/cards/brick.svg
 - title: Animate Modeling Results
   description: Process modeling results and animate as a gif file
   path: https://github.com/WFRCAnalytics/REMM-Animate-Modeling-Results
@@ -159,7 +159,7 @@
   - Analysis
   - REMM
   date: 2022-05-07
-  image: ../assets/cards/brick.svg
+  image: ../_extensions/wfrc-brand/assets/cards/brick.svg
 - title: REMM 2 (2019, previous)
   description: Version of REMM ported straight from urbansim
   path: https://github.com/WFRCAnalytics/REMM2-2019
@@ -168,7 +168,7 @@
   - Model
   - REMM
   date: 2022-04-25
-  image: ../assets/cards/mid.svg
+  image: ../_extensions/wfrc-brand/assets/cards/mid.svg
 - title: REMM 1.0 original (previous)
   description: REMM version 1.0
   path: https://github.com/WFRCAnalytics/REMMOneDotOh
@@ -177,4 +177,4 @@
   - Model
   - REMM
   date: 2020-04-20
-  image: ../assets/cards/mid.svg
+  image: ../_extensions/wfrc-brand/assets/cards/mid.svg

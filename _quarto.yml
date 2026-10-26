@@ -2,6 +2,8 @@ project:
   type: website
   output-dir: docs
   pre-render: scripts/build_lists.py
+  resources:
+    - _extensions/wfrc-brand/assets/cards/*.svg
   brand: _extensions/wfrc-brand/brand.yml
 
 metadata-files:
@@ -60,12 +62,6 @@ website:
         text: Updates
       - href: about.qmd
         text: About
-
-format:
-  html:
-    css: assets/css/site.css
-    link-external-newwindow: true
-    include-after-body: _includes/decorative-images.html
 
 # freeze computational output
 # (see https://quarto.org/docs/projects/code-execution.html#freeze)

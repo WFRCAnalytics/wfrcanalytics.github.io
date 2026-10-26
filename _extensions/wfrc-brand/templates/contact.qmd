@@ -1,0 +1,18 @@
+---
+title: Contact
+pagetitle: Contact
+toc: false
+page-layout: article
+---
+
+<!-- Template from wfrc-brand. Copy to contact/index.qmd; the shared footer links here. -->
+
+Questions, data requests, or help applying our tools? Reach the Analytics team directly.
+
+- [analytics@wfrc.utah.gov](mailto:analytics@wfrc.utah.gov)
+- [41 North Rio Grande St. Suite 103, Salt Lake City, UT 84101](https://maps.app.goo.gl/c8oi9w1AtNwUbxUt8)
+- TTY: 711
+
+## Found a problem with this site?
+
+Open an issue in this site's GitHub repository (use the GitHub menu in the navigation bar). For general information about WFRC programs and services, visit [wfrc.utah.gov](https://wfrc.utah.gov).

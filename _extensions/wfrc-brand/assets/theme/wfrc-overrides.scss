@@ -166,8 +166,13 @@ hr { border-color: $wfrc-line; opacity: 1; }
   padding: 2px 10px;
   text-decoration: none;
 
-  &:hover { background: $wfrc-action; border-color: $wfrc-action; color: $wfrc-action-ink; }
+  // Hover changes the border only: a filled hover would put the (fixed) link text on the action color.
+  &:hover { border-color: $wfrc-action; }
 }
+// Category chips sit on tinted surfaces; Quarto's muted grey and its opacity both fail AA.
+body .listing-category,
+body .quarto-category > a { color: var(--bs-body-color) !important; }
+body .quarto-category { opacity: 1 !important; }
 
 // ── 5  Cards ─────────────────────────────────────────────────────────────────
 .card {
@@ -190,26 +195,91 @@ hr { border-color: $wfrc-line; opacity: 1; }
   .card-img-top { border-radius: 0; }
   .listing-date, .listing-author, .listing-reading-time { color: $wfrc-ink-2; }
 }
-.quarto-grid-item:hover { border-color: $wfrc-action; }
+// Listing cards (type: grid): tinted surface so they separate from the page in both modes,
+// banner image on top, lift on hover. See "Card banners" in the README.
+.quarto-grid-item.card {
+  background: $wfrc-surface-2;
+  border-color: $wfrc-line;
+  overflow: hidden;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+
+  &:hover {
+    border-color: $wfrc-action;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 57, 91, 0.18);
+    @if $wfrc-is-dark { box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5); }
+  }
+  .card-img-top { object-fit: cover; border-radius: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .quarto-grid-item.card { transition: none; &:hover { transform: none; } }
+}
+// Table listings: titles inherit the heading scale; keep them at body size.
+.quarto-listing-table .listing-title,
+.quarto-listing-table h3,
+.quarto-listing-table td a { font-size: 1rem; line-height: 1.4; margin: 0; }
 
 // ── 6  Callouts: left bar, tinted title strip, Quarto icons ──────────────────
+// Spec: 4px bar in the type color; fill is a 9% tint over the page, the title strip 16%;
+// 8px radius on the right, square on the left; the icon is a filled circle in the type color
+// with the glyph cut out in the page color. Glyphs are alpha masks, so one rule colors all five.
+$wfrc-callout-glyphs: (
+  note:      "%3Ccircle cx='8' cy='3.6' r='1.5'/%3E%3Crect x='6.7' y='6.6' width='2.6' height='7' rx='1.1'/%3E",
+  tip:       "%3Cpath d='M2.6 8.6l3.7 3.7 7.1-8' fill='none' stroke='%23000' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E",
+  important: "%3Crect x='6.7' y='2' width='2.6' height='7.6' rx='1.2'/%3E%3Ccircle cx='8' cy='12.7' r='1.5'/%3E",
+  warning:   "%3Cpath d='M8 2.2L14.8 13.8H1.2z' stroke='%23000' stroke-width='1.2' stroke-linejoin='round'/%3E",
+  caution:   "%3Cpath d='M3.6 3.6l8.8 8.8M12.4 3.6l-8.8 8.8' fill='none' stroke='%23000' stroke-width='2.4' stroke-linecap='round'/%3E"
+);
 .callout {
-  border-radius: 0 8px 8px 0;
   box-shadow: none;
-  font-size: 0.95rem;
-  background: $wfrc-bg;
+  font-size: 0.93rem;
+  overflow: hidden;
+  margin: 1.25rem 0;
 
-  .callout-title-container { font-family: $headings-font-family; font-weight: 700; color: $wfrc-ink; }
+  .callout-title-container { font-family: $headings-font-family; font-weight: 700; font-size: 0.9rem; color: $wfrc-ink; }
   .callout-body-container { color: $wfrc-ink; }
   .callout-body-container > :last-child { margin-bottom: 0; }
 }
 .callout.callout-style-default {
+  border-left-width: 4px;
+  border-radius: 0 8px 8px 0;
+
+  > .callout-header { padding: 8px 14px; align-items: center; color: $wfrc-ink; }
+  .callout-icon-container { padding: 0 0.6em 0 0; display: flex; align-items: center; }
+  .callout-icon {
+    display: inline-grid;
+    place-items: center;
+    width: 1.35em;
+    height: 1.35em;
+    border-radius: 50%;
+  }
+  .callout-icon::before {
+    background-image: none !important;
+    width: 0.85em;
+    height: 0.85em;
+    -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+            mask-position: center;
+    -webkit-mask-size: contain;
+            mask-size: contain;
+  }
+  .callout-body-container.callout-body { padding: 10px 14px; }
+  &.callout-titled > .callout-header + .callout-collapse > .callout-body-container,
+  &.callout-titled > .callout-body-container { padding-top: 10px; }
+
   @each $kind, $color in (note: $wfrc-c-note, tip: $wfrc-c-tip, important: $wfrc-c-important, warning: $wfrc-c-warning, caution: $wfrc-c-caution) {
     &.callout-#{$kind} {
       border-left-color: $color;
-      background: mix($color, $wfrc-bg, 7%);
+      background: mix($color, $wfrc-bg, 9%);
 
-      > .callout-header { background: mix($color, $wfrc-bg, 18%); color: $wfrc-ink; }
+      > .callout-header { background: mix($color, $wfrc-bg, 16%); }
+      .callout-icon { background: $color; }
+      .callout-icon::before {
+        background-color: $wfrc-bg;
+        -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E#{map-get($wfrc-callout-glyphs, $kind)}%3C/svg%3E");
+                mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E#{map-get($wfrc-callout-glyphs, $kind)}%3C/svg%3E");
+      }
     }
   }
 }

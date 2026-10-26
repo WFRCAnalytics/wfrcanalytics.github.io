@@ -7,7 +7,7 @@
   - Live
   - App
   date: 2026-10-23
-  image: ../assets/cards/navy.svg
+  image: ../_extensions/wfrc-brand/assets/cards/navy.svg
 - title: Housing ATO Calculator
   description: The Housing ATO Calculator can assist housing and land use planning
     efforts. This tool is intended to be used as a conversation starter, a helpful
@@ -19,7 +19,7 @@
   - Live
   - Map
   date: 2026-09-23
-  image: ../assets/cards/teal.svg
+  image: ../_extensions/wfrc-brand/assets/cards/teal.svg
 - title: Commute Patterns Map
   description: An interactive WebAssembly-powered map for exploring commute flow patterns
     across the Wasatch Front region, built on open-source tools and hosted on GitHub
@@ -29,7 +29,7 @@
   - Live
   - App
   date: 2026-09-22
-  image: ../assets/cards/navy.svg
+  image: ../_extensions/wfrc-brand/assets/cards/navy.svg
 - title: Proposal Evaluation Scoresheet
   description: Browser-based tool for scoring and ranking proposals with weighted
     criteria, Excel reviewer round trips and a PDF report; no backend or accounts.
@@ -38,7 +38,7 @@
   - Live
   - App
   date: 2026-09-18
-  image: ../assets/cards/navy.svg
+  image: ../_extensions/wfrc-brand/assets/cards/navy.svg
 - title: Statewide ATO and VMT Map
   description: This repo brings together the ATO and VMT data from all the models
     in the state and creates a simple web map to view the data.
@@ -47,7 +47,7 @@
   - Live
   - Map
   date: 2026-08-14
-  image: ../assets/cards/teal.svg
+  image: ../_extensions/wfrc-brand/assets/cards/teal.svg
 - title: Commute Flow Explorer
   description: Interactive browser-based commuter flow explorer for the Wasatch Front
     — DuckDB-WASM, H3, Flowmap.gl, MapLibre
@@ -56,7 +56,7 @@
   - Live
   - App
   date: 2026-06-30
-  image: ../assets/cards/navy.svg
+  image: ../_extensions/wfrc-brand/assets/cards/navy.svg
 - title: Utah HTS Visualization Dashboard
   description: A 'shiny' dashboard for exploring and reporting results from the Utah
     Household Travel Survey (HTS). Provides interactive crosstabs, maps, and summary
@@ -68,7 +68,7 @@
   - Internal
   - App
   date: 2026-10-08
-  image: ../assets/cards/navy.svg
+  image: ../_extensions/wfrc-brand/assets/cards/navy.svg
 - title: GPI Forecast Analysis 2025
   description: Analysis of Kem C. Gardner Policy Institute Population, Household and
     Jobs Forecasts. Requires WFRC GitHub access.
@@ -78,7 +78,7 @@
   - Internal
   - App
   date: 2025-12-22
-  image: ../assets/cards/navy.svg
+  image: ../_extensions/wfrc-brand/assets/cards/navy.svg
 - title: Housing Unit Inventory Explorer
   description: Housing Inventory Explorer developed using the ArcGIS Maps SDK for
     JavaScript
@@ -87,7 +87,7 @@
   - Live
   - Map
   date: 2025-06-06
-  image: ../assets/cards/teal.svg
+  image: ../_extensions/wfrc-brand/assets/cards/teal.svg
 - title: vizTool
   description: 'Maps and charts for exploring travel demand model results: roadways,
     transit, mode share, socioeconomics and access to jobs.'
@@ -96,7 +96,7 @@
   - Repository
   - App
   date: 2026-08-27
-  image: ../assets/cards/navy.svg
+  image: ../_extensions/wfrc-brand/assets/cards/navy.svg
 - title: Benefit Cost Analysis
   description: This tool calculates the Benefit-Cost Ratio (BCR) for planned projects
     by leveraging WF-TDM outputs. Requires WFRC GitHub access.
@@ -106,7 +106,7 @@
   - Internal
   - App
   date: 2026-09-29
-  image: ../assets/cards/navy.svg
+  image: ../_extensions/wfrc-brand/assets/cards/navy.svg
 - title: ATO Interactive
   description: Interactive WebAssembly map of job and household accessibility (Access
     to Opportunity) across the Wasatch Front, from the travel demand model. Requires
@@ -117,7 +117,7 @@
   - Internal
   - App
   date: 2026-09-08
-  image: ../assets/cards/navy.svg
+  image: ../_extensions/wfrc-brand/assets/cards/navy.svg
 - title: 3D Households Jobs Forecast
   description: A quick web app showcasing WFRC's hh and job forecast in a 2D/3D viewer
   path: https://github.com/WFRCAnalytics/APP-3D-Households-Jobs-Forecast
@@ -125,7 +125,7 @@
   - Repository
   - App
   date: 2026-04-14
-  image: ../assets/cards/navy.svg
+  image: ../_extensions/wfrc-brand/assets/cards/navy.svg
 - title: Socioeconomic Control Totals
   description: An R-Shiny Application to visualize the 2027-2055 Socioeconomic Control
     Totals. Requires WFRC GitHub access.
@@ -135,7 +135,7 @@
   - Internal
   - App
   date: 2025-12-22
-  image: ../assets/cards/navy.svg
+  image: ../_extensions/wfrc-brand/assets/cards/navy.svg
 - title: Census LEHD Commute Patterns
   description: Summarizes Census LEHD commute data into geodatabases for the Commuter
     Flow Map.
@@ -144,7 +144,7 @@
   - Archived
   - Map
   date: 2025-11-10
-  image: ../assets/cards/teal.svg
+  image: ../_extensions/wfrc-brand/assets/cards/teal.svg
 - title: Housing ATO Calculator
   description: The Housing ATO Calculator can assist housing and land use planning
     efforts. This tool is intended to be used as a conversation starter, a helpful
@@ -156,7 +156,7 @@
   - Archived
   - Map
   date: 2025-11-05
-  image: ../assets/cards/teal.svg
+  image: ../_extensions/wfrc-brand/assets/cards/teal.svg
 - title: Locus OD Data Explorer
   description: Explorer for Locus origin-destination data. Requires WFRC GitHub access.
   path: https://github.com/WFRCAnalytics/MAP-Locus-OD-Data-Explorer
@@ -165,7 +165,7 @@
   - Internal
   - Map
   date: 2025-10-08
-  image: ../assets/cards/teal.svg
+  image: ../_extensions/wfrc-brand/assets/cards/teal.svg
 - title: HTS Trip Purpose Shiny
   description: R-Shiny app showing trips generated by purpose from the 2023 Household
     Travel Survey, by travel mode, vehicles and workers.
@@ -174,7 +174,7 @@
   - Repository
   - App
   date: 2025-09-24
-  image: ../assets/cards/navy.svg
+  image: ../_extensions/wfrc-brand/assets/cards/navy.svg
 - title: Housing ATO Calculator Weber
   description: 'Housing Location Explorer for Weber County: weight what matters locally
     to see access-based housing opportunities.'
@@ -183,7 +183,7 @@
   - Repository
   - Map
   date: 2025-09-22
-  image: ../assets/cards/teal.svg
+  image: ../_extensions/wfrc-brand/assets/cards/teal.svg
 - title: ATO
   description: Web mapping application for Access to Opportunities metrics
   path: https://github.com/WFRCAnalytics/MAP-ATO
@@ -191,7 +191,7 @@
   - Repository
   - Map
   date: 2025-04-08
-  image: ../assets/cards/teal.svg
+  image: ../_extensions/wfrc-brand/assets/cards/teal.svg
 - title: Small Districts OD
   description: Post-processing of origin and destination data from StreetLight and
     preparing data for web app
@@ -200,7 +200,7 @@
   - Repository
   - Map
   date: 2025-04-08
-  image: ../assets/cards/teal.svg
+  image: ../_extensions/wfrc-brand/assets/cards/teal.svg
 - title: Special Generators
   description: Origin-destination data for special-generator TAZs by season and time
     of day, from StreetLight, with a map viewer.
@@ -209,7 +209,7 @@
   - Repository
   - Map
   date: 2025-04-08
-  image: ../assets/cards/teal.svg
+  image: ../_extensions/wfrc-brand/assets/cards/teal.svg
 - title: HTS Trip Length Shiny
   description: R-Shiny app showing trip length distributions from the 2023 Household
     Travel Survey by workers, vehicles, mode and trip purpose.
@@ -218,7 +218,7 @@
   - Repository
   - App
   date: 2025-04-07
-  image: ../assets/cards/navy.svg
+  image: ../_extensions/wfrc-brand/assets/cards/navy.svg
 - title: HTS Trip Length Shiny 2012
   description: R-Shiny app showing trip length distributions from the 2012 Household
     Travel Survey by workers, vehicles, mode and trip purpose.
@@ -227,7 +227,7 @@
   - Repository
   - App
   date: 2025-04-07
-  image: ../assets/cards/navy.svg
+  image: ../_extensions/wfrc-brand/assets/cards/navy.svg
 - title: Congestion Forecast
   description: Map of factored volume-to-capacity ratios showing potentially congested
     areas under future scenarios.
@@ -236,7 +236,7 @@
   - Repository
   - Map
   date: 2025-04-07
-  image: ../assets/cards/teal.svg
+  image: ../_extensions/wfrc-brand/assets/cards/teal.svg
 - title: Environmental Resiliency
   description: Map evaluating how the 2023-2050 Regional Transportation Plan overlaps
     social and natural resources.
@@ -245,7 +245,7 @@
   - Repository
   - Map
   date: 2025-04-07
-  image: ../assets/cards/teal.svg
+  image: ../_extensions/wfrc-brand/assets/cards/teal.svg
 - title: Major Transit Investment Corridors
   description: Map of existing and planned corridors that qualify as Major Transit
     Investment Corridors under Utah law.
@@ -254,7 +254,7 @@
   - Repository
   - Map
   date: 2025-04-07
-  image: ../assets/cards/teal.svg
+  image: ../_extensions/wfrc-brand/assets/cards/teal.svg
 - title: Equity Focus Areas
   description: R-based mapping scripts for determining Equity Focus Areas, plus other
     basic mapping utilities.
@@ -263,7 +263,7 @@
   - Repository
   - App
   date: 2025-04-04
-  image: ../assets/cards/navy.svg
+  image: ../_extensions/wfrc-brand/assets/cards/navy.svg
 - title: Household Job Forecast
   description: Contains socioeconomic forecasts for the 2023 RTP
   path: https://github.com/WFRCAnalytics/MAP-Household-Job-Forecast
@@ -271,7 +271,7 @@
   - Repository
   - Map
   date: 2025-04-04
-  image: ../assets/cards/teal.svg
+  image: ../_extensions/wfrc-brand/assets/cards/teal.svg
 - title: Statewide HH Job Forecast
   description: Statewide-HH-Job-Forecast-Map
   path: https://github.com/WFRCAnalytics/MAP-Statewide-HH-Job-Forecast
@@ -279,7 +279,7 @@
   - Repository
   - Map
   date: 2025-04-04
-  image: ../assets/cards/teal.svg
+  image: ../_extensions/wfrc-brand/assets/cards/teal.svg
 - title: Utah Household Job Forecast
   description: Utah-Household-Job-Forecast-Map
   path: https://github.com/WFRCAnalytics/MAP-Utah-Household-Job-Forecast
@@ -287,7 +287,7 @@
   - Repository
   - Map
   date: 2025-04-04
-  image: ../assets/cards/teal.svg
+  image: ../_extensions/wfrc-brand/assets/cards/teal.svg
 - title: Unified Plan Tools Page
   description: Mobile-friendly landing page of maps and tools for the Unified Plan;
     no longer in use and kept for reference.
@@ -296,7 +296,7 @@
   - Repository
   - App
   date: 2025-04-01
-  image: ../assets/cards/navy.svg
+  image: ../_extensions/wfrc-brand/assets/cards/navy.svg
 - title: Workshop Sketch
   description: Template web app for sketching points, lines and polygons on a map
     during workshops.
@@ -305,4 +305,4 @@
   - Repository
   - Map
   date: 2024-10-22
-  image: ../assets/cards/teal.svg
+  image: ../_extensions/wfrc-brand/assets/cards/teal.svg
