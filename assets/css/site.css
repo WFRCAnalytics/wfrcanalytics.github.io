@@ -65,3 +65,12 @@
   .feature-card { transition: none; }
   .feature-card:hover { transform: none; }
 }
+
+/* Outline buttons on the tinted card surface need the stronger link color to pass AA contrast. */
+.feature-actions .btn-outline-primary {
+  --bs-btn-color: var(--bs-link-color);
+  --bs-btn-border-color: var(--bs-link-color);
+  --bs-btn-hover-bg: var(--bs-link-color);
+  --bs-btn-hover-border-color: var(--bs-link-color);
+  --bs-btn-hover-color: var(--bs-body-bg);
+}
