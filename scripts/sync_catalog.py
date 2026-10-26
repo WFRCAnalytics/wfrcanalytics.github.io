@@ -22,17 +22,18 @@ ORG = "WFRCAnalytics"
 SKIP = {".github", "wfrcanalytics.github.io", "wfrc-brand"}
 HEADER = """# WFRC Analytics catalog -- source of truth for Explore, Reports, Data, Code pages.
 # Machine-owned (scripts/sync_catalog.py): internal, last-push, status, url.
-# Hand-owned: title, description, kind, area, featured, include, review, live-url, no-shot, shot-click, shot-wait.
+# Hand-owned: title, description, kind, area, featured, include, review, live-url, no-shot, shot-click, shot-wait, shot-url.
 # no-shot: true keeps the brand banner instead of a screenshot (for sites that need a sign-in, say).
 # shot-click: CSS selector of a button to click before the screenshot (a splash screen the script cannot dismiss itself).
 # shot-wait: milliseconds to wait before the screenshot, for apps that load slowly.
+# shot-url: photograph this address instead of url (when the official page wraps the app in a frame).
 # live-url: a live site that GitHub does not know about (for example one hosted on wfrc.utah.gov).
 #   The sync checks it is reachable and copies it to url; otherwise url comes from the repo's
 #   homepage setting or its GitHub Pages site.
 # include: false hides an entry; review: new means a human has not curated it yet.
 """
 FIELDS = ["id", "title", "description", "kind", "area", "status", "internal", "repo",
-          "live-url", "no-shot", "shot-click", "shot-wait", "url", "featured", "include", "last-push", "review"]
+          "live-url", "no-shot", "shot-click", "shot-wait", "shot-url", "url", "featured", "include", "last-push", "review"]
 
 KIND_BY_TDM = {"EST": "estimation", "CAL": "calibration", "VAL": "validation", "INP": "input",
                "PP": "post-process", "SCN": "scenario", "GEO": "geography", "DEV": "development"}

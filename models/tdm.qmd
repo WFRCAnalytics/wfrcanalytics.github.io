@@ -50,7 +50,7 @@ Documentation of record lives on the WFRC site, with a page for every version.
 
 ## Getting the model
 
-Model files are shared through a private GitHub repository. Before applying the model, please contact WFRC or MAG staff to discuss your intended use and make sure you have the current release. Access requests and questions go through the team on the [contact page](../contact/index.qmd). The documentation site lists the staff contacts for model access.
+Model files are shared by request through a private GitHub repository, after you read the release letter and talk to WFRC or MAG staff about your planned use. The [Get the model](get-the-model.qmd) guide walks through it step by step.
 
 ## Reproducible runs and calibration
 

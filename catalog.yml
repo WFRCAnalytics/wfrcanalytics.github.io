@@ -1,6 +1,10 @@
 # WFRC Analytics catalog -- source of truth for Explore, Reports, Data, Code pages.
 # Machine-owned (scripts/sync_catalog.py): internal, last-push, status, url.
-# Hand-owned: title, description, kind, area, featured, include, review, live-url.
+# Hand-owned: title, description, kind, area, featured, include, review, live-url, no-shot, shot-click, shot-wait, shot-url.
+# no-shot: true keeps the brand banner instead of a screenshot (for sites that need a sign-in, say).
+# shot-click: CSS selector of a button to click before the screenshot (a splash screen the script cannot dismiss itself).
+# shot-wait: milliseconds to wait before the screenshot, for apps that load slowly.
+# shot-url: photograph this address instead of url (when the official page wraps the app in a frame).
 # live-url: a live site that GitHub does not know about (for example one hosted on wfrc.utah.gov).
 #   The sync checks it is reachable and copies it to url; otherwise url comes from the repo's
 #   homepage setting or its GitHub Pages site.
@@ -176,7 +180,8 @@
   status: live
   internal: false
   repo: https://github.com/WFRCAnalytics/APP-WFRC-Commute-Patterns
-  url: https://wfrcanalytics.github.io/APP-WFRC-Commute-Patterns/
+  live-url: https://wfrc.utah.gov/maps/regional-commuter-flows/
+  url: https://wfrc.utah.gov/maps/regional-commuter-flows/
   featured: true
   include: true
   last-push: '2026-09-22'
@@ -208,7 +213,7 @@
   review: ok
 - id: ARCHIVE-Housing-Inventory-Metrics
   title: Housing Inventory Metrics
-  description: Archived housing inventory metrics workspace.
+  description: Archived notebook summarizing the Salt Lake County housing inventory (March 2021).
   kind: archive
   area: general
   status: archived
@@ -217,7 +222,7 @@
   featured: false
   include: false
   last-push: '2021-03-13'
-  review: inferred-from-name
+  review: ok
 - id: ARCHIVE-Misc
   title: Misc
   description: Miscellaneous scripts for data processing, organization, etc.
@@ -751,7 +756,7 @@
   review: ok
 - id: DEMO-OpenPathsCube-Conversion
   title: Open Paths Cube Conversion
-  description: Demo of converting OpenPaths and Cube model data.
+  description: Experiments converting the v9.2.0 travel demand model to the OpenPaths Cube platform, including network comparison and QA/QC notebooks.
   kind: demo
   area: general
   status: repo-only
@@ -760,7 +765,7 @@
   featured: false
   include: false
   last-push: '2026-05-13'
-  review: inferred-from-name
+  review: ok
 - id: DEMO-quarto-tdm-report
   title: quarto tdm report
   description: 'This repo provides an environment to experiment with the post TDM results report developed by Quarto. '
@@ -922,7 +927,7 @@
   review: ok
 - id: GIS-TIP-Public-Comment-Processing
   title: TIP Public Comment Processing
-  description: Processes public comments on the Transportation Improvement Program.
+  description: Joins Transportation Improvement Program project layers with the public comments received on them.
   kind: analysis
   area: general
   status: repo-only
@@ -931,7 +936,7 @@
   featured: false
   include: true
   last-push: '2025-04-04'
-  review: inferred-from-name
+  review: ok
 - id: GIS_OpportunityZones_InfoSheets
   title: Opportunity Zones Info Sheets
   description: Land Use and Transportation Information sheet for All Census Tracts in Eligible Opportunity Zones 2.0 List in Utah
@@ -1067,7 +1072,9 @@
   status: live
   internal: false
   repo: https://github.com/WFRCAnalytics/MAP-Housing-ATO-Calculator-Updated
-  url: https://wfrcanalytics.github.io/MAP-Housing-ATO-Calculator-Updated/
+  live-url: https://wfrc.utah.gov/housing-ato-calculator-map/
+  shot-url: https://wfrcanalytics.github.io/MAP-Housing-ATO-Calculator-Updated/
+  url: https://wfrc.utah.gov/housing-ato-calculator-map/
   featured: true
   include: true
   last-push: '2026-09-23'
@@ -1101,7 +1108,7 @@
   review: ok
 - id: MAP-Locus-OD-Data-Explorer
   title: Locus OD Data Explorer
-  description: Explorer for Locus origin-destination data.
+  description: 'Viewers for Locus origin-destination data: personal vehicle trips (including by quarter), trucks, and external-to-external trucks for the statewide model.'
   kind: map
   area: general
   status: repo-only
@@ -1110,7 +1117,7 @@
   featured: false
   include: true
   last-push: '2025-10-08'
-  review: inferred-from-name
+  review: ok
 - id: MAP-Major-Transit-Investment-Corridors
   title: Major Transit Investment Corridors
   description: Map of existing and planned corridors that qualify as Major Transit Investment Corridors under Utah law.
@@ -1283,7 +1290,7 @@
   review: drafted
 - id: REMM-Parcel-Splitting
   title: Parcel Splitting
-  description: Parcel splitting step in preparing REMM inputs.
+  description: Notebook that splits parcels into smaller units for use in REMM inputs.
   kind: analysis
   area: remm
   status: repo-only
@@ -1292,7 +1299,7 @@
   featured: false
   include: true
   last-push: '2025-09-22'
-  review: inferred-from-name
+  review: ok
 - id: REMM-Process-Progression-Metrics-For-Web
   title: Process Progression Metrics For Web
   description: Process progression metrics output for use in the web app
@@ -1500,7 +1507,7 @@
   review: ok
 - id: TDM-CAL-Mode-Choice
   title: CAL Mode Choice
-  description: Mode choice calibration for the travel demand model.
+  description: Mode choice calibration for the travel demand model, including commuter rail (CRT) distance groups and vehicle ownership categories.
   kind: calibration
   area: tdm
   status: repo-only
@@ -1509,10 +1516,10 @@
   featured: false
   include: true
   last-push: '2026-04-22'
-  review: inferred-from-name
+  review: ok
 - id: TDM-DEV-E2-CRT-Improvements
   title: DEV E2 CRT Improvements
-  description: Development work on E2 and CRT improvements to the travel demand model.
+  description: 'Analysis for improving the model''s commuter rail (CRT) component: boardings, drive-access distance, distance frequency and station-to-station pairs, checked against observed data.'
   kind: development
   area: tdm
   status: repo-only
@@ -1521,7 +1528,7 @@
   featured: false
   include: true
   last-push: '2025-05-02'
-  review: inferred-from-name
+  review: ok
 - id: TDM-DEV-Replace-Arcpy
   title: DEV Replace Arcpy
   description: Test geoprocessing capabilities and ease of installation of various open source geospatial libraries
@@ -1599,7 +1606,7 @@
   review: drafted
 - id: TDM-EST-TAZ-Median-Income
   title: EST TAZ Median Income
-  description: Estimates median household income by TAZ for the travel demand model.
+  description: Calculates median household income by traffic analysis zone (TAZ) and for the region, for the travel demand model.
   kind: estimation
   area: tdm
   status: live
@@ -1609,7 +1616,7 @@
   featured: false
   include: true
   last-push: '2026-04-22'
-  review: inferred-from-name
+  review: ok
 - id: TDM-EST-Trucks-Streetlight
   title: EST Trucks Streetlight
   description: Processes and summarizes StreetLight truck data for the model.
@@ -1833,7 +1840,7 @@
   review: ok
 - id: TDM-PP-ATO-Big5
   title: PP ATO Big5
-  description: Post-processing of Access to Opportunity results.
+  description: Aggregates Access to Opportunity results to the Big 5 geographies and converts them to a file geodatabase.
   kind: post-process
   area: tdm
   status: repo-only
@@ -1842,7 +1849,7 @@
   featured: false
   include: true
   last-push: '2025-08-08'
-  review: inferred-from-name
+  review: ok
 - id: TDM-PP-Average-Commute-Times
   title: PP Average Commute Times
   description: Calculates average model commute times for RTP performance measures, regionally and for Equity Focus Areas.
@@ -1929,7 +1936,7 @@
   review: drafted
 - id: TDM-VAL-ModeShare-Boardings
   title: VAL Mode Share Boardings
-  description: Validates model mode share against survey data.
+  description: Notebook comparing the model's mode share and transit boardings with survey and observed data.
   kind: validation
   area: tdm
   status: repo-only
@@ -1938,7 +1945,7 @@
   featured: false
   include: true
   last-push: '2025-04-04'
-  review: inferred-from-name
+  review: ok
 - id: TDM-VAL-OBS-Ridership-Comparison
   title: VAL OBS Ridership Comparison
   description: UTA Boardings and On-Board Survey Data from fall 2019

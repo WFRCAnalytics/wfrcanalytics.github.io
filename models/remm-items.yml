@@ -2,7 +2,7 @@
 - title: REMM Result Review Tool
   description: This tool is used to help REMM model development. Will be incorporated
     into our REMM module workflow.
-  path: https://wfrcanalytics.github.io/REMM-Result-Review-Tool/
+  path: ../tools/REMM-Result-Review-Tool.html
   categories:
   - Live
   - Analysis
@@ -30,7 +30,7 @@
   date: '2026-01-27'
   image: ../_extensions/wfrc-brand/assets/cards/brick.svg
 - title: Parcel Splitting
-  description: Parcel splitting step in preparing REMM inputs.
+  description: Notebook that splits parcels into smaller units for use in REMM inputs.
   path: https://github.com/WFRCAnalytics/REMM-Parcel-Splitting
   categories:
   - Repository

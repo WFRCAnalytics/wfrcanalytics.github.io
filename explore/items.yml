@@ -2,7 +2,7 @@
 - title: TDM Calibration Dashboard
   description: Interactive dashboard summarizing travel demand model calibration results
     by scenario.
-  path: https://wfrcanalytics.github.io/APP-wftdm-dashboard/
+  path: ../tools/APP-wftdm-dashboard.html
   categories:
   - Live
   - App
@@ -14,7 +14,7 @@
     visualization tool, and a data-informed guide about planning for housing based
     on access to opportunities. Users choose what factors are important to their community
     and prioritize them.
-  path: https://wfrcanalytics.github.io/MAP-Housing-ATO-Calculator-Updated/
+  path: ../tools/MAP-Housing-ATO-Calculator-Updated.html
   categories:
   - Live
   - Map
@@ -24,7 +24,7 @@
   description: An interactive WebAssembly-powered map for exploring commute flow patterns
     across the Wasatch Front region, built on open-source tools and hosted on GitHub
     Pages — no ArcGIS or proprietary dependencies.
-  path: https://wfrcanalytics.github.io/APP-WFRC-Commute-Patterns/
+  path: ../tools/APP-WFRC-Commute-Patterns.html
   categories:
   - Live
   - App
@@ -33,7 +33,7 @@
 - title: Proposal Evaluation Scoresheet
   description: Browser-based tool for scoring and ranking proposals with weighted
     criteria, Excel reviewer round trips and a PDF report; no backend or accounts.
-  path: https://wfrcanalytics.github.io/APP-Project-Scoresheet/
+  path: ../tools/APP-Project-Scoresheet.html
   categories:
   - Live
   - App
@@ -42,7 +42,7 @@
 - title: vizTool
   description: 'Maps and charts for exploring travel demand model results: roadways,
     transit, mode share, socioeconomics and access to jobs.'
-  path: https://wfrc.utah.gov/viztool-latest-build/
+  path: ../tools/vizTool.html
   categories:
   - Live
   - App
@@ -51,7 +51,7 @@
 - title: Statewide ATO and VMT Map
   description: This repo brings together the ATO and VMT data from all the models
     in the state and creates a simple web map to view the data.
-  path: https://wfrcanalytics.github.io/MAP-Statewide-ATO-VMT/
+  path: ../tools/MAP-Statewide-ATO-VMT.html
   categories:
   - Live
   - Map
@@ -60,7 +60,7 @@
 - title: Commute Flow Explorer
   description: Interactive browser-based commuter flow explorer for the Wasatch Front
     — DuckDB-WASM, H3, Flowmap.gl, MapLibre
-  path: https://wfrcanalytics.github.io/APP-Commute-Explorer/
+  path: ../tools/APP-Commute-Explorer.html
   categories:
   - Live
   - App
@@ -220,7 +220,9 @@
   date: '2025-11-05'
   image: ../_extensions/wfrc-brand/assets/cards/teal.svg
 - title: Locus OD Data Explorer
-  description: Explorer for Locus origin-destination data. Requires WFRC GitHub access.
+  description: 'Viewers for Locus origin-destination data: personal vehicle trips
+    (including by quarter), trucks, and external-to-external trucks for the statewide
+    model. Requires WFRC GitHub access.'
   path: https://github.com/WFRCAnalytics/MAP-Locus-OD-Data-Explorer
   categories:
   - Repository

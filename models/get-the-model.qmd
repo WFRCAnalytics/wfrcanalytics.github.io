@@ -1,0 +1,94 @@
+---
+title: "Get the model"
+description: "How consultants, agencies and researchers request the Wasatch Front models: who to ask, what to read first, and where to download."
+---
+
+WFRC shares its models with consultants, partner agencies and researchers. Access is granted by request. This page walks through it for the **Travel Demand Model** (the one most people ask for), then covers the other models and the data you can download without asking.
+
+::: {.callout-note}
+## Based on two WFRC sources
+This guide summarizes the [Models and Forecasting page](https://wfrc.utah.gov/resources/models-and-forecasting/){target="_blank"} on the WFRC site and the model repository's own instructions, checked in October 2026. Where they differ from this page, they win. Staff contacts change, so check the WFRC page if an email bounces.
+:::
+
+## Which model do you need?
+
+| Model | Status | How to get it |
+|---|---|---|
+| [Travel Demand Model](tdm.qmd) | Current release **{{< meta tdm-current >}}**, version 10 in beta | Request access, then download from GitHub (steps below) |
+| [Real-Estate Market Model](remm.qmd) | Current release **{{< meta remm-current >}}** | Request a copy from WFRC staff; the [source code](https://github.com/WFRCAnalytics/REMM-v3.0){target="_blank"} is public |
+| [Bike Demand Model](bdm.qmd) | Maintained in the open | The [repository](https://github.com/WFRCAnalytics/BDM-Utah-Bike-Demand-Model){target="_blank"} is public; it needs the RSG micromobility toolset |
+| Activity-Based Model | In development | WFRC began an implementation project in March 2026, expected to take about three years. Nothing to request yet. |
+
+## Getting the Travel Demand Model
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6}
+### 1. Read the release letter
+
+Everyone who uses the model agrees to the release letter. In short:
+
+- You are responsible for how you apply the model and interpret its results.
+- Contact WFRC or MAG staff **before** applying it, especially a new release, to discuss your planned use, method and whether you have the current version. Staff can revoke access if this is skipped.
+- If you modify the model, keep a record of the changes and say so when you share results.
+- Please give feedback on how the model performs, and ask for enhancements.
+- Do not pass the model on. Send others to request it from WFRC or MAG, so they get the current version and join the **Model User Group** email list.
+
+The full letter is at the top of the model repository's page, which you can read once you have access.
+:::
+
+::: {.g-col-12 .g-col-md-6}
+### 2. Ask for access
+
+Email WFRC. WFRC's page says to contact the data scientist who handles model requests:
+
+- [Suzie Swim, WFRC Data Scientist](mailto:suzie.swim@wfrc.utah.gov): suzie.swim@wfrc.utah.gov
+
+Tell them who you are, what you plan to use the model for, and your GitHub username. WFRC and MAG (which co-develops the model) both support model users. If you are unsure whom to write to, use the [contact page](../contact/index.qmd).
+
+You will also need a **GitHub account**. The model lives in a private repository, so WFRC grants access to it. The repository's documentation says users must have a GitHub account and may lose repository access if they do not follow the release letter.
+:::
+
+::: {.g-col-12 .g-col-md-6}
+### 3. Download a release
+
+Once you have access, open the model repository's **Releases** page and choose a version. Under **Assets**, download **Source code**. You can instead fork the repository and clone it to your computer.
+
+Versions listed there: 10.0.0 (beta), 9.2.0, 9.1.1, 9.1.0, 9.0.2, 9.0.1, 9.0.0 and 8.3.2. For a study that must follow adopted plans, **use the current release ({{< meta tdm-current >}})** unless WFRC staff advise otherwise.
+:::
+
+::: {.g-col-12 .g-col-md-6}
+### 4. Read the documentation
+
+Documentation for every version is on the [WFRC documentation site](https://wfrc.utah.gov/wftdm-docs/){target="_blank"}: for example, version 9.2.0 has a *What's New* document and a *Model Validation Report*. Version 10 documentation is under development.
+
+See the [release table](tdm.qmd#releases) for the version history and dates.
+:::
+
+::: {.g-col-12 .g-col-md-6}
+### 5. Ask questions
+
+The repository has two channels. Use the right one so the team can respond quickly:
+
+- **Discussions** for general questions, ideas and troubleshooting.
+- **Issues** for actionable items such as bug fixes and feature requests.
+
+For anything else, email WFRC or MAG staff directly.
+:::
+
+::: {.g-col-12 .g-col-md-6}
+### What is in the model
+
+WFRC describes it as a modified four-step, trip-based model with a travel-time feedback loop. It forecasts traffic volumes and transit ridership through 2050. The release includes networks for base, existing and future years, reflecting funded Transportation Improvement Program projects and the adopted Regional Transportation Plans (both fiscally constrained and needs-based), with matching socioeconomic projections in the WFRC area.
+:::
+
+:::
+
+## Data you can download without asking
+
+- **Socioeconomic forecasts** from the 2023-2050 Regional Transportation Plan: [data.wfrc.utah.gov](https://data.wfrc.utah.gov/){target="_blank"}
+- **Traffic volume maps:** [unifiedplan.org/traffic-volume-map](https://unifiedplan.org/traffic-volume-map/){target="_blank"}
+- **Travel Demand Model documentation:** [wfrc.utah.gov/wftdm-docs](https://wfrc.utah.gov/wftdm-docs/){target="_blank"}
+- **Apps, maps and reports** from the team: [Explore](../explore/index.qmd) and [Reports](../reports/index.qmd)
+
+For questions about socioeconomic data, email [analytics@wfrc.utah.gov](mailto:analytics@wfrc.utah.gov).

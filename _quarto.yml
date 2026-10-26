@@ -62,6 +62,8 @@ website:
           - text: Bike Demand Model
             href: models/bdm.qmd
           - text: "---"
+          - text: Get the model
+            href: models/get-the-model.qmd
           - text: TDM documentation
             href: https://wfrc.utah.gov/wftdm-docs/
             target: _blank

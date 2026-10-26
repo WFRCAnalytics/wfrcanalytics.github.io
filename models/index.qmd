@@ -36,6 +36,11 @@ Estimates bicycle trips between small zones called microzones and assigns them t
 :::
 :::
 
+::: {.callout-tip}
+## Want to use a model?
+Access is by request. The [Get the model](get-the-model.qmd) guide explains who to ask, what to read first and where to download.
+:::
+
 ## How the models fit together
 
 ```{mermaid}
@@ -51,8 +56,12 @@ flowchart LR
 
 The Real-Estate Market Model's household and job projections drive trip generation in the Travel Demand Model. In turn, the Real-Estate Market Model uses travel accessibility from the Travel Demand Model when it predicts where development happens. The Bike Demand Model works at a finer scale, with its own zones and network.
 
+## Coming next: an activity-based model
+
+WFRC began an implementation project for an Activity-Based Model (ABM) in March 2026, expected to take about three years. It is not available yet. See the [WFRC models page](https://wfrc.utah.gov/resources/models-and-forecasting/){target="_blank"} for updates.
+
 ## Looking for something specific?
 
 - The full documentation of record for every travel demand model version is on the [WFRC documentation site](https://wfrc.utah.gov/wftdm-docs/){target="_blank"}.
 - Browse the apps built on these models in [Explore](../explore/index.qmd), or the supporting reports in [Reports & methods](../reports/index.qmd).
-- To use a model or discuss a study, [contact the team](../contact/index.qmd).
+- To use a model, see [Get the model](get-the-model.qmd). To discuss a study, [contact the team](../contact/index.qmd).

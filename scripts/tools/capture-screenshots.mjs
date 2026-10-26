@@ -11,7 +11,8 @@
 // Before the picture is taken, splash screens, terms pop-ups and cookie banners are dismissed: any visible
 // button inside a modal or overlay whose label looks like "I agree", "Continue", "Get started", "OK",
 // "Reject all" is clicked (up to three rounds). For a site where that is not enough, put the CSS selector of
-// the button in `shot-click:` on that tool in catalog.yml. A slow app can set `shot-wait:` (milliseconds).
+// the button in `shot-click:` on that tool in catalog.yml. A slow app can set `shot-wait:` (milliseconds), and `shot-url:` photographs a different address (for example
+// the GitHub Pages copy of an app that the official page wraps in a frame).
 //
 // Images go to assets/shots/<id>.jpg (about 770x480) with assets/shots/manifest.json recording what was captured.
 // Uses the system Chrome: set CHROME_PATH, or the usual Windows / Linux / macOS locations are tried.
@@ -92,7 +93,7 @@ async function capture(e) {
     await page.emulateMediaFeatures([{ name: "prefers-color-scheme", value: "light" }]);
     let note = "";
     // Map apps never stop loading tiles, so wait for "load" and then a fixed settle time, not for network idle.
-    try { await page.goto(e.url, { waitUntil: "load", timeout: 30000 }); } catch { note = "slow page (captured anyway)"; }
+    try { await page.goto(e["shot-url"] || e.url, { waitUntil: "load", timeout: 30000 }); } catch { note = "slow page (captured anyway)"; }
     await wait(Number(e["shot-wait"]) || settle);
     const dismissed = await dismissOverlays(page, e["shot-click"]);
     if (dismissed.length) { note = (note ? note + "; " : "") + `dismissed: ${dismissed.join(", ")}`; await wait(2000); }

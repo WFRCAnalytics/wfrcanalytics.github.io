@@ -1,0 +1,125 @@
+# Hand-written facts for the tool detail pages (tools/<id>.html). Keyed by the catalog id.
+# Every statement comes from the tool's own README or live page; update it when the tool changes.
+# The page itself (title, links, screenshot, last updated, citation) is generated from catalog.yml by
+# scripts/build_lists.py. Only ids listed here get a page.
+#
+#   question: the one question the tool answers
+#   audience: who it is for
+#   inside:   what you can do or see in it (bullets)
+#   data:     where the numbers come from (bullets)
+
+WF-TDM-Runs:
+  question: What did the travel demand model produce for each experiment, and exactly which model version and settings produced it?
+  audience: Model users and planners reviewing sensitivity tests, project alternatives and forecasting scenarios.
+  inside:
+    - A report for every run set, newest first, with each scenario's run history and status.
+    - The v10.0-beta.2 set covers a base year 2023 scenario and RTP needs-year scenarios for 2036, 2046 and 2055.
+    - Other run sets include accessible jobs, a household location burden index and commute-shortening sensitivity tests.
+    - Each run records the model version, settings and a curated set of outputs, so a result can be reproduced.
+  data:
+    - Cube Voyager runs of the Wasatch Front Travel Demand Model, managed by the run framework in the repository.
+    - Run metadata committed with each run; the report is rebuilt from it automatically.
+
+APP-wftdm-dashboard:
+  question: How well does a model run match observed data such as traffic counts and the household travel survey?
+  audience: Analysts calibrating and validating the activity-based travel demand model (ActivitySim).
+  inside:
+    - Panels for Summary, Person and Household, Tour, Mode Choice, Trip, Network and a free-form Explore sandbox.
+    - Network panels compare screenline volumes with observed counts and show VMT by facility type and desire lines.
+    - Several scenarios can be loaded at once for side-by-side or overlaid comparison, with shareable deep links.
+    - Everything is computed in the browser; the data never leaves the user's machine.
+  data:
+    - Pre-computed summary files from ActivitySim model runs.
+    - Observed validation data, including AADT counts and the household travel survey, always available to every panel.
+
+vizTool:
+  question: What do the travel demand model's results look like across roads, transit, mode share and accessibility?
+  audience: Planners and analysts exploring model results and the input data behind them.
+  inside:
+    - Maps and charts of roadway, transit ridership, mode split and socioeconomic measures.
+    - Access to jobs and households, with comparisons across geographies and travel modes.
+    - A wiki with usage notes on the project's GitHub page.
+  data:
+    - Results and inputs of the Wasatch Front Travel Demand Model.
+
+WF-TDM-Calibration:
+  question: How was each part of the travel demand model calibrated, and how close does it come to its targets?
+  audience: Model users and reviewers who need the calibration evidence.
+  inside:
+    - Reports for household disaggregation and auto ownership, trip generation, trip distribution and home-based work destination choice, mode choice, highway assignment, and the commercial vehicle model update.
+    - Each calibration iteration is tied to a pinned model version, so results can be reproduced.
+  data:
+    - Calibration scripts, configurations and targets, run against a fixed version of the travel demand model.
+
+APP-Commute-Explorer:
+  question: How do workers flow between places I choose to compare?
+  audience: Planners, researchers and anyone studying commutes around a transit stop, job center or catchment area.
+  inside:
+    - A region-wide flow map that breaks into detail as you zoom in.
+    - Place 2 to 10 points anywhere on the map and see commute flows between them, with a table of wages and industries for each origin and destination pair.
+    - A year slider from 2002 to 2023, covering eight Wasatch Front counties.
+    - Queries run in your browser, so there is no server or account.
+  data:
+    - US Census Bureau LEHD origin-destination employment statistics (LODES 8), filtered to the Wasatch Front counties.
+    - County boundaries from Census TIGER/Line files.
+
+APP-WFRC-Commute-Patterns:
+  question: Where do residents of a city, county or legislative district work, and where do its workers live?
+  audience: Policy questions tied to named places and political districts.
+  inside:
+    - An arc flow map for any city, county, Utah House district or Utah Senate district, in either direction.
+    - Charts for commute balance, a flow diagram, means of transportation, travel time to work, commute distance and industry mix.
+    - Every chart exports as an image or a table.
+    - Data from 2002 to 2023, and light and dark display modes.
+  data:
+    - US Census LEHD LODES 8 for flows, industries and distances.
+    - American Community Survey 5-year estimates for means of transportation and travel time.
+
+MAP-Housing-ATO-Calculator-Updated:
+  question: How well does each part of the Wasatch Front score on access to jobs, transit and everyday necessities, and what changes when I weight them differently?
+  audience: Housing and land-use planners, as a conversation starter and data-informed guide.
+  inside:
+    - Eleven access factors in three groups: employment, transportation and necessities.
+    - You choose which factors matter to your community and weight them; the map re-scores every parcel and hexagon.
+    - Reference layers for Wasatch Choice Centers and Opportunity Zones, which are shown but not scored.
+  data:
+    - Jobs reachable by car and by transit from the WFRC Access to Opportunities data.
+    - Proximity to transit stops, freeway exits, bike lanes and trails, childcare, healthcare, education, grocery stores, community centers and parks.
+
+GIS_SE2025_H3:
+  question: How does the built environment vary across the region, measured with the standard "D variables" of urban form?
+  audience: Planners and analysts relating urban form to travel behavior.
+  inside:
+    - Six D variables: density, diversity, design, destinations, demographics and distance to transit, plus an income diversity index.
+    - A supplementary Rental Housing Attainability Index developed by Cascadia Partners with WFRC and UTA.
+    - Each measure at two hexagon sizes (H3 levels 8 and 9), smoothed and raw.
+  data:
+    - WFRC's SE 2025 socioeconomic data for the WFRC and MAG region.
+
+MAP-Statewide-ATO-VMT:
+  question: How do access to opportunities and vehicle miles traveled compare across all of Utah's travel models?
+  audience: Planners and modelers comparing model areas around the state.
+  inside:
+    - A web map of access to opportunities (ATO) and VMT for every model in the state.
+    - Simplified traffic-zone polygons, one feature per model area and zone, with values by year.
+  data:
+    - Raw outputs and zone shapefiles from each statewide model, processed by the numbered scripts in the repository.
+
+REMM-Result-Review-Tool:
+  question: Do the Real-Estate Market Model's results look right as the model is being developed?
+  audience: REMM developers and reviewers.
+  inside:
+    - A static review map built from the model's results.
+    - A notebook that generates the review assets.
+  data:
+    - Output of the Real-Estate Market Model.
+
+APP-Project-Scoresheet:
+  question: Which proposals score highest against our weighted criteria?
+  audience: WFRC staff and reviewers scoring and ranking proposals.
+  inside:
+    - Configurable firms, reviewers, weighted criteria and scoring scale.
+    - An Excel round trip for collecting reviewers' scores, and a print-quality PDF report for the official record.
+    - No server, database or accounts: everything runs in your browser, and the only saved file is a project file you download.
+  data:
+    - Only what you enter or load; nothing is stored on a server.

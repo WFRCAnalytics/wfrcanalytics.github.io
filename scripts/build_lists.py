@@ -45,6 +45,9 @@ KIND_BANNER = {
     "post-process": "mid", "scenario": "teal", "geography": "bright", "development": "navy",
     "analysis": "brick", "demo": "bright", "archive": "mid", "other": "mid",
 }
+DETAILS = yaml.safe_load((ROOT / "tool-details.yml").read_text(encoding="utf-8")) or {}
+
+
 def card_image(e, prefix):
     """Screenshot of the live tool when one has been captured, otherwise the brand banner for its kind."""
     shot = ROOT / "assets" / "shots" / f"{e['id']}.jpg"
@@ -67,7 +70,7 @@ def item(e):
     return {
         "title": e["title"],
         "description": desc,
-        "path": e.get("url") or e["repo"],
+        "path": f"../tools/{e['id']}.html" if e["id"] in DETAILS else (e.get("url") or e["repo"]),
         "categories": cats,
         "date": e["last-push"],
         "image": card_image(e, "../"),
@@ -136,8 +139,9 @@ def home_snippets(catalog, releases):
                 f"### {e['title']}", "",
                 short(e["description"]), "",
                 "::: {.feature-actions}",
-                f"[Open]({e['url']}){{.btn .btn-primary .btn-sm target=\"_blank\"}} "
-                f"[Source]({e['repo']}){{.btn .btn-outline-primary .btn-sm target=\"_blank\"}}",
+                f"[Open]({e['url']}){{.btn .btn-primary .btn-sm target=\"_blank\"}} " +
+                (f"[Details](tools/{e['id']}.qmd){{.btn .btn-outline-primary .btn-sm}}" if e["id"] in DETAILS
+                 else f"[Source]({e['repo']}){{.btn .btn-outline-primary .btn-sm target=\"_blank\"}}"),
                 ":::", ":::", ":::", ""]
     out += [":::", ""]
     (ROOT / "_home-featured.md").write_text(NL.join(out), encoding="utf-8")
@@ -147,7 +151,7 @@ def home_snippets(catalog, releases):
 SITE_PAGES = [  # (title, path) -- the pages every visitor might be looking for
     ("Home", "/"), ("Explore apps and maps", "/explore/"), ("Models", "/models/"),
     ("Travel Demand Model", "/models/tdm.html"), ("Real-Estate Market Model", "/models/remm.html"),
-    ("Bike Demand Model", "/models/bdm.html"), ("Reports and methods", "/reports/"), ("Data", "/data/"),
+    ("Bike Demand Model", "/models/bdm.html"), ("Get the model", "/models/get-the-model.html"), ("Reports and methods", "/reports/"), ("Data", "/data/"),
     ("Code", "/code/"), ("Updates", "/updates/"), ("About", "/about.html"),
     ("Contact", "/contact/"), ("License", "/license/"),
 ]
@@ -176,6 +180,53 @@ def pretty_month(date, note=None):
     months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
     year, month = str(date).split("-")[:2]
     return f"{months[int(month) - 1]} {year}" + (f" ({note.lower()})" if note else "")
+
+
+def long_date(iso):
+    months = ["January", "February", "March", "April", "May", "June", "July", "August", "September",
+              "October", "November", "December"]
+    y, m, d = str(iso).split("-")
+    return f"{months[int(m) - 1]} {int(d)}, {y}"
+
+
+def tool_pages(catalog):
+    """tools/<id>.qmd for every tool in tool-details.yml: facts are hand-written, the rest comes from the catalog."""
+    out_dir = ROOT / "tools"
+    out_dir.mkdir(exist_ok=True)
+    by_id = {e["id"]: e for e in catalog}
+    wanted = set()
+    for tid, d in DETAILS.items():
+        e = by_id[tid]
+        assert e.get("url") and not e["internal"], f"{tid}: detail pages are for live public tools"
+        wanted.add(f"{tid}.qmd")
+        shot = ROOT / "assets" / "shots" / f"{tid}.jpg"
+        has_shot = shot.exists() and not e.get("no-shot")
+        year = str(e["last-push"])[:4]
+        lines = ["---", f"title: {json.dumps(e['title'])}", f"description: {json.dumps(d['question'])}", "toc: false"]
+        if has_shot:
+            lines.append(f"image: ../assets/shots/{tid}.jpg")
+        lines += ["---", ""]
+        if has_shot:
+            lines += [f"[![](../assets/shots/{tid}.jpg){{.tool-shot fig-alt=\"Screenshot of {e['title']}; opens the tool in a new tab\"}}]({e['url']}){{target=_blank}}", ""]
+        lines += [f"[Open the tool]({e['url']}){{.btn .btn-primary target=_blank}} "
+                  f"[Source code]({e['repo']}){{.btn .btn-outline-primary target=_blank}}", "",
+                  "## What it answers", "", f"**{d['question']}**", "", f"*For:* {d['audience']}", "",
+                  "## What is inside", ""]
+        lines += [f"- {x}" for x in d["inside"]] + ["", "## Where the data comes from", ""]
+        lines += [f"- {x}" for x in d["data"]] + ["", "## About this tool", "",
+                  "| | |", "|---|---|",
+                  f"| Type | {KIND_LABEL[e['kind']]} |", f"| Status | Live |",
+                  f"| Last updated | {long_date(e['last-push'])} (latest change to the source code) |", "",
+                  "## How to cite", "", "::: {.cite}",
+                  f"Wasatch Front Regional Council. ({year}). *{e['title']}* [Online tool]. {e['url']}", ":::", "",
+                  "## Questions or problems?", "",
+                  f"Email [analytics@wfrc.utah.gov](mailto:analytics@wfrc.utah.gov) or [open an issue]({e['repo']}/issues){{target=_blank}} "
+                  "on the source repository. See also [all apps and maps](../explore/index.qmd).", ""]
+        (out_dir / f"{tid}.qmd").write_text(NL.join(lines), encoding="utf-8")
+    for old in out_dir.glob("*.qmd"):          # a tool dropped from tool-details.yml loses its page
+        if old.name not in wanted:
+            old.unlink()
+    print(f"tools/: {len(wanted)} detail pages")
 
 
 def release_tables(releases):
@@ -229,6 +280,7 @@ def main():
     home_snippets(catalog, releases)
     home_updates()
     site_index(catalog)
+    tool_pages(catalog)
     shown = sorted((e for e in catalog if e["include"]), key=sort_key)
     release_tables(releases)
     for page, pred in PAGES.items():

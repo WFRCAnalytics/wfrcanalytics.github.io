@@ -12,7 +12,7 @@ const load = () => dataPromise ??= Promise.all([
   items = idx.map(d => ({ title: d.title, url: d.url, kind: d.kind, id: d.id, desc: d.desc || "", f: !!d.f, ext: /^https?:/.test(d.url) }));
   const seen = new Set();
   for (const s of sections) {
-    if (!s.section || s.href.startsWith("404") || seen.has(s.href)) continue;
+    if (!s.section || s.href.startsWith("404") || s.href.startsWith("tools/") || seen.has(s.href)) continue;
     seen.add(s.href);
     items.push({ title: `${s.title} › ${s.section}`, url: "/" + s.href, kind: "Section", id: "", desc: (s.text || "").replace(/\s+/g, " ").slice(0, 170), f: false, ext: false });
   }
