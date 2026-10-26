@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Analytics</title>
+<link>https://wfrcanalytics.github.io/updates/</link>
+<atom:link href="https://wfrcanalytics.github.io/updates/index.xml" rel="self" type="application/rss+xml"/>
+<description>New releases, tools and changes from the WFRC Analytics team.</description>
+<generator>quarto-1.10.19</generator>
+<lastBuildDate>Sun, 25 Oct 2026 06:00:00 GMT</lastBuildDate>
+<item>
+  <title>A new front door for WFRC Analytics</title>
+  <link>https://wfrcanalytics.github.io/updates/posts/2026-10-25-new-front-door.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>WFRC Analytics works across many repositories, apps and reports. This site is the front door to all of it.</p>
+<ul>
+<li><strong><a href="../../explore/index.html">Explore</a></strong> lists the live apps and maps, such as the commute flow explorers and the housing access calculator.</li>
+<li><strong><a href="../../models/index.html">Models</a></strong> explains the Travel Demand, Real-Estate Market and Bike Demand models, with current releases and links to full documentation.</li>
+<li><strong><a href="../../reports/index.html">Reports &amp; methods</a></strong> collects the estimation, calibration and validation write-ups behind the models.</li>
+<li><strong><a href="../../data/index.html">Data</a></strong> and <strong><a href="../../code/index.html">Code</a></strong> list datasets and every repository, with a clear <strong>Internal</strong> label on those that need WFRC GitHub access.</li>
+</ul>
+<p>The lists are generated from a single catalog, so new tools appear here without hand-editing pages. Spotted something missing or wrong? Tell us through the <a href="../../contact/index.html">contact page</a>.</p>
+
+
+
+ ]]></description>
+  <category>site</category>
+  <guid>https://wfrcanalytics.github.io/updates/posts/2026-10-25-new-front-door.html</guid>
+  <pubDate>Sun, 25 Oct 2026 06:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>

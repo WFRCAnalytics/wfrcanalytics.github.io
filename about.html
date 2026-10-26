@@ -36,7 +36,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./assets/logo/abbreviated/WFRC_logo_abbreviated_color_tranparent.png" rel="icon" type="image/png">
+<link href="./assets/logo/abbreviated/WFRC_logo_abbreviated_color_transparent.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -51,9 +51,9 @@ ul.task-list li input[type="checkbox"] {
 <script id="quarto-axe-checker-options" type="text/plain">dHJ1ZQ==</script>
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f7ad28be91dbaafc5a349d1977635067.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-7d2f992267eb946130f3de5404b2c1df.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-f7ad28be91dbaafc5a349d1977635067.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-0756f8518ec0967a70b41786b4745d2c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-72597b3082f95eb44c4d1a7ce3261060.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-0756f8518ec0967a70b41786b4745d2c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -82,13 +82,68 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
+<script>
+
+// Table listings print categories as plain text ("Live, App"). Turn them into pills,
+
+// and re-run whenever the listing re-renders (filter, page, sort).
+
+(function () {
+
+  var STATE = { Live: 'chip-live', Internal: 'chip-internal', Archived: 'chip-archived' };
+
+  function chips(root) {
+
+    root.querySelectorAll('.quarto-listing-table .listing-categories:not([data-chips])').forEach(function (cell) {
+
+      var names = cell.textContent.split(',').map(function (s) { return s.trim(); }).filter(Boolean);
+
+      cell.setAttribute('data-chips', '1');
+
+      cell.textContent = '';
+
+      names.forEach(function (name) {
+
+        var chip = document.createElement('span');
+
+        chip.className = 'wfrc-chip ' + (STATE[name] || '');
+
+        chip.textContent = name;
+
+        cell.appendChild(chip);
+
+      });
+
+    });
+
+  }
+
+  function start() {
+
+    chips(document);
+
+    new MutationObserver(function () { chips(document); })
+
+      .observe(document.body, { childList: true, subtree: true });
+
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);
+
+  else start();
+
+})();
+
+</script>
 
 
+
+<link rel="stylesheet" href="assets/css/site.css">
 <meta property="og:title" content="About WFRC Analytics – Analytics">
-<meta property="og:description" content="The Wasatch Front Regional Council builds consensus and enhances quality of life by developing and implementing visions and plans for a well-functioning multi-modal transportation system, livable communities, a strong economy, and a healthy environment.The Wasatch Front Regional Council builds consensus and enhances quality of life by developing and implementing visions and plans for a well-functioning multi-modal transportation system, livable communities, a strong economy, and a healthy environment.">
+<meta property="og:description" content="The Wasatch Front Regional Council builds consensus and enhances quality of life by developing and implementing visions and plans for a well-functioning multi-modal transportation system, livable communities, a strong economy, and a healthy environment.">
 <meta property="og:site_name" content="Analytics">
 <meta name="twitter:title" content="About WFRC Analytics – Analytics">
-<meta name="twitter:description" content="The Wasatch Front Regional Council builds consensus and enhances quality of life by developing and implementing visions and plans for a well-functioning multi-modal transportation system, livable communities, a strong economy, and a healthy environment.The Wasatch Front Regional Council builds consensus and enhances quality of life by developing and implementing visions and plans for a well-functioning multi-modal transportation system, livable communities, a strong economy, and a healthy environment.">
+<meta name="twitter:description" content="The Wasatch Front Regional Council builds consensus and enhances quality of life by developing and implementing visions and plans for a well-functioning multi-modal transportation system, livable communities, a strong economy, and a healthy environment.">
 <meta name="twitter:creator" content="@wasatchcouncil">
 <meta name="twitter:site" content="@wasatchcouncil">
 <meta name="twitter:card" content="summary_large_image">
@@ -287,69 +342,57 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
-<span class="menu-text">About</span></a>
+    <a class="nav-link" href="./explore/index.html"> 
+<span class="menu-text">Explore</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-travel-demand-model" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Travel Demand Model</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-models" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Models</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-travel-demand-model">    
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-models">    
         <li>
-    <a class="dropdown-item" href="./1-tdm/current/index.html">
- <span class="dropdown-text">Current Official Release (9.2.0)</span></a>
+    <a class="dropdown-item" href="./models/index.html">
+ <span class="dropdown-text">Overview</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li>
+    <a class="dropdown-item" href="./models/tdm.html">
+ <span class="dropdown-text">Travel Demand Model</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./1-tdm/beta/index.html">
- <span class="dropdown-text">Under Development (10.0.0 - Beta)</span></a>
+    <a class="dropdown-item" href="./models/remm.html">
+ <span class="dropdown-text">Real-Estate Market Model</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./1-tdm/archive/index.html">
- <span class="dropdown-text">Archived Releases</span></a>
+    <a class="dropdown-item" href="./models/bdm.html">
+ <span class="dropdown-text">Bike Demand Model</span></a>
   </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-real-estate-market-model" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Real-Estate Market Model</span>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-real-estate-market-model">    
+        <li><hr class="dropdown-divider"></li>
         <li>
-    <a class="dropdown-item" href="./2-remm/current/index.html">
- <span class="dropdown-text">Current Release (3.0.0)</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./2-remm/beta/index.html">
- <span class="dropdown-text">Under Development (Beta)</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./2-remm/archive/index.html">
- <span class="dropdown-text">Archived Releases</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bike-demand-model" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Bike Demand Model</span>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-bike-demand-model">    
-        <li>
-    <a class="dropdown-item" href="./3-bdm/current/index.html">
- <span class="dropdown-text">Current Release</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./3-bdm/beta/index.html">
- <span class="dropdown-text">Under Development (Beta)</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./3-bdm/archive/index.html">
- <span class="dropdown-text">Archived Releases</span></a>
+    <a class="dropdown-item" href="https://wfrc.utah.gov/wftdm-docs/" target="_blank">
+ <span class="dropdown-text">TDM documentation</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./4-tools/index.html"> 
-<span class="menu-text">Tools</span></a>
+    <a class="nav-link" href="./reports/index.html"> 
+<span class="menu-text">Reports</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./data/index.html"> 
+<span class="menu-text">Data</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./code/index.html"> 
+<span class="menu-text">Code</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./updates/index.html"> 
+<span class="menu-text">Updates</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./about.html" aria-current="page"> 
+<span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-follow-us" role="link" data-bs-toggle="dropdown" aria-expanded="false">
@@ -410,35 +453,14 @@ ul.task-list li input[type="checkbox"] {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-  <div id="quarto-announcement" data-announcement-id="ff41a64e3ed9ef31a42d399ba7f26026" class="alert alert-primary hidden"><i class="bi bi-info-circle quarto-announcement-icon"></i><div class="quarto-announcement-content">
-<p><strong>Alert</strong> - This website currently contains mostly placeholder items and is currently under development.</p>
-</div><i class="bi bi-x-lg quarto-announcement-action"></i></div>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="2">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#our-organization" id="toc-our-organization" class="nav-link active" data-scroll-target="#our-organization">Our Organization</a></li>
-  <li><a href="#the-analytics-team" id="toc-the-analytics-team" class="nav-link" data-scroll-target="#the-analytics-team">The Analytics Team</a>
-  <ul class="collapse">
-  <li><a href="#what-we-do" id="toc-what-we-do" class="nav-link" data-scroll-target="#what-we-do">What We Do</a></li>
-  </ul></li>
-  <li><a href="#our-region" id="toc-our-region" class="nav-link" data-scroll-target="#our-region">Our Region</a></li>
-  <li><a href="#regional-transportation-context" id="toc-regional-transportation-context" class="nav-link" data-scroll-target="#regional-transportation-context">Regional Transportation Context</a></li>
-  <li><a href="#our-approach" id="toc-our-approach" class="nav-link" data-scroll-target="#our-approach">Our Approach</a></li>
-  <li><a href="#commitment-to-transparency" id="toc-commitment-to-transparency" class="nav-link" data-scroll-target="#commitment-to-transparency">Commitment to Transparency</a></li>
-  <li><a href="#technical-support" id="toc-technical-support" class="nav-link" data-scroll-target="#technical-support">Technical Support</a></li>
-  <li><a href="#quick-facts" id="toc-quick-facts" class="nav-link" data-scroll-target="#quick-facts">Quick Facts</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
@@ -448,7 +470,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-title-meta column-page-left">
+<div class="quarto-title-meta column-page">
 
     
   
@@ -460,81 +482,155 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="our-organization" class="level2">
-<h2 class="anchored" data-anchor-id="our-organization">Our Organization</h2>
-<p>The Wasatch Front Regional Council (WFRC) is the Metropolitan Planning Organization (MPO) and Association of Governments (AOG) serving the counties of Box Elder, Davis, Morgan, Salt Lake, Tooele, Weber, and portions of Utah County. As the federally designated MPO for the Wasatch Front region, WFRC coordinates transportation planning for one of the fastest-growing metropolitan areas in the United States, encompassing approximately 2.7 million residents across the greater Salt Lake City region.</p>
+<section id="who-we-are" class="level2">
+<h2 class="anchored" data-anchor-id="who-we-are">Who we are</h2>
+<p>The <a href="https://wfrc.utah.gov/" target="_blank">Wasatch Front Regional Council</a> (WFRC) is the Metropolitan Planning Organization for the Salt Lake and Ogden-Layton urban areas. It serves six counties: Box Elder, Davis, Morgan, Salt Lake, Tooele and Weber.</p>
+<p>WFRC’s mission is to <em>build consensus and enhance quality of life by developing and implementing visions and plans for a well-functioning multi-modal transportation system, livable communities, a strong economy, and a healthy environment.</em></p>
+<p>The Analytics team builds the data, models and tools that give those plans a quantitative foundation.</p>
 </section>
-<section id="the-analytics-team" class="level2">
-<h2 class="anchored" data-anchor-id="the-analytics-team">The Analytics Team</h2>
-<p>The WFRC Analytics team develops, maintains, and applies sophisticated modeling tools to support evidence-based transportation planning and policy decisions. Our work provides the quantitative foundation for regional transportation plans, project prioritization, air quality conformity analysis, and long-range scenario planning.</p>
-<section id="what-we-do" class="level3">
-<h3 class="anchored" data-anchor-id="what-we-do">What We Do</h3>
-<p><strong>Travel Demand Modeling</strong> We maintain and operate a four-step travel demand model that forecasts travel patterns, traffic volumes, and transit ridership across the region through 2050. The model incorporates socioeconomic forecasts, transportation networks, and travel behavior data to evaluate transportation investments and policy alternatives.</p>
-<p><strong>Socioeconomic Forecasting</strong> Our Real-Estate Market Model (REMM) provides parcel-level forecasts of population, households, and employment, coordinating with local jurisdictions and state agencies to ensure consistency in planning assumptions across the region.</p>
-<p><strong>Active Transportation Analysis</strong> The Bike Demand Model estimates bicycle and micromobility demand, supporting the development of active transportation infrastructure and evaluating the impact of bike-friendly policies and investments.</p>
-<p><strong>Data &amp; Visualization</strong> We develop interactive tools and visualizations to communicate complex transportation data and modeling results to decision-makers, stakeholders, and the public.</p>
+<section id="what-we-do" class="level2">
+<h2 class="anchored" data-anchor-id="what-we-do">What we do</h2>
+<div class="wfrc-blocks">
+<section id="models" class="level3 wfrc-block">
+<h3 class="anchored" data-anchor-id="models">Models</h3>
+<p>We maintain the Travel Demand Model together with the Mountainland Association of Governments, plus the Real-Estate Market Model and the Bike Demand Model.</p>
+<p><a href="./models/index.html" class="btn btn-sm">See the models</a></p>
 </section>
+<section id="apps-and-maps" class="level3 wfrc-block mid">
+<h3 class="anchored" data-anchor-id="apps-and-maps">Apps and maps</h3>
+<p>Interactive tools for commuting, access to opportunity, housing, forecasts and model results.</p>
+<p><a href="./explore/index.html" class="btn btn-sm">Explore tools</a></p>
 </section>
-<section id="our-region" class="level2">
-<h2 class="anchored" data-anchor-id="our-region">Our Region</h2>
-<p>The Wasatch Front region is home to Utah’s largest metropolitan area, stretching approximately 120 miles along the Wasatch Mountains from Brigham City in the north to Payson in the south. The region includes:</p>
+<section id="data-and-methods" class="level3 wfrc-block brick">
+<h3 class="anchored" data-anchor-id="data-and-methods">Data and methods</h3>
+<p>Data preparation, parameter estimation, calibration and validation, documented and reproducible.</p>
+<p><a href="./reports/index.html" class="btn btn-sm">Read the reports</a></p>
+</section>
+</div>
+</section>
+<section id="how-we-work" class="level2">
+<h2 class="anchored" data-anchor-id="how-we-work">How we work</h2>
 <ul>
-<li><strong>Salt Lake County</strong>: Home to Salt Lake City, Utah’s capital and largest city</li>
-<li><strong>Utah County</strong>: Including Provo and Orem, anchored by Utah Valley University and Brigham Young University</li>
-<li><strong>Davis County</strong>: Northern suburban communities including Layton, Bountiful, and Farmington</li>
-<li><strong>Weber County</strong>: Including Ogden, a historic railroad hub and regional employment center</li>
-<li><strong>Box Elder, Morgan, and Tooele Counties</strong>: Growing communities at the region’s periphery</li>
-</ul>
-<p>The region is characterized by its dramatic geography, with urban development concentrated along a narrow valley between the Wasatch Mountains to the east and Great Salt Lake to the northwest. This constrained geography creates unique transportation challenges and opportunities.</p>
-</section>
-<section id="regional-transportation-context" class="level2">
-<h2 class="anchored" data-anchor-id="regional-transportation-context">Regional Transportation Context</h2>
-<p>The Wasatch Front faces several key transportation challenges:</p>
-<ul>
-<li><strong>Rapid Growth</strong>: The region is among the fastest-growing metropolitan areas in the nation, adding approximately 50,000 new residents annually</li>
-<li><strong>Geographic Constraints</strong>: Development is channeled along a north-south corridor, creating concentrated transportation demand</li>
-<li><strong>Air Quality</strong>: Winter temperature inversions trap air pollution in the valley, making vehicle emissions a critical concern</li>
-<li><strong>Multi-Modal System</strong>: The region is served by the Utah Transit Authority (UTA), operating light rail (TRAX), commuter rail (FrontRunner), bus rapid transit (BRT), and extensive bus services</li>
+<li><strong>In the open.</strong> Most of our work lives in public repositories on <a href="https://github.com/WFRCAnalytics" target="_blank">GitHub</a>. Repositories that need WFRC access are marked <strong>Internal</strong> on this site.</li>
+<li><strong>Reproducibly.</strong> Model runs and calibration are tied to specific model versions, so results can be traced and repeated.</li>
+<li><strong>With standard tools.</strong> Python, R, Quarto and web mapping libraries, plus Cube Voyager for travel demand modeling and UrbanSim for real-estate market modeling.</li>
 </ul>
 </section>
-<section id="our-approach" class="level2">
-<h2 class="anchored" data-anchor-id="our-approach">Our Approach</h2>
-<p>WFRC Analytics employs industry-standard modeling tools and methodologies while continuously advancing our analytical capabilities:</p>
+<section id="partners-and-data-sources" class="level2">
+<h2 class="anchored" data-anchor-id="partners-and-data-sources">Partners and data sources</h2>
+<p>Our work depends on these partners and data providers:</p>
 <ul>
-<li><strong>Cube Voyager</strong>: Four-step travel demand modeling platform</li>
-<li><strong>UrbanSim-Based REMM</strong>: Land use and real estate market simulation</li>
-<li><strong>Open-Source Tools</strong>: Python, R, and web-based visualization frameworks</li>
-<li><strong>Data Integration</strong>: Leveraging mobile device data, traffic sensors, transit ridership data, and survey information</li>
-</ul>
-<p>We work collaboratively with local jurisdictions, the Utah Department of Transportation (UDOT), the Utah Transit Authority (UTA), MAG (Mountainland Association of Governments), and other planning partners to coordinate transportation planning across the region.</p>
-</section>
-<section id="commitment-to-transparency" class="level2">
-<h2 class="anchored" data-anchor-id="commitment-to-transparency">Commitment to Transparency</h2>
-<p>This documentation portal reflects our commitment to transparency and open access to planning methodologies. By making our technical documentation, validation reports, and analytical tools publicly available, we aim to:</p>
-<ul>
-<li>Support informed public participation in transportation planning</li>
-<li>Enable academic research and education</li>
-<li>Facilitate coordination with planning partners</li>
-<li>Demonstrate accountability in the use of federal transportation funding</li>
+<li><a href="https://magutah.gov/" target="_blank">Mountainland Association of Governments (MAG)</a>, co-developer of the Travel Demand Model</li>
+<li><a href="https://www.udot.utah.gov/" target="_blank">Utah Department of Transportation (UDOT)</a></li>
+<li><a href="https://www.rideuta.com/" target="_blank">Utah Transit Authority (UTA)</a></li>
+<li><a href="https://gardner.utah.edu/" target="_blank">Kem C. Gardner Policy Institute, University of Utah</a></li>
+<li><a href="https://jobs.utah.gov/" target="_blank">Utah Department of Workforce Services (DWS)</a></li>
+<li><a href="https://gis.utah.gov/" target="_blank">Utah Geospatial Resource Center (UGRC)</a></li>
+<li><a href="https://www.census.gov/" target="_blank">U.S. Census Bureau</a></li>
 </ul>
 </section>
-<section id="technical-support" class="level2">
-<h2 class="anchored" data-anchor-id="technical-support">Technical Support</h2>
-<p>For technical questions about our models, data requests, or assistance with transportation planning studies:</p>
-<p><strong>WFRC Analytics Team</strong> Email: <a href="mailto:analytics@wfrc.utah.gov">analytics@wfrc.utah.gov</a> Phone: (801) 363-4250</p>
-<p>For general information about WFRC’s programs and services, visit <a href="https://wfrc.utah.gov" target="_blank">wfrc.utah.gov</a>.</p>
-<hr>
-</section>
-<section id="quick-facts" class="level2">
-<h2 class="anchored" data-anchor-id="quick-facts">Quick Facts</h2>
-<p><strong>Region Served</strong>: 7 counties in northern Utah <strong>Population</strong>: ~2.7 million (2024) <strong>Model Base Year</strong>: 2019 <strong>Forecast Horizon</strong>: 2050 <strong>TAZs (Transportation Analysis Zones)</strong>: 3,847 <strong>Current TDM Version</strong>: 9.2.0 <strong>Current REMM Version</strong>: 3.0.0</p>
-<hr>
-<p><em>Last Updated: January 2025</em></p>
+<section id="get-in-touch" class="level2">
+<h2 class="anchored" data-anchor-id="get-in-touch">Get in touch</h2>
+<p>For model access, data requests or help with a planning study, see the <a href="./contact/index.html">contact page</a>. For general WFRC programs and services, visit <a href="https://wfrc.utah.gov/" target="_blank">wfrc.utah.gov</a>.</p>
 
 
 </section>
 
 </main> <!-- /main -->
+<script>
+
+// Accessibility fixes for things Quarto and its libraries render but cannot configure.
+
+// Included on every page through wfrc-shared.yml (format.html.include-after-body).
+
+(function () {
+
+  function fix(root) {
+
+    // Listing banners are decorative; Quarto drops an empty `image-alt`.
+
+    root.querySelectorAll('img.thumbnail-image:not([alt])').forEach(function (img) {
+
+      img.setAttribute('alt', '');
+
+    });
+
+    // Quarto only sets `title` on the color-scheme toggle: add an accessible name and a clearer tooltip.
+
+    root.querySelectorAll('.quarto-color-scheme-toggle:not([aria-label])').forEach(function (a) {
+
+      a.setAttribute('aria-label', 'Toggle light and dark mode');
+
+      a.setAttribute('title', 'Toggle light / dark');
+
+    });
+
+    // Collapsible callouts put aria-expanded on a plain div: make it a real, keyboard-operable button.
+
+    root.querySelectorAll('.callout-header[aria-expanded]:not([role])').forEach(function (h) {
+
+      h.setAttribute('role', 'button');
+
+      h.setAttribute('tabindex', '0');
+
+      h.addEventListener('keydown', function (e) {
+
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); h.click(); }
+
+      });
+
+    });
+
+    // Observable Plot labels bare <g> marks; aria-label is not allowed on a role-less element.
+
+    root.querySelectorAll('[class^="plot-"] g[aria-label]:not([role])').forEach(function (g) {
+
+      g.removeAttribute('aria-label');
+
+    });
+
+    // Scrollable regions must be reachable by keyboard.
+
+    root.querySelectorAll('pre, div.sourceCode, .card, .card-body, .table-striped, table, .cell-output-display').forEach(function (el) {
+
+      if (el.hasAttribute('tabindex') || el.matches('a, button, input, select, textarea')) return;
+
+      var o = getComputedStyle(el);
+
+      var scrolls = /(auto|scroll)/.test(o.overflowX + o.overflowY) &&
+
+        (el.scrollWidth > el.clientWidth + 1 || el.scrollHeight > el.clientHeight + 1);
+
+      if (scrolls) el.setAttribute('tabindex', '0');
+
+    });
+
+  }
+
+  var queued = false;
+
+  function schedule() {
+
+    if (queued) return;
+
+    queued = true;
+
+    requestAnimationFrame(function () { queued = false; fix(document); });
+
+  }
+
+  fix(document);
+
+  new MutationObserver(schedule).observe(document.body, { childList: true, subtree: true });
+
+  window.addEventListener('resize', schedule);
+
+  window.addEventListener('load', function () { setTimeout(schedule, 800); setTimeout(schedule, 2500); });
+
+})();
+
+</script>
+
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -635,6 +731,11 @@ ul.task-list li input[type="checkbox"] {
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -997,12 +1098,12 @@ ul.task-list li input[type="checkbox"] {
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="https://wfrcanalytics.github.io/contact/" target="_blank">
+    <a class="nav-link" href="./contact/index.html">
 <p>Contact</p>
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="https://wfrcanalytics.github.io/license/" target="_blank">
+    <a class="nav-link" href="./license/index.html">
 <p>License</p>
 </a>
   </li>  

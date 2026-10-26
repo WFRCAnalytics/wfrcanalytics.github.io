@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Models, apps, maps and data from the Wasatch Front Regional Council analytics team.">
 
-<title>Home – Analytics</title>
+<title>WFRC Analytics – Analytics</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -36,11 +37,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./assets/logo/abbreviated/WFRC_logo_abbreviated_color_tranparent.png" rel="icon" type="image/png">
+<link href="./assets/logo/abbreviated/WFRC_logo_abbreviated_color_transparent.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-b81cf0d8b620db449052b3f2608d3c06.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-bd6cab3d11d92836d2d37f3952f449ac.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
@@ -50,11 +52,9 @@ ul.task-list li input[type="checkbox"] {
 <script id="quarto-axe-checker-options" type="text/plain">dHJ1ZQ==</script>
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f7ad28be91dbaafc5a349d1977635067.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-7d2f992267eb946130f3de5404b2c1df.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-f7ad28be91dbaafc5a349d1977635067.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-0756f8518ec0967a70b41786b4745d2c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-72597b3082f95eb44c4d1a7ce3261060.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-0756f8518ec0967a70b41786b4745d2c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -83,20 +83,71 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
+<script>
+
+// Table listings print categories as plain text ("Live, App"). Turn them into pills,
+
+// and re-run whenever the listing re-renders (filter, page, sort).
+
+(function () {
+
+  var STATE = { Live: 'chip-live', Internal: 'chip-internal', Archived: 'chip-archived' };
+
+  function chips(root) {
+
+    root.querySelectorAll('.quarto-listing-table .listing-categories:not([data-chips])').forEach(function (cell) {
+
+      var names = cell.textContent.split(',').map(function (s) { return s.trim(); }).filter(Boolean);
+
+      cell.setAttribute('data-chips', '1');
+
+      cell.textContent = '';
+
+      names.forEach(function (name) {
+
+        var chip = document.createElement('span');
+
+        chip.className = 'wfrc-chip ' + (STATE[name] || '');
+
+        chip.textContent = name;
+
+        cell.appendChild(chip);
+
+      });
+
+    });
+
+  }
+
+  function start() {
+
+    chips(document);
+
+    new MutationObserver(function () { chips(document); })
+
+      .observe(document.body, { childList: true, subtree: true });
+
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);
+
+  else start();
+
+})();
+
+</script>
 
 
-<meta property="og:title" content="Home">
-<meta property="og:image" content="https://wfrcanalytics.github.io/assets/logo/WFRCDieCutLogo.png">
+
+<link rel="stylesheet" href="assets/css/site.css">
+<meta property="og:title" content="WFRC Analytics">
+<meta property="og:description" content="Models, apps, maps and data from the Wasatch Front Regional Council analytics team.">
 <meta property="og:site_name" content="Analytics">
-<meta property="og:image:height" content="108">
-<meta property="og:image:width" content="496">
-<meta name="twitter:title" content="Home">
-<meta name="twitter:image" content="https://wfrcanalytics.github.io/assets/logo/WFRCDieCutLogo.png">
+<meta name="twitter:title" content="WFRC Analytics">
+<meta name="twitter:description" content="Models, apps, maps and data from the Wasatch Front Regional Council analytics team.">
 <meta name="twitter:creator" content="@wasatchcouncil">
 <meta name="twitter:site" content="@wasatchcouncil">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image-height" content="108">
-<meta name="twitter:image-width" content="496">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -292,69 +343,57 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
-<span class="menu-text">About</span></a>
+    <a class="nav-link" href="./explore/index.html"> 
+<span class="menu-text">Explore</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-travel-demand-model" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Travel Demand Model</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-models" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Models</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-travel-demand-model">    
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-models">    
         <li>
-    <a class="dropdown-item" href="./1-tdm/current/index.html">
- <span class="dropdown-text">Current Official Release (9.2.0)</span></a>
+    <a class="dropdown-item" href="./models/index.html">
+ <span class="dropdown-text">Overview</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li>
+    <a class="dropdown-item" href="./models/tdm.html">
+ <span class="dropdown-text">Travel Demand Model</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./1-tdm/beta/index.html">
- <span class="dropdown-text">Under Development (10.0.0 - Beta)</span></a>
+    <a class="dropdown-item" href="./models/remm.html">
+ <span class="dropdown-text">Real-Estate Market Model</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./1-tdm/archive/index.html">
- <span class="dropdown-text">Archived Releases</span></a>
+    <a class="dropdown-item" href="./models/bdm.html">
+ <span class="dropdown-text">Bike Demand Model</span></a>
   </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-real-estate-market-model" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Real-Estate Market Model</span>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-real-estate-market-model">    
+        <li><hr class="dropdown-divider"></li>
         <li>
-    <a class="dropdown-item" href="./2-remm/current/index.html">
- <span class="dropdown-text">Current Release (3.0.0)</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./2-remm/beta/index.html">
- <span class="dropdown-text">Under Development (Beta)</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./2-remm/archive/index.html">
- <span class="dropdown-text">Archived Releases</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bike-demand-model" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Bike Demand Model</span>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-bike-demand-model">    
-        <li>
-    <a class="dropdown-item" href="./3-bdm/current/index.html">
- <span class="dropdown-text">Current Release</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./3-bdm/beta/index.html">
- <span class="dropdown-text">Under Development (Beta)</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./3-bdm/archive/index.html">
- <span class="dropdown-text">Archived Releases</span></a>
+    <a class="dropdown-item" href="https://wfrc.utah.gov/wftdm-docs/" target="_blank">
+ <span class="dropdown-text">TDM documentation</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./4-tools/index.html"> 
-<span class="menu-text">Tools</span></a>
+    <a class="nav-link" href="./reports/index.html"> 
+<span class="menu-text">Reports</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./data/index.html"> 
+<span class="menu-text">Data</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./code/index.html"> 
+<span class="menu-text">Code</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./updates/index.html"> 
+<span class="menu-text">Updates</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-follow-us" role="link" data-bs-toggle="dropdown" aria-expanded="false">
@@ -415,9 +454,6 @@ ul.task-list li input[type="checkbox"] {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-  <div id="quarto-announcement" data-announcement-id="ff41a64e3ed9ef31a42d399ba7f26026" class="alert alert-primary hidden"><i class="bi bi-info-circle quarto-announcement-icon"></i><div class="quarto-announcement-content">
-<p><strong>Alert</strong> - This website currently contains mostly placeholder items and is currently under development.</p>
-</div><i class="bi bi-x-lg quarto-announcement-action"></i></div>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
@@ -425,26 +461,323 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<div class="quarto-about-jolla column-page">
-  <img src="assets/logo/WFRCDieCutLogo.png" alt="Wasatch Front Regional Council logo" class="about-image
-  rectangle " style="width: min(24em, 100%);">
- <header id="title-block-header" class="quarto-title-block"><h1 class="title display-7">Welcome to <span class="name-highlight">WFRC Analytics</span> documentation.</h1></header><main class="content column-page" id="quarto-document-content">
+<main class="content page-columns page-full column-body" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
-<div id="bio">
-<section id="welcome-to-wfrc-analytics-documentation." class="level1">
-<p>The Wasatch Front Regional Council’s Analytics portal serves as the central hub for technical documentation, validation reports, and resources supporting regional transportation planning. Explore our Travel Demand Model, Real-Estate Market Model, and Bike Demand Model, along with the analytical tools and methodologies that inform data-driven planning decisions across the Wasatch Front region.</p>
-<!-- [Learn more about me &rarr;](/about.html) -->
-<div id="landing-icons">
-<!-- [](https://github.com/WFRCAnalytics){target="_blank"} &nbsp; -->
-<p><a href="https://www.facebook.com/WasatchFrontRegionalCouncil" target="_blank"><i class="fa-brands fa-facebook" title="Facebook" aria-label="facebook"></i></a> &nbsp; <a href="https://twitter.com/wasatchcouncil" target="_blank"><i class="fa-brands fa-square-x-twitter" title="X (Twitter)" aria-label="square-x-twitter"></i></a> &nbsp; <a href="https://www.instagram.com/wasatchfrontregionalcouncil" target="_blank"><i class="fa-brands fa-square-instagram" title="Instagram" aria-label="square-instagram"></i></a> &nbsp; <a href="https://www.linkedin.com/company/wasatch-front-regional-council" target="_blank"><i class="fa-brands fa-linkedin" title="LinkedIn" aria-label="linkedin"></i></a> &nbsp; <a href="https://www.youtube.com/@WasatchFrontRegionalCouncil" target="_blank"><i class="fa-brands fa-youtube" title="YouTube" aria-label="youtube"></i></a> &nbsp;</p>
+
+
+
+
+<section id="the-data-and-models-behind-wasatch-front-planning." class="level1 wfrc-hero column-screen">
+<h1>The data and models behind <span class="accent">Wasatch Front planning.</span></h1>
+<p>Explore the travel demand, real-estate market and bike demand models that inform regional plans, along with the apps, maps and reports built on them.</p>
+<p><a href="./explore/index.html" class="btn btn-light">Explore tools</a> <a href="./models/index.html" class="btn btn-outline-light">See the models</a></p>
+<p><span class="wfrc-chip">Travel demand</span> <span class="wfrc-chip">Land use</span> <span class="wfrc-chip">Active transportation</span> <span class="wfrc-chip">Open source</span></p>
+</section>
+<div class="wfrc-band-alt column-screen">
+<section id="at-a-glance" class="level2">
+<h2 class="anchored" data-anchor-id="at-a-glance">At a glance</h2>
+<div class="wfrc-blocks glance">
+<div class="wfrc-block">
+<p><span class="glance-num">9</span></p>
+<p>live apps and maps</p>
+</div>
+<div class="wfrc-block mid">
+<p><span class="glance-num">170</span></p>
+<p>repositories catalogued</p>
+</div>
+<div class="wfrc-block teal">
+<p><span class="glance-num">9.2.0</span></p>
+<p>current travel demand model</p>
+</div>
+<div class="wfrc-block brick">
+<p><span class="glance-num">3.0.0</span></p>
+<p>current real-estate market model</p>
+</div>
+</div>
+</section>
+<section id="featured-tools" class="level2">
+<h2 class="anchored" data-anchor-id="featured-tools">Featured tools</h2>
+<div class="feature-grid">
+<div class="feature-card banner-mid">
+<div class="feature-banner">
+
+</div>
+<div class="feature-body">
+<p><span class="wfrc-chip">Model</span></p>
+<section id="tdm-run-results" class="level3">
+<h3 class="anchored" data-anchor-id="tdm-run-results">TDM Run Results</h3>
+<p>Reproducible, traceable, and publishable Cube Voyager model runs for sensitivity testing, project alternatives, and scenario analysis.</p>
+<div class="feature-actions">
+<p><a href="https://wfrcanalytics.github.io/WF-TDM-Runs/" class="btn btn-primary btn-sm" target="_blank">Open</a> <a href="https://github.com/WFRCAnalytics/WF-TDM-Runs" class="btn btn-outline-primary btn-sm" target="_blank">Source</a></p>
 </div>
 </section>
 </div>
-
-
-</main>  
 </div>
- <!-- /main -->
+<div class="feature-card banner-navy">
+<div class="feature-banner">
+
+</div>
+<div class="feature-body">
+<p><span class="wfrc-chip">App</span></p>
+<section id="tdm-calibration-dashboard" class="level3">
+<h3 class="anchored" data-anchor-id="tdm-calibration-dashboard">TDM Calibration Dashboard</h3>
+<p>Interactive dashboard summarizing travel demand model calibration results by scenario.</p>
+<div class="feature-actions">
+<p><a href="https://wfrcanalytics.github.io/APP-wftdm-dashboard/" class="btn btn-primary btn-sm" target="_blank">Open</a> <a href="https://github.com/WFRCAnalytics/APP-wftdm-dashboard" class="btn btn-outline-primary btn-sm" target="_blank">Source</a></p>
+</div>
+</section>
+</div>
+</div>
+<div class="feature-card banner-mid">
+<div class="feature-banner">
+
+</div>
+<div class="feature-body">
+<p><span class="wfrc-chip">Model</span></p>
+<section id="tdm-calibration-reports" class="level3">
+<h3 class="anchored" data-anchor-id="tdm-calibration-reports">TDM Calibration Reports</h3>
+<p>Calibration scripts, configurations and targets for the model, tied to a pinned model version for reproducibility.</p>
+<div class="feature-actions">
+<p><a href="https://wfrcanalytics.github.io/WF-TDM-Calibration/" class="btn btn-primary btn-sm" target="_blank">Open</a> <a href="https://github.com/WFRCAnalytics/WF-TDM-Calibration" class="btn btn-outline-primary btn-sm" target="_blank">Source</a></p>
+</div>
+</section>
+</div>
+</div>
+<div class="feature-card banner-navy">
+<div class="feature-banner">
+
+</div>
+<div class="feature-body">
+<p><span class="wfrc-chip">App</span></p>
+<section id="commute-flow-explorer" class="level3">
+<h3 class="anchored" data-anchor-id="commute-flow-explorer">Commute Flow Explorer</h3>
+<p>Interactive browser-based commuter flow explorer for the Wasatch Front — DuckDB-WASM, H3, Flowmap.gl, MapLibre.</p>
+<div class="feature-actions">
+<p><a href="https://wfrcanalytics.github.io/APP-Commute-Explorer/" class="btn btn-primary btn-sm" target="_blank">Open</a> <a href="https://github.com/WFRCAnalytics/APP-Commute-Explorer" class="btn btn-outline-primary btn-sm" target="_blank">Source</a></p>
+</div>
+</section>
+</div>
+</div>
+<div class="feature-card banner-teal">
+<div class="feature-banner">
+
+</div>
+<div class="feature-body">
+<p><span class="wfrc-chip">Map</span></p>
+<section id="housing-ato-calculator" class="level3">
+<h3 class="anchored" data-anchor-id="housing-ato-calculator">Housing ATO Calculator</h3>
+<p>The Housing ATO Calculator can assist housing and land use planning efforts.</p>
+<div class="feature-actions">
+<p><a href="https://wfrcanalytics.github.io/MAP-Housing-ATO-Calculator-Updated/" class="btn btn-primary btn-sm" target="_blank">Open</a> <a href="https://github.com/WFRCAnalytics/MAP-Housing-ATO-Calculator-Updated" class="btn btn-outline-primary btn-sm" target="_blank">Source</a></p>
+</div>
+</section>
+</div>
+</div>
+<div class="feature-card banner-brick">
+<div class="feature-banner">
+
+</div>
+<div class="feature-body">
+<p><span class="wfrc-chip">Analysis</span></p>
+<section id="se-2025-urban-form-d-variables" class="level3">
+<h3 class="anchored" data-anchor-id="se-2025-urban-form-d-variables">SE 2025 Urban Form D Variables</h3>
+<p>SE2025 H3 Socioeconomic Data Smoothing.</p>
+<div class="feature-actions">
+<p><a href="https://wfrcanalytics.github.io/GIS_SE2025_H3/" class="btn btn-primary btn-sm" target="_blank">Open</a> <a href="https://github.com/WFRCAnalytics/GIS_SE2025_H3" class="btn btn-outline-primary btn-sm" target="_blank">Source</a></p>
+</div>
+</section>
+</div>
+</div>
+<div class="feature-card banner-teal">
+<div class="feature-banner">
+
+</div>
+<div class="feature-body">
+<p><span class="wfrc-chip">Map</span></p>
+<section id="statewide-ato-and-vmt-map" class="level3">
+<h3 class="anchored" data-anchor-id="statewide-ato-and-vmt-map">Statewide ATO and VMT Map</h3>
+<p>This repo brings together the ATO and VMT data from all the models in the state and creates a simple web map to view the data.</p>
+<div class="feature-actions">
+<p><a href="https://wfrcanalytics.github.io/MAP-Statewide-ATO-VMT/" class="btn btn-primary btn-sm" target="_blank">Open</a> <a href="https://github.com/WFRCAnalytics/MAP-Statewide-ATO-VMT" class="btn btn-outline-primary btn-sm" target="_blank">Source</a></p>
+</div>
+</section>
+</div>
+</div>
+<div class="feature-card banner-navy">
+<div class="feature-banner">
+
+</div>
+<div class="feature-body">
+<p><span class="wfrc-chip">App</span></p>
+<section id="commute-patterns-map" class="level3">
+<h3 class="anchored" data-anchor-id="commute-patterns-map">Commute Patterns Map</h3>
+<p>An interactive WebAssembly-powered map for exploring commute flow patterns across the Wasatch Front region, built on open-source tools and hosted on…</p>
+<div class="feature-actions">
+<p><a href="https://wfrcanalytics.github.io/APP-WFRC-Commute-Patterns/" class="btn btn-primary btn-sm" target="_blank">Open</a> <a href="https://github.com/WFRCAnalytics/APP-WFRC-Commute-Patterns" class="btn btn-outline-primary btn-sm" target="_blank">Source</a></p>
+</div>
+</section>
+</div>
+</div>
+</div>
+<div class="mt-4 mb-5">
+<p><a href="./explore/index.html" class="btn btn-primary">Browse all apps and maps</a></p>
+</div>
+</section>
+<section id="latest-updates" class="level2">
+<h2 class="anchored" data-anchor-id="latest-updates">Latest updates</h2>
+<div class="wfrc-updates">
+<p><span class="wfrc-date">Oct 25</span> <a href="./updates/posts/2026-10-25-new-front-door.html">A new front door for WFRC Analytics</a></p>
+</div>
+<div class="mt-4">
+<p><a href="./updates/index.html" class="btn btn-primary">All updates</a></p>
+</div>
+</section>
+</div>
+<div id="models" class="wfrc-band column-screen">
+<section id="our-models" class="level2">
+<h2 class="anchored" data-anchor-id="our-models">Our models</h2>
+<div class="wfrc-blocks">
+<section id="travel-demand-model" class="level3 wfrc-block">
+<h3 class="anchored" data-anchor-id="travel-demand-model">Travel Demand Model</h3>
+<p>Forecasts travel on the region’s roads and transit. Documentation of record for every version lives on the WFRC site.</p>
+<p><a href="./models/tdm.html" class="btn btn-sm">Overview</a> <a href="https://wfrc.utah.gov/wftdm-docs/" class="btn btn-sm btn-outline-light" target="_blank">Documentation</a></p>
+</section>
+<section id="real-estate-market-model" class="level3 wfrc-block mid">
+<h3 class="anchored" data-anchor-id="real-estate-market-model">Real-Estate Market Model</h3>
+<p>An UrbanSim-based simulation of where people and jobs may locate, used for the region’s socioeconomic forecasts.</p>
+<p><a href="./models/remm.html" class="btn btn-sm">Overview</a> <a href="https://github.com/WFRCAnalytics/REMM-v3.0" class="btn btn-sm btn-outline-light" target="_blank">Source</a></p>
+</section>
+<section id="bike-demand-model" class="level3 wfrc-block brick">
+<h3 class="anchored" data-anchor-id="bike-demand-model">Bike Demand Model</h3>
+<p>Estimates bicycle and micromobility demand to guide active transportation investments.</p>
+<p><a href="./models/bdm.html" class="btn btn-sm">Overview</a> <a href="https://github.com/WFRCAnalytics/BDM-Utah-Bike-Demand-Model" class="btn btn-sm btn-outline-light" target="_blank">Source</a></p>
+</section>
+</div>
+</section>
+</div>
+<section id="find-your-way-around" class="level2 wfrc-band-alt column-screen">
+<h2 class="anchored" data-anchor-id="find-your-way-around">Find your way around</h2>
+<div class="wfrc-blocks">
+<section id="reports-and-methods" class="level3 wfrc-block teal">
+<h3 class="anchored" data-anchor-id="reports-and-methods">Reports and methods</h3>
+<p>How inputs are built, parameters estimated, and models calibrated and validated.</p>
+<p><a href="./reports/index.html" class="btn btn-sm">Read the reports</a></p>
+</section>
+<section id="data" class="level3 wfrc-block">
+<h3 class="anchored" data-anchor-id="data">Data</h3>
+<p>Datasets and the preparation work behind them.</p>
+<p><a href="./data/index.html" class="btn btn-sm">Browse data</a></p>
+</section>
+<section id="code" class="level3 wfrc-block mid">
+<h3 class="anchored" data-anchor-id="code">Code</h3>
+<p>Every public repository, searchable, with internal ones clearly marked.</p>
+<p><a href="./code/index.html" class="btn btn-sm">Search the code</a></p>
+</section>
+<section id="get-in-touch" class="level3 wfrc-block brick">
+<h3 class="anchored" data-anchor-id="get-in-touch">Get in touch</h3>
+<p>Questions, data requests or help applying our tools.</p>
+<p><a href="./contact/index.html" class="btn btn-sm">Contact us</a></p>
+</section>
+</div>
+</section>
+
+
+
+</main> <!-- /main -->
+<script>
+
+// Accessibility fixes for things Quarto and its libraries render but cannot configure.
+
+// Included on every page through wfrc-shared.yml (format.html.include-after-body).
+
+(function () {
+
+  function fix(root) {
+
+    // Listing banners are decorative; Quarto drops an empty `image-alt`.
+
+    root.querySelectorAll('img.thumbnail-image:not([alt])').forEach(function (img) {
+
+      img.setAttribute('alt', '');
+
+    });
+
+    // Quarto only sets `title` on the color-scheme toggle: add an accessible name and a clearer tooltip.
+
+    root.querySelectorAll('.quarto-color-scheme-toggle:not([aria-label])').forEach(function (a) {
+
+      a.setAttribute('aria-label', 'Toggle light and dark mode');
+
+      a.setAttribute('title', 'Toggle light / dark');
+
+    });
+
+    // Collapsible callouts put aria-expanded on a plain div: make it a real, keyboard-operable button.
+
+    root.querySelectorAll('.callout-header[aria-expanded]:not([role])').forEach(function (h) {
+
+      h.setAttribute('role', 'button');
+
+      h.setAttribute('tabindex', '0');
+
+      h.addEventListener('keydown', function (e) {
+
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); h.click(); }
+
+      });
+
+    });
+
+    // Observable Plot labels bare <g> marks; aria-label is not allowed on a role-less element.
+
+    root.querySelectorAll('[class^="plot-"] g[aria-label]:not([role])').forEach(function (g) {
+
+      g.removeAttribute('aria-label');
+
+    });
+
+    // Scrollable regions must be reachable by keyboard.
+
+    root.querySelectorAll('pre, div.sourceCode, .card, .card-body, .table-striped, table, .cell-output-display').forEach(function (el) {
+
+      if (el.hasAttribute('tabindex') || el.matches('a, button, input, select, textarea')) return;
+
+      var o = getComputedStyle(el);
+
+      var scrolls = /(auto|scroll)/.test(o.overflowX + o.overflowY) &&
+
+        (el.scrollWidth > el.clientWidth + 1 || el.scrollHeight > el.clientHeight + 1);
+
+      if (scrolls) el.setAttribute('tabindex', '0');
+
+    });
+
+  }
+
+  var queued = false;
+
+  function schedule() {
+
+    if (queued) return;
+
+    queued = true;
+
+    requestAnimationFrame(function () { queued = false; fix(document); });
+
+  }
+
+  fix(document);
+
+  new MutationObserver(schedule).observe(document.body, { childList: true, subtree: true });
+
+  window.addEventListener('resize', schedule);
+
+  window.addEventListener('load', function () { setTimeout(schedule, 800); setTimeout(schedule, 2500); });
+
+})();
+
+</script>
+
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -460,6 +793,13 @@ ul.task-list li input[type="checkbox"] {
       window.document.body.appendChild(a);
     }
     setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     
@@ -538,6 +878,11 @@ ul.task-list li input[type="checkbox"] {
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -900,12 +1245,12 @@ ul.task-list li input[type="checkbox"] {
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="https://wfrcanalytics.github.io/contact/" target="_blank">
+    <a class="nav-link" href="./contact/index.html">
 <p>Contact</p>
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="https://wfrcanalytics.github.io/license/" target="_blank">
+    <a class="nav-link" href="./license/index.html">
 <p>License</p>
 </a>
   </li>  

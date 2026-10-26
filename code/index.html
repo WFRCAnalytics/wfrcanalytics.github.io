@@ -1,0 +1,3907 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Every WFRC Analytics repository. Search by name, or filter by status, kind and model area.">
+
+<title>Code – Analytics</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../assets/logo/abbreviated/WFRC_logo_abbreviated_color_transparent.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-b81cf0d8b620db449052b3f2608d3c06.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-bd6cab3d11d92836d2d37f3952f449ac.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-b81cf0d8b620db449052b3f2608d3c06.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/quarto-axe/axe.min.js"></script>
+<script src="../site_libs/quarto-axe/axe-check.js" type="module"></script>
+<script id="quarto-axe-checker-options" type="text/plain">dHJ1ZQ==</script>
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-0756f8518ec0967a70b41786b4745d2c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-72597b3082f95eb44c4d1a7ce3261060.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-0756f8518ec0967a70b41786b4745d2c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-description','listing-categories','listing-date',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-title-sort'] },{ data: ['listing-date-sort'] }],
+      page: 24,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
+      searchColumns: ["listing-title","listing-description","listing-categories","listing-date","listing-image"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+<style>html{ scroll-behavior: smooth; }</style>
+<script>
+
+// Table listings print categories as plain text ("Live, App"). Turn them into pills,
+
+// and re-run whenever the listing re-renders (filter, page, sort).
+
+(function () {
+
+  var STATE = { Live: 'chip-live', Internal: 'chip-internal', Archived: 'chip-archived' };
+
+  function chips(root) {
+
+    root.querySelectorAll('.quarto-listing-table .listing-categories:not([data-chips])').forEach(function (cell) {
+
+      var names = cell.textContent.split(',').map(function (s) { return s.trim(); }).filter(Boolean);
+
+      cell.setAttribute('data-chips', '1');
+
+      cell.textContent = '';
+
+      names.forEach(function (name) {
+
+        var chip = document.createElement('span');
+
+        chip.className = 'wfrc-chip ' + (STATE[name] || '');
+
+        chip.textContent = name;
+
+        cell.appendChild(chip);
+
+      });
+
+    });
+
+  }
+
+  function start() {
+
+    chips(document);
+
+    new MutationObserver(function () { chips(document); })
+
+      .observe(document.body, { childList: true, subtree: true });
+
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);
+
+  else start();
+
+})();
+
+</script>
+
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../assets/css/site.css">
+<meta property="og:title" content="Code – Analytics">
+<meta property="og:description" content="Every WFRC Analytics repository. Search by name, or filter by status, kind and model area.">
+<meta property="og:site_name" content="Analytics">
+<meta name="twitter:title" content="Code – Analytics">
+<meta name="twitter:description" content="Every WFRC Analytics repository. Search by name, or filter by status, kind and model area.">
+<meta name="twitter:creator" content="@wasatchcouncil">
+<meta name="twitter:site" content="@wasatchcouncil">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="..\site_libs\quarto-contrib\quarto-project\wfrc-brand\assets\logo\abbreviated\WFRC_logo_abbreviated_color_transparent.png" alt="Wasatch Front Regional Council" class="navbar-logo light-content">
+    <img src="..\site_libs\quarto-contrib\quarto-project\wfrc-brand\assets\logo\abbreviated\WFRC_logo_abbreviated_white_transparent.png" alt="Wasatch Front Regional Council" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Analytics</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../explore/index.html"> 
+<span class="menu-text">Explore</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-models" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Models</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-models">    
+        <li>
+    <a class="dropdown-item" href="../models/index.html">
+ <span class="dropdown-text">Overview</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li>
+    <a class="dropdown-item" href="../models/tdm.html">
+ <span class="dropdown-text">Travel Demand Model</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../models/remm.html">
+ <span class="dropdown-text">Real-Estate Market Model</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../models/bdm.html">
+ <span class="dropdown-text">Bike Demand Model</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li>
+    <a class="dropdown-item" href="https://wfrc.utah.gov/wftdm-docs/" target="_blank">
+ <span class="dropdown-text">TDM documentation</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../reports/index.html"> 
+<span class="menu-text">Reports</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../data/index.html"> 
+<span class="menu-text">Data</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../code/index.html" aria-current="page"> 
+<span class="menu-text">Code</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../updates/index.html"> 
+<span class="menu-text">Updates</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-follow-us" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Follow Us</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-follow-us">    
+        <li>
+    <a class="dropdown-item" href="https://www.facebook.com/WasatchFrontRegionalCouncil/" target="_blank"><i class="bi bi-facebook" role="img">
+</i> 
+ <span class="dropdown-text">Facebook</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://twitter.com/wasatchcouncil/" target="_blank"><i class="bi bi-twitter-x" role="img">
+</i> 
+ <span class="dropdown-text">X (Twitter)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://www.instagram.com/wasatchfrontregionalcouncil/" target="_blank"><i class="bi bi-instagram" role="img">
+</i> 
+ <span class="dropdown-text">Instagram</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://www.linkedin.com/company/wasatch-front-regional-council/" target="_blank"><i class="bi bi-linkedin" role="img">
+</i> 
+ <span class="dropdown-text">LinkedIn</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://www.youtube.com/user/wfrcvideo/" target="_blank"><i class="bi bi-youtube" role="img">
+</i> 
+ <span class="dropdown-text">YouTube</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+    <div class="dropdown">
+      <a href="" title="GitHub" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="GitHub"><i class="bi bi-github"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/WFRCAnalytics/wfrcanalytics.github.io" target="_blank">
+            Source Code
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/WFRCAnalytics/wfrcanalytics.github.io/issues/new" target="_blank">
+            Report a Bug
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/WFRCAnalytics/wfrcanalytics.github.io/discussions/new/choose" target="_blank">
+            Ask a Question
+            </a>
+          </li>
+      </ul>
+    </div>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(170)</span></div><div class="category" data-category="QW5hbHlzaXM=">Analysis <span class="quarto-category-count">(32)</span></div><div class="category" data-category="QXBw">App <span class="quarto-category-count">(16)</span></div><div class="category" data-category="QXJjaGl2ZWQ=">Archived <span class="quarto-category-count">(2)</span></div><div class="category" data-category="QkRN">BDM <span class="quarto-category-count">(6)</span></div><div class="category" data-category="Q2FsaWJyYXRpb24=">Calibration <span class="quarto-category-count">(3)</span></div><div class="category" data-category="RGF0YQ==">Data <span class="quarto-category-count">(31)</span></div><div class="category" data-category="RGV2ZWxvcG1lbnQ=">Development <span class="quarto-category-count">(2)</span></div><div class="category" data-category="RXN0aW1hdGlvbg==">Estimation <span class="quarto-category-count">(8)</span></div><div class="category" data-category="R2VvZ3JhcGh5">Geography <span class="quarto-category-count">(2)</span></div><div class="category" data-category="SW5wdXQlMjBkYXRh">Input data <span class="quarto-category-count">(15)</span></div><div class="category" data-category="SW50ZXJuYWw=">Internal <span class="quarto-category-count">(45)</span></div><div class="category" data-category="TGlicmFyeQ==">Library <span class="quarto-category-count">(2)</span></div><div class="category" data-category="TGl2ZQ==">Live <span class="quarto-category-count">(27)</span></div><div class="category" data-category="TWFw">Map <span class="quarto-category-count">(17)</span></div><div class="category" data-category="TW9kZWw=">Model <span class="quarto-category-count">(15)</span></div><div class="category" data-category="T3RoZXI=">Other <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UG9zdC1wcm9jZXNzaW5n">Post-processing <span class="quarto-category-count">(6)</span></div><div class="category" data-category="UkVNTQ==">REMM <span class="quarto-category-count">(19)</span></div><div class="category" data-category="UmVwb3NpdG9yeQ==">Repository <span class="quarto-category-count">(141)</span></div><div class="category" data-category="U2NlbmFyaW8=">Scenario <span class="quarto-category-count">(2)</span></div><div class="category" data-category="VERN">TDM <span class="quarto-category-count">(49)</span></div><div class="category" data-category="VG9vbA==">Tool <span class="quarto-category-count">(13)</span></div><div class="category" data-category="VmFsaWRhdGlvbg==">Validation <span class="quarto-category-count">(5)</span></div></div></div>
+<!-- main -->
+<main class="content column-page-left" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Code</h1>
+</div>
+
+<div>
+  <div class="description">
+    Every WFRC Analytics repository. Search by name, or filter by status, kind and model area.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta column-page-left">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Internal entries
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Repositories marked <strong>Internal</strong> are private. Their links open only for people with WFRC GitHub access.</p>
+</div>
+</div>
+
+
+
+
+<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
+<div class="listing-actions-group">
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+
+<th>
+Title
+</th>
+
+<th>
+Description
+</th>
+
+<th>
+Categories
+</th>
+
+<th>
+Last updated
+</th>
+
+</tr>
+</thead>
+<tbody class="list">
+
+<tr data-index="0" data-categories="TGl2ZSUyQ0FwcA==" data-listing-date-sort="1792735200000" data-listing-title-sort="TDM Calibration Dashboard">
+<td>
+<a href="https://wfrcanalytics.github.io/APP-wftdm-dashboard/" class="title listing-title">TDM Calibration Dashboard</a>
+</td>
+<td>
+<span class="listing-description">Interactive dashboard summarizing travel demand model calibration results by scenario.</span>
+</td>
+<td>
+<span class="listing-categories">Live, App</span>
+</td>
+<td>
+<span class="listing-date">Oct 23, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="1" data-categories="TGl2ZSUyQ01vZGVsJTJDVERN" data-listing-date-sort="1792562400000" data-listing-title-sort="TDM Calibration Reports">
+<td>
+<a href="https://wfrcanalytics.github.io/WF-TDM-Calibration/" class="title listing-title">TDM Calibration Reports</a>
+</td>
+<td>
+<span class="listing-description">Calibration scripts, configurations and targets for the model, tied to a pinned model version for reproducibility.</span>
+</td>
+<td>
+<span class="listing-categories">Live, Model, TDM</span>
+</td>
+<td>
+<span class="listing-date">Oct 21, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="2" data-categories="TGl2ZSUyQ01vZGVsJTJDVERN" data-listing-date-sort="1792562400000" data-listing-title-sort="TDM Run Results">
+<td>
+<a href="https://wfrcanalytics.github.io/WF-TDM-Runs/" class="title listing-title">TDM Run Results</a>
+</td>
+<td>
+<span class="listing-description">Reproducible, traceable, and publishable Cube Voyager model runs for sensitivity testing, project alternatives, and scenario analysis.</span>
+</td>
+<td>
+<span class="listing-categories">Live, Model, TDM</span>
+</td>
+<td>
+<span class="listing-date">Oct 21, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="3" data-categories="TGl2ZSUyQ01hcA==" data-listing-date-sort="1790143200000" data-listing-title-sort="Housing ATO Calculator">
+<td>
+<a href="https://wfrcanalytics.github.io/MAP-Housing-ATO-Calculator-Updated/" class="title listing-title">Housing ATO Calculator</a>
+</td>
+<td>
+<span class="listing-description">The Housing ATO Calculator can assist housing and land use planning efforts. This tool is intended to be used as a conversation starter, a helpful visualization tool, and a data-informed guide about planning for…</span>
+</td>
+<td>
+<span class="listing-categories">Live, Map</span>
+</td>
+<td>
+<span class="listing-date">Sep 23, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="4" data-categories="TGl2ZSUyQ0FwcA==" data-listing-date-sort="1790056800000" data-listing-title-sort="Commute Patterns Map">
+<td>
+<a href="https://wfrcanalytics.github.io/APP-WFRC-Commute-Patterns/" class="title listing-title">Commute Patterns Map</a>
+</td>
+<td>
+<span class="listing-description">An interactive WebAssembly-powered map for exploring commute flow patterns across the Wasatch Front region, built on open-source tools and hosted on GitHub Pages — no ArcGIS or proprietary dependencies.</span>
+</td>
+<td>
+<span class="listing-categories">Live, App</span>
+</td>
+<td>
+<span class="listing-date">Sep 22, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="5" data-categories="TGl2ZSUyQ0FuYWx5c2lz" data-listing-date-sort="1790056800000" data-listing-title-sort="SE 2025 Urban Form D Variables">
+<td>
+<a href="https://wfrcanalytics.github.io/GIS_SE2025_H3/" class="title listing-title">SE 2025 Urban Form D Variables</a>
+</td>
+<td>
+<span class="listing-description">SE2025 H3 Socioeconomic Data Smoothing</span>
+</td>
+<td>
+<span class="listing-categories">Live, Analysis</span>
+</td>
+<td>
+<span class="listing-date">Sep 22, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="6" data-categories="TGl2ZSUyQ0FwcA==" data-listing-date-sort="1789711200000" data-listing-title-sort="Proposal Evaluation Scoresheet">
+<td>
+<a href="https://wfrcanalytics.github.io/APP-Project-Scoresheet/" class="title listing-title">Proposal Evaluation Scoresheet</a>
+</td>
+<td>
+<span class="listing-description">Browser-based tool for scoring and ranking proposals with weighted criteria, Excel reviewer round trips and a PDF report; no backend or accounts.</span>
+</td>
+<td>
+<span class="listing-categories">Live, App</span>
+</td>
+<td>
+<span class="listing-date">Sep 18, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="7" data-categories="TGl2ZSUyQ0FuYWx5c2lzJTJDUkVNTQ==" data-listing-date-sort="1789106400000" data-listing-title-sort="REMM Result Review Tool">
+<td>
+<a href="https://wfrcanalytics.github.io/REMM-Result-Review-Tool/" class="title listing-title">REMM Result Review Tool</a>
+</td>
+<td>
+<span class="listing-description">This tool is used to help REMM model development. Will be incorporated into our REMM module workflow.</span>
+</td>
+<td>
+<span class="listing-categories">Live, Analysis, REMM</span>
+</td>
+<td>
+<span class="listing-date">Sep 11, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="8" data-categories="TGl2ZSUyQ01hcA==" data-listing-date-sort="1786687200000" data-listing-title-sort="Statewide ATO and VMT Map">
+<td>
+<a href="https://wfrcanalytics.github.io/MAP-Statewide-ATO-VMT/" class="title listing-title">Statewide ATO and VMT Map</a>
+</td>
+<td>
+<span class="listing-description">This repo brings together the ATO and VMT data from all the models in the state and creates a simple web map to view the data.</span>
+</td>
+<td>
+<span class="listing-categories">Live, Map</span>
+</td>
+<td>
+<span class="listing-date">Aug 14, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="9" data-categories="TGl2ZSUyQ0FwcA==" data-listing-date-sort="1782799200000" data-listing-title-sort="Commute Flow Explorer">
+<td>
+<a href="https://wfrcanalytics.github.io/APP-Commute-Explorer/" class="title listing-title">Commute Flow Explorer</a>
+</td>
+<td>
+<span class="listing-description">Interactive browser-based commuter flow explorer for the Wasatch Front — DuckDB-WASM, H3, Flowmap.gl, MapLibre</span>
+</td>
+<td>
+<span class="listing-categories">Live, App</span>
+</td>
+<td>
+<span class="listing-date">Jun 30, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="10" data-categories="TGl2ZSUyQ0ludGVybmFsJTJDTW9kZWwlMkNURE0=" data-listing-date-sort="1792735200000" data-listing-title-sort="TDM Development">
+<td>
+<a href="https://wfrc.utah.gov/wftdm-docs/" class="title listing-title">TDM Development</a>
+</td>
+<td>
+<span class="listing-description">Wasatch Front (WFRC + MAG) Regional Travel Demand Model. Requires WFRC GitHub access.</span>
+</td>
+<td>
+<span class="listing-categories">Live, Internal, Model, TDM</span>
+</td>
+<td>
+<span class="listing-date">Oct 23, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="11" data-categories="TGl2ZSUyQ1ZhbGlkYXRpb24lMkNURE0=" data-listing-date-sort="1791957600000" data-listing-title-sort="VAL School College Enrollment">
+<td>
+<a href="https://wfrcanalytics.github.io/TDM-VAL-SchoolCollegeEnrollment/" class="title listing-title">VAL School College Enrollment</a>
+</td>
+<td>
+<span class="listing-description">Validates the synthetic population against real K-12 and college enrollment.</span>
+</td>
+<td>
+<span class="listing-categories">Live, Validation, TDM</span>
+</td>
+<td>
+<span class="listing-date">Oct 14, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="12" data-categories="TGl2ZSUyQ0FuYWx5c2lz" data-listing-date-sort="1791871200000" data-listing-title-sort="adhoc analyses">
+<td>
+<a href="https://wfrcanalytics.github.io/GIS-adhoc-analyses/" class="title listing-title">adhoc analyses</a>
+</td>
+<td>
+<span class="listing-description">A repo for any ad-hoc GIS analysis.</span>
+</td>
+<td>
+<span class="listing-categories">Live, Analysis</span>
+</td>
+<td>
+<span class="listing-date">Oct 13, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="13" data-categories="TGl2ZSUyQ0ludGVybmFsJTJDQXBw" data-listing-date-sort="1791439200000" data-listing-title-sort="Utah HTS Visualization Dashboard">
+<td>
+<a href="https://wfrc.shinyapps.io/2023-utah-household-travel-survey/" class="title listing-title">Utah HTS Visualization Dashboard</a>
+</td>
+<td>
+<span class="listing-description">A ‘shiny’ dashboard for exploring and reporting results from the Utah Household Travel Survey (HTS). Provides interactive crosstabs, maps, and summary visualizations built with ‘bslib’, for use by Wasatch Front…</span>
+</td>
+<td>
+<span class="listing-categories">Live, Internal, App</span>
+</td>
+<td>
+<span class="listing-date">Oct 8, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="14" data-categories="TGl2ZSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1789365600000" data-listing-title-sort="INP Population Sim">
+<td>
+<a href="https://wfrcanalytics.github.io/TDM-INP-PopulationSim/" class="title listing-title">INP Population Sim</a>
+</td>
+<td>
+<span class="listing-description">Prepare Input Data for PopulationSim</span>
+</td>
+<td>
+<span class="listing-categories">Live, Input data, TDM</span>
+</td>
+<td>
+<span class="listing-date">Sep 14, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="15" data-categories="TGl2ZSUyQ0ludGVybmFsJTJDTW9kZWwlMkNURE0=" data-listing-date-sort="1786514400000" data-listing-title-sort="TDM Documentation">
+<td>
+<a href="https://wfrc.utah.gov/wftdm-docs/" class="title listing-title">TDM Documentation</a>
+</td>
+<td>
+<span class="listing-description">A repository for the What’s New Document, the Inputs Documentation, and the Validation Report for the Travel Demand Model. Requires WFRC GitHub access.</span>
+</td>
+<td>
+<span class="listing-categories">Live, Internal, Model, TDM</span>
+</td>
+<td>
+<span class="listing-date">Aug 12, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="16" data-categories="TGl2ZSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1785304800000" data-listing-title-sort="INP External Forecasts">
+<td>
+<a href="https://wfrcanalytics.github.io/TDM-INP-External-Forecasts/" class="title listing-title">INP External Forecasts</a>
+</td>
+<td>
+<span class="listing-description">Volume forecasts for the model’s external stations, published as a single Quarto report.</span>
+</td>
+<td>
+<span class="listing-categories">Live, Input data, TDM</span>
+</td>
+<td>
+<span class="listing-date">Jul 29, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="17" data-categories="TGl2ZSUyQ0RhdGE=" data-listing-date-sort="1785218400000" data-listing-title-sort="Commercial Vehicle Observed for TDM">
+<td>
+<a href="https://wfrcanalytics.github.io/DATA-Commercial-Vehicle-Observed-for-TDM/" class="title listing-title">Commercial Vehicle Observed for TDM</a>
+</td>
+<td>
+<span class="listing-description">Standalone truck validation report comparing medium and heavy truck shares and VMT by facility type against observed data.</span>
+</td>
+<td>
+<span class="listing-categories">Live, Data</span>
+</td>
+<td>
+<span class="listing-date">Jul 28, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="18" data-categories="TGl2ZSUyQ0FuYWx5c2lz" data-listing-date-sort="1783490400000" data-listing-title-sort="GTFS vs LIN">
+<td>
+<a href="https://wfrcanalytics.github.io/GIS-GTFS-vs-LIN/" class="title listing-title">GTFS vs LIN</a>
+</td>
+<td>
+<span class="listing-description">Compare GTFS to TDM LIN files</span>
+</td>
+<td>
+<span class="listing-categories">Live, Analysis</span>
+</td>
+<td>
+<span class="listing-date">Jul 8, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="19" data-categories="TGl2ZSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1782367200000" data-listing-title-sort="INP College Enrollment">
+<td>
+<a href="https://wfrcanalytics.github.io/TDM-INP-College-Enrollment/" class="title listing-title">INP College Enrollment</a>
+</td>
+<td>
+<span class="listing-description">Gathers college enrollment numbers by TAZ for the travel demand model.</span>
+</td>
+<td>
+<span class="listing-categories">Live, Input data, TDM</span>
+</td>
+<td>
+<span class="listing-date">Jun 25, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="20" data-categories="TGl2ZSUyQ0VzdGltYXRpb24lMkNURE0=" data-listing-date-sort="1776837600000" data-listing-title-sort="EST Auto Operating Costs">
+<td>
+<a href="https://wfrcanalytics.github.io/TDM-EST-Auto-Operating-Costs/" class="title listing-title">EST Auto Operating Costs</a>
+</td>
+<td>
+<span class="listing-description">Updates auto operating costs used in the Wasatch Front travel demand model.</span>
+</td>
+<td>
+<span class="listing-categories">Live, Estimation, TDM</span>
+</td>
+<td>
+<span class="listing-date">Apr 22, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="21" data-categories="TGl2ZSUyQ0VzdGltYXRpb24lMkNURE0=" data-listing-date-sort="1776837600000" data-listing-title-sort="EST TAZ Median Income">
+<td>
+<a href="https://wfrcanalytics.github.io/TDM-EST-TAZ-Median-Income/" class="title listing-title">EST TAZ Median Income</a>
+</td>
+<td>
+<span class="listing-description">Estimates median household income by TAZ for the travel demand model.</span>
+</td>
+<td>
+<span class="listing-categories">Live, Estimation, TDM</span>
+</td>
+<td>
+<span class="listing-date">Apr 22, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="22" data-categories="TGl2ZSUyQ0VzdGltYXRpb24lMkNURE0=" data-listing-date-sort="1776837600000" data-listing-title-sort="EST Value Of Time">
+<td>
+<a href="https://wfrcanalytics.github.io/TDM-EST-Value-Of-Time/" class="title listing-title">EST Value Of Time</a>
+</td>
+<td>
+<span class="listing-description">Calculates values of time from ACS person data, segmented by occupancy and work versus non-work trips.</span>
+</td>
+<td>
+<span class="listing-categories">Live, Estimation, TDM</span>
+</td>
+<td>
+<span class="listing-date">Apr 22, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="23" data-categories="TGl2ZSUyQ1ZhbGlkYXRpb24lMkNURE0=" data-listing-date-sort="1769670000000" data-listing-title-sort="VAL Traffic Volume CCS">
+<td>
+<a href="https://wfrcanalytics.github.io/TDM-VAL-TrafficVolume-CCS/" class="title listing-title">VAL Traffic Volume CCS</a>
+</td>
+<td>
+<span class="listing-description">Observed vs model volumes for the CCS data and model data with filters by functional type, time of day, county</span>
+</td>
+<td>
+<span class="listing-categories">Live, Validation, TDM</span>
+</td>
+<td>
+<span class="listing-date">Jan 29, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="24" data-categories="TGl2ZSUyQ0ludGVybmFsJTJDQXBw" data-listing-date-sort="1766386800000" data-listing-title-sort="GPI Forecast Analysis 2025">
+<td>
+<a href="https://wfrc.shinyapps.io/GPI-Forecast-Analysis-2025/" class="title listing-title">GPI Forecast Analysis 2025</a>
+</td>
+<td>
+<span class="listing-description">Analysis of Kem C. Gardner Policy Institute Population, Household and Jobs Forecasts. Requires WFRC GitHub access.</span>
+</td>
+<td>
+<span class="listing-categories">Live, Internal, App</span>
+</td>
+<td>
+<span class="listing-date">Dec 22, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="25" data-categories="TGl2ZSUyQ0FuYWx5c2lzJTJDQkRN" data-listing-date-sort="1763362800000" data-listing-title-sort="Bikeway by City">
+<td>
+<a href="https://wfrcanalytics.github.io/GIS-Bikeway-by-City/" class="title listing-title">Bikeway by City</a>
+</td>
+<td>
+<span class="listing-description">An analysis of bicycle infrastructure compared to roadways</span>
+</td>
+<td>
+<span class="listing-categories">Live, Analysis, BDM</span>
+</td>
+<td>
+<span class="listing-date">Nov 17, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="26" data-categories="TGl2ZSUyQ01hcA==" data-listing-date-sort="1749189600000" data-listing-title-sort="Housing Unit Inventory Explorer">
+<td>
+<a href="https://wfrc.org/housing-inventory-explorer" class="title listing-title">Housing Unit Inventory Explorer</a>
+</td>
+<td>
+<span class="listing-description">Housing Inventory Explorer developed using the ArcGIS Maps SDK for JavaScript</span>
+</td>
+<td>
+<span class="listing-categories">Live, Map</span>
+</td>
+<td>
+<span class="listing-date">Jun 6, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="27" data-categories="UmVwb3NpdG9yeSUyQ0FwcA==" data-listing-date-sort="1787810400000" data-listing-title-sort="vizTool">
+<td>
+<a href="https://github.com/WFRCAnalytics/vizTool" class="title listing-title">vizTool</a>
+</td>
+<td>
+<span class="listing-description">Maps and charts for exploring travel demand model results: roadways, transit, mode share, socioeconomics and access to jobs.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, App</span>
+</td>
+<td>
+<span class="listing-date">Aug 27, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="28" data-categories="UmVwb3NpdG9yeSUyQ0RhdGE=" data-listing-date-sort="1792648800000" data-listing-title-sort="UDOT Segment Factors">
+<td>
+<a href="https://github.com/WFRCAnalytics/DATA-UDOT-Segment-Factors" class="title listing-title">UDOT Segment Factors</a>
+</td>
+<td>
+<span class="listing-description">Creation of seasonal, day-of-week, and hour-of-day factors.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Data</span>
+</td>
+<td>
+<span class="listing-date">Oct 22, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="29" data-categories="UmVwb3NpdG9yeSUyQ0RhdGE=" data-listing-date-sort="1792389600000" data-listing-title-sort="Regional Metrics Dashboard">
+<td>
+<a href="https://github.com/WFRCAnalytics/DATA-Regional-Metrics-Dashboard" class="title listing-title">Regional Metrics Dashboard</a>
+</td>
+<td>
+<span class="listing-description">Helper scripts for the WFRC Regional Metrics Dashboard</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Data</span>
+</td>
+<td>
+<span class="listing-date">Oct 19, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="30" data-categories="UmVwb3NpdG9yeSUyQ0dlb2dyYXBoeSUyQ1RETQ==" data-listing-date-sort="1791525600000" data-listing-title-sort="GEO Analysis Zones">
+<td>
+<a href="https://github.com/WFRCAnalytics/TDM-GEO-AnalysisZones" class="title listing-title">GEO Analysis Zones</a>
+</td>
+<td>
+<span class="listing-description">The source of truth for TAZ (and MAZ in the future) used in the Wasatch Front Travel Demand Modeling or any other applications.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Geography, TDM</span>
+</td>
+<td>
+<span class="listing-date">Oct 9, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="31" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lz" data-listing-date-sort="1791439200000" data-listing-title-sort="Opportunity Zones Info Sheets">
+<td>
+<a href="https://github.com/WFRCAnalytics/GIS_OpportunityZones_InfoSheets" class="title listing-title">Opportunity Zones Info Sheets</a>
+</td>
+<td>
+<span class="listing-description">Land Use and Transportation Information sheet for All Census Tracts in Eligible Opportunity Zones 2.0 List in Utah</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Analysis</span>
+</td>
+<td>
+<span class="listing-date">Oct 8, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="32" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDQXBw" data-listing-date-sort="1790661600000" data-listing-title-sort="Benefit Cost Analysis">
+<td>
+<a href="https://github.com/WFRCAnalytics/APP-Benefit-Cost-Analysis" class="title listing-title">Benefit Cost Analysis</a>
+</td>
+<td>
+<span class="listing-description">This tool calculates the Benefit-Cost Ratio (BCR) for planned projects by leveraging WF-TDM outputs. Requires WFRC GitHub access.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Internal, App</span>
+</td>
+<td>
+<span class="listing-date">Sep 29, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="33" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YQ==" data-listing-date-sort="1790229600000" data-listing-title-sort="ABM INP Microzones">
+<td>
+<a href="https://github.com/WFRCAnalytics/ABM-INP-Microzones" class="title listing-title">ABM INP Microzones</a>
+</td>
+<td>
+<span class="listing-description">one stop shop for delineating microzones for WFRC models</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Input data</span>
+</td>
+<td>
+<span class="listing-date">Sep 24, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="34" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lz" data-listing-date-sort="1789538400000" data-listing-title-sort="FORECAST Traffic Volume">
+<td>
+<a href="https://github.com/WFRCAnalytics/FORECAST-Traffic-Volume" class="title listing-title">FORECAST Traffic Volume</a>
+</td>
+<td>
+<span class="listing-description">Notebooks and two web apps for traffic volume forecasts: the ART review and adjustment tool, and a public viewer.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Analysis</span>
+</td>
+<td>
+<span class="listing-date">Sep 16, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="35" data-categories="UmVwb3NpdG9yeSUyQ01vZGVsJTJDUkVNTQ==" data-listing-date-sort="1789452000000" data-listing-title-sort="REMM 3.0 model">
+<td>
+<a href="https://github.com/WFRCAnalytics/REMM-v3.0" class="title listing-title">REMM 3.0 model</a>
+</td>
+<td>
+<span class="listing-description">Real Estate Market Model (Wasatch Front Implementation of Urbansim)</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Model, REMM</span>
+</td>
+<td>
+<span class="listing-date">Sep 15, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="36" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRGF0YQ==" data-listing-date-sort="1789106400000" data-listing-title-sort="UTA Automatic Passenger Counting">
+<td>
+<a href="https://github.com/WFRCAnalytics/DATA-UTA-Automatic-Passenger-Counting" class="title listing-title">UTA Automatic Passenger Counting</a>
+</td>
+<td>
+<span class="listing-description">Loads UTA automatic passenger counting ridership data into BigQuery with documented processing pipelines. Requires WFRC GitHub access.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Internal, Data</span>
+</td>
+<td>
+<span class="listing-date">Sep 11, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="37" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDSW5wdXQlMjBkYXRhJTJDVERN" data-listing-date-sort="1788933600000" data-listing-title-sort="INP Work At Home">
+<td>
+<a href="https://github.com/WFRCAnalytics/TDM-INP-Work-At-Home" class="title listing-title">INP Work At Home</a>
+</td>
+<td>
+<span class="listing-description">The purpose of this repository is to calculate the work at home rates (home based jobs as well as telecommuting). . Requires WFRC GitHub access.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Internal, Input data, TDM</span>
+</td>
+<td>
+<span class="listing-date">Sep 9, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="38" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDQXBw" data-listing-date-sort="1788847200000" data-listing-title-sort="ATO Interactive">
+<td>
+<a href="https://github.com/WFRCAnalytics/APP-ATO-Interactive" class="title listing-title">ATO Interactive</a>
+</td>
+<td>
+<span class="listing-description">Interactive WebAssembly map of job and household accessibility (Access to Opportunity) across the Wasatch Front, from the travel demand model. Requires WFRC GitHub access.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Internal, App</span>
+</td>
+<td>
+<span class="listing-date">Sep 8, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="39" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRXN0aW1hdGlvbiUyQ1RETQ==" data-listing-date-sort="1786946400000" data-listing-title-sort="EST HTS Params">
+<td>
+<a href="https://github.com/WFRCAnalytics/TDM-EST-HTS-Params" class="title listing-title">EST HTS Params</a>
+</td>
+<td>
+<span class="listing-description">This repo houses all scripts used to estimate model parameters and adjust model inputs that draw on the household travel survey. Requires WFRC GitHub access.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Internal, Estimation, TDM</span>
+</td>
+<td>
+<span class="listing-date">Aug 17, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="40" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDQW5hbHlzaXM=" data-listing-date-sort="1784786400000" data-listing-title-sort="RTP Phasing Criteria">
+<td>
+<a href="https://github.com/WFRCAnalytics/GIS-RTP-Phasing-Criteria" class="title listing-title">RTP Phasing Criteria</a>
+</td>
+<td>
+<span class="listing-description">A workspace for calculating phasing criteria scores on a project level basis. Active Transportation, Roadway &amp; Transit. Requires WFRC GitHub access.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Internal, Analysis</span>
+</td>
+<td>
+<span class="listing-date">Jul 23, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="41" data-categories="UmVwb3NpdG9yeSUyQ0dlb2dyYXBoeSUyQ1RETQ==" data-listing-date-sort="1784700000000" data-listing-title-sort="GEO True Shape">
+<td>
+<a href="https://github.com/WFRCAnalytics/TDM-GEO-TrueShape" class="title listing-title">GEO True Shape</a>
+</td>
+<td>
+<span class="listing-description">This repo is for processing True Shape Network out of UGRC Roadway Centerlines dataset</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Geography, TDM</span>
+</td>
+<td>
+<span class="listing-date">Jul 22, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="42" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1784613600000" data-listing-title-sort="INP K 12 Enrollment">
+<td>
+<a href="https://github.com/WFRCAnalytics/TDM-INP-K-12-Enrollment" class="title listing-title">INP K 12 Enrollment</a>
+</td>
+<td>
+<span class="listing-description">Summarizing the state school enrollment data at the TAZ level.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Input data, TDM</span>
+</td>
+<td>
+<span class="listing-date">Jul 21, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="43" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lz" data-listing-date-sort="1783576800000" data-listing-title-sort="ATO Impact Tool">
+<td>
+<a href="https://github.com/WFRCAnalytics/ATO-Impact-Tool" class="title listing-title">ATO Impact Tool</a>
+</td>
+<td>
+<span class="listing-description">WFRC tool for assessing changes in Access to Opportunity (ATO) resulting from regional mobility investments</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Analysis</span>
+</td>
+<td>
+<span class="listing-date">Jul 9, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="44" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDQ2FsaWJyYXRpb24lMkNURE0=" data-listing-date-sort="1783576800000" data-listing-title-sort="CAL HBWDest Choice">
+<td>
+<a href="https://github.com/WFRCAnalytics/TDM-CAL-HBWDestChoice" class="title listing-title">CAL HBWDest Choice</a>
+</td>
+<td>
+<span class="listing-description">The purpose of this repository is to calibration and then estimate coefficients/constants for the HBW destination choice model. . Requires WFRC GitHub access.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Internal, Calibration, TDM</span>
+</td>
+<td>
+<span class="listing-date">Jul 9, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="45" data-categories="UmVwb3NpdG9yeSUyQ01vZGVsJTJDQkRN" data-listing-date-sort="1783404000000" data-listing-title-sort="Utah Bike Demand Model">
+<td>
+<a href="https://github.com/WFRCAnalytics/BDM-Utah-Bike-Demand-Model" class="title listing-title">Utah Bike Demand Model</a>
+</td>
+<td>
+<span class="listing-description">Utah Bike Demand Model</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Model, BDM</span>
+</td>
+<td>
+<span class="listing-date">Jul 7, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="46" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRXN0aW1hdGlvbiUyQ1RETQ==" data-listing-date-sort="1779256800000" data-listing-title-sort="EST Commercial Vehicle Model">
+<td>
+<a href="https://github.com/WFRCAnalytics/TDM-EST-Commercial-Vehicle-Model" class="title listing-title">EST Commercial Vehicle Model</a>
+</td>
+<td>
+<span class="listing-description">Workspace for the v10 commercial vehicle model, including consultant deliverables and supporting process files. Requires WFRC GitHub access.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Internal, Estimation, TDM</span>
+</td>
+<td>
+<span class="listing-date">May 20, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="47" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRGF0YQ==" data-listing-date-sort="1776837600000" data-listing-title-sort="OBS Prep For TDM">
+<td>
+<a href="https://github.com/WFRCAnalytics/DATA-OBS-Prep-For-TDM" class="title listing-title">OBS Prep For TDM</a>
+</td>
+<td>
+<span class="listing-description">Prepares transit ridership and on-board survey data, and updates transit access parameters, for the travel demand model. Requires WFRC GitHub access.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Internal, Data</span>
+</td>
+<td>
+<span class="listing-date">Apr 22, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="48" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDQ2FsaWJyYXRpb24lMkNURE0=" data-listing-date-sort="1776837600000" data-listing-title-sort="CAL Mode Choice">
+<td>
+<a href="https://github.com/WFRCAnalytics/TDM-CAL-Mode-Choice" class="title listing-title">CAL Mode Choice</a>
+</td>
+<td>
+<span class="listing-description">Mode choice calibration for the travel demand model. Requires WFRC GitHub access.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Internal, Calibration, TDM</span>
+</td>
+<td>
+<span class="listing-date">Apr 22, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="49" data-categories="UmVwb3NpdG9yeSUyQ0FwcA==" data-listing-date-sort="1776146400000" data-listing-title-sort="3D Households Jobs Forecast">
+<td>
+<a href="https://github.com/WFRCAnalytics/APP-3D-Households-Jobs-Forecast" class="title listing-title">3D Households Jobs Forecast</a>
+</td>
+<td>
+<span class="listing-description">A quick web app showcasing WFRC’s hh and job forecast in a 2D/3D viewer</span>
+</td>
+<td>
+<span class="listing-categories">Repository, App</span>
+</td>
+<td>
+<span class="listing-date">Apr 14, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="50" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRGF0YQ==" data-listing-date-sort="1775023200000" data-listing-title-sort="Microtransit Prep For TDM">
+<td>
+<a href="https://github.com/WFRCAnalytics/DATA-Microtransit-Prep-For-TDM" class="title listing-title">Microtransit Prep For TDM</a>
+</td>
+<td>
+<span class="listing-description">Processes UTA microtransit data to inform how microtransit is represented in the travel demand model. Requires WFRC GitHub access.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Internal, Data</span>
+</td>
+<td>
+<span class="listing-date">Apr 1, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="51" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDVG9vbA==" data-listing-date-sort="1774332000000" data-listing-title-sort="Generate SE Feedback Emails">
+<td>
+<a href="https://github.com/WFRCAnalytics/TOOL-Generate-SE-Feedback-Emails" class="title listing-title">Generate SE Feedback Emails</a>
+</td>
+<td>
+<span class="listing-description">Use google apps scripts to automatically generate emails to send to stakeholders. Requires WFRC GitHub access.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Internal, Tool</span>
+</td>
+<td>
+<span class="listing-date">Mar 24, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="52" data-categories="UmVwb3NpdG9yeSUyQ0RhdGE=" data-listing-date-sort="1772780400000" data-listing-title-sort="HTS Big Query">
+<td>
+<a href="https://github.com/WFRCAnalytics/DATA-HTS-BigQuery" class="title listing-title">HTS Big Query</a>
+</td>
+<td>
+<span class="listing-description">A repo to house SQL code to generate production tables for travel demand modeling purposes.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Data</span>
+</td>
+<td>
+<span class="listing-date">Mar 6, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="53" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRGF0YQ==" data-listing-date-sort="1771484400000" data-listing-title-sort="UDOT AADT Processing">
+<td>
+<a href="https://github.com/WFRCAnalytics/DATA-UDOT-AADT-Processing" class="title listing-title">UDOT AADT Processing</a>
+</td>
+<td>
+<span class="listing-description">Processing UDOT’s AADT and Truck Percent Data for TDM Purposes. Requires WFRC GitHub access.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Internal, Data</span>
+</td>
+<td>
+<span class="listing-date">Feb 19, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="54" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDQ2FsaWJyYXRpb24lMkNURE0=" data-listing-date-sort="1769583600000" data-listing-title-sort="CAL Friction Factors">
+<td>
+<a href="https://github.com/WFRCAnalytics/TDM-CAL-Friction-Factors" class="title listing-title">CAL Friction Factors</a>
+</td>
+<td>
+<span class="listing-description">This repo contains python scripts used to calibrate the friction factors for the WFTDM. It also includes the data munging necessary to produce observed trip length frequency charts. . Requires WFRC GitHub access.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Internal, Calibration, TDM</span>
+</td>
+<td>
+<span class="listing-date">Jan 28, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="55" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDQW5hbHlzaXMlMkNSRU1N" data-listing-date-sort="1769497200000" data-listing-title-sort="Job Space Calculation">
+<td>
+<a href="https://github.com/WFRCAnalytics/REMM-Job-Space-Calculation" class="title listing-title">Job Space Calculation</a>
+</td>
+<td>
+<span class="listing-description">use county controls, building square feet, and dws to distribute job spaces at a taz level. Requires WFRC GitHub access.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Internal, Analysis, REMM</span>
+</td>
+<td>
+<span class="listing-date">Jan 27, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="56" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1769065200000" data-listing-title-sort="INP Socioeconomic Control Totals">
+<td>
+<a href="https://github.com/WFRCAnalytics/TDM-INP-Socioeconomic-Control-Totals" class="title listing-title">INP Socioeconomic Control Totals</a>
+</td>
+<td>
+<span class="listing-description">Estimates county-level socioeconomic control totals for the v10 travel demand model.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Input data, TDM</span>
+</td>
+<td>
+<span class="listing-date">Jan 22, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="57" data-categories="UmVwb3NpdG9yeSUyQ0xpYnJhcnk=" data-listing-date-sort="1767682800000" data-listing-title-sort="Urbansim WFRC">
+<td>
+<a href="https://github.com/WFRCAnalytics/PY-Urbansim-WFRC" class="title listing-title">Urbansim WFRC</a>
+</td>
+<td>
+<span class="listing-description">WFRC’s modified version of urbansim by Paul Waddel</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Library</span>
+</td>
+<td>
+<span class="listing-date">Jan 6, 2026</span>
+</td>
+
+</tr>
+
+<tr data-index="58" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDQXBw" data-listing-date-sort="1766386800000" data-listing-title-sort="Socioeconomic Control Totals">
+<td>
+<a href="https://github.com/WFRCAnalytics/APP-Socioeconomic-Control-Totals" class="title listing-title">Socioeconomic Control Totals</a>
+</td>
+<td>
+<span class="listing-description">An R-Shiny Application to visualize the 2027-2055 Socioeconomic Control Totals. Requires WFRC GitHub access.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Internal, App</span>
+</td>
+<td>
+<span class="listing-date">Dec 22, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="59" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDQW5hbHlzaXM=" data-listing-date-sort="1765954800000" data-listing-title-sort="Housing ATO Calculator Web App Builder Devel">
+<td>
+<a href="https://github.com/WFRCAnalytics/Housing-ATO-Calculator-WebAppBuilder-Devel" class="title listing-title">Housing ATO Calculator Web App Builder Devel</a>
+</td>
+<td>
+<span class="listing-description">Development branch for Housing ATO Calculator Web App. Requires WFRC GitHub access.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Internal, Analysis</span>
+</td>
+<td>
+<span class="listing-date">Dec 17, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="60" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDQW5hbHlzaXM=" data-listing-date-sort="1765263600000" data-listing-title-sort="Housing Within Centers SAP">
+<td>
+<a href="https://github.com/WFRCAnalytics/Housing-Within-Centers-SAP" class="title listing-title">Housing Within Centers SAP</a>
+</td>
+<td>
+<span class="listing-description">Analysis of primary homes created in SAP’s since adoption of the plans. Requires WFRC GitHub access.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Internal, Analysis</span>
+</td>
+<td>
+<span class="listing-date">Dec 9, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="61" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRGF0YQ==" data-listing-date-sort="1764140400000" data-listing-title-sort="Housing Within Centers">
+<td>
+<a href="https://github.com/WFRCAnalytics/DATA-Housing-Within-Centers" class="title listing-title">Housing Within Centers</a>
+</td>
+<td>
+<span class="listing-description">Analysis to find how many primary housing units have been created after new SAP’s were created. Requires WFRC GitHub access.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Internal, Data</span>
+</td>
+<td>
+<span class="listing-date">Nov 26, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="62" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRGF0YQ==" data-listing-date-sort="1763622000000" data-listing-title-sort="Box Elder Parcels">
+<td>
+<a href="https://github.com/WFRCAnalytics/DATA-BoxElder-Parcels" class="title listing-title">Box Elder Parcels</a>
+</td>
+<td>
+<span class="listing-description">Categorizing Box Elder parcels by Land Use into a usable REMM format. Requires WFRC GitHub access.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Internal, Data</span>
+</td>
+<td>
+<span class="listing-date">Nov 20, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="63" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDTW9kZWwlMkNURE0=" data-listing-date-sort="1763017200000" data-listing-title-sort="TDM Official Releases">
+<td>
+<a href="https://github.com/WFRCAnalytics/WF-TDM-Official-Releases" class="title listing-title">TDM Official Releases</a>
+</td>
+<td>
+<span class="listing-description">Official Wasatch Front travel demand model releases (v9.x and later). Requires WFRC GitHub access.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Internal, Model, TDM</span>
+</td>
+<td>
+<span class="listing-date">Nov 13, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="64" data-categories="QXJjaGl2ZWQlMkNNYXA=" data-listing-date-sort="1762758000000" data-listing-title-sort="Census LEHD Commute Patterns">
+<td>
+<a href="https://github.com/WFRCAnalytics/MAP-Census-LEHD-Commute-Patterns" class="title listing-title">Census LEHD Commute Patterns</a>
+</td>
+<td>
+<span class="listing-description">Summarizes Census LEHD commute data into geodatabases for the Commuter Flow Map.</span>
+</td>
+<td>
+<span class="listing-categories">Archived, Map</span>
+</td>
+<td>
+<span class="listing-date">Nov 10, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="65" data-categories="QXJjaGl2ZWQlMkNNYXA=" data-listing-date-sort="1762326000000" data-listing-title-sort="Housing ATO Calculator">
+<td>
+<a href="https://wfrc.org/housing-ato-calculator-map/" class="title listing-title">Housing ATO Calculator</a>
+</td>
+<td>
+<span class="listing-description">The Housing ATO Calculator can assist housing and land use planning efforts. This tool is intended to be used as a conversation starter, a helpful visualization tool, and a data-informed guide about planning for…</span>
+</td>
+<td>
+<span class="listing-categories">Archived, Map</span>
+</td>
+<td>
+<span class="listing-date">Nov 5, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="66" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDTWFw" data-listing-date-sort="1759903200000" data-listing-title-sort="Locus OD Data Explorer">
+<td>
+<a href="https://github.com/WFRCAnalytics/MAP-Locus-OD-Data-Explorer" class="title listing-title">Locus OD Data Explorer</a>
+</td>
+<td>
+<span class="listing-description">Explorer for Locus origin-destination data. Requires WFRC GitHub access.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Internal, Map</span>
+</td>
+<td>
+<span class="listing-date">Oct 8, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="67" data-categories="UmVwb3NpdG9yeSUyQ0FwcA==" data-listing-date-sort="1758693600000" data-listing-title-sort="HTS Trip Purpose Shiny">
+<td>
+<a href="https://github.com/WFRCAnalytics/APP-HTS-Trip-Purpose-Shiny" class="title listing-title">HTS Trip Purpose Shiny</a>
+</td>
+<td>
+<span class="listing-description">R-Shiny app showing trips generated by purpose from the 2023 Household Travel Survey, by travel mode, vehicles and workers.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, App</span>
+</td>
+<td>
+<span class="listing-date">Sep 24, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="68" data-categories="UmVwb3NpdG9yeSUyQ01hcA==" data-listing-date-sort="1758520800000" data-listing-title-sort="Housing ATO Calculator Weber">
+<td>
+<a href="https://github.com/WFRCAnalytics/MAP-Housing-ATO-Calculator-Weber" class="title listing-title">Housing ATO Calculator Weber</a>
+</td>
+<td>
+<span class="listing-description">Housing Location Explorer for Weber County: weight what matters locally to see access-based housing opportunities.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Map</span>
+</td>
+<td>
+<span class="listing-date">Sep 22, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="69" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lzJTJDUkVNTQ==" data-listing-date-sort="1758520800000" data-listing-title-sort="Parcel Splitting">
+<td>
+<a href="https://github.com/WFRCAnalytics/REMM-Parcel-Splitting" class="title listing-title">Parcel Splitting</a>
+</td>
+<td>
+<span class="listing-description">Parcel splitting step in preparing REMM inputs.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Analysis, REMM</span>
+</td>
+<td>
+<span class="listing-date">Sep 22, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="70" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1755064800000" data-listing-title-sort="INP TAZ Age Percent">
+<td>
+<a href="https://github.com/WFRCAnalytics/TDM-INP-TAZ-Age-Percent" class="title listing-title">INP TAZ Age Percent</a>
+</td>
+<td>
+<span class="listing-description">Estimates age-group shares (0-17, 18-64, 65+) for each TAZ from census blocks and ACS data.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Input data, TDM</span>
+</td>
+<td>
+<span class="listing-date">Aug 13, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="71" data-categories="UmVwb3NpdG9yeSUyQ1Bvc3QtcHJvY2Vzc2luZyUyQ1RETQ==" data-listing-date-sort="1754632800000" data-listing-title-sort="PP ATO Big5">
+<td>
+<a href="https://github.com/WFRCAnalytics/TDM-PP-ATO-Big5" class="title listing-title">PP ATO Big5</a>
+</td>
+<td>
+<span class="listing-description">Post-processing of Access to Opportunity results.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Post-processing, TDM</span>
+</td>
+<td>
+<span class="listing-date">Aug 8, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="72" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lzJTJDUkVNTQ==" data-listing-date-sort="1753250400000" data-listing-title-sort="WF Model Area Splits">
+<td>
+<a href="https://github.com/WFRCAnalytics/REMM-WF-Model-Area-Splits" class="title listing-title">WF Model Area Splits</a>
+</td>
+<td>
+<span class="listing-description">Forecast percentage of HH, pop, and employment within REMM modeling area vs within the UDOT space</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Analysis, REMM</span>
+</td>
+<td>
+<span class="listing-date">Jul 23, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="73" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRGF0YQ==" data-listing-date-sort="1752818400000" data-listing-title-sort="HTS Prep For TDM">
+<td>
+<a href="https://github.com/WFRCAnalytics/DATA-HTS-Prep-For-TDM" class="title listing-title">HTS Prep For TDM</a>
+</td>
+<td>
+<span class="listing-description">This repo provides an environment to keep track of all the changes made to the raw 2023 HTS data for the purpose of using it for the TDM. Requires WFRC GitHub access.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Internal, Data</span>
+</td>
+<td>
+<span class="listing-date">Jul 18, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="74" data-categories="UmVwb3NpdG9yeSUyQ0RhdGElMkNCRE0=" data-listing-date-sort="1750831200000" data-listing-title-sort="Bike Create Features">
+<td>
+<a href="https://github.com/WFRCAnalytics/DATA-Bike-Create-Features" class="title listing-title">Bike Create Features</a>
+</td>
+<td>
+<span class="listing-description">Builds existing and planned bike facility layers from Utah roads and trails data (UGRC), identifying the best bike feature and road side.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Data, BDM</span>
+</td>
+<td>
+<span class="listing-date">Jun 25, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="75" data-categories="UmVwb3NpdG9yeSUyQ0VzdGltYXRpb24lMkNURE0=" data-listing-date-sort="1748930400000" data-listing-title-sort="EST Life Cycle">
+<td>
+<a href="https://github.com/WFRCAnalytics/TDM-EST-LifeCycle" class="title listing-title">EST Life Cycle</a>
+</td>
+<td>
+<span class="listing-description">Defines the household life cycle categories (children and seniors) used in the model.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Estimation, TDM</span>
+</td>
+<td>
+<span class="listing-date">Jun 3, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="76" data-categories="UmVwb3NpdG9yeSUyQ1Rvb2w=" data-listing-date-sort="1748844000000" data-listing-title-sort="Centers Capacity">
+<td>
+<a href="https://github.com/WFRCAnalytics/TOOL-Centers-Capacity" class="title listing-title">Centers Capacity</a>
+</td>
+<td>
+<span class="listing-description">Estimates how much housing and jobs urban centers can add by a given horizon under market and policy constraints.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Tool</span>
+</td>
+<td>
+<span class="listing-date">Jun 2, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="77" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRGF0YQ==" data-listing-date-sort="1746856800000" data-listing-title-sort="HTS OBS Market Analysis">
+<td>
+<a href="https://github.com/WFRCAnalytics/DATA-HTS-OBS-Market-Analysis" class="title listing-title">HTS OBS Market Analysis</a>
+</td>
+<td>
+<span class="listing-description">DATA-HTS-OBS-Market-Analysis. Requires WFRC GitHub access.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Internal, Data</span>
+</td>
+<td>
+<span class="listing-date">May 10, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="78" data-categories="UmVwb3NpdG9yeSUyQ0RldmVsb3BtZW50JTJDVERN" data-listing-date-sort="1746165600000" data-listing-title-sort="DEV E2 CRT Improvements">
+<td>
+<a href="https://github.com/WFRCAnalytics/TDM-DEV-E2-CRT-Improvements" class="title listing-title">DEV E2 CRT Improvements</a>
+</td>
+<td>
+<span class="listing-description">Development work on E2 and CRT improvements to the travel demand model.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Development, TDM</span>
+</td>
+<td>
+<span class="listing-date">May 2, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="79" data-categories="UmVwb3NpdG9yeSUyQ0RhdGE=" data-listing-date-sort="1744783200000" data-listing-title-sort="Merge WFRC MAG GFLU">
+<td>
+<a href="https://github.com/WFRCAnalytics/DATA-Merge-WFRC-MAG-GFLU" class="title listing-title">Merge WFRC MAG GFLU</a>
+</td>
+<td>
+<span class="listing-description">Combine and standardize WFRC and MAG’s Generalized Future Land Use GIS layers</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Data</span>
+</td>
+<td>
+<span class="listing-date">Apr 16, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="80" data-categories="UmVwb3NpdG9yeSUyQ01vZGVsJTJDQkRN" data-listing-date-sort="1744178400000" data-listing-title-sort="Post Process Outputs">
+<td>
+<a href="https://github.com/WFRCAnalytics/BDM-Post-Process-Outputs" class="title listing-title">Post Process Outputs</a>
+</td>
+<td>
+<span class="listing-description">Post Process Bike Model Outputs for QAQC purposes</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Model, BDM</span>
+</td>
+<td>
+<span class="listing-date">Apr 9, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="81" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRGF0YQ==" data-listing-date-sort="1744178400000" data-listing-title-sort="GPI Forecast Review 2021">
+<td>
+<a href="https://github.com/WFRCAnalytics/DATA-GPI-Forecast-Review-2021" class="title listing-title">GPI Forecast Review 2021</a>
+</td>
+<td>
+<span class="listing-description">Review 2021 GPI socioeconomic and employment forecasts. Requires WFRC GitHub access.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Internal, Data</span>
+</td>
+<td>
+<span class="listing-date">Apr 9, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="82" data-categories="UmVwb3NpdG9yeSUyQ0RhdGE=" data-listing-date-sort="1744178400000" data-listing-title-sort="Official SE RTP 2019">
+<td>
+<a href="https://github.com/WFRCAnalytics/DATA-Official-SE-RTP-2019" class="title listing-title">Official SE RTP 2019</a>
+</td>
+<td>
+<span class="listing-description">Official Socio-Economic data for the 2019 Regional Transportation Plan</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Data</span>
+</td>
+<td>
+<span class="listing-date">Apr 9, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="83" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lz" data-listing-date-sort="1744178400000" data-listing-title-sort="Housing Inventory Overlay Version">
+<td>
+<a href="https://github.com/WFRCAnalytics/GIS-Housing-Inventory-Overlay-Version" class="title listing-title">Housing Inventory Overlay Version</a>
+</td>
+<td>
+<span class="listing-description">Create an extended version of the housing unit inventory with additional geographic attributes</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Analysis</span>
+</td>
+<td>
+<span class="listing-date">Apr 9, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="84" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lz" data-listing-date-sort="1744178400000" data-listing-title-sort="Parking Lots">
+<td>
+<a href="https://github.com/WFRCAnalytics/GIS-Parking-Lots" class="title listing-title">Parking Lots</a>
+</td>
+<td>
+<span class="listing-description">Exploration of detecting parking lots from imagery with ArcGIS deep learning.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Analysis</span>
+</td>
+<td>
+<span class="listing-date">Apr 9, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="85" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lz" data-listing-date-sort="1744178400000" data-listing-title-sort="TAZ Grouping Analysis Variables">
+<td>
+<a href="https://github.com/WFRCAnalytics/GIS-TAZ-Grouping-Analysis-Variables" class="title listing-title">TAZ Grouping Analysis Variables</a>
+</td>
+<td>
+<span class="listing-description">Create road composition and socioeconomic variables for similar TAZ</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Analysis</span>
+</td>
+<td>
+<span class="listing-date">Apr 9, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="86" data-categories="UmVwb3NpdG9yeSUyQ0xpYnJhcnk=" data-listing-date-sort="1744178400000" data-listing-title-sort="Orca WFRC">
+<td>
+<a href="https://github.com/WFRCAnalytics/PY-Orca-WFRC" class="title listing-title">Orca WFRC</a>
+</td>
+<td>
+<span class="listing-description">WFRC version of the Orca package</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Library</span>
+</td>
+<td>
+<span class="listing-date">Apr 9, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="87" data-categories="UmVwb3NpdG9yeSUyQ1Rvb2wlMkNCRE0=" data-listing-date-sort="1744178400000" data-listing-title-sort="Bike Ped Demand Model">
+<td>
+<a href="https://github.com/WFRCAnalytics/TOOL-BikePed-Demand-Model" class="title listing-title">Bike Ped Demand Model</a>
+</td>
+<td>
+<span class="listing-description">GIS tool for estimating latent bike and pedestrian demand.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Tool, BDM</span>
+</td>
+<td>
+<span class="listing-date">Apr 9, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="88" data-categories="UmVwb3NpdG9yeSUyQ1Rvb2w=" data-listing-date-sort="1744178400000" data-listing-title-sort="Create Residential Capacity Classes">
+<td>
+<a href="https://github.com/WFRCAnalytics/TOOL-Create-Residential-Capacity-Classes" class="title listing-title">Create Residential Capacity Classes</a>
+</td>
+<td>
+<span class="listing-description">Create residential capacity classes for capacity tool</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Tool</span>
+</td>
+<td>
+<span class="listing-date">Apr 9, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="89" data-categories="UmVwb3NpdG9yeSUyQ1Rvb2w=" data-listing-date-sort="1744178400000" data-listing-title-sort="Network To Graph">
+<td>
+<a href="https://github.com/WFRCAnalytics/TOOL-Network-To-Graph" class="title listing-title">Network To Graph</a>
+</td>
+<td>
+<span class="listing-description">Converts Multi-modal Network Features to graph format (nodes/links) using Arcpy</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Tool</span>
+</td>
+<td>
+<span class="listing-date">Apr 9, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="90" data-categories="UmVwb3NpdG9yeSUyQ1Rvb2w=" data-listing-date-sort="1744178400000" data-listing-title-sort="Pseudo Parcels">
+<td>
+<a href="https://github.com/WFRCAnalytics/TOOL-PseudoParcels" class="title listing-title">Pseudo Parcels</a>
+</td>
+<td>
+<span class="listing-description">Builds block based microzones and then builds microzone filling parcels using existing parcel centroids and Thiessen polygon algorithm</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Tool</span>
+</td>
+<td>
+<span class="listing-date">Apr 9, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="91" data-categories="UmVwb3NpdG9yeSUyQ0RhdGE=" data-listing-date-sort="1744092000000" data-listing-title-sort="COVID Compare using BTS">
+<td>
+<a href="https://github.com/WFRCAnalytics/DATA-COVID-Compare-using-BTS" class="title listing-title">COVID Compare using BTS</a>
+</td>
+<td>
+<span class="listing-description">Compares 2019 and 2020 trips, trip lengths and work-from-home levels using Bureau of Transportation Statistics data.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Data</span>
+</td>
+<td>
+<span class="listing-date">Apr 8, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="92" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRGF0YQ==" data-listing-date-sort="1744092000000" data-listing-title-sort="OBS TDM Boardings by Stop XY">
+<td>
+<a href="https://github.com/WFRCAnalytics/DATA-OBS-TDM-Boardings-by-Stop-XY" class="title listing-title">OBS TDM Boardings by Stop XY</a>
+</td>
+<td>
+<span class="listing-description">Generates boardings and alightings by mode and stop location from on-board survey data. Requires WFRC GitHub access.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Internal, Data</span>
+</td>
+<td>
+<span class="listing-date">Apr 8, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="93" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRGF0YQ==" data-listing-date-sort="1744092000000" data-listing-title-sort="Preliminary GPI Projection 2024">
+<td>
+<a href="https://github.com/WFRCAnalytics/DATA-Preliminary-GPI-Projection-2024" class="title listing-title">Preliminary GPI Projection 2024</a>
+</td>
+<td>
+<span class="listing-description">Reviews preliminary Kem C. Gardner Policy Institute control totals; reusable for future releases. Requires WFRC GitHub access.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Internal, Data</span>
+</td>
+<td>
+<span class="listing-date">Apr 8, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="94" data-categories="UmVwb3NpdG9yeSUyQ0RhdGE=" data-listing-date-sort="1744092000000" data-listing-title-sort="Transit 2014 2015">
+<td>
+<a href="https://github.com/WFRCAnalytics/DATA-Transit-2014-2015" class="title listing-title">Transit 2014 2015</a>
+</td>
+<td>
+<span class="listing-description">Automated passenger counter transit boardings data for late 2014 and early 2015.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Data</span>
+</td>
+<td>
+<span class="listing-date">Apr 8, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="95" data-categories="UmVwb3NpdG9yeSUyQ0RhdGE=" data-listing-date-sort="1744092000000" data-listing-title-sort="UT Sales Tax Analysis">
+<td>
+<a href="https://github.com/WFRCAnalytics/DATA-UT-Sales-Tax-Analysis" class="title listing-title">UT Sales Tax Analysis</a>
+</td>
+<td>
+<span class="listing-description">This notebook processes data from the Tax Commission into spatial, web-ready format</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Data</span>
+</td>
+<td>
+<span class="listing-date">Apr 8, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="96" data-categories="UmVwb3NpdG9yeSUyQ01hcA==" data-listing-date-sort="1744092000000" data-listing-title-sort="ATO">
+<td>
+<a href="https://github.com/WFRCAnalytics/MAP-ATO" class="title listing-title">ATO</a>
+</td>
+<td>
+<span class="listing-description">Web mapping application for Access to Opportunities metrics</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Map</span>
+</td>
+<td>
+<span class="listing-date">Apr 8, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="97" data-categories="UmVwb3NpdG9yeSUyQ01hcA==" data-listing-date-sort="1744092000000" data-listing-title-sort="Small Districts OD">
+<td>
+<a href="https://github.com/WFRCAnalytics/MAP-Small-Districts-OD" class="title listing-title">Small Districts OD</a>
+</td>
+<td>
+<span class="listing-description">Post-processing of origin and destination data from StreetLight and preparing data for web app</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Map</span>
+</td>
+<td>
+<span class="listing-date">Apr 8, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="98" data-categories="UmVwb3NpdG9yeSUyQ01hcA==" data-listing-date-sort="1744092000000" data-listing-title-sort="Special Generators">
+<td>
+<a href="https://github.com/WFRCAnalytics/MAP-Special-Generators" class="title listing-title">Special Generators</a>
+</td>
+<td>
+<span class="listing-description">Origin-destination data for special-generator TAZs by season and time of day, from StreetLight, with a map viewer.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Map</span>
+</td>
+<td>
+<span class="listing-date">Apr 8, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="99" data-categories="UmVwb3NpdG9yeSUyQ0VzdGltYXRpb24lMkNURE0=" data-listing-date-sort="1744092000000" data-listing-title-sort="EST Trucks Streetlight">
+<td>
+<a href="https://github.com/WFRCAnalytics/TDM-EST-Trucks-Streetlight" class="title listing-title">EST Trucks Streetlight</a>
+</td>
+<td>
+<span class="listing-description">Processes and summarizes StreetLight truck data for the model.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Estimation, TDM</span>
+</td>
+<td>
+<span class="listing-date">Apr 8, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="100" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1744092000000" data-listing-title-sort="INP Census Block to TAZ">
+<td>
+<a href="https://github.com/WFRCAnalytics/TDM-INP-Census-Block-to-TAZ" class="title listing-title">INP Census Block to TAZ</a>
+</td>
+<td>
+<span class="listing-description">TDM-Census-Block-to-TAZ</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Input data, TDM</span>
+</td>
+<td>
+<span class="listing-date">Apr 8, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="101" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1744092000000" data-listing-title-sort="INP TAZ Renumbering">
+<td>
+<a href="https://github.com/WFRCAnalytics/TDM-INP-TAZ-Renumbering" class="title listing-title">INP TAZ Renumbering</a>
+</td>
+<td>
+<span class="listing-description">Reclassifies and renumbers TAZs using ArcGIS and spatial data.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Input data, TDM</span>
+</td>
+<td>
+<span class="listing-date">Apr 8, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="102" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1744092000000" data-listing-title-sort="INP TAZ to Census Tract">
+<td>
+<a href="https://github.com/WFRCAnalytics/TDM-INP-TAZ-to-CensusTract" class="title listing-title">INP TAZ to Census Tract</a>
+</td>
+<td>
+<span class="listing-description">Assigns each TAZ to a census tract GEOID by spatial join of TAZ centroids.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Input data, TDM</span>
+</td>
+<td>
+<span class="listing-date">Apr 8, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="103" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1744092000000" data-listing-title-sort="INP Transit Node Renumbering">
+<td>
+<a href="https://github.com/WFRCAnalytics/TDM-INP-Transit-Node-Renumbering" class="title listing-title">INP Transit Node Renumbering</a>
+</td>
+<td>
+<span class="listing-description">Scripts that renumber transit line files to new network node numbers.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Input data, TDM</span>
+</td>
+<td>
+<span class="listing-date">Apr 8, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="104" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDSW5wdXQlMjBkYXRhJTJDVERN" data-listing-date-sort="1744092000000" data-listing-title-sort="INP USTM Externals Using National Network">
+<td>
+<a href="https://github.com/WFRCAnalytics/TDM-INP-USTM-Externals-Using-National-Network" class="title listing-title">INP USTM Externals Using National Network</a>
+</td>
+<td>
+<span class="listing-description">Defines external pass-through trips by merging a national network with the statewide model. Requires WFRC GitHub access.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Internal, Input data, TDM</span>
+</td>
+<td>
+<span class="listing-date">Apr 8, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="105" data-categories="UmVwb3NpdG9yeSUyQ1Bvc3QtcHJvY2Vzc2luZyUyQ1RETQ==" data-listing-date-sort="1744092000000" data-listing-title-sort="PP Merge ATO Outputs">
+<td>
+<a href="https://github.com/WFRCAnalytics/TDM-PP-Merge-ATO-Outputs" class="title listing-title">PP Merge ATO Outputs</a>
+</td>
+<td>
+<span class="listing-description">Notebook demo of using Pandas to merge TDM-ATO Outputs </span>
+</td>
+<td>
+<span class="listing-categories">Repository, Post-processing, TDM</span>
+</td>
+<td>
+<span class="listing-date">Apr 8, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="106" data-categories="UmVwb3NpdG9yeSUyQ1Bvc3QtcHJvY2Vzc2luZyUyQ1RETQ==" data-listing-date-sort="1744092000000" data-listing-title-sort="PP Transit Output Comparison">
+<td>
+<a href="https://github.com/WFRCAnalytics/TDM-PP-Transit-Output-Comparison" class="title listing-title">PP Transit Output Comparison</a>
+</td>
+<td>
+<span class="listing-description">Compares daily transit boardings by mode and route between a base and a proposed transit scenario.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Post-processing, TDM</span>
+</td>
+<td>
+<span class="listing-date">Apr 8, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="107" data-categories="UmVwb3NpdG9yeSUyQ1Rvb2w=" data-listing-date-sort="1744092000000" data-listing-title-sort="Centers Capacity City">
+<td>
+<a href="https://github.com/WFRCAnalytics/TOOL-Centers-Capacity-City" class="title listing-title">Centers Capacity City</a>
+</td>
+<td>
+<span class="listing-description">City-level version of the centers development capacity tool.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Tool</span>
+</td>
+<td>
+<span class="listing-date">Apr 8, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="108" data-categories="UmVwb3NpdG9yeSUyQ1Rvb2w=" data-listing-date-sort="1744092000000" data-listing-title-sort="Combine USTM SE">
+<td>
+<a href="https://github.com/WFRCAnalytics/TOOL-Combine-USTM-SE" class="title listing-title">Combine USTM SE</a>
+</td>
+<td>
+<span class="listing-description">Read and concatenate all CSVs in subfolders into a single dataframe and CSV for outup.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Tool</span>
+</td>
+<td>
+<span class="listing-date">Apr 8, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="109" data-categories="UmVwb3NpdG9yeSUyQ1Rvb2w=" data-listing-date-sort="1744092000000" data-listing-title-sort="Parcel Redevelopment Potential">
+<td>
+<a href="https://github.com/WFRCAnalytics/TOOL-Parcel-Redevelopment-Potential" class="title listing-title">Parcel Redevelopment Potential</a>
+</td>
+<td>
+<span class="listing-description">Determines which REMM parcels are eligible for redevelopment by land use class and transit station area.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Tool</span>
+</td>
+<td>
+<span class="listing-date">Apr 8, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="110" data-categories="UmVwb3NpdG9yeSUyQ1Rvb2w=" data-listing-date-sort="1744092000000" data-listing-title-sort="Residential Capacity">
+<td>
+<a href="https://github.com/WFRCAnalytics/TOOL-Residential-Capacity" class="title listing-title">Residential Capacity</a>
+</td>
+<td>
+<span class="listing-description">GIS tool that projects residential development capacity on eligible parcels up to maximum build-out.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Tool</span>
+</td>
+<td>
+<span class="listing-date">Apr 8, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="111" data-categories="UmVwb3NpdG9yeSUyQ0FwcA==" data-listing-date-sort="1744005600000" data-listing-title-sort="HTS Trip Length Shiny">
+<td>
+<a href="https://github.com/WFRCAnalytics/APP-HTS-Trip-Length-Shiny" class="title listing-title">HTS Trip Length Shiny</a>
+</td>
+<td>
+<span class="listing-description">R-Shiny app showing trip length distributions from the 2023 Household Travel Survey by workers, vehicles, mode and trip purpose.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, App</span>
+</td>
+<td>
+<span class="listing-date">Apr 7, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="112" data-categories="UmVwb3NpdG9yeSUyQ0FwcA==" data-listing-date-sort="1744005600000" data-listing-title-sort="HTS Trip Length Shiny 2012">
+<td>
+<a href="https://github.com/WFRCAnalytics/APP-HTS-Trip-Length-Shiny-2012" class="title listing-title">HTS Trip Length Shiny 2012</a>
+</td>
+<td>
+<span class="listing-description">R-Shiny app showing trip length distributions from the 2012 Household Travel Survey by workers, vehicles, mode and trip purpose.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, App</span>
+</td>
+<td>
+<span class="listing-date">Apr 7, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="113" data-categories="UmVwb3NpdG9yeSUyQ0RhdGE=" data-listing-date-sort="1744005600000" data-listing-title-sort="Census PUMS Household Size">
+<td>
+<a href="https://github.com/WFRCAnalytics/DATA-Census-PUMS-Household-Size" class="title listing-title">Census PUMS Household Size</a>
+</td>
+<td>
+<span class="listing-description">Downloads Census PUMS household size, bedroom and income data for Utah and builds summary tables.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Data</span>
+</td>
+<td>
+<span class="listing-date">Apr 7, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="114" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRGF0YQ==" data-listing-date-sort="1744005600000" data-listing-title-sort="HTS Anonymize">
+<td>
+<a href="https://github.com/WFRCAnalytics/DATA-HTS-Anonymize" class="title listing-title">HTS Anonymize</a>
+</td>
+<td>
+<span class="listing-description">Anonymizes Household Travel Survey data by removing precise locations and generalizing block groups to census tracts. Requires WFRC GitHub access.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Internal, Data</span>
+</td>
+<td>
+<span class="listing-date">Apr 7, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="115" data-categories="UmVwb3NpdG9yeSUyQ0RhdGE=" data-listing-date-sort="1744005600000" data-listing-title-sort="Street Light Insight API Custom Queries">
+<td>
+<a href="https://github.com/WFRCAnalytics/DATA-StreetLight-Insight-API-Custom-Queries" class="title listing-title">Street Light Insight API Custom Queries</a>
+</td>
+<td>
+<span class="listing-description">Custom StreetLight Insight API queries (recreation zones, county flows, station areas) built before the subscription ended.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Data</span>
+</td>
+<td>
+<span class="listing-date">Apr 7, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="116" data-categories="UmVwb3NpdG9yeSUyQ0RhdGE=" data-listing-date-sort="1744005600000" data-listing-title-sort="UDOT Master Segments">
+<td>
+<a href="https://github.com/WFRCAnalytics/DATA-UDOT-Master-Segments" class="title listing-title">UDOT Master Segments</a>
+</td>
+<td>
+<span class="listing-description">ArcGIS Pro project that merges each submodel area’s segments into one master road segment layer.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Data</span>
+</td>
+<td>
+<span class="listing-date">Apr 7, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="117" data-categories="UmVwb3NpdG9yeSUyQ01hcA==" data-listing-date-sort="1744005600000" data-listing-title-sort="Congestion Forecast">
+<td>
+<a href="https://github.com/WFRCAnalytics/MAP-Congestion-Forecast" class="title listing-title">Congestion Forecast</a>
+</td>
+<td>
+<span class="listing-description">Map of factored volume-to-capacity ratios showing potentially congested areas under future scenarios.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Map</span>
+</td>
+<td>
+<span class="listing-date">Apr 7, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="118" data-categories="UmVwb3NpdG9yeSUyQ01hcA==" data-listing-date-sort="1744005600000" data-listing-title-sort="Environmental Resiliency">
+<td>
+<a href="https://github.com/WFRCAnalytics/MAP-Environmental-Resiliency" class="title listing-title">Environmental Resiliency</a>
+</td>
+<td>
+<span class="listing-description">Map evaluating how the 2023-2050 Regional Transportation Plan overlaps social and natural resources.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Map</span>
+</td>
+<td>
+<span class="listing-date">Apr 7, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="119" data-categories="UmVwb3NpdG9yeSUyQ01hcA==" data-listing-date-sort="1744005600000" data-listing-title-sort="Major Transit Investment Corridors">
+<td>
+<a href="https://github.com/WFRCAnalytics/MAP-Major-Transit-Investment-Corridors" class="title listing-title">Major Transit Investment Corridors</a>
+</td>
+<td>
+<span class="listing-description">Map of existing and planned corridors that qualify as Major Transit Investment Corridors under Utah law.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Map</span>
+</td>
+<td>
+<span class="listing-date">Apr 7, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="120" data-categories="UmVwb3NpdG9yeSUyQ1Bvc3QtcHJvY2Vzc2luZyUyQ1RETQ==" data-listing-date-sort="1744005600000" data-listing-title-sort="PP Average Commute Times">
+<td>
+<a href="https://github.com/WFRCAnalytics/TDM-PP-Average-Commute-Times" class="title listing-title">PP Average Commute Times</a>
+</td>
+<td>
+<span class="listing-description">Calculates average model commute times for RTP performance measures, regionally and for Equity Focus Areas.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Post-processing, TDM</span>
+</td>
+<td>
+<span class="listing-date">Apr 7, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="121" data-categories="UmVwb3NpdG9yeSUyQ1Bvc3QtcHJvY2Vzc2luZyUyQ1RETQ==" data-listing-date-sort="1744005600000" data-listing-title-sort="PP Plot ATO Travelsheds">
+<td>
+<a href="https://github.com/WFRCAnalytics/TDM-PP-Plot-ATO-Travelsheds" class="title listing-title">PP Plot ATO Travelsheds</a>
+</td>
+<td>
+<span class="listing-description">Plots Access to Opportunity travelsheds from model skims.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Post-processing, TDM</span>
+</td>
+<td>
+<span class="listing-date">Apr 7, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="122" data-categories="UmVwb3NpdG9yeSUyQ1Bvc3QtcHJvY2Vzc2luZyUyQ1RETQ==" data-listing-date-sort="1744005600000" data-listing-title-sort="PP Trip Stats by SE and Transit Intensity">
+<td>
+<a href="https://github.com/WFRCAnalytics/TDM-PP-Trip-Stats-by-SE-and-Transit-Intensity" class="title listing-title">PP Trip Stats by SE and Transit Intensity</a>
+</td>
+<td>
+<span class="listing-description">Trip statistics and maps comparing centered development and transit intensity.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Post-processing, TDM</span>
+</td>
+<td>
+<span class="listing-date">Apr 7, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="123" data-categories="UmVwb3NpdG9yeSUyQ1NjZW5hcmlvJTJDVERN" data-listing-date-sort="1744005600000" data-listing-title-sort="SCN Centers Transit Strategy Land Use">
+<td>
+<a href="https://github.com/WFRCAnalytics/TDM-SCN-Centers-Transit-Strategy-Land-Use" class="title listing-title">SCN Centers Transit Strategy Land Use</a>
+</td>
+<td>
+<span class="listing-description">Land use calculations for testing centers and transit strategies in the 2027 RTP.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Scenario, TDM</span>
+</td>
+<td>
+<span class="listing-date">Apr 7, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="124" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDU2NlbmFyaW8lMkNURE0=" data-listing-date-sort="1744005600000" data-listing-title-sort="SCN Three Transit Corridors Land Use">
+<td>
+<a href="https://github.com/WFRCAnalytics/TDM-SCN-Three-Transit-Corridors-Land-Use" class="title listing-title">SCN Three Transit Corridors Land Use</a>
+</td>
+<td>
+<span class="listing-description">Land use calculations for testing BRT and LRT on three transit corridors. Requires WFRC GitHub access.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Internal, Scenario, TDM</span>
+</td>
+<td>
+<span class="listing-date">Apr 7, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="125" data-categories="UmVwb3NpdG9yeSUyQ0FwcA==" data-listing-date-sort="1743746400000" data-listing-title-sort="Equity Focus Areas">
+<td>
+<a href="https://github.com/WFRCAnalytics/APP-EquityFocusAreas" class="title listing-title">Equity Focus Areas</a>
+</td>
+<td>
+<span class="listing-description">R-based mapping scripts for determining Equity Focus Areas, plus other basic mapping utilities.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, App</span>
+</td>
+<td>
+<span class="listing-date">Apr 4, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="126" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lz" data-listing-date-sort="1743746400000" data-listing-title-sort="ATO Recalc Exploration">
+<td>
+<a href="https://github.com/WFRCAnalytics/ATO-Recalc-Exploration" class="title listing-title">ATO Recalc Exploration</a>
+</td>
+<td>
+<span class="listing-description">explore recalculated ato values using geopandas</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Analysis</span>
+</td>
+<td>
+<span class="listing-date">Apr 4, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="127" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lz" data-listing-date-sort="1743746400000" data-listing-title-sort="ATO Workplace TAZ Based">
+<td>
+<a href="https://github.com/WFRCAnalytics/ATO-Workplace-TAZ-Based" class="title listing-title">ATO Workplace TAZ Based</a>
+</td>
+<td>
+<span class="listing-description">Code base for calculating traffic analysis zone (TAZ) based workplace Access To Opportunities metrics</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Analysis</span>
+</td>
+<td>
+<span class="listing-date">Apr 4, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="128" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDTW9kZWwlMkNCRE0=" data-listing-date-sort="1743746400000" data-listing-title-sort="Micromobility Toolset">
+<td>
+<a href="https://github.com/WFRCAnalytics/BDM-Micromobility-Toolset" class="title listing-title">Micromobility Toolset</a>
+</td>
+<td>
+<span class="listing-description">Micromobility Travel Modeling Toolkit. Requires WFRC GitHub access.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Internal, Model, BDM</span>
+</td>
+<td>
+<span class="listing-date">Apr 4, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="129" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRGF0YQ==" data-listing-date-sort="1743746400000" data-listing-title-sort="DWS Manufacturing Job Disaggregation">
+<td>
+<a href="https://github.com/WFRCAnalytics/DATA-DWS-Manufacturing-Job-Disaggregation" class="title listing-title">DWS Manufacturing Job Disaggregation</a>
+</td>
+<td>
+<span class="listing-description">Splits TAZ manufacturing jobs into NAICS 31, 32 and 33 shares for a freight model update. Requires WFRC GitHub access.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Internal, Data</span>
+</td>
+<td>
+<span class="listing-date">Apr 4, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="130" data-categories="UmVwb3NpdG9yeSUyQ0RhdGE=" data-listing-date-sort="1743746400000" data-listing-title-sort="IPUMS Time Series">
+<td>
+<a href="https://github.com/WFRCAnalytics/DATA-IPUMS-Time-Series" class="title listing-title">IPUMS Time Series</a>
+</td>
+<td>
+<span class="listing-description">Collects IPUMS time-series data through the ipumsr API into a geodatabase for ArcGIS Online.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Data</span>
+</td>
+<td>
+<span class="listing-date">Apr 4, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="131" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDRGF0YQ==" data-listing-date-sort="1743746400000" data-listing-title-sort="Process Statewide SE to AGOL">
+<td>
+<a href="https://github.com/WFRCAnalytics/DATA-Process-Statewide-SE-to-AGOL" class="title listing-title">Process Statewide SE to AGOL</a>
+</td>
+<td>
+<span class="listing-description">Process and upload Statewide SE forecast to ArcGIS Online. Requires WFRC GitHub access.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Internal, Data</span>
+</td>
+<td>
+<span class="listing-date">Apr 4, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="132" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDQW5hbHlzaXM=" data-listing-date-sort="1743746400000" data-listing-title-sort="RTP2023 Phasing Criteria">
+<td>
+<a href="https://github.com/WFRCAnalytics/GIS-RTP2023-PhasingCriteria" class="title listing-title">RTP2023 Phasing Criteria</a>
+</td>
+<td>
+<span class="listing-description">2023 WFRC RTP phasing criteria. Requires WFRC GitHub access.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Internal, Analysis</span>
+</td>
+<td>
+<span class="listing-date">Apr 4, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="133" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lz" data-listing-date-sort="1743746400000" data-listing-title-sort="TIP Public Comment Processing">
+<td>
+<a href="https://github.com/WFRCAnalytics/GIS-TIP-Public-Comment-Processing" class="title listing-title">TIP Public Comment Processing</a>
+</td>
+<td>
+<span class="listing-description">Processes public comments on the Transportation Improvement Program.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Analysis</span>
+</td>
+<td>
+<span class="listing-date">Apr 4, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="134" data-categories="UmVwb3NpdG9yeSUyQ01hcA==" data-listing-date-sort="1743746400000" data-listing-title-sort="Household Job Forecast">
+<td>
+<a href="https://github.com/WFRCAnalytics/MAP-Household-Job-Forecast" class="title listing-title">Household Job Forecast</a>
+</td>
+<td>
+<span class="listing-description">Contains socioeconomic forecasts for the 2023 RTP</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Map</span>
+</td>
+<td>
+<span class="listing-date">Apr 4, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="135" data-categories="UmVwb3NpdG9yeSUyQ01hcA==" data-listing-date-sort="1743746400000" data-listing-title-sort="Statewide HH Job Forecast">
+<td>
+<a href="https://github.com/WFRCAnalytics/MAP-Statewide-HH-Job-Forecast" class="title listing-title">Statewide HH Job Forecast</a>
+</td>
+<td>
+<span class="listing-description">Statewide-HH-Job-Forecast-Map</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Map</span>
+</td>
+<td>
+<span class="listing-date">Apr 4, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="136" data-categories="UmVwb3NpdG9yeSUyQ01hcA==" data-listing-date-sort="1743746400000" data-listing-title-sort="Utah Household Job Forecast">
+<td>
+<a href="https://github.com/WFRCAnalytics/MAP-Utah-Household-Job-Forecast" class="title listing-title">Utah Household Job Forecast</a>
+</td>
+<td>
+<span class="listing-description">Utah-Household-Job-Forecast-Map</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Map</span>
+</td>
+<td>
+<span class="listing-date">Apr 4, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="137" data-categories="UmVwb3NpdG9yeSUyQ0RldmVsb3BtZW50JTJDVERN" data-listing-date-sort="1743746400000" data-listing-title-sort="DEV Replace Arcpy">
+<td>
+<a href="https://github.com/WFRCAnalytics/TDM-DEV-Replace-Arcpy" class="title listing-title">DEV Replace Arcpy</a>
+</td>
+<td>
+<span class="listing-description">Test geoprocessing capabilities and ease of installation of various open source geospatial libraries</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Development, TDM</span>
+</td>
+<td>
+<span class="listing-date">Apr 4, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="138" data-categories="UmVwb3NpdG9yeSUyQ0VzdGltYXRpb24lMkNURE0=" data-listing-date-sort="1743746400000" data-listing-title-sort="EST Bus Speeds">
+<td>
+<a href="https://github.com/WFRCAnalytics/TDM-EST-Bus-Speeds" class="title listing-title">EST Bus Speeds</a>
+</td>
+<td>
+<span class="listing-description">Estimates ratios of bus speed to traffic speed from the congested model network and GTFS schedules.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Estimation, TDM</span>
+</td>
+<td>
+<span class="listing-date">Apr 4, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="139" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1743746400000" data-listing-title-sort="INP Parcel to TAZ">
+<td>
+<a href="https://github.com/WFRCAnalytics/TDM-INP-Parcel-to-TAZ" class="title listing-title">INP Parcel to TAZ</a>
+</td>
+<td>
+<span class="listing-description">Builds a lookup between parcels and TAZ IDs.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Input data, TDM</span>
+</td>
+<td>
+<span class="listing-date">Apr 4, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="140" data-categories="UmVwb3NpdG9yeSUyQ0lucHV0JTIwZGF0YSUyQ1RETQ==" data-listing-date-sort="1743746400000" data-listing-title-sort="INP TAZ to ZIPCode">
+<td>
+<a href="https://github.com/WFRCAnalytics/TDM-INP-TAZ-to-ZIPCode" class="title listing-title">INP TAZ to ZIPCode</a>
+</td>
+<td>
+<span class="listing-description">Creating a dataset that contains TAZID and ZIPCode information</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Input data, TDM</span>
+</td>
+<td>
+<span class="listing-date">Apr 4, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="141" data-categories="UmVwb3NpdG9yeSUyQ1ZhbGlkYXRpb24lMkNURE0=" data-listing-date-sort="1743746400000" data-listing-title-sort="VAL Mode Share Boardings">
+<td>
+<a href="https://github.com/WFRCAnalytics/TDM-VAL-ModeShare-Boardings" class="title listing-title">VAL Mode Share Boardings</a>
+</td>
+<td>
+<span class="listing-description">Validates model mode share against survey data.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Validation, TDM</span>
+</td>
+<td>
+<span class="listing-date">Apr 4, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="142" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDVmFsaWRhdGlvbiUyQ1RETQ==" data-listing-date-sort="1743746400000" data-listing-title-sort="VAL OBS Ridership Comparison">
+<td>
+<a href="https://github.com/WFRCAnalytics/TDM-VAL-OBS-Ridership-Comparison" class="title listing-title">VAL OBS Ridership Comparison</a>
+</td>
+<td>
+<span class="listing-description">UTA Boardings and On-Board Survey Data from fall 2019. Requires WFRC GitHub access.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Internal, Validation, TDM</span>
+</td>
+<td>
+<span class="listing-date">Apr 4, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="143" data-categories="UmVwb3NpdG9yeSUyQ1ZhbGlkYXRpb24lMkNURE0=" data-listing-date-sort="1743746400000" data-listing-title-sort="VAL Scenario Comparison Toolbox">
+<td>
+<a href="https://github.com/WFRCAnalytics/TDM-VAL-Scenario-Comparison-Toolbox" class="title listing-title">VAL Scenario Comparison Toolbox</a>
+</td>
+<td>
+<span class="listing-description">Scripts for validating and viewing model outputs before the v9.1.0 release.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Validation, TDM</span>
+</td>
+<td>
+<span class="listing-date">Apr 4, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="144" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDVG9vbA==" data-listing-date-sort="1743746400000" data-listing-title-sort="AGOL Mgmt">
+<td>
+<a href="https://github.com/WFRCAnalytics/TOOL-AGOL-Mgmt" class="title listing-title">AGOL Mgmt</a>
+</td>
+<td>
+<span class="listing-description">various python scripts for interacting with ArcGIS Online Content. Requires WFRC GitHub access.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Internal, Tool</span>
+</td>
+<td>
+<span class="listing-date">Apr 4, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="145" data-categories="UmVwb3NpdG9yeSUyQ1Rvb2w=" data-listing-date-sort="1743746400000" data-listing-title-sort="SWSLCo Land Use Allocation">
+<td>
+<a href="https://github.com/WFRCAnalytics/TOOL-SWSLCo-Land-Use-Allocation" class="title listing-title">SWSLCo Land Use Allocation</a>
+</td>
+<td>
+<span class="listing-description">Tool to allocate additional land use growth intensities based on GIS-defined areas.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Tool</span>
+</td>
+<td>
+<span class="listing-date">Apr 4, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="146" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDVG9vbA==" data-listing-date-sort="1743746400000" data-listing-title-sort="Website Sandbox">
+<td>
+<a href="https://github.com/WFRCAnalytics/TOOL-Website-Sandbox" class="title listing-title">Website Sandbox</a>
+</td>
+<td>
+<span class="listing-description">Local sandbox for testing web mapping sites. Requires WFRC GitHub access.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Internal, Tool</span>
+</td>
+<td>
+<span class="listing-date">Apr 4, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="147" data-categories="UmVwb3NpdG9yeSUyQ0FwcA==" data-listing-date-sort="1743487200000" data-listing-title-sort="Unified Plan Tools Page">
+<td>
+<a href="https://github.com/WFRCAnalytics/APP-Unified-Plan-Tools-Page" class="title listing-title">Unified Plan Tools Page</a>
+</td>
+<td>
+<span class="listing-description">Mobile-friendly landing page of maps and tools for the Unified Plan; no longer in use and kept for reference.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, App</span>
+</td>
+<td>
+<span class="listing-date">Apr 1, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="148" data-categories="UmVwb3NpdG9yeSUyQ01hcA==" data-listing-date-sort="1729576800000" data-listing-title-sort="Workshop Sketch">
+<td>
+<a href="https://github.com/WFRCAnalytics/MAP-Workshop-Sketch" class="title listing-title">Workshop Sketch</a>
+</td>
+<td>
+<span class="listing-description">Template web app for sketching points, lines and polygons on a map during workshops.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Map</span>
+</td>
+<td>
+<span class="listing-date">Oct 22, 2024</span>
+</td>
+
+</tr>
+
+<tr data-index="149" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lzJTJDUkVNTQ==" data-listing-date-sort="1723528800000" data-listing-title-sort="SE Descriptive Statistics">
+<td>
+<a href="https://github.com/WFRCAnalytics/REMM-SE-Descriptive-Statistics" class="title listing-title">SE Descriptive Statistics</a>
+</td>
+<td>
+<span class="listing-description">This notebook calculates descriptive statistics (including the average) of SE values of multiple REMM runs</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Analysis, REMM</span>
+</td>
+<td>
+<span class="listing-date">Aug 13, 2024</span>
+</td>
+
+</tr>
+
+<tr data-index="150" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lzJTJDUkVNTQ==" data-listing-date-sort="1697090400000" data-listing-title-sort="Process SE Output For Web">
+<td>
+<a href="https://github.com/WFRCAnalytics/REMM-Process-SE-Output-For-Web" class="title listing-title">Process SE Output For Web</a>
+</td>
+<td>
+<span class="listing-description">Process TAZ level REMM output to various TAZ 9.0.0 geographies for SE Data Reviewer Web App</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Analysis, REMM</span>
+</td>
+<td>
+<span class="listing-date">Oct 12, 2023</span>
+</td>
+
+</tr>
+
+<tr data-index="151" data-categories="UmVwb3NpdG9yeSUyQ0RhdGE=" data-listing-date-sort="1692770400000" data-listing-title-sort="Historical Parcels">
+<td>
+<a href="https://github.com/WFRCAnalytics/DATA-Historical-Parcels" class="title listing-title">Historical Parcels</a>
+</td>
+<td>
+<span class="listing-description">Identifies regional redevelopment from historical assessor parcel data to inform REMM.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Data</span>
+</td>
+<td>
+<span class="listing-date">Aug 23, 2023</span>
+</td>
+
+</tr>
+
+<tr data-index="152" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lz" data-listing-date-sort="1692770400000" data-listing-title-sort="OUG Tools">
+<td>
+<a href="https://github.com/WFRCAnalytics/GIS-OUG-Tools" class="title listing-title">OUG Tools</a>
+</td>
+<td>
+<span class="listing-description">A set of tools to merge individually owned units into Owned Unit Groupings in a Parcel Dataset</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Analysis</span>
+</td>
+<td>
+<span class="listing-date">Aug 23, 2023</span>
+</td>
+
+</tr>
+
+<tr data-index="153" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDTW9kZWwlMkNURE0=" data-listing-date-sort="1691647200000" data-listing-title-sort="TDM v8.3.2">
+<td>
+<a href="https://github.com/WFRCAnalytics/WF-TDM-v8.3.2" class="title listing-title">TDM v8.3.2</a>
+</td>
+<td>
+<span class="listing-description">This is the Wasatch Front Travel Demand Model v8.3.2 - 2022-02-04a. Requires WFRC GitHub access.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Internal, Model, TDM</span>
+</td>
+<td>
+<span class="listing-date">Aug 10, 2023</span>
+</td>
+
+</tr>
+
+<tr data-index="154" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDTW9kZWwlMkNURE0=" data-listing-date-sort="1688364000000" data-listing-title-sort="TDM v9.0 beta">
+<td>
+<a href="https://github.com/WFRCAnalytics/WF-TDM-v9.0-beta" class="title listing-title">TDM v9.0 beta</a>
+</td>
+<td>
+<span class="listing-description">Shared copy of the v9.0 beta model (June 2023). Requires WFRC GitHub access.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Internal, Model, TDM</span>
+</td>
+<td>
+<span class="listing-date">Jul 3, 2023</span>
+</td>
+
+</tr>
+
+<tr data-index="155" data-categories="UmVwb3NpdG9yeSUyQ01vZGVsJTJDUkVNTQ==" data-listing-date-sort="1687413600000" data-listing-title-sort="REMM 1.0 model (previous)">
+<td>
+<a href="https://github.com/WFRCAnalytics/REMM-v1.0" class="title listing-title">REMM 1.0 model (previous)</a>
+</td>
+<td>
+<span class="listing-description">Real Estate Market Model - Version 1</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Model, REMM</span>
+</td>
+<td>
+<span class="listing-date">Jun 22, 2023</span>
+</td>
+
+</tr>
+
+<tr data-index="156" data-categories="UmVwb3NpdG9yeSUyQ01vZGVsJTJDUkVNTQ==" data-listing-date-sort="1687413600000" data-listing-title-sort="REMM 2.0 model (previous)">
+<td>
+<a href="https://github.com/WFRCAnalytics/REMM-v2.0" class="title listing-title">REMM 2.0 model (previous)</a>
+</td>
+<td>
+<span class="listing-description">Real Estate Market Model - Version 2</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Model, REMM</span>
+</td>
+<td>
+<span class="listing-date">Jun 22, 2023</span>
+</td>
+
+</tr>
+
+<tr data-index="157" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDQW5hbHlzaXMlMkNSRU1N" data-listing-date-sort="1686117600000" data-listing-title-sort="Manage Base Year Data">
+<td>
+<a href="https://github.com/WFRCAnalytics/REMM-Manage-Base-Year-Data" class="title listing-title">Manage Base Year Data</a>
+</td>
+<td>
+<span class="listing-description">Workspace to inspect, check and convert base year data into REMM-ready inputs. Requires WFRC GitHub access.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Internal, Analysis, REMM</span>
+</td>
+<td>
+<span class="listing-date">Jun 7, 2023</span>
+</td>
+
+</tr>
+
+<tr data-index="158" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lzJTJDUkVNTQ==" data-listing-date-sort="1682402400000" data-listing-title-sort="SE Comparison Tools">
+<td>
+<a href="https://github.com/WFRCAnalytics/REMM-SE-Comparison-Tools" class="title listing-title">SE Comparison Tools</a>
+</td>
+<td>
+<span class="listing-description">REMM-SE-Comparison-Tools</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Analysis, REMM</span>
+</td>
+<td>
+<span class="listing-date">Apr 25, 2023</span>
+</td>
+
+</tr>
+
+<tr data-index="159" data-categories="UmVwb3NpdG9yeSUyQ0ludGVybmFsJTJDT3RoZXI=" data-listing-date-sort="1681365600000" data-listing-title-sort="REMM3 TDM9 Internal Use">
+<td>
+<a href="https://github.com/WFRCAnalytics/REMM3_TDM9_Internal_Use" class="title listing-title">REMM3 TDM9 Internal Use</a>
+</td>
+<td>
+<span class="listing-description">REMM with TDM900 Structure. Requires WFRC GitHub access.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Internal, Other</span>
+</td>
+<td>
+<span class="listing-date">Apr 13, 2023</span>
+</td>
+
+</tr>
+
+<tr data-index="160" data-categories="UmVwb3NpdG9yeSUyQ0RhdGE=" data-listing-date-sort="1678773600000" data-listing-title-sort="Continuous Count Station">
+<td>
+<a href="https://github.com/WFRCAnalytics/DATA-Continuous-Count-Station" class="title listing-title">Continuous Count Station</a>
+</td>
+<td>
+<span class="listing-description">Notebooks for working with UDOT continuous count station traffic data, with a 2019 demo.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Data</span>
+</td>
+<td>
+<span class="listing-date">Mar 14, 2023</span>
+</td>
+
+</tr>
+
+<tr data-index="161" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lzJTJDUkVNTQ==" data-listing-date-sort="1674802800000" data-listing-title-sort="Analysis Tools">
+<td>
+<a href="https://github.com/WFRCAnalytics/REMM-Analysis-Tools" class="title listing-title">Analysis Tools</a>
+</td>
+<td>
+<span class="listing-description">Notebooks and scripts for various REMM-related tasks</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Analysis, REMM</span>
+</td>
+<td>
+<span class="listing-date">Jan 27, 2023</span>
+</td>
+
+</tr>
+
+<tr data-index="162" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lzJTJDUkVNTQ==" data-listing-date-sort="1665468000000" data-listing-title-sort="TAZ SE Review For MB">
+<td>
+<a href="https://github.com/WFRCAnalytics/REMM-TAZ-SE-Review-For-MB" class="title listing-title">TAZ SE Review For MB</a>
+</td>
+<td>
+<span class="listing-description">REMM TAZ-level SE review environment</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Analysis, REMM</span>
+</td>
+<td>
+<span class="listing-date">Oct 11, 2022</span>
+</td>
+
+</tr>
+
+<tr data-index="163" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lzJTJDUkVNTQ==" data-listing-date-sort="1657173600000" data-listing-title-sort="Random Forest Variable Analysis">
+<td>
+<a href="https://github.com/WFRCAnalytics/REMM-RandomForest-Variable-Analysis" class="title listing-title">Random Forest Variable Analysis</a>
+</td>
+<td>
+<span class="listing-description">Random forest analysis to select the top variables for REMM estimation.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Analysis, REMM</span>
+</td>
+<td>
+<span class="listing-date">Jul 7, 2022</span>
+</td>
+
+</tr>
+
+<tr data-index="164" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lzJTJDUkVNTQ==" data-listing-date-sort="1655186400000" data-listing-title-sort="Process Progression Metrics For Web">
+<td>
+<a href="https://github.com/WFRCAnalytics/REMM-Process-Progression-Metrics-For-Web" class="title listing-title">Process Progression Metrics For Web</a>
+</td>
+<td>
+<span class="listing-description">Process progression metrics output for use in the web app</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Analysis, REMM</span>
+</td>
+<td>
+<span class="listing-date">Jun 14, 2022</span>
+</td>
+
+</tr>
+
+<tr data-index="165" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lzJTJDUkVNTQ==" data-listing-date-sort="1653976800000" data-listing-title-sort="Input Data Prep 2019">
+<td>
+<a href="https://github.com/WFRCAnalytics/REMM-Input-Data-Prep-2019" class="title listing-title">Input Data Prep 2019</a>
+</td>
+<td>
+<span class="listing-description">REMM-Input-Data-Prep-2019</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Analysis, REMM</span>
+</td>
+<td>
+<span class="listing-date">May 31, 2022</span>
+</td>
+
+</tr>
+
+<tr data-index="166" data-categories="UmVwb3NpdG9yeSUyQ0FuYWx5c2lzJTJDUkVNTQ==" data-listing-date-sort="1651903200000" data-listing-title-sort="Animate Modeling Results">
+<td>
+<a href="https://github.com/WFRCAnalytics/REMM-Animate-Modeling-Results" class="title listing-title">Animate Modeling Results</a>
+</td>
+<td>
+<span class="listing-description">Process modeling results and animate as a gif file</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Analysis, REMM</span>
+</td>
+<td>
+<span class="listing-date">May 7, 2022</span>
+</td>
+
+</tr>
+
+<tr data-index="167" data-categories="UmVwb3NpdG9yeSUyQ01vZGVsJTJDUkVNTQ==" data-listing-date-sort="1650866400000" data-listing-title-sort="REMM 2 (2019, previous)">
+<td>
+<a href="https://github.com/WFRCAnalytics/REMM2-2019" class="title listing-title">REMM 2 (2019, previous)</a>
+</td>
+<td>
+<span class="listing-description">Version of REMM ported straight from urbansim</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Model, REMM</span>
+</td>
+<td>
+<span class="listing-date">Apr 25, 2022</span>
+</td>
+
+</tr>
+
+<tr data-index="168" data-categories="UmVwb3NpdG9yeSUyQ0RhdGE=" data-listing-date-sort="1643353200000" data-listing-title-sort="Housing Unit Inventory">
+<td>
+<a href="https://github.com/WFRCAnalytics/DATA-Housing-Unit-Inventory" class="title listing-title">Housing Unit Inventory</a>
+</td>
+<td>
+<span class="listing-description">Create housing unit inventory for Utah Metropolitan Region using various data sources.</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Data</span>
+</td>
+<td>
+<span class="listing-date">Jan 28, 2022</span>
+</td>
+
+</tr>
+
+<tr data-index="169" data-categories="UmVwb3NpdG9yeSUyQ01vZGVsJTJDUkVNTQ==" data-listing-date-sort="1587362400000" data-listing-title-sort="REMM 1.0 original (previous)">
+<td>
+<a href="https://github.com/WFRCAnalytics/REMMOneDotOh" class="title listing-title">REMM 1.0 original (previous)</a>
+</td>
+<td>
+<span class="listing-description">REMM version 1.0</span>
+</td>
+<td>
+<span class="listing-categories">Repository, Model, REMM</span>
+</td>
+<td>
+<span class="listing-date">Apr 20, 2020</span>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+<div class="listing-no-matching d-none">No matching items</div>
+<nav id="listing-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
+</div></main> <!-- /main -->
+<script>
+
+// Accessibility fixes for things Quarto and its libraries render but cannot configure.
+
+// Included on every page through wfrc-shared.yml (format.html.include-after-body).
+
+(function () {
+
+  function fix(root) {
+
+    // Listing banners are decorative; Quarto drops an empty `image-alt`.
+
+    root.querySelectorAll('img.thumbnail-image:not([alt])').forEach(function (img) {
+
+      img.setAttribute('alt', '');
+
+    });
+
+    // Quarto only sets `title` on the color-scheme toggle: add an accessible name and a clearer tooltip.
+
+    root.querySelectorAll('.quarto-color-scheme-toggle:not([aria-label])').forEach(function (a) {
+
+      a.setAttribute('aria-label', 'Toggle light and dark mode');
+
+      a.setAttribute('title', 'Toggle light / dark');
+
+    });
+
+    // Collapsible callouts put aria-expanded on a plain div: make it a real, keyboard-operable button.
+
+    root.querySelectorAll('.callout-header[aria-expanded]:not([role])').forEach(function (h) {
+
+      h.setAttribute('role', 'button');
+
+      h.setAttribute('tabindex', '0');
+
+      h.addEventListener('keydown', function (e) {
+
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); h.click(); }
+
+      });
+
+    });
+
+    // Observable Plot labels bare <g> marks; aria-label is not allowed on a role-less element.
+
+    root.querySelectorAll('[class^="plot-"] g[aria-label]:not([role])').forEach(function (g) {
+
+      g.removeAttribute('aria-label');
+
+    });
+
+    // Scrollable regions must be reachable by keyboard.
+
+    root.querySelectorAll('pre, div.sourceCode, .card, .card-body, .table-striped, table, .cell-output-display').forEach(function (el) {
+
+      if (el.hasAttribute('tabindex') || el.matches('a, button, input, select, textarea')) return;
+
+      var o = getComputedStyle(el);
+
+      var scrolls = /(auto|scroll)/.test(o.overflowX + o.overflowY) &&
+
+        (el.scrollWidth > el.clientWidth + 1 || el.scrollHeight > el.clientHeight + 1);
+
+      if (scrolls) el.setAttribute('tabindex', '0');
+
+    });
+
+  }
+
+  var queued = false;
+
+  function schedule() {
+
+    if (queued) return;
+
+    queued = true;
+
+    requestAnimationFrame(function () { queued = false; fix(document); });
+
+  }
+
+  fix(document);
+
+  new MutationObserver(schedule).observe(document.body, { childList: true, subtree: true });
+
+  window.addEventListener('resize', schedule);
+
+  window.addEventListener('load', function () { setTimeout(schedule, 800); setTimeout(schedule, 2500); });
+
+})();
+
+</script>
+
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/wfrcanalytics\.github\.io");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2025 <a href="https://wfrc.utah.gov/">Wasatch Front Regional Council</a></p>
+</div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/WFRCAnalytics/" target="_blank">
+      <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.facebook.com/WasatchFrontRegionalCouncil/" target="_blank">
+      <i class="bi bi-facebook" role="img" aria-label="Facebook">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/wasatchcouncil/" target="_blank">
+      <i class="bi bi-twitter-x" role="img" aria-label="X (Twitter)">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.instagram.com/wasatchfrontregionalcouncil/" target="_blank">
+      <i class="bi bi-instagram" role="img" aria-label="Instagram">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/company/wasatch-front-regional-council/" target="_blank">
+      <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/user/wfrcvideo/" target="_blank">
+      <i class="bi bi-youtube" role="img" aria-label="YouTube">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../contact/index.html">
+<p>Contact</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../license/index.html">
+<p>License</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

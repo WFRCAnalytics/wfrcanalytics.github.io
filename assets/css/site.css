@@ -1,0 +1,125 @@
+/* Site-specific styles. Candidates to move into wfrc-brand if other sites need them. */
+
+/* Subtle hairline that follows light and dark mode (Bootstrap's border color is too bright in dark). */
+body { --wfrc-line: color-mix(in srgb, var(--bs-body-color) 16%, var(--bs-body-bg)); }
+
+/* Home "At a glance": the brand color blocks, with a large number. */
+.glance .wfrc-block {
+  padding: 1.2rem 1.5rem;
+  justify-content: center;
+}
+.glance .glance-num {
+  display: block;
+  font-family: var(--bs-headings-font-family);
+  font-weight: 700;
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  line-height: 1.05;
+  color: #fff;
+}
+.glance .wfrc-block p {
+  margin: 0.35rem 0 0;
+  font-size: 0.95rem;
+}
+
+/* Home "Featured tools": cards with a banner, like the Explore listing, so they read differently from the stat tiles. */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--bs-tertiary-bg, var(--bs-body-bg));
+  border: 1px solid var(--wfrc-line);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.feature-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 57, 91, .18);
+}
+.feature-banner {
+  height: 76px;
+  background-size: cover;
+  background-position: center;
+}
+.feature-card.banner-navy .feature-banner { background-image: url("../../_extensions/wfrc-brand/assets/cards/navy.svg"); }
+.feature-card.banner-mid .feature-banner { background-image: url("../../_extensions/wfrc-brand/assets/cards/mid.svg"); }
+.feature-card.banner-teal .feature-banner { background-image: url("../../_extensions/wfrc-brand/assets/cards/teal.svg"); }
+.feature-card.banner-bright .feature-banner { background-image: url("../../_extensions/wfrc-brand/assets/cards/bright.svg"); }
+.feature-card.banner-brick .feature-banner { background-image: url("../../_extensions/wfrc-brand/assets/cards/brick.svg"); }
+.feature-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1rem 1.25rem 1.25rem;
+}
+.feature-body p { margin: 0 0 1rem; font-size: 0.9rem; }
+.feature-body p:has(> .wfrc-chip) { margin: 0; }
+.feature-body h3 { margin: 0.5rem 0 0.4rem; font-size: 1.15rem; line-height: 1.25; }
+/* Pandoc wraps everything after the ### heading in section.level3, so it must stretch too. */
+.feature-body > section { display: flex; flex-direction: column; flex: 1; }
+.feature-actions { margin-top: auto; }
+.feature-actions p { margin: 0; display: flex; gap: 0.5rem; flex-wrap: wrap; }
+@media (prefers-reduced-motion: reduce) {
+  .feature-card { transition: none; }
+  .feature-card:hover { transform: none; }
+}
+
+/* Outline buttons on the tinted card surface need the stronger link color to pass AA contrast. */
+.feature-actions .btn-outline-primary {
+  --bs-btn-color: var(--bs-link-color);
+  --bs-btn-border-color: var(--bs-link-color);
+  --bs-btn-hover-bg: var(--bs-link-color);
+  --bs-btn-hover-border-color: var(--bs-link-color);
+  --bs-btn-hover-color: var(--bs-body-bg);
+}
+
+/* Table listings (Code page, model component tables): a rounded card with a tinted header. */
+.quarto-listing-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--wfrc-line);
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 0.92rem;
+}
+.quarto-listing-table thead th {
+  background: var(--bs-tertiary-bg, var(--bs-body-bg));
+  border-bottom: 2px solid #0093c5;
+  padding: 0.75rem 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.quarto-listing-table tbody td {
+  padding: 0.8rem 1rem;
+  vertical-align: top;
+  border-top: 1px solid var(--wfrc-line);
+}
+.quarto-listing-table tbody tr:first-child td { border-top: 0; }
+.quarto-listing-table tbody tr:hover td { background: var(--bs-tertiary-bg, transparent); }
+.quarto-listing-table td:first-child { min-width: 11rem; }
+.quarto-listing-table .listing-title { font-weight: 600; }
+.quarto-listing-table td:last-child { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.quarto-listing-table .listing-categories { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+
+/* Status pills */
+.wfrc-chip.chip-live {
+  background: color-mix(in srgb, #00799f 16%, var(--bs-body-bg));
+  border-color: #00799f;
+}
+.wfrc-chip.chip-internal {
+  background: color-mix(in srgb, #febc46 30%, var(--bs-body-bg));
+  border-color: #c28a00;
+}
+.wfrc-chip.chip-archived {
+  font-style: italic;
+  background: transparent;
+  border-style: dashed;
+}

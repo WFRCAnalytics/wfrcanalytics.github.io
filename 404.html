@@ -36,7 +36,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="/site_libs/quarto-search/fuse.min.js"></script>
 <script src="/site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="/">
-<link href="/./assets/logo/abbreviated/WFRC_logo_abbreviated_color_tranparent.png" rel="icon" type="image/png">
+<link href="/./assets/logo/abbreviated/WFRC_logo_abbreviated_color_transparent.png" rel="icon" type="image/png">
 <script src="/site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="/site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="/site_libs/quarto-html/popper.min.js"></script>
@@ -51,9 +51,9 @@ ul.task-list li input[type="checkbox"] {
 <script id="quarto-axe-checker-options" type="text/plain">dHJ1ZQ==</script>
 <script src="/site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="/site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="/site_libs/bootstrap/bootstrap-f7ad28be91dbaafc5a349d1977635067.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="/site_libs/bootstrap/bootstrap-dark-7d2f992267eb946130f3de5404b2c1df.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="/site_libs/bootstrap/bootstrap-f7ad28be91dbaafc5a349d1977635067.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="/site_libs/bootstrap/bootstrap-0756f8518ec0967a70b41786b4745d2c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="/site_libs/bootstrap/bootstrap-dark-72597b3082f95eb44c4d1a7ce3261060.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="/site_libs/bootstrap/bootstrap-0756f8518ec0967a70b41786b4745d2c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -82,8 +82,63 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
+<script>
+
+// Table listings print categories as plain text ("Live, App"). Turn them into pills,
+
+// and re-run whenever the listing re-renders (filter, page, sort).
+
+(function () {
+
+  var STATE = { Live: 'chip-live', Internal: 'chip-internal', Archived: 'chip-archived' };
+
+  function chips(root) {
+
+    root.querySelectorAll('.quarto-listing-table .listing-categories:not([data-chips])').forEach(function (cell) {
+
+      var names = cell.textContent.split(',').map(function (s) { return s.trim(); }).filter(Boolean);
+
+      cell.setAttribute('data-chips', '1');
+
+      cell.textContent = '';
+
+      names.forEach(function (name) {
+
+        var chip = document.createElement('span');
+
+        chip.className = 'wfrc-chip ' + (STATE[name] || '');
+
+        chip.textContent = name;
+
+        cell.appendChild(chip);
+
+      });
+
+    });
+
+  }
+
+  function start() {
+
+    chips(document);
+
+    new MutationObserver(function () { chips(document); })
+
+      .observe(document.body, { childList: true, subtree: true });
+
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);
+
+  else start();
+
+})();
+
+</script>
 
 
+
+<link rel="stylesheet" href="/assets/css/site.css">
 <meta property="og:title" content="404 - Page Not Found">
 <meta property="og:site_name" content="Analytics">
 <meta name="twitter:title" content="404 - Page Not Found">
@@ -285,69 +340,57 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="/about.html"> 
-<span class="menu-text">About</span></a>
+    <a class="nav-link" href="/explore/index.html"> 
+<span class="menu-text">Explore</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-travel-demand-model" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Travel Demand Model</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-models" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Models</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-travel-demand-model">    
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-models">    
         <li>
-    <a class="dropdown-item" href="/1-tdm/current/index.html">
- <span class="dropdown-text">Current Official Release (9.2.0)</span></a>
+    <a class="dropdown-item" href="/models/index.html">
+ <span class="dropdown-text">Overview</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li>
+    <a class="dropdown-item" href="/models/tdm.html">
+ <span class="dropdown-text">Travel Demand Model</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="/1-tdm/beta/index.html">
- <span class="dropdown-text">Under Development (10.0.0 - Beta)</span></a>
+    <a class="dropdown-item" href="/models/remm.html">
+ <span class="dropdown-text">Real-Estate Market Model</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="/1-tdm/archive/index.html">
- <span class="dropdown-text">Archived Releases</span></a>
+    <a class="dropdown-item" href="/models/bdm.html">
+ <span class="dropdown-text">Bike Demand Model</span></a>
   </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-real-estate-market-model" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Real-Estate Market Model</span>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-real-estate-market-model">    
+        <li><hr class="dropdown-divider"></li>
         <li>
-    <a class="dropdown-item" href="/2-remm/current/index.html">
- <span class="dropdown-text">Current Release (3.0.0)</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="/2-remm/beta/index.html">
- <span class="dropdown-text">Under Development (Beta)</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="/2-remm/archive/index.html">
- <span class="dropdown-text">Archived Releases</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bike-demand-model" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Bike Demand Model</span>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-bike-demand-model">    
-        <li>
-    <a class="dropdown-item" href="/3-bdm/current/index.html">
- <span class="dropdown-text">Current Release</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="/3-bdm/beta/index.html">
- <span class="dropdown-text">Under Development (Beta)</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="/3-bdm/archive/index.html">
- <span class="dropdown-text">Archived Releases</span></a>
+    <a class="dropdown-item" href="https://wfrc.utah.gov/wftdm-docs/" target="_blank">
+ <span class="dropdown-text">TDM documentation</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="/4-tools/index.html"> 
-<span class="menu-text">Tools</span></a>
+    <a class="nav-link" href="/reports/index.html"> 
+<span class="menu-text">Reports</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="/data/index.html"> 
+<span class="menu-text">Data</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="/code/index.html"> 
+<span class="menu-text">Code</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="/updates/index.html"> 
+<span class="menu-text">Updates</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="/about.html"> 
+<span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-follow-us" role="link" data-bs-toggle="dropdown" aria-expanded="false">
@@ -408,9 +451,6 @@ ul.task-list li input[type="checkbox"] {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-  <div id="quarto-announcement" data-announcement-id="ff41a64e3ed9ef31a42d399ba7f26026" class="alert alert-primary hidden"><i class="bi bi-info-circle quarto-announcement-icon"></i><div class="quarto-announcement-content">
-<p><strong>Alert</strong> - This website currently contains mostly placeholder items and is currently under development.</p>
-</div><i class="bi bi-x-lg quarto-announcement-action"></i></div>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
@@ -467,7 +507,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="g-col-12 g-col-md-6">
 <p><strong>Get Support</strong></p>
 <ul>
-<li><a href="/./contact.html">Contact us</a> for assistance</li>
+<li><a href="/./contact/index.html">Contact us</a> for assistance</li>
 <li><a href="https://github.com/WFRCAnalytics/wfrcanalytics.github.io/issues/new" target="_blank">Report an issue</a> on GitHub</li>
 <li>Check our <a href="/./about.html">About</a> page for more information</li>
 </ul>
@@ -478,6 +518,100 @@ ul.task-list li input[type="checkbox"] {
 
 
 </main> <!-- /main -->
+<script>
+
+// Accessibility fixes for things Quarto and its libraries render but cannot configure.
+
+// Included on every page through wfrc-shared.yml (format.html.include-after-body).
+
+(function () {
+
+  function fix(root) {
+
+    // Listing banners are decorative; Quarto drops an empty `image-alt`.
+
+    root.querySelectorAll('img.thumbnail-image:not([alt])').forEach(function (img) {
+
+      img.setAttribute('alt', '');
+
+    });
+
+    // Quarto only sets `title` on the color-scheme toggle: add an accessible name and a clearer tooltip.
+
+    root.querySelectorAll('.quarto-color-scheme-toggle:not([aria-label])').forEach(function (a) {
+
+      a.setAttribute('aria-label', 'Toggle light and dark mode');
+
+      a.setAttribute('title', 'Toggle light / dark');
+
+    });
+
+    // Collapsible callouts put aria-expanded on a plain div: make it a real, keyboard-operable button.
+
+    root.querySelectorAll('.callout-header[aria-expanded]:not([role])').forEach(function (h) {
+
+      h.setAttribute('role', 'button');
+
+      h.setAttribute('tabindex', '0');
+
+      h.addEventListener('keydown', function (e) {
+
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); h.click(); }
+
+      });
+
+    });
+
+    // Observable Plot labels bare <g> marks; aria-label is not allowed on a role-less element.
+
+    root.querySelectorAll('[class^="plot-"] g[aria-label]:not([role])').forEach(function (g) {
+
+      g.removeAttribute('aria-label');
+
+    });
+
+    // Scrollable regions must be reachable by keyboard.
+
+    root.querySelectorAll('pre, div.sourceCode, .card, .card-body, .table-striped, table, .cell-output-display').forEach(function (el) {
+
+      if (el.hasAttribute('tabindex') || el.matches('a, button, input, select, textarea')) return;
+
+      var o = getComputedStyle(el);
+
+      var scrolls = /(auto|scroll)/.test(o.overflowX + o.overflowY) &&
+
+        (el.scrollWidth > el.clientWidth + 1 || el.scrollHeight > el.clientHeight + 1);
+
+      if (scrolls) el.setAttribute('tabindex', '0');
+
+    });
+
+  }
+
+  var queued = false;
+
+  function schedule() {
+
+    if (queued) return;
+
+    queued = true;
+
+    requestAnimationFrame(function () { queued = false; fix(document); });
+
+  }
+
+  fix(document);
+
+  new MutationObserver(schedule).observe(document.body, { childList: true, subtree: true });
+
+  window.addEventListener('resize', schedule);
+
+  window.addEventListener('load', function () { setTimeout(schedule, 800); setTimeout(schedule, 2500); });
+
+})();
+
+</script>
+
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -578,6 +712,11 @@ ul.task-list li input[type="checkbox"] {
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -940,12 +1079,12 @@ ul.task-list li input[type="checkbox"] {
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="https://wfrcanalytics.github.io/contact/" target="_blank">
+    <a class="nav-link" href="/contact/index.html">
 <p>Contact</p>
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="https://wfrcanalytics.github.io/license/" target="_blank">
+    <a class="nav-link" href="/license/index.html">
 <p>License</p>
 </a>
   </li>  
