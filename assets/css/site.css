@@ -1,0 +1,19 @@
+/* Site-specific styles. Candidates to move into wfrc-brand if other sites need them. */
+
+/* Home "At a glance": the brand color blocks, with a large number. */
+.glance .wfrc-block {
+  padding: 1.2rem 1.5rem;
+  justify-content: center;
+}
+.glance .glance-num {
+  display: block;
+  font-family: var(--bs-headings-font-family);
+  font-weight: 700;
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  line-height: 1.05;
+  color: #fff;
+}
+.glance .wfrc-block p {
+  margin: 0.35rem 0 0;
+  font-size: 0.95rem;
+}

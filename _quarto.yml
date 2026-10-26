@@ -63,6 +63,10 @@ website:
       - href: about.qmd
         text: About
 
+format:
+  html:
+    css: assets/css/site.css
+
 # freeze computational output
 # (see https://quarto.org/docs/projects/code-execution.html#freeze)
 freeze: auto

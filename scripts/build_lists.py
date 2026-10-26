@@ -106,9 +106,9 @@ def home_snippets(catalog, releases):
         (current(releases, "tdm"), "current travel demand model"),
         (current(releases, "remm"), "current real-estate market model"),
     ]
-    out = ["::: {.wfrc-keyfacts}"]
-    for num, label in facts:
-        out += ["::: {}", f"**{num}**", label, ":::"]
+    out = ["::: {.wfrc-blocks .glance}"]
+    for n, (num, label) in enumerate(facts):
+        out += [f"::: {{.wfrc-block{BLOCK_CLASS[n % 4]}}}", f"[{num}]{{.glance-num}}", "", label, ":::", ""]
     out += [":::", ""]
     (ROOT / "_home-facts.md").write_text(NL.join(out), encoding="utf-8")
 
