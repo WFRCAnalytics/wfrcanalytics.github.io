@@ -1,22 +1,6 @@
 [
   {
-    "listing": "/explore/index.html",
-    "items": []
-  },
-  {
-    "listing": "/models/remm.html",
-    "items": []
-  },
-  {
-    "listing": "/reports/index.html",
-    "items": []
-  },
-  {
-    "listing": "/code/index.html",
-    "items": []
-  },
-  {
-    "listing": "/models/bdm.html",
+    "listing": "/data/index.html",
     "items": []
   },
   {
@@ -24,7 +8,23 @@
     "items": []
   },
   {
-    "listing": "/data/index.html",
+    "listing": "/models/bdm.html",
+    "items": []
+  },
+  {
+    "listing": "/code/index.html",
+    "items": []
+  },
+  {
+    "listing": "/reports/index.html",
+    "items": []
+  },
+  {
+    "listing": "/models/remm.html",
+    "items": []
+  },
+  {
+    "listing": "/explore/index.html",
     "items": []
   },
   {
