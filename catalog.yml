@@ -2215,7 +2215,7 @@
   url: https://wfrc.utah.gov/wftdm-docs/
   featured: false
   include: true
-  last-push: '2026-10-23'
+  last-push: '2026-10-26'
   review: ok
 - id: WF-TDM-Documentation
   title: TDM Documentation
@@ -2228,7 +2228,7 @@
   url: https://wfrc.utah.gov/wftdm-docs/
   featured: false
   include: true
-  last-push: '2026-08-12'
+  last-push: '2026-10-26'
   review: ok
 - id: WF-TDM-Official-Releases
   title: TDM Official Releases

@@ -1,0 +1,5 @@
+internal broken: 0
+external checked: 189; failing: 3
+  401 https://docs.google.com/document/d/1QW1MMaRt1T9WUiNs4Ig9TdYE77BgdEVSFF-uPRnV2rk/edit  <- models/remm.html
+  401 https://docs.google.com/spreadsheets/d/1lWqqHUEF0IOpqIgNil0gEWuN29oVjzCsLly4eeluqpA/edit?usp=sharing  <- models/bdm.html
+  404 https://wfrc.utah.gov/wftdm-docs/v10x/v1000/index.html  <- models/tdm.html
