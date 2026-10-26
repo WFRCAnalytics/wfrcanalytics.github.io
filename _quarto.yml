@@ -84,6 +84,7 @@ format:
     include-in-header:
       - assets/js/listing-chips.html
       - assets/js/quick-jump.html
+      - assets/head.html
 
 # freeze computational output
 # (see https://quarto.org/docs/projects/code-execution.html#freeze)

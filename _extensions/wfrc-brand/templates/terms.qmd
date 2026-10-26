@@ -1,51 +1,44 @@
 ---
 title: Terms of use
 pagetitle: Terms of use
-description: "This site's material is for public use. Data from other organizations stays under its original terms."
+description: "Material made by this team is licensed under CC BY 4.0. Data from other organizations stays under its original terms."
 toc: false
 page-layout: article
 ---
 
 <!-- Template from wfrc-brand. Copy to terms/index.qmd; the shared footer links here. This wording is a draft: have WFRC communications or legal confirm it before publishing. -->
 
-The Wasatch Front Regional Council (WFRC) is a public agency. This site and the tools on it are published for public use, and no license or fee is attached to what the team produces. Data from other organizations is different: it keeps its original terms.
+The Wasatch Front Regional Council (WFRC) is a public agency. This site and the tools on it are published for public use. Content made by [team name] is licensed under the [Creative Commons Attribution 4.0 International license (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/); the [legal code](https://creativecommons.org/licenses/by/4.0/legalcode) is the full text. You may share and adapt it, including for commercial use, as long as you follow the conditions below.
 
-## Material made by [team name]
+Data from other organizations is not covered by this license. It keeps its original copyright and terms.
 
-You may read, share, link to and build on the pages, charts, maps and apps this team created. There is no license to request and no fee. Because WFRC is a public agency, its data and methods must not be misrepresented, so reuse comes with three conditions:
+## What the license asks of you
 
-1. **Credit the work and link to the source.** For example: *Wasatch Front Regional Council. (2026). [Tool name] [Online tool]. https://example.org/tool/*
+1. **Credit WFRC and link to the source.** For example: *Wasatch Front Regional Council. (2026). [Tool name] [Online tool]. https://example.org/tool/*
 
-2. **If you modify, adapt or build on our work, you must say clearly what you changed.** Describe the changes to the data, the method, the settings or the presentation, and name who made them. A changed version must never be presented as WFRC's own. For example: *"Based on WFRC's [Tool name] (2026). Modified by [organization]: [what changed]."*
+2. **Say if you changed the material.** Describe what you changed, and keep any earlier notes about changes that you find. A changed version must never be presented as WFRC's own. For example: *"Based on WFRC's [Tool name] (2026). Modified by [organization]: [what changed]."*
 
-3. **Do not imply that WFRC endorses your version, your conclusions or your product.** Do not use the WFRC name or logo in a way that suggests it does.
+3. **Do not suggest that WFRC endorses you or your use.**
 
 These conditions apply to results from our tools and models as well as to the pages and maps themselves.
 
-## Data from other sources
+## What the license does not cover
 
-Many tools combine WFRC's work with data from other organizations. **That data keeps its original copyright and terms, and you must follow them if you reuse it.** Check the provider before you republish, redistribute or build a product on it.
+- **The WFRC name, logos and other trademarks.** CC BY 4.0 does not license them. Do not use them in a way that suggests WFRC sponsors or approves your work.
+- **Data from other sources.** Each provider's copyright and terms apply, and you must follow them if you reuse it. Check the provider before you republish, redistribute or build a product on it.
+- **Models.** They are shared under the release letter, not under CC BY 4.0.
+- **Source code.** Each repository has its own license file.
 
 | Source | Used for |
 |---|---|
 | [Example data provider](https://example.org/) | Replace with what this site uses the data for |
 | [Another data provider](https://example.org/) | Replace with what this site uses the data for |
 
-## Models
-
-<!-- Delete this section if the site has no models. -->
-
-Describe how models are shared, for example by request under a release letter, and link to that page.
-
-## Source code
-
-<!-- Delete this section if the site has no public source code. -->
-
-The source code for this site is in its GitHub repository. Libraries and data used inside it keep their own licenses and terms.
+<!-- Delete the Models bullet if the site has no models, and the Source code bullet if it has no public source code. -->
 
 ## No warranty
 
-Tools and data are provided in good faith as best-effort planning products. You are responsible for how you apply them and interpret their results.
+Tools and data are provided in good faith as best-effort planning products. You are responsible for how you apply them and interpret their results. CC BY 4.0 also disclaims warranties.
 
 ## Questions
 

@@ -216,7 +216,9 @@ def tool_pages(catalog):
         lines += [f"- {x}" for x in d["data"]] + ["", "## About this tool", "",
                   "| | |", "|---|---|",
                   f"| Type | {KIND_LABEL[e['kind']]} |", f"| Status | Live |",
-                  f"| Last updated | {long_date(e['last-push'])} (latest change to the source code) |", "",
+                  f"| Last updated | {long_date(e['last-push'])} (latest change to the source code) |",
+                  "| Terms | WFRC's material is licensed CC BY 4.0; data from other sources keeps its own terms. "
+                  "See the [terms of use](../terms/index.qmd). |", "",
                   "## How to cite", "", "::: {.cite}",
                   f"Wasatch Front Regional Council. ({year}). *{e['title']}* [Online tool]. {e['url']}", ":::", "",
                   "## Questions or problems?", "",

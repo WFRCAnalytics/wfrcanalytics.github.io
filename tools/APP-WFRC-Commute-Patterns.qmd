@@ -34,6 +34,7 @@ image: ../assets/shots/APP-WFRC-Commute-Patterns.jpg
 | Type | App |
 | Status | Live |
 | Last updated | September 22, 2026 (latest change to the source code) |
+| Terms | WFRC's material is licensed CC BY 4.0; data from other sources keeps its own terms. See the [terms of use](../terms/index.qmd). |
 
 ## How to cite
 
