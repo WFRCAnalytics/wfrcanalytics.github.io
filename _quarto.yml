@@ -54,7 +54,7 @@ website:
         text: Reports
       - href: data/index.qmd
         text: Data
-      - href: https://wfrcanalytics.github.io/code/
+      - href: code/index.qmd
         text: Code
       - href: updates/index.qmd
         text: Updates
@@ -64,6 +64,7 @@ website:
 format:
   html:
     css: assets/css/site.css
+    link-external-newwindow: true
 
 # freeze computational output
 # (see https://quarto.org/docs/projects/code-execution.html#freeze)

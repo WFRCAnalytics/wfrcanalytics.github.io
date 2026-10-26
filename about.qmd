@@ -47,7 +47,15 @@ Data preparation, parameter estimation, calibration and validation, documented a
 
 ## Partners and data sources
 
-Our work depends on partners and data from the Mountainland Association of Governments (MAG), the Utah Department of Transportation (UDOT), the Utah Transit Authority (UTA), the Kem C. Gardner Policy Institute at the University of Utah, the Utah Department of Workforce Services, the Utah Geospatial Resource Center, and the U.S. Census Bureau.
+Our work depends on these partners and data providers:
+
+- [Mountainland Association of Governments (MAG)](https://magutah.gov/){target="_blank"}, co-developer of the Travel Demand Model
+- [Utah Department of Transportation (UDOT)](https://www.udot.utah.gov/){target="_blank"}
+- [Utah Transit Authority (UTA)](https://www.rideuta.com/){target="_blank"}
+- [Kem C. Gardner Policy Institute, University of Utah](https://gardner.utah.edu/){target="_blank"}
+- [Utah Department of Workforce Services (DWS)](https://jobs.utah.gov/){target="_blank"}
+- [Utah Geospatial Resource Center (UGRC)](https://gis.utah.gov/){target="_blank"}
+- [U.S. Census Bureau](https://www.census.gov/){target="_blank"}
 
 ## Get in touch
 
