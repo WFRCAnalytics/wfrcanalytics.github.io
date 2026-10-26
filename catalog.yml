@@ -323,7 +323,7 @@
   title: Bike Create Features
   description: Builds existing and planned bike facility layers from Utah roads and trails data (UGRC), identifying the best bike feature and road side.
   kind: data
-  area: general
+  area: bdm
   status: repo-only
   internal: false
   repo: https://github.com/WFRCAnalytics/DATA-Bike-Create-Features
@@ -817,7 +817,7 @@
   title: Bikeway by City
   description: An analysis of bicycle infrastructure compared to roadways
   kind: analysis
-  area: general
+  area: bdm
   status: live
   internal: false
   repo: https://github.com/WFRCAnalytics/GIS-Bikeway-by-City
@@ -1362,7 +1362,7 @@
   last-push: 2022-10-11
   review: ok
 - id: REMM-v1.0
-  title: v1.0
+  title: REMM 1.0 model (previous)
   description: Real Estate Market Model - Version 1
   kind: model
   area: remm
@@ -1374,7 +1374,7 @@
   last-push: 2023-06-22
   review: ok
 - id: REMM-v2.0
-  title: v2.0
+  title: REMM 2.0 model (previous)
   description: Real Estate Market Model - Version 2
   kind: model
   area: remm
@@ -1386,7 +1386,7 @@
   last-push: 2023-06-22
   review: ok
 - id: REMM-v3.0
-  title: v3.0
+  title: REMM 3.0 model
   description: Real Estate Market Model (Wasatch Front Implementation of Urbansim)
   kind: model
   area: remm
@@ -1410,7 +1410,7 @@
   last-push: 2025-07-23
   review: ok
 - id: REMM2-2019
-  title: REMM2 2019
+  title: REMM 2 (2019, previous)
   description: Version of REMM ported straight from urbansim
   kind: model
   area: remm
@@ -1434,7 +1434,7 @@
   last-push: 2023-04-13
   review: ok
 - id: REMMOneDotOh
-  title: REMMOne Dot Oh
+  title: REMM 1.0 original (previous)
   description: REMM version 1.0
   kind: model
   area: remm
@@ -1985,7 +1985,7 @@
   title: Bike Ped Demand Model
   description: GIS tool for estimating latent bike and pedestrian demand.
   kind: tool
-  area: general
+  area: bdm
   status: repo-only
   internal: false
   repo: https://github.com/WFRCAnalytics/TOOL-BikePed-Demand-Model

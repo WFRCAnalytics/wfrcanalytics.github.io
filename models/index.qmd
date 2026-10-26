@@ -1,0 +1,58 @@
+---
+title: "Models"
+description: "Three models describe how the Wasatch Front region lives, works and travels."
+toc: false
+---
+
+WFRC and its partners maintain three planning models. They are developed in the open, and the pages below explain what each one does and where to find its documentation.
+
+::: {.wfrc-blocks}
+::: {.wfrc-block}
+### Travel Demand Model
+
+Forecasts how people travel on the region's roads and transit. Built with Mountainland Association of Governments (MAG).
+
+Current release **{{< meta tdm-current >}}**
+
+[Learn more](tdm.qmd){.btn .btn-sm}
+:::
+
+::: {.wfrc-block .mid}
+### Real-Estate Market Model
+
+Simulates where households and jobs may locate, from available land and market conditions, on the UrbanSim platform.
+
+Current release **{{< meta remm-current >}}**
+
+[Learn more](remm.qmd){.btn .btn-sm}
+:::
+
+::: {.wfrc-block .brick}
+### Bike Demand Model
+
+Estimates bicycle trips between small zones called microzones and assigns them to the bike network.
+
+[Learn more](bdm.qmd){.btn .btn-sm}
+:::
+:::
+
+## How the models fit together
+
+```{mermaid}
+%%| fig-alt: "Flow diagram. Land and policy inputs feed the Real-Estate Market Model, which produces household and job forecasts. These feed the Travel Demand Model, which returns travel accessibility to the Real-Estate Market Model. The Bike Demand Model is a separate model that uses microzones and the bike network."
+flowchart LR
+  A[Land, plans and<br/>control totals] --> B[Real-Estate<br/>Market Model]
+  B --> H[Households<br/>and jobs] --> C[Travel Demand<br/>Model]
+  C --> Q[Travel<br/>accessibility] --> B
+  C --> D[Forecasts for plans<br/>and projects]
+  E[Microzones and<br/>bike network] --> F[Bike Demand<br/>Model]
+  F --> D
+```
+
+The Real-Estate Market Model's household and job projections drive trip generation in the Travel Demand Model. In turn, the Real-Estate Market Model uses travel accessibility from the Travel Demand Model when it predicts where development happens. The Bike Demand Model works at a finer scale, with its own zones and network.
+
+## Looking for something specific?
+
+- The full documentation of record for every travel demand model version is on the [WFRC documentation site](https://wfrc.utah.gov/wftdm-docs/){target="_blank"}.
+- Browse the apps built on these models in [Explore](../explore/index.qmd), or the supporting reports in [Reports & methods](../reports/index.qmd).
+- To use a model or discuss a study, [contact the team](../contact.qmd).

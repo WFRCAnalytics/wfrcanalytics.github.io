@@ -1,0 +1,10 @@
+/* Site-specific tweaks. Candidates to move into wfrc-brand if other sites need them. */
+
+/* Table listings: titles inherit heading scale from the brand theme; keep them at body size. */
+.quarto-listing-table .listing-title,
+.quarto-listing-table h3,
+.quarto-listing-table td a {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 0;
+}

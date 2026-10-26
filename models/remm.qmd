@@ -1,0 +1,90 @@
+---
+title: "Real-Estate Market Model"
+description: "REMM projects where households and jobs may locate across the Wasatch Front, using the UrbanSim platform."
+aliases:
+  - /2-remm/index.html
+  - /2-remm/current/index.html
+  - /2-remm/beta/index.html
+  - /2-remm/archive/index.html
+listing:
+  - id: remm-components
+    contents: remm-items.yml
+    type: table
+    fields: [title, description, categories, date]
+    field-display-names:
+      date: Last updated
+    sort: false
+    categories: true
+    filter-ui: true
+    page-size: 15
+---
+
+**Where will Utahns live and work in the future?** REMM projects future residential and employment-related development using the [UrbanSim](https://github.com/udst/urbansim){target="_blank"} modeling platform. WFRC runs a modified version of UrbanSim.
+
+::: {.wfrc-keyfacts}
+::: {}
+**{{< meta remm-current >}}**
+current release
+:::
+::: {}
+**3.0.2**
+in beta
+:::
+::: {}
+**2023**
+base year of the adopted RTP
+:::
+:::
+
+## What it does
+
+REMM considers how much land is available and how profitable new development and redevelopment would be. It is first calibrated to reproduce the base year of the adopted Regional Transportation Plan, currently 2023. It then simulates development forward in time to produce household and job projections.
+
+## What goes in
+
+The model draws on the best available regional sources:
+
+- A region-wide parcel land use and valuation database
+- An inventory of local government general plans
+- The results of a multi-year scenario-based visioning exercise
+- A synthesized household population dataset for the model's base year, built from Census data
+- Address-geocoded employment totals from the Utah Department of Workforce Services (DWS)
+- County-level employment and population control totals from the Kem C. Gardner Policy Institute at the University of Utah
+- Input from public and private sector expert advisors
+- "Physical constraint" map layers showing where development is prohibited or impractical because of steep terrain, wetlands, mining, or public lands
+
+## How it connects to travel
+
+```{mermaid}
+%%| fig-alt: "Cycle diagram. Inputs feed REMM, which produces household and job projections. These go to the Travel Demand Model for trip generation. The Travel Demand Model returns travel accessibility to REMM."
+flowchart LR
+  A[Parcels, plans, constraints,<br/>control totals] --> B[REMM]
+  B --> P[Household and job<br/>projections] --> C[Travel Demand Model]
+  C --> Q[Travel<br/>accessibility] --> B
+```
+
+The household and job projections inform trip generation in the regional [Travel Demand Model](tdm.qmd). In turn, REMM factors travel accessibility from the Travel Demand Model into its predictions of where development will happen.
+
+## Releases
+
+{{< include _releases-remm.md >}}
+
+Earlier versions are kept in their own repositories (`REMMOneDotOh`, `REMM-v1.0`, `REMM2-2019`, `REMM-v2.0`) for reference.
+
+## Review the results
+
+The [REMM Result Review Tool](https://wfrcanalytics.github.io/REMM-Result-Review-Tool/){target="_blank"} is a map used to review model results during development.
+
+## Documentation and code
+
+- [Model source code (REMM-v3.0)](https://github.com/WFRCAnalytics/REMM-v3.0){target="_blank"}
+- [Model documentation](https://docs.google.com/document/d/1zF3MWmOhru1-82TL6yOfIDP_rhoKDDRYtqSdHP4eJcQ/edit?tab=t.0){target="_blank"}. The model authors note it still needs updating.
+- [Full installation instructions](https://docs.google.com/document/d/1QW1MMaRt1T9WUiNs4Ig9TdYE77BgdEVSFF-uPRnV2rk/edit){target="_blank"}
+- [WFRC's UrbanSim fork](https://github.com/WFRCAnalytics/PY-Urbansim-WFRC){target="_blank"}, based on UrbanSim by Paul Waddell. Questions about UrbanSim itself go to the [upstream project](https://github.com/udst/urbansim){target="_blank"}.
+
+## Supporting tools and analyses
+
+REMM relies on a set of preparation and review workflows, such as managing base year data, distributing job space by TAZ, splitting parcels, and choosing model variables. Entries marked **Internal** need WFRC GitHub access.
+
+::: {#remm-components}
+:::

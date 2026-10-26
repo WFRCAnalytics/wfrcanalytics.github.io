@@ -2,6 +2,8 @@
 title: "Explore"
 description: "Interactive apps and maps from the WFRC Analytics team. Open a live tool, or follow the repository link to see how it is built."
 toc: false
+aliases:
+  - /4-tools/index.html
 listing:
   contents: items.yml
   type: grid

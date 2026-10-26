@@ -1,0 +1,73 @@
+---
+title: "Travel Demand Model"
+description: "The Wasatch Front Travel Demand Model forecasts travel on the region's roads and transit. WFRC and MAG develop it together."
+aliases:
+  - /1-tdm/index.html
+  - /1-tdm/current/index.html
+  - /1-tdm/beta/index.html
+  - /1-tdm/archive/index.html
+listing:
+  - id: tdm-components
+    contents: tdm-items.yml
+    type: table
+    fields: [title, description, categories, date]
+    field-display-names:
+      date: Last updated
+    sort: false
+    categories: true
+    filter-ui: true
+    page-size: 15
+---
+
+The WF TDM is a regional model of how people travel. Planners use it to test transportation investments and policies, and to support the Regional Transportation Plan. WFRC and the Mountainland Association of Governments (MAG) develop and maintain it together.
+
+::: {.wfrc-keyfacts}
+::: {}
+**{{< meta tdm-current >}}**
+current release
+:::
+::: {}
+**10.0.0**
+in beta
+:::
+::: {}
+**WFRC + MAG**
+model partners
+:::
+:::
+
+## Documentation
+
+Documentation of record lives on the WFRC site, with a page for every version.
+
+- [Documentation for all versions](https://wfrc.utah.gov/wftdm-docs/){target="_blank"}
+- Version 9.x documents: a *What's New* document describing changes since the last release, and a *Model Validation Report* covering trip generation, distribution, mode choice and highway assignment.
+- Version 10 documents: a *Data Dictionary* and a *Model Validation Report*.
+
+## Releases
+
+{{< include _releases-tdm.md >}}
+
+## Getting the model
+
+Model files are shared through a private GitHub repository. Before applying the model, please contact WFRC or MAG staff to discuss your intended use and make sure you have the current release. Access requests and questions go through the team on the [contact page](../contact.qmd). The documentation site lists the staff contacts for model access.
+
+## Reproducible runs and calibration
+
+Two repositories apply the model in a traceable, repeatable way:
+
+- **[TDM run results](https://wfrcanalytics.github.io/WF-TDM-Runs/){target="_blank"}** publishes experiment results, such as sensitivity tests, project alternatives and forecasting scenarios. Each run records exactly which model version and settings produced it.
+- **[TDM calibration reports](https://wfrcanalytics.github.io/WF-TDM-Calibration/){target="_blank"}** show each calibration iteration. Calibration is tied to a pinned model version so that results can be reproduced.
+
+The **[calibration dashboard](https://wfrcanalytics.github.io/APP-wftdm-dashboard/){target="_blank"}** summarizes calibration results by scenario, and the [vizTool](https://github.com/WFRCAnalytics/vizTool){target="_blank"} helps explore model results through maps and charts.
+
+## Geography
+
+The [analysis zones repository](https://github.com/WFRCAnalytics/TDM-GEO-AnalysisZones){target="_blank"} is the source of truth for the traffic analysis zones (TAZ) the model uses. Each release is a tagged version of the zone layer.
+
+## Model components and supporting work
+
+Inputs, parameter estimation, calibration, validation, post-processing and scenario work each live in a repository named with a `TDM-` prefix. Where a repository publishes a report, the title links to it. Otherwise it links to the source. Entries marked **Internal** need WFRC GitHub access.
+
+::: {#tdm-components}
+:::

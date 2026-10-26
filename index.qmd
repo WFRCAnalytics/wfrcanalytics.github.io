@@ -10,7 +10,7 @@ title-block-banner: false
 
 Explore the travel demand, real-estate market and bike demand models that inform regional plans, along with the apps, maps and reports built on them.
 
-[Explore tools](explore/index.qmd){.btn .btn-light} [See the models](#models){.btn .btn-outline-light}
+[Explore tools](explore/index.qmd){.btn .btn-light} [See the models](models/index.qmd){.btn .btn-outline-light}
 
 [Travel demand]{.wfrc-chip} [Land use]{.wfrc-chip} [Active transportation]{.wfrc-chip} [Open source]{.wfrc-chip}
 :::
@@ -36,7 +36,7 @@ Explore the travel demand, real-estate market and bike demand models that inform
 
 Forecasts travel on the region's roads and transit. Documentation of record for every version lives on the WFRC site.
 
-[Overview](1-tdm/index.qmd){.btn .btn-sm} [Documentation](https://wfrc.utah.gov/wftdm-docs/){.btn .btn-sm .btn-outline-light target="_blank"}
+[Overview](models/tdm.qmd){.btn .btn-sm} [Documentation](https://wfrc.utah.gov/wftdm-docs/){.btn .btn-sm .btn-outline-light target="_blank"}
 :::
 
 ::: {.wfrc-block .mid}
@@ -44,7 +44,7 @@ Forecasts travel on the region's roads and transit. Documentation of record for 
 
 An UrbanSim-based simulation of where people and jobs may locate, used for the region's socioeconomic forecasts.
 
-[Overview](2-remm/index.qmd){.btn .btn-sm} [Source](https://github.com/WFRCAnalytics/REMM-v3.0){.btn .btn-sm .btn-outline-light target="_blank"}
+[Overview](models/remm.qmd){.btn .btn-sm} [Source](https://github.com/WFRCAnalytics/REMM-v3.0){.btn .btn-sm .btn-outline-light target="_blank"}
 :::
 
 ::: {.wfrc-block .brick}
@@ -52,7 +52,7 @@ An UrbanSim-based simulation of where people and jobs may locate, used for the r
 
 Estimates bicycle and micromobility demand to guide active transportation investments.
 
-[Overview](3-bdm/index.qmd){.btn .btn-sm} [Source](https://github.com/WFRCAnalytics/BDM-Utah-Bike-Demand-Model){.btn .btn-sm .btn-outline-light target="_blank"}
+[Overview](models/bdm.qmd){.btn .btn-sm} [Source](https://github.com/WFRCAnalytics/BDM-Utah-Bike-Demand-Model){.btn .btn-sm .btn-outline-light target="_blank"}
 :::
 :::
 :::

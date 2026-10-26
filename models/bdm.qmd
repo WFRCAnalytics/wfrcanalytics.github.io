@@ -1,0 +1,78 @@
+---
+title: "Bike Demand Model"
+description: "The Utah Bike Demand Model estimates bicycle trips between microzones and assigns them to the bike network."
+aliases:
+  - /3-bdm/index.html
+  - /3-bdm/current/index.html
+  - /3-bdm/beta/index.html
+  - /3-bdm/archive/index.html
+listing:
+  - id: bdm-components
+    contents: bdm-items.yml
+    type: table
+    fields: [title, description, categories, date]
+    field-display-names:
+      date: Last updated
+    sort: false
+    categories: true
+    filter-ui: true
+    page-size: 15
+---
+
+The model builds on the [micromobility toolset](https://github.com/RSGInc/micromobility_toolset){target="_blank"} from RSG, applied to Utah data. It estimates how many bicycle trips happen between small zones and which parts of the bike network they use.
+
+## How it works
+
+```{mermaid}
+%%| fig-alt: "Pipeline diagram. Convert the network and create microzones, then run the bike demand model with trip generation, trip distribution and trip assignment, then post-process the outputs."
+flowchart LR
+  A[Convert<br/>network] --> C[Trip<br/>generation]
+  B[Create<br/>microzones] --> C
+  C --> D[Trip<br/>distribution] --> E[Trip<br/>assignment] --> F[Post-process<br/>outputs]
+```
+
+1. **Convert the network.** Prepares the bike network for the model.
+2. **Create microzones.** Builds the small zones the model works in (see below).
+3. **Run the bike demand model.** Trip generation, trip distribution and trip assignment.
+4. **Post-process outputs.** Produces monthly bike volume across links, microzone-to-microzone trip summaries and microzone centroid nodes, used for quality checks.
+
+## Microzones
+
+Microzones, or micro analysis zones (MAZ), are smaller than the traffic analysis zones used by the [Travel Demand Model](tdm.qmd). They are typically about the size of a census block and group areas with similar land use, such as residential, commercial, industrial, education, parks and open space. They also follow Wasatch Choice Centers, and buildings within a microzone tend to share similar points of access to the network. This finer scale suits bicycle travel, where short trips matter.
+
+## Running the model
+
+The model needs at least 32 GB of RAM and Python 3.
+
+```bash
+pip install git+https://github.com/rsginc/micromobility_toolset
+python Create_Microzones.py        # if microzone data is needed
+python Convert_MM_Network.py       # if network data is needed
+python utah_bike_demand_model.py   # run the full model
+```
+
+Add `--name generate_demand` or `--name assign_demand` to run one step, or `--sample 100` to run only the first 100 microzones. Outputs are saved in the repository's `logs` folder. See the [full instructions](https://github.com/WFRCAnalytics/BDM-Utah-Bike-Demand-Model){target="_blank"}.
+
+## Releases
+
+The Bike Demand Model does not currently publish numbered releases. The repository's latest version is the current model.
+
+## Documentation
+
+- [Source code and instructions](https://github.com/WFRCAnalytics/BDM-Utah-Bike-Demand-Model){target="_blank"}
+- Model design specification (PDF, dated January 28, 2021), in the repository's `Model_Design` folder
+- [Design meeting notes](https://github.com/RSGInc/utah_bike_demand_model/wiki){target="_blank"}
+- [Bike model coefficients tracker](https://docs.google.com/spreadsheets/d/1lWqqHUEF0IOpqIgNil0gEWuN29oVjzCsLly4eeluqpA/edit?usp=sharing){target="_blank"}
+
+## Related bike work
+
+- [Bikeway by city](https://wfrcanalytics.github.io/GIS-Bikeway-by-City/){target="_blank"} compares bicycle infrastructure with the roadway network for each city.
+- A feature-building script combines UGRC roads and trails data into existing and planned bike facility layers, choosing the best bike feature and its side of the road.
+- A latent bike demand GIS tool is also kept in the catalog below.
+
+## Components
+
+Entries marked **Internal** need WFRC GitHub access.
+
+::: {#bdm-components}
+:::

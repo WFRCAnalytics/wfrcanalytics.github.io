@@ -221,6 +221,7 @@
   categories:
   - Live
   - Analysis
+  - BDM
   date: 2025-11-17
 - title: Housing Unit Inventory Explorer
   description: Housing Inventory Explorer developed using the ArcGIS Maps SDK for
@@ -293,7 +294,7 @@
   - Repository
   - Analysis
   date: 2026-09-16
-- title: v3.0
+- title: REMM 3.0 model
   description: Real Estate Market Model (Wasatch Front Implementation of Urbansim)
   path: https://github.com/WFRCAnalytics/REMM-v3.0
   categories:
@@ -651,6 +652,7 @@
   categories:
   - Repository
   - Data
+  - BDM
   date: 2025-06-25
 - title: EST Life Cycle
   description: Defines the household life cycle categories (children and seniors)
@@ -753,6 +755,7 @@
   categories:
   - Repository
   - Tool
+  - BDM
   date: 2025-04-09
 - title: Create Residential Capacity Classes
   description: Create residential capacity classes for capacity tool
@@ -1308,7 +1311,7 @@
   - Model
   - TDM
   date: 2023-07-03
-- title: v1.0
+- title: REMM 1.0 model (previous)
   description: Real Estate Market Model - Version 1
   path: https://github.com/WFRCAnalytics/REMM-v1.0
   categories:
@@ -1316,7 +1319,7 @@
   - Model
   - REMM
   date: 2023-06-22
-- title: v2.0
+- title: REMM 2.0 model (previous)
   description: Real Estate Market Model - Version 2
   path: https://github.com/WFRCAnalytics/REMM-v2.0
   categories:
@@ -1406,7 +1409,7 @@
   - Analysis
   - REMM
   date: 2022-05-07
-- title: REMM2 2019
+- title: REMM 2 (2019, previous)
   description: Version of REMM ported straight from urbansim
   path: https://github.com/WFRCAnalytics/REMM2-2019
   categories:
@@ -1422,7 +1425,7 @@
   - Repository
   - Data
   date: 2022-01-28
-- title: REMMOne Dot Oh
+- title: REMM 1.0 original (previous)
   description: REMM version 1.0
   path: https://github.com/WFRCAnalytics/REMMOneDotOh
   categories:

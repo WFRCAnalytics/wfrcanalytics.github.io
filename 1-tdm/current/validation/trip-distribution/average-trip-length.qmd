@@ -1,3 +1,0 @@
----
-title: Average Trip Length
----

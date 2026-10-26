@@ -103,6 +103,7 @@
   categories:
   - Live
   - Analysis
+  - BDM
   date: 2025-11-17
 - title: GEO Analysis Zones
   description: The source of truth for TAZ (and MAZ in the future) used in the Wasatch
