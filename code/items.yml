@@ -113,7 +113,18 @@
   - Internal
   - Model
   - TDM
-  date: '2026-10-23'
+  date: '2026-10-26'
+  image: ../_extensions/wfrc-brand/assets/cards/mid.svg
+- title: TDM Documentation
+  description: A repository for the What's New Document, the Inputs Documentation,
+    and the Validation Report for the Travel Demand Model. Requires WFRC GitHub access.
+  path: https://wfrc.utah.gov/wftdm-docs/
+  categories:
+  - Live
+  - Internal
+  - Model
+  - TDM
+  date: '2026-10-26'
   image: ../_extensions/wfrc-brand/assets/cards/mid.svg
 - title: VAL School College Enrollment
   description: Validates the synthetic population against real K-12 and college enrollment.
@@ -163,17 +174,6 @@
   - TDM
   date: '2026-09-14'
   image: ../assets/shots/TDM-INP-PopulationSim.jpg
-- title: TDM Documentation
-  description: A repository for the What's New Document, the Inputs Documentation,
-    and the Validation Report for the Travel Demand Model. Requires WFRC GitHub access.
-  path: https://wfrc.utah.gov/wftdm-docs/
-  categories:
-  - Live
-  - Internal
-  - Model
-  - TDM
-  date: '2026-08-12'
-  image: ../_extensions/wfrc-brand/assets/cards/mid.svg
 - title: INP External Forecasts
   description: Volume forecasts for the model's external stations, published as a
     single Quarto report.
