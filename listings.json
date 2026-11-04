@@ -1,10 +1,14 @@
 [
   {
+    "listing": "/reports/index.html",
+    "items": []
+  },
+  {
     "listing": "/data/index.html",
     "items": []
   },
   {
-    "listing": "/models/tdm.html",
+    "listing": "/models/remm.html",
     "items": []
   },
   {
@@ -16,21 +20,17 @@
     "items": []
   },
   {
-    "listing": "/reports/index.html",
-    "items": []
+    "listing": "/updates/index.html",
+    "items": [
+      "/updates/posts/2026-10-25-new-front-door.html"
+    ]
   },
   {
-    "listing": "/models/remm.html",
+    "listing": "/models/tdm.html",
     "items": []
   },
   {
     "listing": "/explore/index.html",
     "items": []
-  },
-  {
-    "listing": "/updates/index.html",
-    "items": [
-      "/updates/posts/2026-10-25-new-front-door.html"
-    ]
   }
 ]
