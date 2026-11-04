@@ -158,5 +158,10 @@
   "captured": "2026-10-26T05:33:52.637Z",
   "lastPush": "2026-10-09",
   "url": "https://wfrc.maps.arcgis.com/home/item.html?id=6cdfccde494d41a291de6da3c8c1bf08"
+ },
+ "APP-synthetic-data-generator": {
+  "captured": "2026-11-04T20:13:16.183Z",
+  "lastPush": "2026-11-03",
+  "url": "https://wfrcanalytics.github.io/APP-synthetic-data-generator/"
  }
 }

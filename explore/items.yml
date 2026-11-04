@@ -66,6 +66,16 @@
   - App
   date: '2026-06-30'
   image: ../assets/shots/APP-Commute-Explorer.jpg
+- title: Synthetic Data Generator
+  description: Turns a private survey table into a fake table with the same columns,
+    types and summary statistics, entirely in your browser, so AI coding agents can
+    build analysis code without seeing real data.
+  path: ../tools/APP-synthetic-data-generator.html
+  categories:
+  - Live
+  - App
+  date: '2026-11-03'
+  image: ../assets/shots/APP-synthetic-data-generator.jpg
 - title: Utah HTS Visualization Dashboard
   description: A 'shiny' dashboard for exploring and reporting results from the Utah
     Household Travel Survey (HTS). Provides interactive crosstabs, maps, and summary

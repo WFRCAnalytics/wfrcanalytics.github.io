@@ -160,6 +160,19 @@
   include: true
   last-push: '2025-12-22'
   review: ok
+- id: APP-synthetic-data-generator
+  title: Synthetic Data Generator
+  description: Turns a private survey table into a fake table with the same columns, types and summary statistics, entirely in your browser, so AI coding agents can build analysis code without seeing real data.
+  kind: app
+  area: general
+  status: live
+  internal: false
+  repo: https://github.com/WFRCAnalytics/APP-synthetic-data-generator
+  url: https://wfrcanalytics.github.io/APP-synthetic-data-generator/
+  featured: false
+  include: true
+  last-push: '2026-11-03'
+  review: drafted
 - id: APP-Unified-Plan-Tools-Page
   title: Unified Plan Tools Page
   description: Mobile-friendly landing page of maps and tools for the Unified Plan; no longer in use and kept for reference.

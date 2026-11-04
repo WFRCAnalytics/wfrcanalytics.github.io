@@ -63,6 +63,18 @@ APP-Commute-Explorer:
     - US Census Bureau LEHD origin-destination employment statistics (LODES 8), filtered to the Wasatch Front counties.
     - County boundaries from Census TIGER/Line files.
 
+APP-synthetic-data-generator:
+  question: How can I let an AI coding agent help with analysis code without handing it real survey data?
+  audience: WFRC staff and partner analysts who work with private or sensitive tables and want to use AI coding agents.
+  inside:
+    - Reads a CSV, Excel, Parquet, JSON, SPSS, Stata or SAS file, or lets you design a table from scratch, and shows only its structure, never row values.
+    - A review card for every column, where you can change types, sentinel codes, ID patterns and exclusions.
+    - A fake table with the same columns, row count, types, formats and summary statistics, plus a README that tells the agent the data is not real.
+    - A small spec file you can save and reuse; it holds summaries and settings only, never rows or personal values.
+    - Everything runs in your browser tab, with no uploads, accounts or analytics, and closing the page clears the real data from memory.
+  data:
+    - None. The tool uses only the file you choose, on your own computer. Names, emails, phone numbers and addresses in the fake file are invented from word lists.
+
 APP-WFRC-Commute-Patterns:
   question: Where do residents of a city, county or legislative district work, and where do its workers live?
   audience: Policy questions tied to named places and political districts.

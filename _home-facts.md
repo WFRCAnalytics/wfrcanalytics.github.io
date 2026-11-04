@@ -1,12 +1,12 @@
 ::: {.wfrc-blocks .glance}
 ::: {.wfrc-block}
-[17]{.glance-num}
+[18]{.glance-num}
 
 cataloged webapps
 :::
 
 ::: {.wfrc-block .mid}
-[170]{.glance-num}
+[171]{.glance-num}
 
 repositories cataloged
 :::
