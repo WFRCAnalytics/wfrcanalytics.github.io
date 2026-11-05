@@ -104,6 +104,16 @@
   - App
   date: '2026-06-30'
   image: ../assets/shots/APP-Commute-Explorer.jpg
+- title: Community Profiles
+  description: Facts and figures for the Wasatch Front region, counties, cities and
+    WFRC planning areas — a static, map-first dashboard (DuckDB-WASM, MapLibre, Observable
+    Plot) and the data pipeline behind it
+  path: https://wfrcanalytics.github.io/APP-Community-Profiles/
+  categories:
+  - Live
+  - App
+  date: '2026-11-05'
+  image: ../_extensions/wfrc-brand/assets/cards/navy.svg
 - title: Synthetic Data Generator
   description: Turns a private survey table into a fake table with the same columns,
     types and summary statistics, entirely in your browser, so AI coding agents can
