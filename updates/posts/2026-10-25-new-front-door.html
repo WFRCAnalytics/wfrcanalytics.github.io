@@ -54,9 +54,9 @@ ul.task-list li input[type="checkbox"] {
 <script id="quarto-axe-checker-options" type="text/plain">dHJ1ZQ==</script>
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-83820139305ebf757dfc2e152f91f27d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-d37993bf8720c3cc32ab2560f02fae2e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-83820139305ebf757dfc2e152f91f27d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-43ce28fdbbc7a48ac8bd291fe2d235b0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-c1f69bab50188d0142c3c15186e2e75c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-43ce28fdbbc7a48ac8bd291fe2d235b0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -79,7 +79,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<style>html{ scroll-behavior: smooth; }</style>
 <script>
 // Table listings print categories as plain text ("Live, App"). Turn them into pills,
 // and re-run whenever the listing re-renders (filter, page, sort).
@@ -115,9 +114,15 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../../assets/css/site.css">
 <meta property="og:title" content="A new front door for WFRC Analytics – Analytics">
 <meta property="og:description" content="This site now brings the team’s models, apps, maps, reports and code together in one place.">
+<meta property="og:image" content="https://wfrcanalytics.github.io/_extensions/WFRCAnalytics/wfrc-brand/assets/social/wfrc-card.png">
 <meta property="og:site_name" content="Analytics">
+<meta property="og:image:alt" content="Wasatch Front Regional Council">
+<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="1200">
 <meta name="twitter:title" content="A new front door for WFRC Analytics – Analytics">
 <meta name="twitter:description" content="This site now brings the team’s models, apps, maps, reports and code together in one place.">
+<meta name="twitter:image" content="https://wfrcanalytics.github.io/_extensions/WFRCAnalytics/wfrc-brand/assets/social/wfrc-card.png">
+<meta name="twitter:image:alt" content="Wasatch Front Regional Council">
 <meta name="twitter:creator" content="@wasatchcouncil">
 <meta name="twitter:site" content="@wasatchcouncil">
 <meta name="twitter:card" content="summary_large_image">
@@ -311,8 +316,8 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../site_libs/quarto-contrib/quarto-project/wfrc-brand/assets/logo/abbreviated/WFRC_logo_abbreviated_color_transparent.png" alt="Wasatch Front Regional Council" class="navbar-logo light-content">
-    <img src="../../site_libs/quarto-contrib/quarto-project/wfrc-brand/assets/logo/abbreviated/WFRC_logo_abbreviated_white_transparent.png" alt="Wasatch Front Regional Council" class="navbar-logo dark-content">
+    <img src="../../site_libs/quarto-contrib/quarto-project/WFRCAnalytics/wfrc-brand/assets/logo/abbreviated/WFRC_logo_abbreviated_color_transparent.png" alt="Wasatch Front Regional Council" class="navbar-logo light-content">
+    <img src="../../site_libs/quarto-contrib/quarto-project/WFRCAnalytics/wfrc-brand/assets/logo/abbreviated/WFRC_logo_abbreviated_white_transparent.png" alt="Wasatch Front Regional Council" class="navbar-logo dark-content">
     </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Analytics</span>
@@ -495,7 +500,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-</main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script>
 // Accessibility fixes for things Quarto and its libraries render but cannot configure.
 // Included on every page through wfrc-shared.yml (format.html.include-after-body).
@@ -516,6 +521,23 @@ ul.task-list li input[type="checkbox"] {
       h.setAttribute('tabindex', '0');
       h.addEventListener('keydown', function (e) {
         if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); h.click(); }
+      });
+    });
+    // The announcement's dismiss control is a bare <i> with a click handler: give it a role, a name
+    // and keyboard operation (Enter and Space).
+    root.querySelectorAll('#quarto-announcement .quarto-announcement-action:not([role])').forEach(function (i) {
+      i.setAttribute('role', 'button');
+      i.setAttribute('tabindex', '0');
+      i.setAttribute('aria-label', 'Dismiss announcement');
+      i.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); i.click(); }
+      });
+    });
+    // Quarto's "Back to top" is an <a role="button"> without an href, so the keyboard cannot reach it.
+    root.querySelectorAll('#quarto-back-to-top:not([tabindex])').forEach(function (a) {
+      a.setAttribute('tabindex', '0');
+      a.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); window.scrollTo(0, 0); }
       });
     });
     // Observable Plot labels bare <g> marks; aria-label is not allowed on a role-less element.
@@ -1140,12 +1162,12 @@ ul.task-list li input[type="checkbox"] {
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="../../contact/index.html">
+    <a class="nav-link" href="https://wfrcanalytics.github.io/contact/">
 <p>Contact</p>
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../../terms/index.html">
+    <a class="nav-link" href="https://wfrcanalytics.github.io/terms/">
 <p>Terms of use</p>
 </a>
   </li>  
@@ -1157,5 +1179,4 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

@@ -88,9 +88,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script id="quarto-axe-checker-options" type="text/plain">dHJ1ZQ==</script>
 <script src="/site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="/site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="/site_libs/bootstrap/bootstrap-dc3dd0eaac4eb1c230c3efc18df635c8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="/site_libs/bootstrap/bootstrap-dark-2464beda61c5eb5d02fbc435edc600b1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="/site_libs/bootstrap/bootstrap-dc3dd0eaac4eb1c230c3efc18df635c8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="/site_libs/bootstrap/bootstrap-62a83fe5c59903d19659cbca7844cba9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="/site_libs/bootstrap/bootstrap-dark-ad1644ed6dbe460fa3afd2c91238aeee.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="/site_libs/bootstrap/bootstrap-62a83fe5c59903d19659cbca7844cba9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -113,7 +113,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<style>html{ scroll-behavior: smooth; }</style>
 <script>
 // Table listings print categories as plain text ("Live, App"). Turn them into pills,
 // and re-run whenever the listing re-renders (filter, page, sort).
@@ -151,9 +150,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="/assets/css/site.css">
 <meta property="og:title" content="404 - Off the map">
 <meta property="og:description" content="This page is off the map. Here is the nearest station.">
+<meta property="og:image" content="https://wfrcanalytics.github.io/_extensions/WFRCAnalytics/wfrc-brand/assets/social/wfrc-card.png">
 <meta property="og:site_name" content="Analytics">
+<meta property="og:image:alt" content="Wasatch Front Regional Council">
+<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="1200">
 <meta name="twitter:title" content="404 - Off the map">
 <meta name="twitter:description" content="This page is off the map. Here is the nearest station.">
+<meta name="twitter:image" content="https://wfrcanalytics.github.io/_extensions/WFRCAnalytics/wfrc-brand/assets/social/wfrc-card.png">
+<meta name="twitter:image:alt" content="Wasatch Front Regional Council">
 <meta name="twitter:creator" content="@wasatchcouncil">
 <meta name="twitter:site" content="@wasatchcouncil">
 <meta name="twitter:card" content="summary_large_image">
@@ -347,8 +352,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="/index.html" class="navbar-brand navbar-brand-logo">
-    <img src="/_extensions/wfrc-brand/assets/logo/abbreviated/WFRC_logo_abbreviated_color_transparent.png" alt="Wasatch Front Regional Council" class="navbar-logo light-content">
-    <img src="/_extensions/wfrc-brand/assets/logo/abbreviated/WFRC_logo_abbreviated_white_transparent.png" alt="Wasatch Front Regional Council" class="navbar-logo dark-content">
+    <img src="/_extensions/WFRCAnalytics/wfrc-brand/assets/logo/abbreviated/WFRC_logo_abbreviated_color_transparent.png" alt="Wasatch Front Regional Council" class="navbar-logo light-content">
+    <img src="/_extensions/WFRCAnalytics/wfrc-brand/assets/logo/abbreviated/WFRC_logo_abbreviated_white_transparent.png" alt="Wasatch Front Regional Council" class="navbar-logo dark-content">
     </a>
     <a class="navbar-brand" href="/index.html">
     <span class="navbar-title">Analytics</span>
@@ -790,7 +795,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-</main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script>
 // Accessibility fixes for things Quarto and its libraries render but cannot configure.
 // Included on every page through wfrc-shared.yml (format.html.include-after-body).
@@ -811,6 +816,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       h.setAttribute('tabindex', '0');
       h.addEventListener('keydown', function (e) {
         if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); h.click(); }
+      });
+    });
+    // The announcement's dismiss control is a bare <i> with a click handler: give it a role, a name
+    // and keyboard operation (Enter and Space).
+    root.querySelectorAll('#quarto-announcement .quarto-announcement-action:not([role])').forEach(function (i) {
+      i.setAttribute('role', 'button');
+      i.setAttribute('tabindex', '0');
+      i.setAttribute('aria-label', 'Dismiss announcement');
+      i.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); i.click(); }
+      });
+    });
+    // Quarto's "Back to top" is an <a role="button"> without an href, so the keyboard cannot reach it.
+    root.querySelectorAll('#quarto-back-to-top:not([tabindex])').forEach(function (a) {
+      a.setAttribute('tabindex', '0');
+      a.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); window.scrollTo(0, 0); }
       });
     });
     // Observable Plot labels bare <g> marks; aria-label is not allowed on a role-less element.
@@ -1384,12 +1406,12 @@ window._ojs.runtime.interpretFromScriptTags();
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="/contact/index.html">
+    <a class="nav-link" href="https://wfrcanalytics.github.io/contact/">
 <p>Contact</p>
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="/terms/index.html">
+    <a class="nav-link" href="https://wfrcanalytics.github.io/terms/">
 <p>Terms of use</p>
 </a>
   </li>  
@@ -1401,5 +1423,4 @@ window._ojs.runtime.interpretFromScriptTags();
 
 
 
-<script src="/site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
