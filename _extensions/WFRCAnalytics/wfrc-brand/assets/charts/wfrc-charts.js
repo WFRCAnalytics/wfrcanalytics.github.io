@@ -1,7 +1,7 @@
 // WFRC chart helpers for Observable JS (Observable Plot, d3).
 //
 //   ```{ojs}
-//   import {wfrcColors, wfrcPlot} from "./_extensions/wfrc-brand/assets/charts/wfrc-charts.js"
+//   import {wfrcColors, wfrcPlot} from "./_extensions/WFRCAnalytics/wfrc-brand/assets/charts/wfrc-charts.js"
 //   wfrcPlot({Plot, marks: [Plot.lineY(data, {x: "date", y: "value", stroke: "mode"})]})
 //   ```
 //

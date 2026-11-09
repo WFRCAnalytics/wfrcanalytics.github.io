@@ -55,6 +55,8 @@ logo:
     dark: abbreviated-white
 
 typography:
+  # Fonts load from Google Fonts. For offline builds or no third-party requests, point
+  # project.brand at brand-offline.yml instead (same brand, bundled font files; HTML and Typst only).
   fonts:
     - family: Poppins
       source: google
@@ -192,11 +194,6 @@ color:
     cyan: "#24949A"
     white: wfrc-paper
     black: wfrc-ink
-
-    # ── Legacy names, kept so downstream SCSS using $brand-wfrc-* keeps compiling.
-    wfrc-blue: wfrc-navy
-    wfrc-secondary-blue: wfrc-bright-blue
-    wfrc-yellow: wfrc-gold
 
     # ── RTP (Regional Transportation Plan) map colors ─────────────────────────
     rtp-fuschia: "#9d4879"

@@ -22,7 +22,7 @@
 //  11  Dashboard (value boxes, sidebar layout, nav)
 //  12  Inputs (panel-input, OJS, WebR)
 //  13  Landing-page utility classes (.wfrc-*)
-//  14  Legacy classes and responsive rules
+//  14  Responsive rules
 // =============================================================================
 
 // ── 1  Role tokens as CSS variables ──────────────────────────────────────────
@@ -47,6 +47,46 @@
   --wfrc-chart-4: #{$wfrc-chart-4};
   --wfrc-chart-5: #{$wfrc-chart-5};
   --wfrc-shadow: #{$wfrc-shadow};
+}
+
+// Scrollbars and native controls follow the mode instead of the browser default (a bright default
+// scrollbar on the dark page, or a heavy one with arrow buttons on the light page).
+// Chrome, Edge and Safari: a slim pill thumb on a transparent track, no arrow buttons. Chrome ignores
+// these pseudo-elements once `scrollbar-width` or `scrollbar-color` is set, so those two standard
+// properties are only given to browsers without them (Firefox).
+:root {
+  @if $wfrc-is-dark { color-scheme: dark; } @else { color-scheme: light; }
+}
+$wfrc-scroll-thumb: mix($wfrc-ink-2, $wfrc-bg, 55%);
+::-webkit-scrollbar { width: 12px; height: 12px; }
+::-webkit-scrollbar-track, ::-webkit-scrollbar-corner { background: transparent; }
+::-webkit-scrollbar-button { display: none; width: 0; height: 0; }
+::-webkit-scrollbar-thumb {
+  background: $wfrc-scroll-thumb;
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background-clip: padding-box;
+  min-height: 36px;
+  min-width: 36px;
+}
+::-webkit-scrollbar-thumb:hover { background: $wfrc-ink-2; background-clip: padding-box; }
+@supports not selector(::-webkit-scrollbar) {
+  * { scrollbar-width: thin; scrollbar-color: #{$wfrc-scroll-thumb} transparent; }
+}
+
+// Smooth scrolling for in-page links (contents, anchors, Back to top) in plain CSS, and only for people
+// who have not asked for reduced motion. Quarto's `smooth-scroll` option loads zenscroll instead, a UMD
+// script that throws "Mismatched anonymous define() module" on any page where RequireJS is present
+// (Plotly figures, notebook widgets), so wfrc-shared.yml leaves that option off.
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+// Where a link lands: a small gap above the heading (zenscroll left 9px). Visitors who asked for reduced
+// motion jump instantly, and after an upward jump Quarto's headroom navbar pins itself over the top of
+// the page, so they get room for it.
+:target { scroll-margin-top: 0.55rem; }
+@media (prefers-reduced-motion: reduce) {
+  :target { scroll-margin-top: 4.5rem; }
 }
 
 // ── 2  Typography ────────────────────────────────────────────────────────────
@@ -129,6 +169,28 @@ hr { border-color: $wfrc-line; opacity: 1; }
   &.alert-danger    { border-left-color: $wfrc-c-important; }
   &.alert-secondary, &.alert-light, &.alert-dark { border-left-color: $wfrc-ink-2; }
   a { color: $wfrc-link; }
+
+  // The dismiss control is a bare icon in Quarto. A 24px square target (WCAG 2.2) with the same
+  // layout height as before (negative block margin), a hover surface and a focus ring; a11y-fixes.html
+  // makes it a keyboard-operable button with a name.
+  .quarto-announcement-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+    width: 1.75rem;
+    height: 1.75rem;
+    margin: -0.3rem 0 -0.3rem 0.5rem;
+    border-radius: 6px;
+    color: $wfrc-ink-2;
+    transition: background-color 0.15s ease, color 0.15s ease;
+
+    &:hover { background: $wfrc-surface; color: $wfrc-h1; }
+    &:focus-visible { outline: 2px solid $wfrc-focus; outline-offset: 1px; }
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  #quarto-announcement .quarto-announcement-action { transition: none; }
 }
 
 // ── 4  Buttons and chips ─────────────────────────────────────────────────────
@@ -239,7 +301,7 @@ $wfrc-callout-glyphs: (
   note:      "%3Ccircle cx='8' cy='3.6' r='1.5'/%3E%3Crect x='6.7' y='6.6' width='2.6' height='7' rx='1.1'/%3E",
   tip:       "%3Cpath d='M2.6 8.6l3.7 3.7 7.1-8' fill='none' stroke='%23000' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E",
   important: "%3Crect x='6.7' y='2' width='2.6' height='7.6' rx='1.2'/%3E%3Ccircle cx='8' cy='12.7' r='1.5'/%3E",
-  warning:   "%3Cpath d='M8 2.2L14.8 13.8H1.2z' stroke='%23000' stroke-width='1.2' stroke-linejoin='round'/%3E",
+  warning:   "%3Cpath fill-rule='evenodd' d='M8 2.1Q8.5 2.1 8.8 2.7L14.9 13.1Q15.3 13.9 14.4 13.9H1.6Q0.7 13.9 1.1 13.1L7.2 2.7Q7.5 2.1 8 2.1Z M7.15 5.8H8.85V10H7.15Z M8 10.9A1.05 1.05 0 1 0 8 13A1.05 1.05 0 1 0 8 10.9Z'/%3E",
   caution:   "%3Cpath d='M3.6 3.6l8.8 8.8M12.4 3.6l-8.8 8.8' fill='none' stroke='%23000' stroke-width='2.4' stroke-linecap='round'/%3E"
 );
 .callout {
@@ -297,8 +359,10 @@ $wfrc-callout-glyphs: (
 }
 
 // ── 7  Code ──────────────────────────────────────────────────────────────────
-// Keep code reading as typed: no Fira Code ligatures (<- stays <-, |> stays |>).
-code, pre, kbd, samp { font-variant-ligatures: none; font-feature-settings: "liga" 0, "calt" 0; }
+// Fira Code ligatures on: != >= <= == => -> <- |> render as single glyphs. They are explicit here so a
+// site rule or Bootstrap default cannot switch them off. To read code strictly as typed, add
+// `code, pre { font-variant-ligatures: none; font-feature-settings: "calt" 0; }` to your site CSS.
+code, pre, kbd, samp { font-variant-ligatures: normal; font-feature-settings: "calt" 1, "liga" 1; }
 div.sourceCode, pre.sourceCode, div.cell-output pre, pre:not(.sourceCode) {
   background-color: $wfrc-code-bg;
   color: $wfrc-code-ink;
@@ -315,7 +379,8 @@ p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode), h1 
   border-radius: 4px;
   padding: 0.08em 0.35em;
 }
-.code-with-filename .code-with-filename-file {
+.code-with-filename .code-with-filename-file,
+.quarto-dark .code-with-filename .code-with-filename-file { // Quarto's dark rule (#555) is this specific
   font-family: $font-family-monospace;
   font-size: 0.75rem;
   color: $wfrc-ink-2;
@@ -325,13 +390,73 @@ p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode), h1 
   border-radius: 6px 6px 0 0;
   pre { background: transparent; }
 }
+// Copy button. Quarto draws the icon only while the code block is hovered, so a bordered button
+// shows as an empty rectangle at rest and the icon pops in. Here the icon is always drawn (an alpha
+// mask, so it takes the text color) and the whole button fades in, as one square control, when the
+// block is hovered or the button has keyboard focus. On touch screens, which cannot hover, it stays
+// visible but quiet.
+$wfrc-icon-copy: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z'/%3E%3Cpath d='M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z'/%3E%3C/svg%3E";
+$wfrc-icon-check: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z' stroke='%23000' stroke-width='.6'/%3E%3C/svg%3E";
 .code-copy-button {
-  border-radius: 999px;
-  border: 1px solid $wfrc-line;
-  background: $wfrc-surface;
-  color: $wfrc-action;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.9rem;
+  height: 1.9rem;
+  padding: 0;
+  margin: 6px 6px 0 0;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+  color: $wfrc-ink-2;
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.16s ease, transform 0.16s ease, background-color 0.16s ease,
+              border-color 0.16s ease, color 0.16s ease;
 
-  &:hover { background: $wfrc-surface-2; color: $wfrc-h1; }
+  > .bi::before {
+    display: block !important;
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    vertical-align: 0;
+    background: currentColor !important;
+    -webkit-mask: url("#{$wfrc-icon-copy}") center / contain no-repeat;
+            mask: url("#{$wfrc-icon-copy}") center / contain no-repeat;
+  }
+  &.code-copy-button-checked > .bi::before {
+    -webkit-mask-image: url("#{$wfrc-icon-check}");
+            mask-image: url("#{$wfrc-icon-check}");
+  }
+
+  &:hover { color: $wfrc-h1; background: $wfrc-surface-2; border-color: $wfrc-line; }
+  &:focus-visible { outline: 2px solid $wfrc-focus; outline-offset: 2px; }
+  &.code-copy-button-checked { color: $wfrc-c-tip; }
+}
+div.code-copy-outer-scaffold:hover > .code-copy-button,
+.code-copy-button:focus-visible,
+.code-copy-button.code-copy-button-checked {
+  opacity: 1;
+  transform: none;
+  background: $wfrc-surface;
+  border-color: $wfrc-line;
+}
+div.code-copy-outer-scaffold:hover > .code-copy-button:hover { background: $wfrc-surface-2; }
+// The "Copied!" tooltip (Bootstrap): same roles as the other controls, readable in both modes.
+.tooltip {
+  --bs-tooltip-opacity: 1;
+  --bs-tooltip-border-radius: 8px;
+  --bs-tooltip-padding-x: 0.65rem;
+  --bs-tooltip-padding-y: 0.35rem;
+  --bs-tooltip-font-size: 0.75rem;
+  font-family: $headings-font-family;
+  font-weight: 600;
+}
+@media (hover: none) {
+  .code-copy-button { opacity: 0.85; transform: none; background: $wfrc-surface; border-color: $wfrc-line; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .code-copy-button { transition: none; transform: none; }
 }
 
 // ── 8  Tabsets, tables, blockquotes, details ─────────────────────────────────
@@ -421,6 +546,34 @@ details > summary { color: $wfrc-h1; font-family: $headings-font-family; font-we
   a { color: $wfrc-footer-link; }
 }
 .quarto-title-meta-heading { font-family: $headings-font-family; font-size: 0.72rem; }
+
+// "Back to top" (website.back-to-top-navigation, on by default in wfrc-shared.yml): Quarto shows it
+// fixed at the bottom center once the page has scrolled. A pill in the card surface with a hairline,
+// like the other controls, instead of Quarto's white box with a heavy grey shadow.
+@keyframes wfrc-rise {
+  from { opacity: 0; transform: translate(-50%, 8px); }
+  to   { opacity: 1; transform: translate(-50%, 0); }
+}
+#quarto-back-to-top {
+  font: 600 0.8rem/1 $headings-font-family;
+  color: $wfrc-link;
+  background: $wfrc-surface;
+  border: 1px solid $wfrc-line;
+  border-radius: 999px;
+  box-shadow: $wfrc-shadow;
+  padding: 0.6rem 1.05rem;
+  cursor: pointer;
+  text-decoration: none;
+  animation: wfrc-rise 0.2s ease-out;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+
+  .bi { margin-right: 0.35rem; }
+  &:hover { color: $wfrc-h1; background: $wfrc-surface-2; border-color: $wfrc-rule; text-decoration: none; }
+  &:focus-visible { outline: 2px solid $wfrc-focus; outline-offset: 2px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #quarto-back-to-top { animation: none; transition: none; }
+}
 
 // ── 10  Footer with a ridge line ─────────────────────────────────────────────
 // The ridge is a CSS mask filled with the footer color, so one rule serves both modes.
@@ -629,12 +782,65 @@ $wfrc-inner: max(20px, calc((100vw - 1100px) / 2));
 .wfrc-chip { display: inline-block; font: 600 0.75rem/1.4 $headings-font-family; padding: 2px 10px; border-radius: 999px; border: 1px solid $wfrc-line; background: $wfrc-surface-2; color: $wfrc-h1; }
 .wfrc-hero .wfrc-chip { background: rgba(255, 255, 255, 0.14); border-color: rgba(255, 255, 255, 0.3); color: #fff; }
 
-// ── 14  Legacy classes (used by existing WFRC pages) and responsive rules ────
-#bio { font-size: 1.1rem; }
-#landing-icons { font-size: 1.4rem; }
-.name-highlight { font-weight: 600; color: $wfrc-h1 !important; }
-.featured-image { background-size: cover; background-position: center; color: #fff; box-shadow: inset 0 0 0 1000px rgba(0, 57, 91, 0.75); }
-.description a { text-decoration: underline !important; &:hover { text-decoration: none !important; } }
+// Status chips, promoted from the wfrcanalytics.github.io site: add a state to .wfrc-chip.
+//   [Live]{.wfrc-chip .chip-live}  [Internal]{.wfrc-chip .chip-internal}  [Archived]{.wfrc-chip .chip-archived}
+.wfrc-chip.chip-live { background: mix($wfrc-action, $wfrc-bg, 16%); border-color: $wfrc-action; }
+.wfrc-chip.chip-internal { background: mix($wfrc-gold, $wfrc-bg, 30%); border-color: $wfrc-c-warning; }
+.wfrc-chip.chip-archived { font-style: italic; background: transparent; border-style: dashed; }
+
+// A large number inside a color block: <span class="wfrc-stat-num">19</span> in a .wfrc-block.
+.wfrc-stat-num {
+  display: block;
+  font-family: $headings-font-family;
+  font-weight: 700;
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  line-height: 1.05;
+  color: #fff;
+}
+
+// Table listings (type: table) as one rounded card with a tinted header row.
+.quarto-listing-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid $wfrc-line;
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 0.92rem;
+
+  thead th {
+    background: $wfrc-bg-alt;
+    border-bottom: 2px solid $wfrc-rule;
+    padding: 0.75rem 1rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  tbody td { padding: 0.8rem 1rem; vertical-align: top; border-top: 1px solid $wfrc-line; }
+  tbody tr:first-child td { border-top: 0; }
+  tbody tr:hover td { background: $wfrc-bg-alt; }
+  .listing-title { font-weight: 600; }
+  .listing-categories { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+}
+
+// "How to cite" or any callout-like aside: ::: {.wfrc-cite}
+.wfrc-cite {
+  background: $wfrc-bg-alt;
+  border-left: 4px solid $wfrc-rule;
+  border-radius: 0 8px 8px 0;
+  padding: 0.7rem 1rem;
+  p { margin: 0; }
+}
+
+// Screenshots on cards and detail pages: crop to the top of the page, with a hairline border.
+.wfrc-shot { display: block; width: 100%; max-width: 900px; border: 1px solid $wfrc-line; border-radius: 10px; margin-bottom: 1rem; }
+.quarto-grid-item .card-img-top.wfrc-shot-top, .wfrc-shot-top .card-img-top { object-position: top center; }
+
+// The repo-actions dropdown is the last navbar item; open it right-aligned or it runs off the screen.
+.quarto-navbar-tools .dropdown-menu { --bs-position: end; right: 0; left: auto; }
+
+// ── 14  Responsive rules ─────────────────────────────────────────────────────
 .aa-DetachedOverlay { position: absolute; }
 
 // Phones: markdown tables and plots scroll inside their own box instead of widening the page.
@@ -651,5 +857,21 @@ $wfrc-inner: max(20px, calc((100vw - 1100px) / 2));
     &-left { order: 3 !important; flex-basis: 100%; text-align: center; }
   }
   .navbar-title { font-size: 0.85rem; }
-  .navbar .quarto-navbar-tools { font-size: 1.2rem; text-align: left; }
+
+  // The collapsed navbar is ONE row: menu button, logo and title, then the tools. Quarto lets the row
+  // wrap, so with the GitHub menu, the mode toggle and search the tools dropped to a second row and
+  // the logo's link shrank until the logo was clipped ("WFR"). The logo and the tools never shrink;
+  // only the title does, and it ends in an ellipsis.
+  .navbar > .navbar-container { flex-wrap: nowrap; }
+  .navbar-brand-container { min-width: 0; }
+  .navbar-brand-container > a.navbar-brand-logo { flex: none; overflow: visible; }
+  .navbar-brand-container .navbar-logo { max-height: 30px; width: auto; }
+  .navbar-brand-container > a.navbar-brand:not(.navbar-brand-logo) { min-width: 0; margin-right: 0; overflow: hidden; }
+  .navbar-brand-container .navbar-title { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .navbar .quarto-navbar-tools { flex: none; white-space: nowrap; font-size: 1.2rem; text-align: left; }
+  .navbar #quarto-search { flex: none; }
+}
+// Phones: a little tighter type so more of a long site title fits.
+@media screen and (max-width: 480px) {
+  .navbar-title { font-size: 0.78rem; letter-spacing: 0.04em; }
 }

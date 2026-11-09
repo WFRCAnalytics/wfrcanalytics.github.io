@@ -53,7 +53,7 @@ def card_image(e, prefix):
     shot = ROOT / "assets" / "shots" / f"{e['id']}.jpg"
     if shot.exists() and not e.get("no-shot"):
         return f"{prefix}assets/shots/{e['id']}.jpg"
-    return f"{prefix}_extensions/wfrc-brand/assets/cards/{KIND_BANNER[e['kind']]}.svg"
+    return f"{prefix}_extensions/WFRCAnalytics/wfrc-brand/assets/cards/{KIND_BANNER[e['kind']]}.svg"
 
 
 def item(e):

@@ -1,14 +1,15 @@
 # WFRC chart helpers for R (ggplot2).
 #
-#   source("_extensions/wfrc-brand/assets/charts/wfrc-charts.R")
+#   source("_extensions/WFRCAnalytics/wfrc-brand/assets/charts/wfrc-charts.R")
 #   ggplot(df, aes(x, y, color = group)) + geom_line() + theme_wfrc() + scale_color_wfrc()
 #
 # Colors are read from brand.yml, so there is one source of truth. Use at most five
 # categories, in this order. Gold (series 4) is below 3:1 on white: label series directly.
 
 .wfrc_brand_file <- function(path = NULL) {
-  candidates <- c(path, "_brand.yml", "_extensions/wfrc-brand/brand.yml",
-                  "../_extensions/wfrc-brand/brand.yml", "../../_extensions/wfrc-brand/brand.yml")
+  # `quarto add` installs under the owner folder; the flat "_extensions/wfrc-brand" is a copy placed by hand.
+  rel <- c("_extensions/WFRCAnalytics/wfrc-brand/brand.yml", "_extensions/wfrc-brand/brand.yml")
+  candidates <- c(path, "_brand.yml", rel, paste0("../", rel), paste0("../../", rel))
   hit <- candidates[!is.na(candidates) & file.exists(candidates)]
   if (!length(hit)) stop("brand.yml not found; pass path = to wfrc_colors()", call. = FALSE)
   hit[[1]]

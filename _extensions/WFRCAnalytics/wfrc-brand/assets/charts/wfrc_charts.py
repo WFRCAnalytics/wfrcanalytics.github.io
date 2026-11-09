@@ -1,6 +1,6 @@
 """WFRC chart helpers for Python (matplotlib, plotly).
 
-    import sys; sys.path.append("_extensions/wfrc-brand/assets/charts")
+    import sys; sys.path.append("_extensions/WFRCAnalytics/wfrc-brand/assets/charts")
     import wfrc_charts as wfrc
     wfrc.use_style()               # matplotlib; pass mode="dark" for dark pages
     fig = go.Figure(layout=dict(template=wfrc.plotly_template()))   # plotly
@@ -14,7 +14,8 @@ from pathlib import Path
 
 import yaml
 
-_CANDIDATES = ("_brand.yml", "_extensions/wfrc-brand/brand.yml")
+# The second is where `quarto add` installs it; the third is a copy placed by hand without the owner folder.
+_CANDIDATES = ("_brand.yml", "_extensions/WFRCAnalytics/wfrc-brand/brand.yml", "_extensions/wfrc-brand/brand.yml")
 
 
 def _brand_file(path: str | Path | None = None) -> Path:
