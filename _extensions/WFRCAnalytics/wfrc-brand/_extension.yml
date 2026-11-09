@@ -1,6 +1,6 @@
 title: wfrc-brand
 author: Pukar Bhandari
-version: 0.5.1
+version: 1.0.6
 quarto-required: ">=1.8.0"
 contributes:
   shortcodes:
@@ -63,7 +63,29 @@ contributes:
       highlight-style:
         light: assets/theme/wfrc-light.theme
         dark: assets/theme/wfrc-dark.theme
+    revealjs:
+      theme:
+        - default
+        - assets/theme/wfrc-revealjs.scss
+        - brand
+      slide-number: true
+      hash-type: number
+      transition: fade
+      transition-speed: fast
+      controls: true
+      width: 1280
+      height: 720
+      margin: 0.08
+      footer: "Wasatch Front Regional Council"
     typst:
+      papersize: us-letter
+      # Quarto draws the brand logo at the top left of every page (0.75 in down, about 0.85 in tall),
+      # so the top margin has to clear it or the body text runs under the logo from page 2 on.
+      margin:
+        x: 1in
+        top: 1.8in
+        bottom: 1in
+      fontsize: 10.5pt
       toc: true
       number-sections: true
       number-depth: 2

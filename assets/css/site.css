@@ -46,11 +46,11 @@ body { --wfrc-line: color-mix(in srgb, var(--bs-body-color) 16%, var(--bs-body-b
   background-size: cover;
   background-position: top center;
 }
-.feature-card.banner-navy .feature-banner { background-image: url("../../_extensions/wfrc-brand/assets/cards/navy.svg"); }
-.feature-card.banner-mid .feature-banner { background-image: url("../../_extensions/wfrc-brand/assets/cards/mid.svg"); }
-.feature-card.banner-teal .feature-banner { background-image: url("../../_extensions/wfrc-brand/assets/cards/teal.svg"); }
-.feature-card.banner-bright .feature-banner { background-image: url("../../_extensions/wfrc-brand/assets/cards/bright.svg"); }
-.feature-card.banner-brick .feature-banner { background-image: url("../../_extensions/wfrc-brand/assets/cards/brick.svg"); }
+.feature-card.banner-navy .feature-banner { background-image: url("../../_extensions/WFRCAnalytics/wfrc-brand/assets/cards/navy.svg"); }
+.feature-card.banner-mid .feature-banner { background-image: url("../../_extensions/WFRCAnalytics/wfrc-brand/assets/cards/mid.svg"); }
+.feature-card.banner-teal .feature-banner { background-image: url("../../_extensions/WFRCAnalytics/wfrc-brand/assets/cards/teal.svg"); }
+.feature-card.banner-bright .feature-banner { background-image: url("../../_extensions/WFRCAnalytics/wfrc-brand/assets/cards/bright.svg"); }
+.feature-card.banner-brick .feature-banner { background-image: url("../../_extensions/WFRCAnalytics/wfrc-brand/assets/cards/brick.svg"); }
 .feature-body {
   display: flex;
   flex-direction: column;

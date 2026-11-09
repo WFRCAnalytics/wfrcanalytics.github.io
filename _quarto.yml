@@ -3,15 +3,15 @@ project:
   output-dir: docs
   pre-render: scripts/build_lists.py
   resources:
-    - _extensions/wfrc-brand/assets/cards/*.svg
+    - _extensions/WFRCAnalytics/wfrc-brand/assets/cards/*.svg
     - assets/data/site-index.json
     - assets/js/lost-map.js
     - assets/js/quick-jump.js
     - assets/shots/*.jpg
-  brand: _extensions/wfrc-brand/brand.yml
+  brand: _extensions/WFRCAnalytics/wfrc-brand/brand.yml
 
 metadata-files:
-  - _extensions/wfrc-brand/wfrc-shared.yml
+  - _extensions/WFRCAnalytics/wfrc-brand/wfrc-shared.yml
 
 website:
   title: "Analytics"
