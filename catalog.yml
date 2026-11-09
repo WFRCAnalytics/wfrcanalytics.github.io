@@ -55,7 +55,7 @@
   repo: https://github.com/WFRCAnalytics/APP-Benefit-Cost-Analysis
   featured: false
   include: true
-  last-push: '2026-09-29'
+  last-push: '2026-11-09'
   review: ok
 - id: APP-Community-Profiles
   title: Community Profiles
@@ -68,7 +68,7 @@
   url: https://wfrcanalytics.github.io/APP-Community-Profiles/
   featured: false
   include: true
-  last-push: '2026-11-05'
+  last-push: '2026-11-09'
   review: ok
 - id: APP-Commute-Explorer
   title: Commute Flow Explorer
@@ -159,7 +159,7 @@
   url: https://wfrcanalytics.github.io/APP-Project-Scoresheet/
   featured: true
   include: true
-  last-push: '2026-09-18'
+  last-push: '2026-11-06'
   review: drafted
 - id: APP-Socioeconomic-Control-Totals
   title: Socioeconomic Control Totals
@@ -210,7 +210,7 @@
   url: https://wfrc.utah.gov/maps/regional-commuter-flows/
   featured: true
   include: true
-  last-push: '2026-09-22'
+  last-push: '2026-10-30'
   review: ok
 - id: APP-wftdm-dashboard
   title: TDM Calibration Dashboard
@@ -223,7 +223,7 @@
   url: https://wfrcanalytics.github.io/APP-wftdm-dashboard/
   featured: true
   include: true
-  last-push: '2026-10-23'
+  last-push: '2026-11-04'
   review: ok
 - id: ARCHIVE-Create-Microzones
   title: Create Microzones
@@ -851,7 +851,7 @@
   url: https://wfrcanalytics.github.io/GIS-adhoc-analyses/
   featured: false
   include: true
-  last-push: '2026-10-13'
+  last-push: '2026-11-09'
   review: ok
 - id: GIS-Bikeway-by-City
   title: Bikeway by City
@@ -925,7 +925,7 @@
   repo: https://github.com/WFRCAnalytics/GIS-RTP-Phasing-Criteria
   featured: false
   include: true
-  last-push: '2026-07-23'
+  last-push: '2026-11-09'
   review: ok
 - id: GIS-RTP2023-PhasingCriteria
   title: RTP2023 Phasing Criteria
@@ -1103,7 +1103,7 @@
   url: https://wfrc.utah.gov/housing-ato-calculator-map/
   featured: true
   include: true
-  last-push: '2026-09-23'
+  last-push: '2026-11-06'
   review: ok
 - id: MAP-Housing-ATO-Calculator-Weber
   title: Housing ATO Calculator Weber
@@ -1729,7 +1729,7 @@
   url: https://wfrcanalytics.github.io/TDM-INP-External-Forecasts/
   featured: false
   include: true
-  last-push: '2026-07-29'
+  last-push: '2026-11-09'
   review: drafted
 - id: TDM-INP-K-12-Enrollment
   title: INP K 12 Enrollment
@@ -2007,7 +2007,7 @@
   url: https://wfrcanalytics.github.io/TDM-VAL-SchoolCollegeEnrollment/
   featured: false
   include: true
-  last-push: '2026-10-14'
+  last-push: '2026-11-09'
   review: drafted
 - id: TDM-VAL-TrafficVolume-CCS
   title: VAL Traffic Volume CCS
@@ -2215,7 +2215,7 @@
   url: https://wfrc.utah.gov/viztool-latest-build/
   featured: true
   include: true
-  last-push: '2026-08-27'
+  last-push: '2026-11-09'
   review: drafted
 - id: WF-TDM-Calibration
   title: TDM Calibration Reports
@@ -2228,7 +2228,7 @@
   url: https://wfrcanalytics.github.io/WF-TDM-Calibration/
   featured: true
   include: true
-  last-push: '2026-10-21'
+  last-push: '2026-10-29'
   review: drafted
 - id: WF-TDM-Development
   title: TDM Development
@@ -2241,7 +2241,7 @@
   url: https://wfrc.utah.gov/wftdm-docs/
   featured: false
   include: true
-  last-push: '2026-10-23'
+  last-push: '2026-11-09'
   review: ok
 - id: WF-TDM-Documentation
   title: TDM Documentation
@@ -2254,7 +2254,7 @@
   url: https://wfrc.utah.gov/wftdm-docs/
   featured: false
   include: true
-  last-push: '2026-08-12'
+  last-push: '2026-10-30'
   review: ok
 - id: WF-TDM-Official-Releases
   title: TDM Official Releases
@@ -2267,7 +2267,7 @@
   url: https://wfrc.utah.gov/wftdm-docs/
   featured: false
   include: true
-  last-push: '2025-11-13'
+  last-push: '2026-10-26'
   review: drafted
 - id: WF-TDM-Runs
   title: TDM Run Results
@@ -2280,7 +2280,7 @@
   url: https://wfrcanalytics.github.io/WF-TDM-Runs/
   featured: true
   include: true
-  last-push: '2026-10-21'
+  last-push: '2026-11-04'
   review: ok
 - id: WF-TDM-v8.3.2
   title: TDM v8.3.2

@@ -17,6 +17,24 @@
   - REMM
   date: '2026-09-11'
   image: ../assets/shots/REMM-Result-Review-Tool.jpg
+- title: adhoc analyses
+  description: A repo for any ad-hoc GIS analysis.
+  path: https://wfrcanalytics.github.io/GIS-adhoc-analyses/
+  categories:
+  - Live
+  - Analysis
+  date: '2026-11-09'
+  image: ../assets/shots/GIS-adhoc-analyses.jpg
+- title: INP External Forecasts
+  description: Volume forecasts for the model's external stations, published as a
+    single Quarto report.
+  path: https://wfrcanalytics.github.io/TDM-INP-External-Forecasts/
+  categories:
+  - Live
+  - Input data
+  - TDM
+  date: '2026-11-09'
+  image: ../assets/shots/TDM-INP-External-Forecasts.jpg
 - title: VAL School College Enrollment
   description: Validates the synthetic population against real K-12 and college enrollment.
   path: https://wfrcanalytics.github.io/TDM-VAL-SchoolCollegeEnrollment/
@@ -24,16 +42,8 @@
   - Live
   - Validation
   - TDM
-  date: '2026-10-14'
+  date: '2026-11-09'
   image: ../assets/shots/TDM-VAL-SchoolCollegeEnrollment.jpg
-- title: adhoc analyses
-  description: A repo for any ad-hoc GIS analysis.
-  path: https://wfrcanalytics.github.io/GIS-adhoc-analyses/
-  categories:
-  - Live
-  - Analysis
-  date: '2026-10-13'
-  image: ../assets/shots/GIS-adhoc-analyses.jpg
 - title: GEO Analysis Zones
   description: The source of truth for TAZ (and MAZ in the future) used in the Wasatch
     Front Travel Demand Modeling or any other applications.
@@ -53,16 +63,6 @@
   - TDM
   date: '2026-09-14'
   image: ../assets/shots/TDM-INP-PopulationSim.jpg
-- title: INP External Forecasts
-  description: Volume forecasts for the model's external stations, published as a
-    single Quarto report.
-  path: https://wfrcanalytics.github.io/TDM-INP-External-Forecasts/
-  categories:
-  - Live
-  - Input data
-  - TDM
-  date: '2026-07-29'
-  image: ../assets/shots/TDM-INP-External-Forecasts.jpg
 - title: ATO Impact Tool
   description: WFRC tool for assessing changes in Access to Opportunity (ATO) resulting
     from regional mobility investments
@@ -148,6 +148,16 @@
   - TDM
   date: '2025-04-04'
   image: ../_extensions/WFRCAnalytics/wfrc-brand/assets/cards/mid.svg
+- title: RTP Phasing Criteria
+  description: A workspace for calculating phasing criteria scores on a project level
+    basis. Active Transportation, Roadway & Transit. Requires WFRC GitHub access.
+  path: https://github.com/WFRCAnalytics/GIS-RTP-Phasing-Criteria
+  categories:
+  - Repository
+  - Internal
+  - Analysis
+  date: '2026-11-09'
+  image: ../_extensions/WFRCAnalytics/wfrc-brand/assets/cards/brick.svg
 - title: Opportunity Zones Info Sheets
   description: Land Use and Transportation Information sheet for All Census Tracts
     in Eligible Opportunity Zones 2.0 List in Utah
@@ -197,16 +207,6 @@
   - TDM
   date: '2026-08-17'
   image: ../_extensions/WFRCAnalytics/wfrc-brand/assets/cards/mid.svg
-- title: RTP Phasing Criteria
-  description: A workspace for calculating phasing criteria scores on a project level
-    basis. Active Transportation, Roadway & Transit. Requires WFRC GitHub access.
-  path: https://github.com/WFRCAnalytics/GIS-RTP-Phasing-Criteria
-  categories:
-  - Repository
-  - Internal
-  - Analysis
-  date: '2026-07-23'
-  image: ../_extensions/WFRCAnalytics/wfrc-brand/assets/cards/brick.svg
 - title: GEO True Shape
   description: This repo is for processing True Shape Network out of UGRC Roadway
     Centerlines dataset
