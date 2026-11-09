@@ -646,6 +646,8 @@ svg[class^="plot-"], figure[class^="plot-"], div[class^="plot-"] { font-family: 
 svg[class^="plot-"] { background: transparent !important; max-width: 100%; height: auto; }
 figure[class^="plot-"] { max-width: 100%; overflow-x: auto; }
 svg[class^="plot-"] text { fill: currentColor; }
+// A chart that sets its own text colour (style: {color: "#023c5b"}) would be unreadable in dark mode; text follows the page.
+svg[class^="plot-"] { color: inherit !important; }
 
 // ── 12  Inputs ───────────────────────────────────────────────────────────────
 .panel-input, .quarto-input-panel {
