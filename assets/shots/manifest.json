@@ -1,7 +1,7 @@
 {
  "MAP-Housing-ATO-Calculator-Updated": {
-  "captured": "2026-10-26T05:49:27.654Z",
-  "lastPush": "2026-09-23",
+  "captured": "2026-11-09T23:17:22.167Z",
+  "lastPush": "2026-11-06",
   "url": "https://wfrc.utah.gov/housing-ato-calculator-map/"
  },
  "APP-Commute-Explorer": {
@@ -10,18 +10,18 @@
   "url": "https://wfrcanalytics.github.io/APP-Commute-Explorer/"
  },
  "APP-Project-Scoresheet": {
-  "captured": "2026-10-26T05:31:47.721Z",
-  "lastPush": "2026-09-18",
+  "captured": "2026-11-09T23:16:58.230Z",
+  "lastPush": "2026-11-06",
   "url": "https://wfrcanalytics.github.io/APP-Project-Scoresheet/"
  },
  "APP-WFRC-Commute-Patterns": {
-  "captured": "2026-10-26T05:49:00.281Z",
-  "lastPush": "2026-09-22",
+  "captured": "2026-11-09T23:17:03.510Z",
+  "lastPush": "2026-10-30",
   "url": "https://wfrc.utah.gov/maps/regional-commuter-flows/"
  },
  "APP-wftdm-dashboard": {
-  "captured": "2026-10-26T05:31:58.058Z",
-  "lastPush": "2026-10-23",
+  "captured": "2026-11-09T23:17:08.561Z",
+  "lastPush": "2026-11-04",
   "url": "https://wfrcanalytics.github.io/APP-wftdm-dashboard/"
  },
  "DATA-Commercial-Vehicle-Observed-for-TDM": {
@@ -30,8 +30,8 @@
   "url": "https://wfrcanalytics.github.io/DATA-Commercial-Vehicle-Observed-for-TDM/"
  },
  "GIS-adhoc-analyses": {
-  "captured": "2026-10-26T05:32:23.100Z",
-  "lastPush": "2026-10-13",
+  "captured": "2026-11-09T23:17:13.964Z",
+  "lastPush": "2026-11-09",
   "url": "https://wfrcanalytics.github.io/GIS-adhoc-analyses/"
  },
  "GIS-Bikeway-by-City": {
@@ -85,8 +85,8 @@
   "url": "https://wfrcanalytics.github.io/TDM-INP-College-Enrollment/"
  },
  "TDM-INP-External-Forecasts": {
-  "captured": "2026-10-26T05:34:03.041Z",
-  "lastPush": "2026-07-29",
+  "captured": "2026-11-09T23:17:31.534Z",
+  "lastPush": "2026-11-09",
   "url": "https://wfrcanalytics.github.io/TDM-INP-External-Forecasts/"
  },
  "TDM-INP-PopulationSim": {
@@ -95,8 +95,8 @@
   "url": "https://wfrcanalytics.github.io/TDM-INP-PopulationSim/"
  },
  "TDM-VAL-SchoolCollegeEnrollment": {
-  "captured": "2026-10-26T05:34:13.654Z",
-  "lastPush": "2026-10-14",
+  "captured": "2026-11-09T23:17:37.163Z",
+  "lastPush": "2026-11-09",
   "url": "https://wfrcanalytics.github.io/TDM-VAL-SchoolCollegeEnrollment/"
  },
  "TDM-VAL-TrafficVolume-CCS": {
@@ -105,18 +105,18 @@
   "url": "https://wfrcanalytics.github.io/TDM-VAL-TrafficVolume-CCS/"
  },
  "WF-TDM-Calibration": {
-  "captured": "2026-10-26T05:34:32.791Z",
-  "lastPush": "2026-10-21",
+  "captured": "2026-11-09T23:17:50.495Z",
+  "lastPush": "2026-10-29",
   "url": "https://wfrcanalytics.github.io/WF-TDM-Calibration/"
  },
  "WF-TDM-Runs": {
-  "captured": "2026-10-26T05:34:37.749Z",
-  "lastPush": "2026-10-21",
+  "captured": "2026-11-09T23:17:55.394Z",
+  "lastPush": "2026-11-04",
   "url": "https://wfrcanalytics.github.io/WF-TDM-Runs/"
  },
  "vizTool": {
-  "captured": "2026-10-26T05:34:27.527Z",
-  "lastPush": "2026-08-27",
+  "captured": "2026-11-09T23:17:45.495Z",
+  "lastPush": "2026-11-09",
   "url": "https://wfrc.utah.gov/viztool-latest-build/"
  },
  "APP-HTS-Trip-Length-Shiny-2012": {
@@ -163,5 +163,10 @@
   "captured": "2026-11-04T20:13:16.183Z",
   "lastPush": "2026-11-03",
   "url": "https://wfrcanalytics.github.io/APP-synthetic-data-generator/"
+ },
+ "APP-Community-Profiles": {
+  "captured": "2026-11-09T23:16:52.997Z",
+  "lastPush": "2026-11-09",
+  "url": "https://wfrcanalytics.github.io/APP-Community-Profiles/"
  }
 }
