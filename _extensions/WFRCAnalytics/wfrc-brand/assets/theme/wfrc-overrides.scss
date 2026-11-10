@@ -648,6 +648,9 @@ figure[class^="plot-"] { max-width: 100%; overflow-x: auto; }
 svg[class^="plot-"] text { fill: currentColor; }
 // A chart that sets its own text colour (style: {color: "#023c5b"}) would be unreadable in dark mode; text follows the page.
 svg[class^="plot-"] { color: inherit !important; }
+// Plot paints its tooltip box white (an inline fill) whatever the page is, so in dark mode the light text
+// above lands on white. The box takes the page colour instead; the text and outline already follow the theme.
+svg[class^="plot-"] g[pointer-events="none"] path { fill: var(--wfrc-bg) !important; }
 
 // ── 12  Inputs ───────────────────────────────────────────────────────────────
 .panel-input, .quarto-input-panel {
