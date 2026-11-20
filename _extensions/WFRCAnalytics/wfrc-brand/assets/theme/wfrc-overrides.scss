@@ -546,10 +546,9 @@ details > summary { color: $wfrc-h1; font-family: $headings-font-family; font-we
     border-left: 1px solid $wfrc-line;
   }
 }
-// The "medium" (stacked) brand logo is far too large in a docked sidebar, and the header already
-// carries the logo, so keep it small.
-#quarto-sidebar .sidebar-logo { max-height: 36px; width: auto; margin-bottom: 0.75rem; }
-.breadcrumb .breadcrumb-item a, .quarto-title-breadcrumbs .breadcrumb-item a, .quarto-title-breadcrumbs .breadcrumb li:last-of-type a { color: $wfrc-ink-2; &:hover { color: $wfrc-h1; } }
+// The header already carries the logo, so don't repeat it at the top of a docked sidebar.
+#quarto-sidebar .sidebar-logo-link { display: none; }
+.breadcrumb .breadcrumb-item a, .quarto-title-breadcrumbs .breadcrumb-item a, .quarto-title-breadcrumbs .breadcrumb li:last-of-type a { color: $wfrc-ink-2; &:hover { color: $wfrc-h1; text-decoration: underline !important; } }
 .breadcrumb-item.active, .breadcrumb-item + .breadcrumb-item::before { color: $wfrc-ink-2; }
 .page-link {
   color: $wfrc-h1;
@@ -563,6 +562,15 @@ details > summary { color: $wfrc-h1; font-family: $headings-font-family; font-we
 
   .title, .subtitle, .quarto-title-author-name, .quarto-title-affiliation, .quarto-title-meta-heading, .quarto-title-meta-contents, .description { color: #fff !important; }
   a { color: $wfrc-footer-link; }
+  // Breadcrumbs sit on the navy banner: the body-text grey is unreadable there in light mode
+  .breadcrumb-item a, .breadcrumb-item.active, .breadcrumb-item + .breadcrumb-item::before,
+  .quarto-title-breadcrumbs .breadcrumb li:last-of-type a { color: #fff !important; }
+  // Hover on the links only (a `::before:hover` in the list above would make the rule invalid).
+  // Same underline as the links on the page background (ice blue alone is too close to white).
+  .breadcrumb-item a:hover, .quarto-title-breadcrumbs .breadcrumb li:last-of-type a:hover {
+    color: $wfrc-footer-link !important;
+    text-decoration: underline !important;
+  }
 }
 .quarto-title-meta-heading { font-family: $headings-font-family; font-size: 0.72rem; }
 

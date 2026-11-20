@@ -1,6 +1,6 @@
 title: wfrc-brand
 author: Pukar Bhandari
-version: 1.0.10
+version: 1.0.12
 quarto-required: ">=1.8.0"
 contributes:
   shortcodes:
@@ -28,7 +28,7 @@ contributes:
       code-link: true
       code-tools: true
       grid:
-        sidebar-width: 260px
+        sidebar-width: 350px
       theme:
         light:
           - assets/theme/wfrc.scss

@@ -160,7 +160,7 @@ format:
     # define() module" on pages where RequireJS is present (Plotly, notebook widgets). The theme
     # smooth-scrolls with CSS instead (wfrc-overrides.scss).
     grid:
-      sidebar-width: 260px
+      sidebar-width: 350px
 
 # Freeze — org standard: auto freeze outputs (re-execute only if file updated)
 # (see https://quarto.org/docs/projects/code-execution.html#freeze). Not set here on purpose: `engine`
