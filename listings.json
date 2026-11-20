@@ -1,24 +1,20 @@
 [
   {
-    "listing": "/models/remm.html",
-    "items": []
-  },
-  {
-    "listing": "/models/tdm.html",
-    "items": []
-  },
-  {
-    "listing": "/reports/index.html",
-    "items": []
-  },
-  {
     "listing": "/updates/index.html",
     "items": [
       "/updates/posts/2026-10-25-new-front-door.html"
     ]
   },
   {
-    "listing": "/data/index.html",
+    "listing": "/models/tdm.html",
+    "items": []
+  },
+  {
+    "listing": "/models/bdm.html",
+    "items": []
+  },
+  {
+    "listing": "/models/remm.html",
     "items": []
   },
   {
@@ -30,7 +26,11 @@
     "items": []
   },
   {
-    "listing": "/models/bdm.html",
+    "listing": "/data/index.html",
+    "items": []
+  },
+  {
+    "listing": "/reports/index.html",
     "items": []
   }
 ]
