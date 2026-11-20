@@ -521,6 +521,11 @@ details > summary { color: $wfrc-h1; font-family: $headings-font-family; font-we
   .sidebar-link, .sidebar-item-toggle {
     border-radius: 6px;
   }
+  // Room around the text, so the hover/active highlight is a comfortable pill instead of
+  // hugging the first letter. Applied to every link so Home, headings and items stay aligned.
+  .sidebar-item .sidebar-link {
+    padding: 0.35rem 0.75rem;
+  }
   .sidebar-link:hover { background: $wfrc-surface-2; color: $wfrc-h1; }
   .sidebar-link.active, .active > .sidebar-link {
     background: $wfrc-surface-2;
@@ -529,7 +534,21 @@ details > summary { color: $wfrc-h1; font-family: $headings-font-family; font-we
     box-shadow: inset 3px 0 0 $wfrc-rule;
   }
   .sidebar-title, .menu-text.sidebar-section-title { color: $wfrc-ink-2; font-family: $headings-font-family; }
+  // Section headings (e.g. a year group) read as headings, not as dimmed links
+  .sidebar-item-section > .sidebar-item-container .sidebar-item-text {
+    color: $wfrc-ink;
+    font-weight: 600;
+  }
+  // Children sit under their heading on a thin rule
+  ul.sidebar-section {
+    margin-left: 0.5rem;
+    padding-left: 0.5rem;
+    border-left: 1px solid $wfrc-line;
+  }
 }
+// The "medium" (stacked) brand logo is far too large in a docked sidebar, and the header already
+// carries the logo, so keep it small.
+#quarto-sidebar .sidebar-logo { max-height: 36px; width: auto; margin-bottom: 0.75rem; }
 .breadcrumb .breadcrumb-item a, .quarto-title-breadcrumbs .breadcrumb-item a, .quarto-title-breadcrumbs .breadcrumb li:last-of-type a { color: $wfrc-ink-2; &:hover { color: $wfrc-h1; } }
 .breadcrumb-item.active, .breadcrumb-item + .breadcrumb-item::before { color: $wfrc-ink-2; }
 .page-link {
